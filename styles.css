@@ -116,6 +116,40 @@ nav {
   font-weight: 600;
 }
 
+.download-block {
+  margin-top: 22px;
+  padding-top: 18px;
+  border-top: 1px solid var(--line);
+}
+
+.btn-download {
+  display: inline-block;
+  padding: 14px 22px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #2eae6b, #248f58);
+  color: #fff !important;
+  font-weight: 700;
+  font-size: 1.05rem;
+  text-decoration: none !important;
+  box-shadow: 0 8px 24px rgba(46, 174, 107, 0.35);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.btn-download:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 12px 28px rgba(46, 174, 107, 0.45);
+  text-decoration: none !important;
+}
+
+.download-note,
+.download-hint {
+  margin: 10px 0 0;
+  color: var(--muted);
+  font-size: 0.88rem;
+}
+
+.download-hint { font-size: 0.82rem; opacity: 0.9; }
+
 article h1 {
   margin: 0 0 6px;
   font-size: 1.9rem;
