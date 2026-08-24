@@ -144,3 +144,27 @@ footer {
   color: var(--muted);
   font-size: 0.9rem;
 }
+
+footer p { margin: 0 0 8px; }
+
+.footer-keywords {
+  font-size: 0.78rem;
+  opacity: 0.75;
+  line-height: 1.5;
+}
+
+.faq { margin: 8px 0 0; }
+
+.faq dt {
+  color: var(--text);
+  font-weight: 600;
+  margin-top: 14px;
+}
+
+.faq dt:first-child { margin-top: 0; }
+
+.faq dd {
+  color: var(--muted);
+  margin: 4px 0 0;
+  padding-left: 0;
+}

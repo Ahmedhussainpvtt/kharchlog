@@ -1,49 +1,220 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-IN">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Kharch Log</title>
-  <meta name="description" content="Kharch Log — personal expense tracker for Android that saves to your Google Sheet." />
+  <title>Kharch Log — Free Expense Tracker App for Android | Google Sheets</title>
+  <meta name="description" content="Kharch Log is a free expense tracker app for Android. Track daily spending, income &amp; UPI/bank SMS automatically. Syncs to your own Google Sheet — best free personal finance &amp; budget tracker for India." />
+  <meta name="keywords" content="free expense tracker, best expense tracker, expense tracker app, free expense tracker app, android expense tracker, personal finance app, money manager, budget tracker, daily expense tracker, income expense tracker, UPI expense tracker, bank SMS expense tracker, Google Sheets expense tracker, India expense tracker, household expense tracker, kharch log, kharchlog, free money tracker, spending tracker, expense manager, finance tracker, budget app free, track expenses free, expense diary, money book app, rupee expense tracker, personal budget app, expense tracking app India, best free expense tracker android, offline expense tracker, simple expense tracker, family expense tracker, monthly expense tracker, expense log app, kharch tracker, kharcha tracker" />
+  <meta name="author" content="Kharch Log" />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+  <meta name="googlebot" content="index, follow" />
+  <meta name="theme-color" content="#0f1b2d" />
+  <meta name="application-name" content="Kharch Log" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-title" content="Kharch Log" />
+  <meta name="geo.region" content="IN" />
+  <meta name="geo.placename" content="India" />
   <link rel="canonical" href="https://kharchlog.in/" />
+  <link rel="sitemap" type="application/xml" title="Sitemap" href="https://kharchlog.in/sitemap.xml" />
   <link rel="stylesheet" href="styles.css" />
   <link rel="icon" href="logo.png" />
+  <link rel="apple-touch-icon" href="logo.png" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Kharch Log" />
+  <meta property="og:title" content="Kharch Log — Free Expense Tracker for Android" />
+  <meta property="og:description" content="Best free expense tracker app. Log spending manually or from UPI/bank SMS. Saves to your Google Sheet in your Drive. Personal finance made simple." />
+  <meta property="og:url" content="https://kharchlog.in/" />
+  <meta property="og:image" content="https://kharchlog.in/logo.png" />
+  <meta property="og:image:alt" content="Kharch Log — free Android expense tracker app logo" />
+  <meta property="og:locale" content="en_IN" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Kharch Log — Free Expense Tracker for Android" />
+  <meta name="twitter:description" content="Free expense tracker with SMS auto-detect &amp; Google Sheets sync. Your data stays in your Drive." />
+  <meta name="twitter:image" content="https://kharchlog.in/logo.png" />
+  <meta name="twitter:image:alt" content="Kharch Log expense tracker app" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://kharchlog.in/#website",
+        "url": "https://kharchlog.in/",
+        "name": "Kharch Log",
+        "description": "Free expense tracker app for Android with Google Sheets sync and UPI SMS auto-detect.",
+        "inLanguage": "en-IN",
+        "publisher": { "@id": "https://kharchlog.in/#organization" }
+      },
+      {
+        "@type": "Organization",
+        "@id": "https://kharchlog.in/#organization",
+        "name": "Kharch Log",
+        "url": "https://kharchlog.in/",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://kharchlog.in/logo.png",
+          "width": 512,
+          "height": 512
+        },
+        "email": "kharchlog@gmail.com",
+        "sameAs": []
+      },
+      {
+        "@type": "SoftwareApplication",
+        "@id": "https://kharchlog.in/#app",
+        "name": "Kharch Log",
+        "alternateName": ["KharchLog", "Kharch Log Expense Tracker"],
+        "url": "https://kharchlog.in/",
+        "applicationCategory": "FinanceApplication",
+        "applicationSubCategory": "Expense Tracker",
+        "operatingSystem": "Android",
+        "description": "Free Android expense tracker that logs daily spending and income, auto-detects bank/UPI SMS transactions, and syncs to your own Google Sheet.",
+        "featureList": [
+          "Free expense tracking",
+          "Manual expense and income entry",
+          "UPI and bank SMS auto-detect",
+          "Google Sheets sync to your Drive",
+          "Categories, payment modes, and notes",
+          "Today's spending dashboard",
+          "Monthly sheet tabs",
+          "Payee-to-category rules",
+          "Needs-review inbox for unclear SMS"
+        ],
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "INR",
+          "availability": "https://schema.org/InStock"
+        },
+        "author": { "@id": "https://kharchlog.in/#organization" },
+        "publisher": { "@id": "https://kharchlog.in/#organization" },
+        "image": "https://kharchlog.in/logo.png",
+        "inLanguage": "en-IN",
+        "countriesSupported": "IN"
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://kharchlog.in/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Is Kharch Log a free expense tracker?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Kharch Log is a completely free expense tracker app for Android. There are no subscriptions or in-app purchases. Your expense data is stored in your own Google Sheet."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is the best free expense tracker for Android in India?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Kharch Log is built for Indian users: it supports UPI and bank SMS auto-detect, rupee amounts, categories, and syncs everything to Google Sheets in your Google Drive so you own your data."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does Kharch Log work with Google Sheets?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Kharch Log creates a Kharch Log folder and spreadsheet in your Google Drive automatically. Every expense and income entry syncs to your sheet — use the app or edit the sheet directly."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can Kharch Log read UPI and bank SMS automatically?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Optionally, yes. Grant SMS permission and Kharch Log detects common debit and credit messages from Indian banks and UPI apps. SMS text is processed on your phone; entries go to your Google Sheet."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is my expense data private?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Kharch Log does not run a backend that collects your expenses. Data lives in your Google Sheet under your account. See our Privacy Policy for full details."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
   <div class="wrap">
     <header>
-      <img src="logo.png" alt="Kharch Log logo" />
+      <img src="logo.png" alt="Kharch Log — free expense tracker app for Android" width="56" height="56" />
       <div class="brand">Kharch Log</div>
     </header>
 
-    <nav>
+    <nav aria-label="Main">
       <a href="index.html">Home</a>
       <a href="privacy.html">Privacy Policy</a>
       <a href="terms.html">Terms of Service</a>
     </nav>
 
     <section class="hero">
-      <h1>Your money book, on your phone</h1>
+      <h1>Free Expense Tracker for Android</h1>
       <p>
-        Kharch Log is an Android app that logs expenses and income — manually or from bank/UPI SMS —
-        and saves them to a Google Sheet in <strong>your</strong> Google Drive.
+        <strong>Kharch Log</strong> is a free personal finance &amp; budget app that tracks daily spending and income —
+        manually or automatically from bank/UPI SMS — and saves everything to a Google Sheet in <strong>your</strong> Google Drive.
       </p>
-      <span class="badge">Personal finance · Google Sign-In · Your data stays yours</span>
+      <span class="badge">100% free · No ads · Google Sheets · UPI SMS detect · India</span>
     </section>
 
     <div class="card">
-      <h2>What it does</h2>
+      <h2>Why use Kharch Log as your expense tracker?</h2>
       <ul>
-        <li>Add expenses with amount, category, payment mode, and notes</li>
-        <li>Optional SMS auto-detect for common bank/UPI debit &amp; credit messages</li>
+        <li><strong>Free expense tracker</strong> — no subscription, no premium tier</li>
+        <li><strong>Best of both worlds</strong> — simple Android app + full spreadsheet you control</li>
+        <li><strong>UPI &amp; bank SMS</strong> — optional auto-detect for debit/credit messages</li>
+        <li><strong>Today's spending</strong> — see what you spent today at a glance</li>
+        <li><strong>Monthly tabs</strong> — organized expense log by month in Google Sheets</li>
+        <li><strong>Categories &amp; payee rules</strong> — smart sorting for recurring merchants</li>
+        <li><strong>Your data stays yours</strong> — limited Drive access, only Kharch Log files</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>Features — personal finance &amp; money management</h2>
+      <ul>
+        <li>Add expenses with amount, category, payment mode, payee, and notes</li>
+        <li>Track income and salary deposits separately</li>
+        <li>Optional SMS auto-detect for common Indian bank/UPI debit &amp; credit messages</li>
         <li>Creates a <strong>Kharch Log</strong> folder and spreadsheet in your Drive automatically</li>
+        <li>Review inbox for transactions that need your approval</li>
+        <li>Search and filter your expense history</li>
         <li>Uses limited Google Drive access: only files this app creates for you</li>
       </ul>
     </div>
 
     <div class="card">
+      <h2>Free expense tracker FAQ</h2>
+      <dl class="faq">
+        <dt>Is Kharch Log really free?</dt>
+        <dd>Yes — completely free expense tracker app. No ads, no paid plans.</dd>
+        <dt>Do I need Excel or special software?</dt>
+        <dd>No. Expenses sync to Google Sheets (free with any Google account). Open on phone, web, or export anytime.</dd>
+        <dt>Does it work for UPI and Indian banks?</dt>
+        <dd>Yes. Built for India — rupee amounts, UPI/bank SMS parsing, and categories suited to daily kharcha tracking.</dd>
+        <dt>Can I use it without SMS permission?</dt>
+        <dd>Absolutely. Manual entry works fully. SMS is optional for automatic expense logging.</dd>
+        <dt>How is this different from other budget apps?</dt>
+        <dd>Most apps lock data on their servers. Kharch Log writes to <em>your</em> Google Sheet — you own and export your expense history forever.</dd>
+      </dl>
+    </div>
+
+    <div class="card">
       <h2>Support</h2>
-      <p>Email <a href="mailto:kharchlog@gmail.com">kharchlog@gmail.com</a></p>
+      <p>Questions about the free expense tracker app? Email <a href="mailto:kharchlog@gmail.com">kharchlog@gmail.com</a></p>
     </div>
 
     <div class="card">
@@ -54,7 +225,10 @@
       </p>
     </div>
 
-    <footer>© 2026 Kharch Log</footer>
+    <footer>
+      <p>© 2026 Kharch Log — free expense tracker &amp; personal finance app for Android</p>
+      <p class="footer-keywords">Keywords: free expense tracker · best expense tracker app · android budget tracker · Google Sheets money manager · UPI expense tracker India · kharch log · kharchlog.in</p>
+    </footer>
   </div>
 </body>
 </html>
