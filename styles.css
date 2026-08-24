@@ -106,26 +106,6 @@ nav {
   margin-bottom: 12px !important;
 }
 
-.seo-keywords-block summary {
-  cursor: pointer;
-  color: var(--muted);
-  font-size: 0.9rem;
-  font-weight: 600;
-}
-
-.seo-keywords-block[open] summary {
-  margin-bottom: 12px;
-}
-
-.seo-keywords {
-  font-size: 0.72rem;
-  line-height: 1.55;
-  color: var(--muted);
-  opacity: 0.85;
-  margin: 0;
-  word-break: break-word;
-}
-
 .card ul {
   margin: 8px 0 0;
   padding-left: 1.15rem;
