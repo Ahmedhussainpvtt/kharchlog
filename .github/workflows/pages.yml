@@ -26,7 +26,7 @@ jobs:
       - name: Prepare site artifact
         run: |
           mkdir -p _site/privacy _site/terms
-          cp index.html styles.css logo.png KharchLog.apk CNAME .nojekyll robots.txt sitemap.xml _site/
+          cp index.html styles.css logo.png KharchLog.apk CNAME .nojekyll robots.txt sitemap.xml seo-keywords.txt _site/
           cp privacy/index.html _site/privacy/
           cp terms/index.html _site/terms/
       - uses: actions/upload-pages-artifact@v3
