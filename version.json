@@ -1,6 +1,6 @@
 {
-  "versionCode": 112,
-  "versionName": "3.2.12",
+  "versionCode": 113,
+  "versionName": "3.2.13",
   "apkUrl": "https://raw.githubusercontent.com/Ahmedhussainpvtt/kharchlog/refs/heads/main/KharchLog.apk",
-  "notes": "UPI ID + QR on share/PDF, unified Config sheet, PayeeRules removed, permission/autostart fix"
+  "notes": "Fix permission flow: battery and autostart prompt on every app open"
 }
