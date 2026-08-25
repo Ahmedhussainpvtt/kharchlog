@@ -1,6 +1,1 @@
-{
-  "versionCode": 101,
-  "versionName": "3.2.1",
-  "apkUrl": "https://kharchlog.in/KharchLog.apk",
-  "notes": "Voice assistant, native permissions, UI fixes, in-app updates"
-}
+{"apkUrl":"https://raw.githubusercontent.com/Ahmedhussainpvtt/ExpenseTracker/main/releases/KharchLog.apk","versionCode":103,"versionName":"3.2.3","notes":"Check for updates on every app open; GitHub-first downloads"}
