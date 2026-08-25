@@ -1,6 +1,6 @@
 {
   "versionCode": 116,
   "versionName": "3.2.16",
-  "apkUrl": "https://raw.githubusercontent.com/Ahmedhussainpvtt/kharchlog/main/KharchLog.apk",
-  "notes": "Voice assistant, native permissions, UI fixes, in-app updates"
+  "apkUrl": "https://raw.githubusercontent.com/Ahmedhussainpvtt/kharchlog/refs/heads/main/KharchLog.apk",
+  "notes": "License gate + Cloud Run payment check (v3.2.16 release build)"
 }
