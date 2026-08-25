@@ -30,14 +30,24 @@
     return true;
   }
 
-  function markPaid(email, paymentId) {
+  function createOrder(email) {
+    return fetch(cfg.trackerUrl.replace(/\/$/, '') + '/create-order', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ email: email })
+    }).then(function (r) { return r.json(); });
+  }
+
+  function markPaid(email, response) {
     return fetch(cfg.trackerUrl, {
       method: 'POST',
       headers: { 'Content-Type': 'text/plain;charset=utf-8' },
       body: JSON.stringify({
         action: 'markPaid',
         email: email,
-        paymentId: paymentId
+        paymentId: response.razorpay_payment_id,
+        orderId: response.razorpay_order_id,
+        signature: response.razorpay_signature
       })
     }).then(function (r) { return r.json(); });
   }
@@ -56,46 +66,65 @@
     );
     if (!ok) return;
 
-    setStatus('Opening Razorpay…');
+    setStatus('Creating order…');
+    if (payBtn) payBtn.disabled = true;
 
-    var options = {
-      key: cfg.razorpayKeyId,
-      amount: cfg.amountPaise || 10000,
-      currency: cfg.currency || 'INR',
-      name: cfg.productName || 'Kharch Log',
-      description: cfg.productDescription || 'Lifetime access',
-      prefill: { email: email },
-      theme: { color: '#1a6f8d' },
-      handler: function (response) {
-        setStatus('Confirming payment…');
-        markPaid(email, response.razorpay_payment_id)
-          .then(function (data) {
-            if (data && data.ok && data.paid) {
-              window.location.href = '/pay/success.html?email=' + encodeURIComponent(email);
-            } else {
-              setStatus((data && data.error) || 'Payment recorded failed — contact support', true);
-            }
-          })
-          .catch(function () {
-            setStatus('Could not confirm payment — email support with payment ID: ' + response.razorpay_payment_id, true);
-          });
-      },
-      modal: {
-        ondismiss: function () {
-          setStatus('Payment cancelled');
+    createOrder(email)
+      .then(function (orderData) {
+        if (!orderData || !orderData.ok || !orderData.orderId) {
+          throw new Error((orderData && orderData.error) || 'Could not create order');
         }
-      }
-    };
 
-    try {
-      var rzp = new Razorpay(options);
-      rzp.on('payment.failed', function (resp) {
-        setStatus('Payment failed: ' + (resp.error && resp.error.description || 'try again'), true);
+        setStatus('Opening Razorpay…');
+
+        var options = {
+          key: cfg.razorpayKeyId,
+          order_id: orderData.orderId,
+          amount: orderData.amount || cfg.amountPaise || 10000,
+          currency: orderData.currency || cfg.currency || 'INR',
+          name: cfg.productName || 'Kharch Log',
+          description: cfg.productDescription || 'Lifetime access',
+          prefill: { email: email },
+          notes: { email: email, product: 'Kharch Log Lifetime' },
+          theme: { color: '#1a6f8d' },
+          config: {
+            display: { save: false }
+          },
+          handler: function (response) {
+            setStatus('Confirming payment…');
+            markPaid(email, response)
+              .then(function (data) {
+                if (data && data.ok && data.paid) {
+                  window.location.href = '/pay/success.html?email=' + encodeURIComponent(email);
+                } else {
+                  setStatus((data && data.error) || 'Payment recorded failed — contact support', true);
+                  if (payBtn) payBtn.disabled = false;
+                }
+              })
+              .catch(function () {
+                setStatus('Could not confirm payment — email support with payment ID: ' + response.razorpay_payment_id, true);
+                if (payBtn) payBtn.disabled = false;
+              });
+          },
+          modal: {
+            ondismiss: function () {
+              setStatus('Payment cancelled');
+              if (payBtn) payBtn.disabled = false;
+            }
+          }
+        };
+
+        var rzp = new Razorpay(options);
+        rzp.on('payment.failed', function (resp) {
+          setStatus('Payment failed: ' + (resp.error && resp.error.description || 'try again'), true);
+          if (payBtn) payBtn.disabled = false;
+        });
+        rzp.open();
+      })
+      .catch(function (e) {
+        setStatus(e.message || 'Could not start checkout', true);
+        if (payBtn) payBtn.disabled = false;
       });
-      rzp.open();
-    } catch (e) {
-      setStatus('Razorpay error: ' + e.message, true);
-    }
   }
 
   readEmailFromQuery();
