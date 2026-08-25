@@ -1,6 +1,6 @@
 {
-  "versionCode": 104,
-  "versionName": "3.2.4",
-  "apkUrl": "https://raw.githubusercontent.com/Ahmedhussainpvtt/kharchlog/main/KharchLog.apk",
-  "notes": "Tiny test update - try Update / Later"
+  "versionCode": 105,
+  "versionName": "3.2.5",
+  "apkUrl": "https://kharchlog.in/KharchLog.apk",
+  "notes": "Fix update check (version.json on site + more mirrors)"
 }
