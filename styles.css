@@ -82,6 +82,17 @@ nav {
   font-size: 1.05rem;
 }
 
+.hero-tagline {
+  margin: 0 0 12px !important;
+  color: #7dd3fc !important;
+  font-size: 1.15rem !important;
+  font-weight: 600;
+}
+
+.pay-hero .hero-tagline {
+  margin-bottom: 14px !important;
+}
+
 .card {
   background: rgba(28, 47, 74, 0.72);
   border: 1px solid var(--line);
@@ -155,6 +166,110 @@ nav {
 }
 
 .download-hint { font-size: 0.82rem; opacity: 0.9; }
+
+.pay-hero { margin-bottom: 18px; }
+
+.pay-card { margin-top: 0; }
+
+.pay-email-notice {
+  background: rgba(255, 193, 7, 0.12);
+  border: 1px solid rgba(255, 193, 7, 0.35);
+  border-radius: 10px;
+  padding: 14px 16px;
+  margin-bottom: 16px;
+  font-size: 0.92rem;
+  line-height: 1.45;
+}
+
+.pay-email-notice strong {
+  display: block;
+  margin-bottom: 6px;
+  color: #ffd666;
+}
+
+.pay-email-check {
+  font-size: 0.85rem;
+  color: #9bb4c7;
+  margin: 8px 0 16px;
+}
+
+.pay-label {
+  display: block;
+  margin: 16px 0 6px;
+  font-size: 0.9rem;
+  color: var(--muted);
+  font-weight: 600;
+}
+
+.pay-input {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 1px solid var(--line);
+  background: rgba(15, 27, 45, 0.6);
+  color: var(--text);
+  font-size: 1rem;
+}
+
+.pay-input:focus {
+  outline: 2px solid rgba(46, 174, 107, 0.45);
+  border-color: rgba(46, 174, 107, 0.6);
+}
+
+.pay-price {
+  margin: 20px 0 12px;
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--text);
+}
+
+.pay-once {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--muted);
+}
+
+.pay-btn {
+  width: 100%;
+  text-align: center;
+  border: none;
+  cursor: pointer;
+}
+
+.pay-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.pay-status {
+  min-height: 1.4em;
+  margin: 12px 0 0;
+  font-size: 0.9rem;
+  color: var(--accent);
+}
+
+.pay-status-error { color: #ff8a8a; }
+
+.pay-fine {
+  margin-top: 16px;
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+.pay-steps {
+  margin: 8px 0 0;
+  padding-left: 1.2rem;
+  color: var(--muted);
+}
+
+.back-home { margin-top: 24px; text-align: center; }
+
+.site-footer {
+  margin-top: 28px;
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
 
 article h1 {
   margin: 0 0 6px;

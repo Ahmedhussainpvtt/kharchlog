@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en-IN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Get Kharch Log — ₹100 lifetime access</title>
+  <meta name="description" content="One-time ₹100 payment for lifetime access to Kharch Log expense tracker for Android." />
+  <link rel="stylesheet" href="/styles.css" />
+  <link rel="icon" href="/logo.png" />
+  <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+  <script src="/pay/config.js"></script>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <img src="/logo.png" alt="Kharch Log" width="56" height="56" />
+      <div class="brand">Kharch Log</div>
+    </header>
+
+    <nav aria-label="Main">
+      <a href="/">Home</a>
+      <a href="/privacy/">Privacy</a>
+      <a href="/terms/">Terms</a>
+    </nav>
+
+    <section class="hero pay-hero">
+      <h1>Get lifetime access — ₹100</h1>
+      <p class="hero-tagline">
+        Less than the cost of a single meal — pay once, use Kharch Log forever.
+      </p>
+      <p>
+        One-time payment. No subscription. Your expense data stays in <strong>your</strong> Google Sheet.
+      </p>
+      <span class="badge">SMS auto-detect · Google Sheets · Voice add · No ads</span>
+    </section>
+
+    <div class="card pay-card">
+      <h2>Pay &amp; download</h2>
+
+      <div class="pay-email-notice" role="note">
+        <strong>Important — use your Google sign-in email</strong>
+        <p>
+          Enter the <strong>exact Gmail address</strong> you will use to sign in inside the Kharch Log app.
+          If this email is wrong, payment will not unlock the app and we cannot transfer access to another account.
+        </p>
+      </div>
+
+      <label class="pay-label" for="email">Google email for app sign-in</label>
+      <input id="email" class="pay-input" type="email" placeholder="you@gmail.com" autocomplete="email" required />
+
+      <p class="pay-email-check" id="emailHint">Double-check this matches your phone’s Google account.</p>
+
+      <p class="pay-price">₹100 <span class="pay-once">one-time · lifetime</span></p>
+
+      <button id="payBtn" class="btn-download pay-btn" type="button">Pay ₹100 with Razorpay</button>
+      <p id="status" class="pay-status" role="status"></p>
+
+      <p class="pay-fine">
+        After payment you can download the APK and sign in. Already paid?
+        <a href="/pay/success.html">Open download page</a>.
+      </p>
+    </div>
+
+    <div class="card">
+      <h2>What you get</h2>
+      <ul>
+        <li>Full Android app — expense &amp; income tracking</li>
+        <li>Optional UPI/bank SMS auto-detect</li>
+        <li>Sync to your own Google Sheet in Drive</li>
+        <li>Share invoices with UPI QR</li>
+        <li>Free updates via in-app updater</li>
+      </ul>
+    </div>
+
+    <footer class="site-footer">
+      <p>Questions? <a href="mailto:kharchlog@gmail.com">kharchlog@gmail.com</a></p>
+    </footer>
+  </div>
+
+  <script src="/pay/checkout.js"></script>
+</body>
+</html>
