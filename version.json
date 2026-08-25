@@ -1,6 +1,6 @@
 {
-  "versionCode": 117,
-  "versionName": "3.2.17",
+  "versionCode": 118,
+  "versionName": "3.2.18",
   "apkUrl": "https://raw.githubusercontent.com/Ahmedhussainpvtt/kharchlog/refs/heads/main/KharchLog.apk",
-  "notes": "Approved column for SMS review, home screen fix, mandate SMS ignored, live-SMS-only tracking"
+  "notes": "Faster license open, share/invoice collect-payment prompt, voice-add UI + parse fixes, remove menu permissions row"
 }
