@@ -3,65 +3,13 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Payment successful — Download Kharch Log</title>
+  <title>Kharch Log — Payments coming soon</title>
+  <meta name="robots" content="noindex" />
   <link rel="stylesheet" href="/styles.css" />
   <link rel="icon" href="/logo.png" />
+  <meta http-equiv="refresh" content="0; url=/pay/" />
 </head>
 <body>
-  <div class="wrap">
-    <header>
-      <img src="/logo.png" alt="Kharch Log" width="56" height="56" />
-      <div class="brand">Kharch Log</div>
-    </header>
-
-    <section class="hero pay-hero">
-      <h1>You're all set</h1>
-      <p id="successLead">
-        Lifetime access is registered for your email. Download the app and sign in with the
-        <strong>same Google account</strong> you paid with.
-      </p>
-    </section>
-
-    <div class="card pay-card">
-      <div class="download-block">
-        <a class="btn-download" href="/KharchLog.apk" download="KharchLog.apk" id="apkLink">Download APK</a>
-        <p class="download-note" id="versionNote">Android 7.0+ · sideload install</p>
-        <p class="download-hint">Open the APK → allow install → sign in with Google → start tracking.</p>
-      </div>
-    </div>
-
-    <div class="card">
-      <h2>Next steps</h2>
-      <ol class="pay-steps">
-        <li>Install KharchLog.apk</li>
-        <li>Allow SMS, battery &amp; autostart when prompted</li>
-        <li>Sign in with the email you paid with</li>
-        <li>App connects your Google Sheet automatically</li>
-      </ol>
-    </div>
-
-    <p class="back-home"><a href="/">← Back to home</a></p>
-  </div>
-
-  <script>
-    (function () {
-      var params = new URLSearchParams(window.location.search);
-      var email = (params.get('email') || '').trim();
-      if (email) {
-        var lead = document.getElementById('successLead');
-        if (lead) {
-          lead.innerHTML =
-            'Lifetime access is registered for <strong>' + email + '</strong>. ' +
-            'Download the app and sign in with this exact Google account.';
-        }
-      }
-    })();
-    fetch('/version.json').then(r => r.json()).then(v => {
-      const el = document.getElementById('versionNote');
-      if (el && v.versionName) el.textContent = 'v' + v.versionName + ' · Android 7.0+ · sideload install';
-      const apk = document.getElementById('apkLink');
-      if (apk && v.versionName) apk.textContent = 'Download APK — v' + v.versionName;
-    }).catch(() => {});
-  </script>
+  <p><a href="/pay/">Payments coming soon</a></p>
 </body>
 </html>
