@@ -1,6 +1,6 @@
 {
-  "versionCode": 118,
-  "versionName": "3.2.18",
+  "versionCode": 119,
+  "versionName": "3.2.19",
   "apkUrl": "https://raw.githubusercontent.com/Ahmedhussainpvtt/kharchlog/refs/heads/main/KharchLog.apk",
-  "notes": "Faster license open, share/invoice collect-payment prompt, voice-add UI + parse fixes, remove menu permissions row"
+  "notes": "Dashboard home with balance card, Week/Month/Year, spending donut; Details list with share/edit/delete; bottom nav + Report"
 }
