@@ -5,8 +5,11 @@
   --text: #eef3f8;
   --muted: #9db0c7;
   --accent: #2eae6b;
+  --primary: #2596BE;
+  --secondary: #10B981;
   --line: rgba(255, 255, 255, 0.08);
   --max: 720px;
+  --font: "Manrope", "Segoe UI", system-ui, sans-serif;
 }
 
 * { box-sizing: border-box; }
@@ -18,7 +21,7 @@ html, body {
               radial-gradient(900px 500px at 100% 0%, #145239 0%, transparent 45%),
               var(--bg);
   color: var(--text);
-  font-family: "Segoe UI", system-ui, sans-serif;
+  font-family: var(--font);
   line-height: 1.65;
   min-height: 100%;
 }

@@ -1,6 +1,6 @@
 {
-  "versionCode": 121,
-  "versionName": "3.2.21",
+  "versionCode": 122,
+  "versionName": "3.2.22",
   "apkUrl": "https://raw.githubusercontent.com/Ahmedhussainpvtt/kharchlog/refs/heads/main/KharchLog.apk",
-  "notes": "Gradient primary/secondary theme, glow buttons, restyled Settings cards"
+  "notes": "Emerald secondary #10B981, Manrope fonts, real shadows, restyled Add expense"
 }
