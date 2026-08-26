@@ -1,6 +1,6 @@
 {
-  "versionCode": 122,
-  "versionName": "3.2.22",
+  "versionCode": 123,
+  "versionName": "3.2.23",
   "apkUrl": "https://raw.githubusercontent.com/Ahmedhussainpvtt/kharchlog/refs/heads/main/KharchLog.apk",
-  "notes": "Emerald secondary #10B981, Manrope fonts, real shadows, restyled Add expense"
+  "notes": "Security: Google license auth, no shared secret in APK, hardened Cloud Run."
 }
