@@ -1,6 +1,6 @@
 {
-  "versionCode": 120,
-  "versionName": "3.2.20",
+  "versionCode": 121,
+  "versionName": "3.2.21",
   "apkUrl": "https://raw.githubusercontent.com/Ahmedhussainpvtt/kharchlog/refs/heads/main/KharchLog.apk",
-  "notes": "Profile vs Settings, raised + FAB, Reports from/to dates, home shimmer loading"
+  "notes": "Gradient primary/secondary theme, glow buttons, restyled Settings cards"
 }
