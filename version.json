@@ -1,6 +1,6 @@
 {
-  "versionCode": 125,
-  "versionName": "3.2.25",
+  "versionCode": 129,
+  "versionName": "3.2.29",
   "apkUrl": "https://raw.githubusercontent.com/Ahmedhussainpvtt/kharchlog/refs/heads/main/KharchLog.apk",
-  "notes": "Release signing, faster paid check, Today-first load, unpaid never hits Sheets, blue gradients + shadows."
+  "notes": "License reliability after reinstall; soft green tip gradients and colored 3D shadows"
 }
