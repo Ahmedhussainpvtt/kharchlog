@@ -1,6 +1,6 @@
 {
-  "versionCode": 119,
-  "versionName": "3.2.19",
+  "versionCode": 120,
+  "versionName": "3.2.20",
   "apkUrl": "https://raw.githubusercontent.com/Ahmedhussainpvtt/kharchlog/refs/heads/main/KharchLog.apk",
-  "notes": "Dashboard home with balance card, Week/Month/Year, spending donut; Details list with share/edit/delete; bottom nav + Report"
+  "notes": "Profile vs Settings, raised + FAB, Reports from/to dates, home shimmer loading"
 }
