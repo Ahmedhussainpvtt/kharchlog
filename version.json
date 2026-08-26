@@ -1,6 +1,6 @@
 {
-  "versionCode": 123,
-  "versionName": "3.2.23",
+  "versionCode": 125,
+  "versionName": "3.2.25",
   "apkUrl": "https://raw.githubusercontent.com/Ahmedhussainpvtt/kharchlog/refs/heads/main/KharchLog.apk",
-  "notes": "Security: Google license auth, no shared secret in APK, hardened Cloud Run."
+  "notes": "Release signing, faster paid check, Today-first load, unpaid never hits Sheets, blue gradients + shadows."
 }
