@@ -1,6 +1,6 @@
 {
-  "versionCode": 129,
-  "versionName": "3.2.29",
+  "versionCode": 131,
+  "versionName": "3.2.31",
   "apkUrl": "https://raw.githubusercontent.com/Ahmedhussainpvtt/kharchlog/refs/heads/main/KharchLog.apk",
-  "notes": "License reliability after reinstall; soft green tip gradients and colored 3D shadows"
+  "notes": "Sliding gradients, income/expense arrows, safer period loading"
 }
