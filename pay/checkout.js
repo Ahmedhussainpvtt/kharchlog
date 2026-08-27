@@ -93,7 +93,11 @@
         }
       })
       .catch(function (e) {
-        setStatus(e.message || 'Could not start checkout', true);
+        var msg = e && e.message ? e.message : 'Could not start checkout';
+        if (msg === 'Failed to fetch' || msg === 'Load failed' || msg === 'NetworkError when attempting to fetch resource.') {
+          msg = 'Could not reach payment server (network/CORS). Retry in a minute.';
+        }
+        setStatus(msg, true);
         if (payBtn) payBtn.disabled = false;
       });
   }
