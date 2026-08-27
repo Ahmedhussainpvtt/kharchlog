@@ -24,8 +24,7 @@
   <header class="site-header">
     <div class="site-header__inner">
       <a class="brand-lockup" href="/" aria-label="Kharch Log home">
-        <img src="/logo.png" alt="" width="40" height="40" />
-        <span class="brand-lockup__name">Kharch Log</span>
+        <img src="/brand-lockup.png" alt="Kharch Log" height="40" width="139" />
       </a>
       <nav class="site-nav" aria-label="Primary">
         <div class="nav-dropdown">
@@ -53,34 +52,29 @@
       <p>Practical guides on expense tracking, SMS capture, and owning your data in Google Sheets.</p>
     </div>
     <section class="section" style="width:min(var(--max), calc(100% - 40px));margin:0 auto 48px;">
-      <div class="blog-grid" id="blog-grid"><a class="blog-card" href="/blog/how-to-track-expenses-automatically-with-sms/">
-          <span class="blog-card__date">2026-08-27</span>
-          <h2>How to track expenses automatically with bank SMS</h2>
-          <p>Learn how SMS-based expense tracking works on Android, when you need SMS permission, and how Kharch Log keeps data in your Google Sheet.</p>
-        </a>
-<a class="blog-card" href="/blog/google-sheets-vs-budget-apps/">
-          <span class="blog-card__date">2026-08-26</span>
-          <h2>Google Sheets expense tracker vs closed budget apps</h2>
-          <p>Compare keeping expenses in Google Sheets versus locking history inside a budget app. Why ownership matters for long-term tracking.</p>
-        </a>
-<a class="blog-card" href="/blog/daily-expense-tracker-habits/">
-          <span class="blog-card__date">2026-08-25</span>
-          <h2>Daily expense tracker habits that actually stick</h2>
-          <p>Practical habits for a daily expense tracker: log same day, use categories, review weekly. Tips inspired by simple money books.</p>
-        </a></div>
+      <div class="blog-grid" id="blog-grid"></div>
     </section>
     <script>
-      // Hydrate from API so daily posts appear after publish without editing this file.
-      fetch('/blog/api/posts.json').then(r => r.json()).then(data => {
-        if (!data || !data.posts || !data.posts.length) return;
-        const grid = document.getElementById('blog-grid');
-        grid.innerHTML = data.posts.map(p => `
-          <a class="blog-card" href="${p.url}">
-            <span class="blog-card__date">${p.date}</span>
-            <h2>${p.title}</h2>
-            <p>${p.description}</p>
-          </a>`).join('');
-      }).catch(() => {});
+      function blogCard(p) {
+        var img = p.image || ('/images/blog/' + p.slug + '.jpg');
+        return (
+          '<a class="blog-card" href="' + p.url + '">' +
+            '<div class="blog-card__media"><img src="' + img + '" alt="" loading="lazy" width="640" height="360" /></div>' +
+            '<div class="blog-card__body">' +
+              '<span class="blog-card__date">' + p.date + '</span>' +
+              '<h2>' + p.title + '</h2>' +
+              '<p>' + p.description + '</p>' +
+            '</div>' +
+          '</a>'
+        );
+      }
+      fetch('/blog/api/posts.json')
+        .then(function (r) { return r.json(); })
+        .then(function (data) {
+          if (!data || !data.posts || !data.posts.length) return;
+          document.getElementById('blog-grid').innerHTML = data.posts.map(blogCard).join('');
+        })
+        .catch(function () {});
     </script>
 
   </main>
@@ -88,8 +82,7 @@
   <footer class="site-footer">
     <div class="site-footer__inner">
       <div class="site-footer__brand">
-        <img src="/logo.png" alt="" width="32" height="32" />
-        <span>Kharch Log</span>
+        <img src="/brand-lockup.png" alt="Kharch Log" height="28" width="97" />
       </div>
       <nav aria-label="Footer">
         <a href="/">Home</a>

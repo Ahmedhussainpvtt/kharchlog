@@ -1,6 +1,6 @@
 {
   "versionCode": 160,
   "versionName": "3.2.60",
-  "apkUrl": "https://raw.githubusercontent.com/Ahmedhussainpvtt/kharchlog/refs/heads/main/KharchLog.apk",
-  "notes": "Remove dark letterbox ring around logo"
+  "apkUrl": "https://raw.githubusercontent.com/Ahmedhussainpvtt/kharchlog/main/KharchLog.apk",
+  "notes": "Voice assistant, native permissions, UI fixes, in-app updates"
 }
