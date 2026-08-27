@@ -1055,11 +1055,27 @@ footer:not(.site-footer) {
   padding: 48px 0;
 }
 .seo-block h2 {
-  margin: 0 0 12px;
-  font-size: clamp(1.4rem, 2.5vw, 1.8rem);
+  margin: 28px 0 12px;
+  font-size: clamp(1.35rem, 2.5vw, 1.75rem);
 }
-.seo-block p, .seo-block li { color: var(--muted); }
-.seo-block ul { padding-left: 1.2rem; }
+.seo-block h2:first-child { margin-top: 0; }
+.seo-block h3 {
+  margin: 20px 0 8px;
+  font-size: 1.1rem;
+  color: var(--text);
+}
+.seo-block p, .seo-block li { color: var(--muted); line-height: 1.65; }
+.seo-block ul, .seo-block ol { padding-left: 1.25rem; margin: 0 0 16px; }
+.seo-block li { margin: 0 0 6px; }
+.seo-block .seo-toc {
+  margin: 0 0 28px;
+  padding: 16px 18px;
+  background: var(--secondary-soft, rgba(20, 184, 166, 0.08));
+  border-radius: 12px;
+  border: 1px solid rgba(20, 184, 166, 0.2);
+}
+.seo-block .seo-toc ul { margin: 8px 0 0; }
+.seo-block .seo-toc a { color: var(--text); }
 
 .feature-detail {
   width: min(var(--max), calc(100% - 40px));
