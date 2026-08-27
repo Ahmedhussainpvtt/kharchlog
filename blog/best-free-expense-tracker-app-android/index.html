@@ -46,10 +46,21 @@
         <span class="brand-lockup__name">Kharch Log</span>
       </a>
       <nav class="site-nav" aria-label="Primary">
-        <a href="/features/">Features</a>
+        <div class="nav-dropdown">
+          <a href="/features/" class="nav-dropdown__trigger" aria-haspopup="true">Features</a>
+          <div class="nav-dropdown__menu" role="menu">
+            <a href="/features/" role="menuitem">All features</a>
+            <a href="/features/manual-voice-entry/" role="menuitem">Manual &amp; voice expense entry</a>
+            <a href="/features/sms-auto-capture/" role="menuitem">Bank &amp; UPI SMS auto-capture</a>
+            <a href="/features/review-inbox/" role="menuitem">Needs-review inbox for unclear SMS</a>
+            <a href="/features/google-sheets-sync/" role="menuitem">Google Sheets expense sync</a>
+            <a href="/features/reports-insights/" role="menuitem">Today view &amp; spending reports</a>
+            <a href="/features/share-invoice/" role="menuitem">Share expenses &amp; invoice PDF</a>
+          </div>
+        </div>
         <a href="/blog/">Blog</a>
         <a href="/#faq">FAQ</a>
-        <a href="/privacy/">Privacy</a>
+        <a href="/contact/">Contact</a>
         <span class="nav-cta nav-cta--soon" aria-disabled="true">Launching soon</span>
       </nav>
     </div>
