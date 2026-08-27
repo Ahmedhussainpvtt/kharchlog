@@ -23,13 +23,18 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: actions/configure-pages@v5
-      - name: Prepare site artifact
+      - name: Prepare full site artifact
         run: |
-          mkdir -p _site/privacy _site/terms _site/pay
-          cp index.html styles.css logo.png CNAME .nojekyll robots.txt sitemap.xml version.json _site/
-          cp privacy/index.html _site/privacy/
-          cp terms/index.html _site/terms/
-          cp pay/index.html pay/success.html pay/checkout.js pay/config.js _site/pay/
+          mkdir -p _site
+          # Entire static site (features/blog/pricing/contact/images/pay/…)
+          rsync -a \
+            --exclude '.git' \
+            --exclude '.github' \
+            --exclude '_site' \
+            --exclude 'KharchLog.apk' \
+            ./ _site/
+          # Keep APK downloadable if present in repo
+          if [ -f KharchLog.apk ]; then cp KharchLog.apk _site/; fi
       - uses: actions/upload-pages-artifact@v3
         with:
           path: _site

@@ -497,6 +497,8 @@ a:hover { text-decoration: underline; }
   margin: 0 0 14px;
   color: var(--muted);
 }
+.faq details p + p { margin-top: -6px; }
+.seo-block .faq { margin-top: 8px; }
 
 /* —— CTA band —— */
 .pricing-tease {
