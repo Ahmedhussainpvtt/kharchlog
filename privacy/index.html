@@ -64,7 +64,7 @@
       <ul>
         <li><strong>Google account email</strong> — used only to sign you in and connect to your Google Drive/Sheets.</li>
         <li><strong>Expense data you enter</strong> — amounts, categories, payment modes, comments, person name, salary keyword.</li>
-        <li><strong>SMS content (for auto-capture)</strong> — SMS permission is required if you want the App to automatically capture bank/UPI transactions from messages on your device. The App reads relevant <em>new</em> messages locally to detect amounts and payees. We do <strong>not</strong> upload SMS to a Kharch Log server; matched details are written into <em>your</em> Google Sheet only. If you prefer not to grant SMS, you can still add expenses manually or by voice.</li>
+        <li><strong>SMS content (for auto-capture)</strong> — SMS permission is <strong>required</strong> so the App can automatically capture bank/UPI transactions from messages on your device. The App reads relevant <em>new</em> messages locally to detect amounts and payees. We do <strong>not</strong> upload SMS to a Kharch Log server; matched details are written into <em>your</em> Google Sheet only.</li>
         <li><strong>Google Drive / Sheets files created by the App</strong> — a folder named “Kharch Log” and a spreadsheet inside it. Your expense ledger is linked directly to this sheet under your Google account.</li>
       </ul>
 
@@ -90,7 +90,7 @@
 
       <h2>6. Permissions</h2>
       <ul>
-        <li><strong>SMS</strong> — needed for automatic capture from bank/UPI messages. Without it, auto-capture is off; manual entry, voice add, reports, and Google Sheets sync still work. You can revoke SMS later in Android settings.</li>
+        <li><strong>SMS</strong> — required for automatic capture from bank/UPI messages. Manual entry, voice add, reports, and Google Sheets sync work alongside SMS capture. You can revoke SMS later in Android settings (auto-capture will stop).</li>
         <li><strong>Battery / restricted settings</strong> — optional; helps SMS detection stay reliable on some phones.</li>
         <li><strong>Internet</strong> — required for Google Sign-In and sheet sync.</li>
         <li><strong>Microphone</strong> — only if you use voice add; processed for speech-to-text on device/OS services you already use.</li>

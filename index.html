@@ -25,7 +25,7 @@
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Kharch Log" />
   <meta property="og:title" content="Kharch Log — Free Expense Tracker for Android" />
-  <meta property="og:description" content="Track daily spending and income on Android. Optional UPI/bank SMS detect. Your data stays in your Google Sheet." />
+  <meta property="og:description" content="Track daily spending and income on Android. UPI/bank SMS auto-capture. Your data stays in your Google Sheet." />
   <meta property="og:url" content="https://kharchlog.in/" />
   <meta property="og:image" content="https://kharchlog.in/og-image.jpg" />
   <meta property="og:image:type" content="image/jpeg" />
@@ -49,7 +49,7 @@
         "@id": "https://kharchlog.in/#website",
         "url": "https://kharchlog.in/",
         "name": "Kharch Log",
-        "description": "Free Android expense tracker with Google Sheets sync and optional UPI/bank SMS auto-detect.",
+        "description": "Android expense tracker with Google Sheets sync and UPI/bank SMS auto-detect.",
         "inLanguage": "en-IN",
         "publisher": { "@id": "https://kharchlog.in/#organization" }
       },
@@ -75,10 +75,10 @@
         "applicationCategory": "FinanceApplication",
         "applicationSubCategory": "Expense Tracker",
         "operatingSystem": "Android",
-        "description": "Free Android expense tracker that logs daily spending and income, optionally auto-detects bank/UPI SMS, and syncs to your own Google Sheet.",
+        "description": "Android expense tracker that logs daily spending and income, auto-detects bank/UPI SMS, and syncs to your own Google Sheet.",
         "featureList": [
           "Manual expense and income entry",
-          "Optional UPI and bank SMS auto-detect",
+          "UPI and bank SMS auto-detect",
           "Google Sheets sync in your Drive",
           "Needs-review inbox for unclear SMS",
           "Categories, payment modes, payee, and notes",
@@ -136,7 +136,7 @@
             "name": "Can it read UPI and bank SMS?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Optionally. If you grant SMS permission, Kharch Log detects common Indian bank and UPI debit/credit messages on your phone. Unclear messages go to a review inbox for you to approve or reject."
+              "text": "Yes. Kharch Log needs SMS permission to detect common Indian bank and UPI debit/credit messages on your phone. Unclear messages go to a review inbox for you to approve or reject."
             }
           },
           {
@@ -144,7 +144,7 @@
             "name": "Do I need SMS permission?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Yes — SMS permission is required if you want automatic capture from bank and UPI messages. If you prefer not to grant it, you can still add expenses manually or by voice, and use reports and Google Sheets sync as usual."
+              "text": "Yes. SMS permission is required so Kharch Log can auto-capture bank and UPI payment messages on your device."
             }
           },
           {
@@ -152,7 +152,7 @@
             "name": "Is my expense data private?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Kharch Log does not store your expense ledger on our servers. Data syncs directly to your Google Sheet under your account. SMS permission is needed for automatic capture from bank/UPI messages; without it you can still add expenses manually or by voice. See the Privacy Policy for Google Sign-In and SMS details."
+              "text": "Kharch Log does not store your expense ledger on our servers. Data syncs directly to your Google Sheet under your account. SMS is read on-device for auto-capture. See the Privacy Policy for Google Sign-In and SMS details."
             }
           },
           {
@@ -207,7 +207,7 @@
         <h1 id="hero-brand" class="hero__brand">Kharch Log</h1>
         <p class="hero__lead">
           The best easy expense tracker for Android — <strong>super simple setup</strong>, <strong>super easy to use</strong>,
-          optional UPI/bank SMS, and every rupee in <strong>your</strong> Google Sheet. You won’t find this combo anywhere else.
+          UPI/bank SMS auto-capture, and every rupee in <strong>your</strong> Google Sheet. You won’t find this combo anywhere else.
         </p>
         <div class="hero__actions">
           <p class="launch-soon" role="status">Will be launching soon</p>
@@ -241,7 +241,7 @@
         </article>
         <article class="feature">
           <h3>UPI &amp; bank SMS</h3>
-          <p>Optional SMS permission parses common Indian debit and credit messages. You stay in control of approvals.</p>
+          <p>SMS permission is required to parse common Indian debit and credit messages. You stay in control of approvals in the review inbox.</p>
         </article>
         <article class="feature">
           <h3>Needs-review inbox</h3>
@@ -290,7 +290,7 @@
         <div>
           <p class="showcase__kicker">Feature</p>
           <h3>Bank & UPI <span class="accent">SMS auto-capture</span></h3>
-          <p class="showcase__lead">SMS permission powers automatic capture from debit and credit alerts. Prefer privacy? Skip SMS and log manually or by voice instead.</p>
+          <p class="showcase__lead">SMS permission is required for automatic capture from debit and credit alerts. Unclear messages go to the review inbox before they hit your Sheet.</p>
           <ul class="checklist"><li><span class="check-icon" aria-hidden="true">✓</span><span>Parse common bank and UPI debit/credit messages on-device</span></li>
 <li><span class="check-icon" aria-hidden="true">✓</span><span>Send unclear SMS to the needs-review inbox</span></li>
 <li><span class="check-icon" aria-hidden="true">✓</span><span>No Kharch Log server stores your SMS — matched rows go to your Sheet</span></li></ul>
@@ -372,7 +372,7 @@
 
     <section class="seo-block section" style="width:min(var(--max), calc(100% - 40px));margin:0 auto;">
       <h2>Free expense tracker &amp; personal finance logging</h2>
-      <p>Kharch Log is a free Android expense tracker for people who want a simple money book: log spending and income in any currency, optionally auto-capture from bank/UPI SMS, and keep every row in a Google Sheet you control. It sits between lightweight trackers (like Fast Budget / Lekhhaa) and spreadsheet ownership — without forcing enterprise expense-management complexity from tools such as Zoho Expense or Kredmint.</p>
+      <p>Kharch Log is an Android expense tracker for people who want a simple money book: log spending and income, auto-capture from bank/UPI SMS (SMS permission required), and keep every row in a Google Sheet you control. It sits between lightweight trackers (like Fast Budget / Lekhhaa) and spreadsheet ownership — without forcing enterprise expense-management complexity from tools such as Zoho Expense or Kredmint.</p>
       <h2>What you can track</h2>
       <ul>
         <li>Daily expenses and income (manual or voice)</li>
@@ -407,7 +407,7 @@
           <span class="steps__num" aria-hidden="true">3</span>
           <div>
             <h3>Log money your way</h3>
-            <p>Add manually, use voice, or turn on SMS detect. Review anything unclear, then sync.</p>
+            <p>Grant SMS for auto-capture, add manually or by voice when needed. Review anything unclear, then sync.</p>
           </div>
         </li>
       </ol>
@@ -425,7 +425,7 @@
         </li>
         <li>
           <strong>Multi-currency logging</strong>
-          <span>Log in rupees, dollars, or any currency you use. Optional SMS capture reads bank/UPI alerts when you allow it; otherwise add manually or by voice.</span>
+          <span>Log in rupees, dollars, or any currency you use. SMS permission powers bank/UPI auto-capture; you can still add cash or odd spends manually or by voice.</span>
         </li>
         <li>
           <strong>App speed + spreadsheet power</strong>
@@ -433,7 +433,7 @@
         </li>
         <li>
           <strong>Setup you’ll actually finish</strong>
-          <span>Sign in with Google, grant SMS if you want auto-capture — done. No bank passwords, no complicated onboarding you’ll abandon mid-way.</span>
+          <span>Sign in with Google, grant SMS for auto-capture — done. No bank passwords, no complicated onboarding you’ll abandon mid-way.</span>
         </li>
       </ul>
     </section>
@@ -473,15 +473,15 @@
         </details>
         <details>
           <summary>Can it read UPI and bank SMS?</summary>
-          <p>Optionally. Grant SMS permission and Kharch Log detects common Indian debit/credit messages. Unclear ones wait in the review inbox.</p>
+          <p>Yes. Grant SMS permission and Kharch Log detects common Indian debit/credit messages. Unclear ones wait in the review inbox.</p>
         </details>
         <details>
           <summary>Do I need SMS permission?</summary>
-          <p>Yes — SMS permission is required for automatic capture from bank and UPI messages. If you don’t want that, skip SMS and add expenses manually or by voice; reports and Google Sheets sync still work.</p>
+          <p>Yes — SMS permission is required for bank and UPI auto-capture. That is how Kharch Log reads payment alerts on your phone.</p>
         </details>
         <details>
           <summary>Is my expense data private?</summary>
-          <p>We don’t store your expense ledger on a Kharch Log server — entries sync directly to <em>your</em> Google Sheet. See the <a href="/privacy/">Privacy Policy</a> for Google Sign-In and SMS details. SMS permission is needed only for automatic capture; manual and voice entry work without it.</p>
+          <p>We don’t store your expense ledger on a Kharch Log server — entries sync directly to <em>your</em> Google Sheet. See the <a href="/privacy/">Privacy Policy</a> for Google Sign-In and SMS details. SMS is read on-device for auto-capture.</p>
         </details>
         <details>
           <summary>When can I download the app?</summary>

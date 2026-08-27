@@ -47,7 +47,7 @@
     <div class="page-hero section" style="width:min(var(--max), calc(100% - 40px));margin:0 auto;">
       <p class="crumbs"><a href="/">Home</a> / <a href="/features/">Features</a> / Bank & UPI SMS auto-capture</p>
       <h1>Bank & UPI SMS auto-capture</h1>
-      <p>SMS permission powers automatic capture from debit and credit alerts. Prefer privacy? Skip SMS and log manually or by voice instead.</p>
+      <p>SMS permission is required for automatic capture from debit and credit alerts. Unclear messages go to the review inbox before they hit your Sheet.</p>
     </div>
 
     <section class="showcase">
@@ -68,16 +68,16 @@
 <div class="feature-quick-answer"><p><strong>Quick answer:</strong> Kharch Log reads bank and UPI debit/credit SMS on your Android phone — on-device — and syncs matched expenses to your Google Sheet. No net-banking login required.</p></div>
 <div class="section__head">
 <h2>Automatic tracking without sharing bank passwords</h2>
-<p><a href="https://finart.app/expense-tracker-app-india/" rel="noopener">FinArt</a> describes Indian finance as UPI, cards, wallets, EMIs, and bank SMS — not one clean feed. Kharch Log is built for that reality: optional SMS permission turns payment alerts into ledger rows while keeping credentials out of the workflow, similar to FinArt’s “no bank login” positioning.</p>
+<p><a href="https://finart.app/expense-tracker-app-india/" rel="noopener">FinArt</a> describes Indian finance as UPI, cards, wallets, EMIs, and bank SMS — not one clean feed. Kharch Log is built for that reality: SMS permission is required so payment alerts become ledger rows while keeping bank credentials out of the workflow, similar to FinArt’s “no bank login” positioning.</p>
 </div>
 <div class="section__head">
 <h2>How SMS auto-capture works</h2>
-<ol class="steps-inline"><li><div><strong>Install & sign in</strong>Link your Google account so parsed expenses have somewhere durable to land — your Kharch Log Sheet in Drive.</div></li><li><div><strong>Grant SMS permission (optional)</strong>Required only for automatic capture. Skip it and use manual or voice entry — the app is fully usable without SMS access.</div></li><li><div><strong>Payment SMS arrives</strong>Debit and credit alerts from banks and UPI apps are parsed on-device for amount, merchant hint, and date.</div></li><li><div><strong>Review or auto-save</strong>High-confidence matches sync to Sheets. Unclear messages go to the <a href="/features/review-inbox/">review inbox</a> — never silently invent spending.</div></li></ol>
+<ol class="steps-inline"><li><div><strong>Install & sign in</strong>Link your Google account so parsed expenses have somewhere durable to land — your Kharch Log Sheet in Drive.</div></li><li><div><strong>Grant SMS permission</strong>Required. Kharch Log needs SMS access to read bank and UPI payment alerts on your phone.</div></li><li><div><strong>Payment SMS arrives</strong>Debit and credit alerts from banks and UPI apps are parsed on-device for amount, merchant hint, and date.</div></li><li><div><strong>Review or auto-save</strong>High-confidence matches sync to Sheets. Unclear messages go to the <a href="/features/review-inbox/">review inbox</a> — never silently invent spending.</div></li></ol>
 </div>
 <div class="section__head feature-deep">
 <h2>Why SMS capture fits Indian spending patterns</h2>
 <p>FinArt tracks UPI, cards, wallets, and subscriptions from alerts. Kharch Log starts with SMS — the alert almost every Indian payment still generates — and pairs it with manual/voice for cash or apps that do not SMS.</p>
-<h3>Reduce manual effort</h3><p>FinArt’s pitch: turn daily transaction noise into monthly decisions. SMS capture removes retyping for every Swiggy or petrol SMS.</p><h3>Privacy you control</h3><p>SMS permission is explicit and revocable in Android settings. Prefer not to grant it? Manual and voice still sync to your Sheet.</p>
+<h3>Reduce manual effort</h3><p>FinArt’s pitch: turn daily transaction noise into monthly decisions. SMS capture removes retyping for every Swiggy or petrol SMS.</p><h3>Privacy you control</h3><p>SMS is read on-device for capture. Matched rows sync to your Google Sheet — Kharch Log does not keep an SMS vault on its servers.</p>
 <div class="feature-detail__grid"><div class="feature-detail__card"><h3>UPI &amp; card alerts</h3><p>PhonePe, GPay, Paytm, HDFC, SBI, and other common formats — capture without opening five apps.</p></div><div class="feature-detail__card"><h3>No bank login</h3><p>Unlike Fast Budget’s optional bank sync, Kharch Log never asks for net-banking passwords.</p></div><div class="feature-detail__card"><h3>On-device parsing</h3><p>SMS text is processed on your phone. Kharch Log does not operate a server-side SMS vault.</p></div><div class="feature-detail__card"><h3>Credit + debit</h3><p>Salary credits, refunds, and reversals can be captured when the SMS pattern matches.</p></div><div class="feature-detail__card"><h3>Works with any currency</h3><p>Log amounts as they appear in the message — Kharch Log does not force currency conversion.</p></div><div class="feature-detail__card"><h3>Pair with manual entry</h3><p>Cash, UPI without SMS, or international spends — add manually; SMS handles the digital majority.</p></div></div>
 </div>
 <div class="section__head">
@@ -91,7 +91,7 @@
 </div>
 <div class="section__head">
 <h2>Common questions</h2>
-<div class="faq-mini"><details><summary>Is SMS permission required?</summary><p>Only for automatic capture. Manual and voice entry work without it.</p></details><details><summary>Does Kharch Log upload my SMS to a server?</summary><p>No. Parsing happens on-device; matched rows sync to your Google Sheet.</p></details><details><summary>Will every bank SMS parse perfectly?</summary><p>No — formats vary. Unclear items wait in the review inbox for your decision.</p></details><details><summary>Does this work on iPhone?</summary><p>Kharch Log is Android-only. iOS restricts SMS access differently — use manual/voice entry.</p></details><details><summary>Can I disable SMS capture later?</summary><p>Yes — revoke SMS permission in Android settings and continue logging manually.</p></details><details><summary>What about OTP or promo SMS?</summary><p>Non-transaction messages should land in the review inbox or be ignored — not your expense Sheet.</p></details></div>
+<div class="faq-mini"><details><summary>Is SMS permission required?</summary><p>Yes. SMS permission is required so Kharch Log can auto-capture bank and UPI payment messages.</p></details><details><summary>Does Kharch Log upload my SMS to a server?</summary><p>No. Parsing happens on-device; matched rows sync to your Google Sheet.</p></details><details><summary>Will every bank SMS parse perfectly?</summary><p>No — formats vary. Unclear items wait in the review inbox for your decision.</p></details><details><summary>Does this work on iPhone?</summary><p>Kharch Log is Android-only. iOS restricts SMS access differently — use manual/voice entry.</p></details><details><summary>Can I disable SMS capture later?</summary><p>Yes — revoke SMS permission in Android settings and continue logging manually.</p></details><details><summary>What about OTP or promo SMS?</summary><p>Non-transaction messages should land in the review inbox or be ignored — not your expense Sheet.</p></details></div>
 </div>
 <div class="section__head">
 <h2>Explore related features</h2>
