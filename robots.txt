@@ -1,4 +1,8 @@
 User-agent: *
 Allow: /
 
+# Thin / utility pages — keep crawl budget on the product home page
+Disallow: /pay/
+Disallow: /pay/success.html
+
 Sitemap: https://kharchlog.in/sitemap.xml

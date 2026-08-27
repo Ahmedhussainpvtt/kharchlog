@@ -1,6 +1,6 @@
 {
   "versionCode": 156,
   "versionName": "3.2.56",
-  "apkUrl": "https://raw.githubusercontent.com/Ahmedhussainpvtt/kharchlog/refs/heads/main/KharchLog.apk",
-  "notes": "Padded launcher icon on brand gradient; remove white scroll fade on transaction details."
+  "apkUrl": "https://raw.githubusercontent.com/Ahmedhussainpvtt/kharchlog/main/KharchLog.apk",
+  "notes": "Voice assistant, native permissions, UI fixes, in-app updates"
 }
