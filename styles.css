@@ -570,6 +570,25 @@ a:hover { text-decoration: underline; }
 .pricing-tease .launch-soon {
   margin: 0 auto;
 }
+.pricing-tease__hook--lead {
+  font-size: 1.12rem;
+  color: var(--text);
+  font-weight: 500;
+}
+.pricing-tease__note {
+  margin: 16px 0 0;
+  font-size: 0.95rem;
+  color: var(--muted);
+}
+.pricing-tease__note a {
+  font-weight: 700;
+  text-decoration: none;
+}
+.pricing-tease__note a:hover { text-decoration: underline; }
+.pricing-tease--page {
+  margin-top: 0;
+  margin-bottom: 56px;
+}
 
 .cta-band {
   margin: 28px auto 56px;
