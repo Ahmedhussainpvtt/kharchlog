@@ -1,49 +1,6 @@
 {
-  "updated": "2026-08-30",
+  "updated": "2026-08-26",
   "posts": [
-    {
-      "slug": "upi-expense-tracker-stop-losing-small-payments",
-      "title": "UPI expense tracker: stop losing small payments",
-      "description": "Small UPI payments add up fast. Learn how a UPI expense tracker and bank SMS auto-capture help you see the full picture without typing every tap.",
-      "date": "2026-08-30",
-      "url": "/blog/upi-expense-tracker-stop-losing-small-payments/",
-      "tags": [
-        "UPI expense tracker",
-        "bank SMS expense tracker",
-        "track UPI spending",
-        "automatic expense tracking"
-      ],
-      "image": "/images/blog/upi-expense-tracker-stop-losing-small-payments.jpg"
-    },
-    {
-      "slug": "how-to-track-your-spending-every-week",
-      "title": "How to track your spending every week (simple system)",
-      "description": "A simple weekly system to track your spending: capture daily, categorize, review once a week, and adjust. Built for busy people who abandon complex budgets.",
-      "date": "2026-08-29",
-      "url": "/blog/how-to-track-your-spending-every-week/",
-      "tags": [
-        "track your spending",
-        "weekly budget",
-        "spending tracker",
-        "budget tips",
-        "daily expense tracker"
-      ],
-      "image": "/images/blog/how-to-track-your-spending-every-week.jpg"
-    },
-    {
-      "slug": "best-free-expense-tracker-app-android",
-      "title": "Best free expense tracker app for Android: what to look for",
-      "description": "A practical buyer\u2019s guide to the best free expense tracker app for Android \u2014 SMS capture, Google Sheets sync, categories, privacy, and daily logging.",
-      "date": "2026-08-28",
-      "url": "/blog/best-free-expense-tracker-app-android/",
-      "tags": [
-        "best free expense tracker app",
-        "free expense tracker android",
-        "expense tracker app",
-        "personal finance app"
-      ],
-      "image": "/images/blog/best-free-expense-tracker-app-android.jpg"
-    },
     {
       "slug": "how-to-track-expenses-automatically-with-sms",
       "title": "How to track expenses automatically with bank SMS",
@@ -54,8 +11,7 @@
         "sms expense tracker",
         "automatic expense tracking",
         "android"
-      ],
-      "image": "/images/blog/how-to-track-expenses-automatically-with-sms.jpg"
+      ]
     },
     {
       "slug": "google-sheets-vs-budget-apps",
@@ -67,8 +23,7 @@
         "google sheets expense tracker",
         "budget app",
         "personal finance"
-      ],
-      "image": "/images/blog/google-sheets-vs-budget-apps.jpg"
+      ]
     },
     {
       "slug": "daily-expense-tracker-habits",
@@ -80,8 +35,7 @@
         "daily expense tracker",
         "spending habits",
         "budget tips"
-      ],
-      "image": "/images/blog/daily-expense-tracker-habits.jpg"
+      ]
     }
   ]
 }

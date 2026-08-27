@@ -32,6 +32,7 @@
         <a href="/features/">All features</a>
         <a href="/blog/">Blog</a>
         <a href="/#faq">FAQ</a>
+        <a href="/contact/">Contact</a>
         <a href="/privacy/">Privacy</a>
         <span class="nav-cta nav-cta--soon" aria-disabled="true">Launching soon</span>
       </nav>
@@ -46,7 +47,7 @@
     </div>
 
     <section class="showcase">
-      <div class="showcase__grid section" style="width:min(var(--max), calc(100% - 40px));margin:0 auto;">
+      <div class="showcase__grid showcase__inner" style="width:min(var(--max), calc(100% - 40px));margin:0 auto;">
         <div>
           <ul class="checklist">
             <li><span class="check-icon" aria-hidden="true">✓</span><span>See pending SMS-detected transactions in one inbox</span></li><li><span class="check-icon" aria-hidden="true">✓</span><span>Approve clean matches; reject junk or duplicates</span></li><li><span class="check-icon" aria-hidden="true">✓</span><span>Edit category, payee, or amount before sync</span></li>
@@ -59,10 +60,38 @@
       </div>
     </section>
     
-<section class="section"><div class="section__head">
+<div class="feature-detail section">
+<div class="section__head">
 <h2>Human-in-the-loop expense control</h2>
-<p>Business tools like Kredmint emphasize approval workflows. Kharch Log brings a lightweight personal version: you stay the approver for anything the SMS parser is unsure about.</p>
-</div></section>
+<p>Enterprise tools like Kredmint use approval workflows so finance teams catch mistakes before reimbursement. Kharch Log brings a lightweight version to personal tracking: auto-detected SMS never silently becomes a permanent expense until you say so.</p>
+</div>
+<div class="section__head">
+<h2>How the review inbox works</h2>
+<ol class="steps-inline">
+<li><div><strong>SMS parser flags uncertainty</strong>Promotional texts, OTPs, balance enquiries, and ambiguous debits stay out of your Sheet.</div></li>
+<li><div><strong>Review pending items</strong>Open the inbox to see amount, payee hint, and original SMS snippet side by side.</div></li>
+<li><div><strong>Approve, reject, or edit</strong>One tap to accept a clean match; reject junk; or fix category and amount before sync.</div></li>
+</ol>
+</div>
+<div class="section__head">
+<h2>Why a review step matters</h2>
+<div class="feature-detail__grid">
+<div class="feature-detail__card"><h3>No phantom expenses</h3><p>Failed parses do not inflate your monthly total — you decide what counts.</p></div>
+<div class="feature-detail__card"><h3>Duplicate protection</h3><p>Reject repeats when the same UPI alert was already logged manually.</p></div>
+<div class="feature-detail__card"><h3>Category cleanup</h3><p>Fix “Swiggy” vs “Food” before the row hits Sheets — reports stay accurate.</p></div>
+<div class="feature-detail__card"><h3>Trust in automation</h3><p>Automation saves time; approval keeps you confident in the numbers.</p></div>
+</div>
+</div>
+<div class="section__head">
+<h2>Common questions</h2>
+<div class="faq-mini">
+<details><summary>Can I approve from the transaction detail screen?</summary><p>Yes — pending SMS-detected items show approve and reject actions until you decide.</p></details>
+<details><summary>What happens to rejected SMS?</summary><p>They are dismissed and not written to your Google Sheet.</p></details>
+<details><summary>Do manual entries use the inbox?</summary><p>No — only auto-captured SMS that need confirmation appear there.</p></details>
+</div>
+<p><a href="/features/sms-auto-capture/">SMS auto-capture</a> · <a href="/features/google-sheets-sync/">Google Sheets sync</a> · <a href="/contact/">Contact us</a></p>
+</div>
+</div>
 
 
   </main>
@@ -77,6 +106,7 @@
         <a href="/">Home</a>
         <a href="/features/">Features</a>
         <a href="/blog/">Blog</a>
+        <a href="/contact/">Contact</a>
         <a href="/privacy/">Privacy Policy</a>
         <a href="/terms/">Terms of Service</a>
         <a href="mailto:kharchlog@gmail.com">Support</a>

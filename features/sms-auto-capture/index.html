@@ -32,6 +32,7 @@
         <a href="/features/">All features</a>
         <a href="/blog/">Blog</a>
         <a href="/#faq">FAQ</a>
+        <a href="/contact/">Contact</a>
         <a href="/privacy/">Privacy</a>
         <span class="nav-cta nav-cta--soon" aria-disabled="true">Launching soon</span>
       </nav>
@@ -46,7 +47,7 @@
     </div>
 
     <section class="showcase">
-      <div class="showcase__grid section" style="width:min(var(--max), calc(100% - 40px));margin:0 auto;">
+      <div class="showcase__grid showcase__inner" style="width:min(var(--max), calc(100% - 40px));margin:0 auto;">
         <div>
           <ul class="checklist">
             <li><span class="check-icon" aria-hidden="true">✓</span><span>Parse common bank and UPI debit/credit messages on-device</span></li><li><span class="check-icon" aria-hidden="true">✓</span><span>Send unclear SMS to the needs-review inbox</span></li><li><span class="check-icon" aria-hidden="true">✓</span><span>No Kharch Log server stores your SMS — matched rows go to your Sheet</span></li>
@@ -59,18 +60,38 @@
       </div>
     </section>
     
-<section class="section"><div class="section__head">
+<div class="feature-detail section">
+<div class="section__head">
 <h2>Automatic expense tracking without a bank login</h2>
-<p>Unlike Monarch-style bank sync, Kharch Log does not connect to your bank account. It optionally reads payment SMS already on your phone — similar in spirit to “track spending from the notifications you already get.” Works with any currency because the app logs amounts, not FX rates.</p>
+<p>Many finance apps ask for net-banking credentials or paid bank sync. Kharch Log takes a different path: it reads payment SMS already on your Android phone — the same debit alerts from UPI, cards, and banks you get after every tap or swipe. Parsing happens on-device; matched rows sync to your Google Sheet.</p>
 </div>
-<div class="seo-block">
-<h2>Related searches</h2>
-<ul>
-<li>UPI expense tracker / bank SMS expense tracker</li>
-<li>automatic expense tracking Android</li>
-<li>expense tracker that reads SMS</li>
-</ul>
-</div></section>
+<div class="section__head">
+<h2>How SMS auto-capture works</h2>
+<ol class="steps-inline">
+<li><div><strong>Grant SMS permission</strong>Only needed if you want automatic capture. Skip it and log manually — the app still works.</div></li>
+<li><div><strong>New payment SMS arrives</strong>Kharch Log listens for common bank/UPI debit and credit patterns — amount, merchant, date extracted locally.</div></li>
+<li><div><strong>Clear match → Sheet</strong>High-confidence parses become expense rows. Unclear messages go to the <a href="/features/review-inbox/">review inbox</a> instead of silently logging wrong data.</div></li>
+</ol>
+</div>
+<div class="section__head">
+<h2>Why SMS-based tracking works in India</h2>
+<div class="feature-detail__grid">
+<div class="feature-detail__card"><h3>UPI &amp; card alerts</h3><p>PhonePe, GPay, Paytm, and bank SMS formats are common — no need to open each app to copy amounts.</p></div>
+<div class="feature-detail__card"><h3>On-device parsing</h3><p>SMS text is processed on your phone. Kharch Log does not upload message content to its own servers.</p></div>
+<div class="feature-detail__card"><h3>Your Sheet, your data</h3><p>Like ExpenseTracker.io and Chat2Sheet, the ledger lives in Google Sheets you control — export, pivot, share.</p></div>
+<div class="feature-detail__card"><h3>Privacy choice</h3><p>No SMS permission? Use manual or voice entry only. You stay in control of what the app can read.</p></div>
+</div>
+</div>
+<div class="section__head">
+<h2>Common questions</h2>
+<div class="faq-mini">
+<details><summary>Is SMS permission required?</summary><p>Only for automatic capture. Manual and voice entry work without it.</p></details>
+<details><summary>Does Kharch Log store my SMS?</summary><p>No server-side SMS vault. Parsed expenses sync to your Google Sheet; unclear items wait in the review inbox on your device.</p></details>
+<details><summary>Will every bank SMS parse perfectly?</summary><p>Not always — that is why the review inbox exists. You approve anything the parser is unsure about.</p></details>
+</div>
+<p><a href="/features/review-inbox/">Review inbox</a> · <a href="/privacy/">Privacy policy</a> · <a href="/contact/">Contact us</a></p>
+</div>
+</div>
 
 
   </main>
@@ -85,6 +106,7 @@
         <a href="/">Home</a>
         <a href="/features/">Features</a>
         <a href="/blog/">Blog</a>
+        <a href="/contact/">Contact</a>
         <a href="/privacy/">Privacy Policy</a>
         <a href="/terms/">Terms of Service</a>
         <a href="mailto:kharchlog@gmail.com">Support</a>
