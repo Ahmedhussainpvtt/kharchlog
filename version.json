@@ -1,6 +1,6 @@
 {
-  "versionCode": 157,
-  "versionName": "3.2.57",
+  "versionCode": 158,
+  "versionName": "3.2.58",
   "apkUrl": "https://raw.githubusercontent.com/Ahmedhussainpvtt/kharchlog/refs/heads/main/KharchLog.apk",
-  "notes": "Updated app icon"
+  "notes": "Logo padding + consistent brand tile"
 }
