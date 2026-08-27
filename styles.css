@@ -787,24 +787,39 @@ footer:not(.site-footer) {
   gap: 12px;
 }
 .checklist li {
-  display: grid;
-  grid-template-columns: auto 1fr;
+  display: flex;
+  align-items: flex-start;
   gap: 12px;
-  align-items: start;
   color: var(--text);
   font-weight: 500;
+  line-height: 1.5;
+}
+.checklist li::before,
+.checklist li::after {
+  content: none;
+  display: none;
+}
+.checklist li > span:last-child {
+  flex: 1;
+  min-width: 0;
+}
+.showcase .checklist,
+.showcase .checklist li {
+  direction: ltr;
 }
 .check-icon {
+  flex: 0 0 22px;
   width: 22px;
   height: 22px;
   border-radius: 50%;
-  flex-shrink: 0;
   background: linear-gradient(315deg, var(--primary), var(--secondary));
-  display: grid;
-  place-items: center;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   color: #fff;
   font-size: 12px;
   font-weight: 700;
+  line-height: 1;
   margin-top: 2px;
 }
 .showcase__media {
