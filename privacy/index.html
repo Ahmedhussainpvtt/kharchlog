@@ -17,22 +17,44 @@
   <meta property="og:type" content="website" />
 </head>
 <body>
-  <div class="wrap">
-    <header>
-      <img src="/logo.png" alt="Kharch Log logo" width="56" height="56" />
-      <div class="brand">Kharch Log</div>
-    </header>
+  <a class="skip-link" href="#main">Skip to content</a>
 
-    <nav aria-label="Main">
-      <a href="/">Home</a>
-      <a href="/privacy/">Privacy Policy</a>
-      <a href="/terms/">Terms of Service</a>
-    </nav>
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a class="brand-lockup" href="/" aria-label="Kharch Log home">
+        <img src="/logo.png" alt="" width="40" height="40" />
+        <span class="brand-lockup__name">Kharch Log</span>
+      </a>
+      <nav class="site-nav" aria-label="Primary">
+        <div class="nav-dropdown">
+          <a href="/features/" class="nav-dropdown__trigger" aria-haspopup="true">Features</a>
+          <div class="nav-dropdown__menu" role="menu">
+            <a href="/features/" role="menuitem">All features</a>
+            <a href="/features/manual-voice-entry/" role="menuitem">Manual &amp; voice expense entry</a>
+            <a href="/features/sms-auto-capture/" role="menuitem">Bank &amp; UPI SMS auto-capture</a>
+            <a href="/features/review-inbox/" role="menuitem">Needs-review inbox for unclear SMS</a>
+            <a href="/features/google-sheets-sync/" role="menuitem">Google Sheets expense sync</a>
+            <a href="/features/reports-insights/" role="menuitem">Today view &amp; spending reports</a>
+            <a href="/features/share-invoice/" role="menuitem">Share expenses &amp; invoice PDF</a>
+          </div>
+        </div>
+        <a href="/blog/">Blog</a>
+        <a href="/#faq">FAQ</a>
+        <a href="/contact/">Contact</a>
+        <a href="/privacy/">Privacy</a>
+        <span class="nav-cta nav-cta--soon" aria-disabled="true">Launching soon</span>
+      </nav>
+    </div>
+  </header>
 
-    <article>
+  <main id="main">
+    <div class="page-hero section" style="width:min(var(--max), calc(100% - 40px));margin:0 auto;">
+      <p class="crumbs"><a href="/">Home</a> / Privacy Policy</p>
       <h1>Privacy Policy</h1>
       <p class="meta">Last updated: 27 August 2026 · Contact: <a href="mailto:kharchlog@gmail.com">kharchlog@gmail.com</a></p>
+    </div>
 
+    <article class="legal-page__content">
       <h2>1. Who we are</h2>
       <p>
         Kharch Log (“the App”) is a personal expense-tracking Android application.
@@ -91,7 +113,7 @@
       <h2>10. Contact</h2>
       <p>Questions: <a href="mailto:kharchlog@gmail.com">kharchlog@gmail.com</a></p>
     </article>
-  </div>
+  </main>
 
   <footer class="site-footer">
     <div class="site-footer__inner">
@@ -103,6 +125,7 @@
         <a href="/">Home</a>
         <a href="/features/">Features</a>
         <a href="/blog/">Blog</a>
+        <a href="/contact/">Contact</a>
         <a href="/privacy/">Privacy Policy</a>
         <a href="/terms/">Terms of Service</a>
         <a href="mailto:kharchlog@gmail.com">Support</a>
