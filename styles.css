@@ -284,12 +284,14 @@ a:hover { text-decoration: underline; }
 .hero__brand {
   margin: 0 0 14px;
   font-size: clamp(2.6rem, 6vw, 4rem);
-  line-height: 1.05;
+  line-height: 1.18;
   letter-spacing: -0.04em;
   font-weight: 700;
+  padding-bottom: 0.08em;
   background: linear-gradient(315deg, var(--primary) 35%, var(--secondary));
   -webkit-background-clip: text;
   background-clip: text;
+  -webkit-text-fill-color: transparent;
   color: transparent;
 }
 
