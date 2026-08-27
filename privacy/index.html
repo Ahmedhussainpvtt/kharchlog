@@ -31,7 +31,7 @@
 
     <article>
       <h1>Privacy Policy</h1>
-      <p class="meta">Last updated: 24 August 2026 · Contact: <a href="mailto:kharchlog@gmail.com">kharchlog@gmail.com</a></p>
+      <p class="meta">Last updated: 27 August 2026 · Contact: <a href="mailto:kharchlog@gmail.com">kharchlog@gmail.com</a></p>
 
       <h2>1. Who we are</h2>
       <p>
@@ -43,8 +43,8 @@
       <ul>
         <li><strong>Google account email</strong> — used only to sign you in and connect to your Google Drive/Sheets.</li>
         <li><strong>Expense data you enter</strong> — amounts, categories, payment modes, comments, person name, salary keyword.</li>
-        <li><strong>SMS content (optional)</strong> — if you grant SMS permission, the App reads <em>new</em> bank/UPI messages on your device to detect amounts. SMS text is not uploaded to our servers; relevant details may be saved into <em>your</em> Google Sheet.</li>
-        <li><strong>Google Drive / Sheets files created by the App</strong> — a folder named “Kharch Log” and a spreadsheet inside it, used to store your expenses.</li>
+        <li><strong>SMS content (for auto-capture)</strong> — SMS permission is required if you want the App to automatically capture bank/UPI transactions from messages on your device. The App reads relevant <em>new</em> messages locally to detect amounts and payees. We do <strong>not</strong> upload SMS to a Kharch Log server; matched details are written into <em>your</em> Google Sheet only. If you prefer not to grant SMS, you can still add expenses manually or by voice.</li>
+        <li><strong>Google Drive / Sheets files created by the App</strong> — a folder named “Kharch Log” and a spreadsheet inside it. Your expense ledger is linked directly to this sheet under your Google account.</li>
       </ul>
 
       <h2>3. How Google access works</h2>
@@ -56,9 +56,9 @@
 
       <h2>4. Where data is stored</h2>
       <ul>
-        <li>Expense rows are stored in <strong>your</strong> Google Sheet under your Google account.</li>
+        <li>Expense rows are stored in <strong>your</strong> Google Sheet under your Google account — not on a Kharch Log server.</li>
+        <li>We do <strong>not</strong> operate a Kharch Log backend that collects, hosts, or sells your expense data. Sync goes from the App on your phone straight to Google Sheets/Drive.</li>
         <li>Small local preferences (e.g. signed-in email, linked sheet id, profile fields) are stored on your device.</li>
-        <li>We do <strong>not</strong> operate a Kharch Log backend that collects or sells your expense data.</li>
       </ul>
 
       <h2>5. Sharing</h2>
@@ -69,9 +69,10 @@
 
       <h2>6. Permissions</h2>
       <ul>
-        <li><strong>SMS</strong> — optional; for auto-detecting transactions. You can deny or revoke it and still use manual entry.</li>
+        <li><strong>SMS</strong> — needed for automatic capture from bank/UPI messages. Without it, auto-capture is off; manual entry, voice add, reports, and Google Sheets sync still work. You can revoke SMS later in Android settings.</li>
         <li><strong>Battery / restricted settings</strong> — optional; helps SMS detection stay reliable on some phones.</li>
         <li><strong>Internet</strong> — required for Google Sign-In and sheet sync.</li>
+        <li><strong>Microphone</strong> — only if you use voice add; processed for speech-to-text on device/OS services you already use.</li>
       </ul>
 
       <h2>7. Retention &amp; deletion</h2>
