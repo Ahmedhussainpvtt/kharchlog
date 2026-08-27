@@ -69,7 +69,7 @@
           '</a>'
         );
       }
-      fetch('/blog/api/posts.json')
+      fetch('/blog/posts.json')
         .then(function (r) { return r.json(); })
         .then(function (data) {
           if (!data || !data.posts || !data.posts.length) return;
