@@ -5,8 +5,8 @@
   --text: #eef3f8;
   --muted: #9db0c7;
   --accent: #2eae6b;
-  --primary: #2596BE;
-  --secondary: #10B981;
+  --primary: #0F2A43;
+  --secondary: #14B8A6;
   --line: rgba(255, 255, 255, 0.08);
   --max: 720px;
   --font: "Manrope", "Segoe UI", system-ui, sans-serif;
@@ -17,8 +17,8 @@
 html, body {
   margin: 0;
   padding: 0;
-  background: radial-gradient(1200px 600px at 20% -10%, #1a4f7c 0%, transparent 55%),
-              radial-gradient(900px 500px at 100% 0%, #145239 0%, transparent 45%),
+  background: radial-gradient(1200px 600px at 20% -10%, #152535 0%, transparent 55%),
+              radial-gradient(900px 500px at 100% 0%, #10484A 0%, transparent 45%),
               var(--bg);
   color: var(--text);
   font-family: var(--font);

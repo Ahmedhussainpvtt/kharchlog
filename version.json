@@ -1,6 +1,6 @@
 {
-  "versionCode": 131,
-  "versionName": "3.2.31",
+  "versionCode": 154,
+  "versionName": "3.2.54",
   "apkUrl": "https://raw.githubusercontent.com/Ahmedhussainpvtt/kharchlog/refs/heads/main/KharchLog.apk",
-  "notes": "Sliding gradients, income/expense arrows, safer period loading"
+  "notes": "Button shimmer on network CTAs, branded AppToast, voice save UI match, bordered Approve/Reject."
 }
