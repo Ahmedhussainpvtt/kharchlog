@@ -22,7 +22,12 @@
   </url>
   <url>
     <loc>https://kharchlog.in/pricing/</loc>
-    <lastmod>2026-08-26</lastmod>
+    <lastmod>2026-08-27</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kharchlog.in/faq/</loc>
+    <lastmod>2026-08-27</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
