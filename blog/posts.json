@@ -2,18 +2,6 @@
   "updated": "2026-08-27",
   "posts": [
     {
-      "slug": "stop-losing-upi-payments",
-      "title": "How to stop losing UPI payments",
-      "description": "Small UPI spends add up. A simple weekly habit that works.",
-      "date": "2026-08-27",
-      "url": "/blog/stop-losing-upi-payments/",
-      "image": "/images/blog/stop-losing-upi-payments.jpg",
-      "tags": [
-        "upi",
-        "habits"
-      ]
-    },
-    {
       "slug": "how-to-track-expenses-automatically-with-sms",
       "title": "How to track expenses automatically with bank SMS",
       "description": "Learn how SMS-based expense tracking works on Android, when you need SMS permission, and how Kharch Log keeps data in your Google Sheet.",
