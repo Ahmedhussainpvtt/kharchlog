@@ -2,13 +2,29 @@
   "updated": "2026-08-27",
   "posts": [
     {
+      "slug": "stop-losing-upi-payments",
+      "title": "How to stop losing UPI payments",
+      "description": "Small UPI spends add up. A simple weekly habit that works.",
+      "date": "2026-08-27",
+      "url": "/blog/stop-losing-upi-payments/",
+      "image": "/images/blog/stop-losing-upi-payments.jpg",
+      "tags": [
+        "upi",
+        "habits"
+      ]
+    },
+    {
       "slug": "how-to-track-expenses-automatically-with-sms",
       "title": "How to track expenses automatically with bank SMS",
       "description": "Learn how SMS-based expense tracking works on Android, when you need SMS permission, and how Kharch Log keeps data in your Google Sheet.",
       "date": "2026-08-27",
       "url": "/blog/how-to-track-expenses-automatically-with-sms/",
       "image": "/images/blog/how-to-track-expenses-automatically-with-sms.jpg",
-      "tags": ["sms expense tracker", "automatic expense tracking", "android"]
+      "tags": [
+        "sms expense tracker",
+        "automatic expense tracking",
+        "android"
+      ]
     },
     {
       "slug": "google-sheets-vs-budget-apps",
@@ -17,7 +33,11 @@
       "date": "2026-08-26",
       "url": "/blog/google-sheets-vs-budget-apps/",
       "image": "/images/blog/google-sheets-vs-budget-apps.jpg",
-      "tags": ["google sheets expense tracker", "budget app", "personal finance"]
+      "tags": [
+        "google sheets expense tracker",
+        "budget app",
+        "personal finance"
+      ]
     },
     {
       "slug": "daily-expense-tracker-habits",
@@ -26,7 +46,11 @@
       "date": "2026-08-25",
       "url": "/blog/daily-expense-tracker-habits/",
       "image": "/images/blog/daily-expense-tracker-habits.jpg",
-      "tags": ["daily expense tracker", "spending habits", "budget tips"]
+      "tags": [
+        "daily expense tracker",
+        "spending habits",
+        "budget tips"
+      ]
     },
     {
       "slug": "how-to-track-your-spending-every-week",
@@ -35,7 +59,10 @@
       "date": "2026-08-24",
       "url": "/blog/how-to-track-your-spending-every-week/",
       "image": "/images/blog/how-to-track-your-spending-every-week.jpg",
-      "tags": ["weekly spending", "expense review"]
+      "tags": [
+        "weekly spending",
+        "expense review"
+      ]
     },
     {
       "slug": "upi-expense-tracker-stop-losing-small-payments",
@@ -44,7 +71,10 @@
       "date": "2026-08-23",
       "url": "/blog/upi-expense-tracker-stop-losing-small-payments/",
       "image": "/images/blog/upi-expense-tracker-stop-losing-small-payments.jpg",
-      "tags": ["upi", "sms"]
+      "tags": [
+        "upi",
+        "sms"
+      ]
     },
     {
       "slug": "best-free-expense-tracker-app-android",
@@ -53,7 +83,10 @@
       "date": "2026-08-22",
       "url": "/blog/best-free-expense-tracker-app-android/",
       "image": "/images/blog/best-free-expense-tracker-app-android.jpg",
-      "tags": ["android", "expense tracker"]
+      "tags": [
+        "android",
+        "expense tracker"
+      ]
     }
   ]
 }
