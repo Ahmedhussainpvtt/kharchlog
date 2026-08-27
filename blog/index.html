@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Kharch Log Blog — Expense Tracking Tips & Guides</title>
+  <meta name="description" content="Guides on SMS expense tracking, Google Sheets ledgers, and daily spending habits from Kharch Log." />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
+  <link rel="canonical" href="https://kharchlog.in/blog/" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/styles.css" />
+  <link rel="icon" href="/logo.png" />
+  <meta property="og:title" content="Kharch Log Blog — Expense Tracking Tips & Guides" />
+  <meta property="og:description" content="Guides on SMS expense tracking, Google Sheets ledgers, and daily spending habits from Kharch Log." />
+  <meta property="og:url" content="https://kharchlog.in/blog/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://kharchlog.in/og-image.jpg" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a class="brand-lockup" href="/" aria-label="Kharch Log home">
+        <img src="/logo.png" alt="" width="40" height="40" />
+        <span class="brand-lockup__name">Kharch Log</span>
+      </a>
+      <nav class="site-nav" aria-label="Primary">
+        <a href="/#features">Features</a>
+        <a href="/features/">All features</a>
+        <a href="/blog/">Blog</a>
+        <a href="/#faq">FAQ</a>
+        <a href="/privacy/">Privacy</a>
+        <span class="nav-cta nav-cta--soon" aria-disabled="true">Launching soon</span>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+
+
+    <div class="page-hero section" style="width:min(var(--max), calc(100% - 40px));margin:0 auto;">
+      <p class="crumbs"><a href="/">Home</a> / Blog</p>
+      <h1>Kharch Log blog</h1>
+      <p>Practical guides on expense tracking, SMS capture, and owning your data in Google Sheets. New posts publish via our blog API feed.</p>
+    </div>
+    <section class="section" style="width:min(var(--max), calc(100% - 40px));margin:0 auto 48px;">
+      <div class="blog-grid" id="blog-grid"><a class="blog-card" href="/blog/how-to-track-expenses-automatically-with-sms/">
+          <span class="blog-card__date">2026-08-27</span>
+          <h2>How to track expenses automatically with bank SMS</h2>
+          <p>Learn how SMS-based expense tracking works on Android, when you need SMS permission, and how Kharch Log keeps data in your Google Sheet.</p>
+        </a>
+<a class="blog-card" href="/blog/google-sheets-vs-budget-apps/">
+          <span class="blog-card__date">2026-08-26</span>
+          <h2>Google Sheets expense tracker vs closed budget apps</h2>
+          <p>Compare keeping expenses in Google Sheets versus locking history inside a budget app. Why ownership matters for long-term tracking.</p>
+        </a>
+<a class="blog-card" href="/blog/daily-expense-tracker-habits/">
+          <span class="blog-card__date">2026-08-25</span>
+          <h2>Daily expense tracker habits that actually stick</h2>
+          <p>Practical habits for a daily expense tracker: log same day, use categories, review weekly. Tips inspired by simple money books.</p>
+        </a></div>
+      <p style="margin-top:20px;color:var(--muted);font-size:0.92rem;">JSON feed: <a href="/blog/api/posts.json"><code>/blog/api/posts.json</code></a></p>
+    </section>
+    <script>
+      // Hydrate from API so daily posts appear after publish without editing this file.
+      fetch('/blog/api/posts.json').then(r => r.json()).then(data => {
+        if (!data || !data.posts || !data.posts.length) return;
+        const grid = document.getElementById('blog-grid');
+        grid.innerHTML = data.posts.map(p => `
+          <a class="blog-card" href="${p.url}">
+            <span class="blog-card__date">${p.date}</span>
+            <h2>${p.title}</h2>
+            <p>${p.description}</p>
+          </a>`).join('');
+      }).catch(() => {});
+    </script>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="site-footer__inner">
+      <div class="site-footer__brand">
+        <img src="/logo.png" alt="" width="32" height="32" />
+        <span>Kharch Log</span>
+      </div>
+      <nav aria-label="Footer">
+        <a href="/">Home</a>
+        <a href="/features/">Features</a>
+        <a href="/blog/">Blog</a>
+        <a href="/privacy/">Privacy Policy</a>
+        <a href="/terms/">Terms of Service</a>
+        <a href="mailto:kharchlog@gmail.com">Support</a>
+      </nav>
+      <p class="site-footer__copy">© 2026 Kharch Log — free expense tracker for Android</p>
+    </div>
+  </footer>
+
+</body>
+</html>

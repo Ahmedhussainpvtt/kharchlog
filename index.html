@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Kharch Log — Free Expense Tracker for Android | UPI SMS + Google Sheets</title>
-  <meta name="description" content="Kharch Log is a free Android expense tracker for India. Log spending manually or from UPI/bank SMS, review unclear transactions, and sync everything to your own Google Sheet." />
+  <meta name="description" content="Free Android expense tracker: log any currency, optional bank/UPI SMS auto-capture, review inbox, and Google Sheets sync you own. Launching soon." />
   <meta name="author" content="Kharch Log" />
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
   <meta name="googlebot" content="index, follow" />
@@ -179,7 +179,8 @@
       </a>
       <nav class="site-nav" aria-label="Primary">
         <a href="#features">Features</a>
-        <a href="#how-it-works">How it works</a>
+        <a href="/features/">All features</a>
+        <a href="/blog/">Blog</a>
         <a href="#faq">FAQ</a>
         <a href="/privacy/">Privacy</a>
         <span class="nav-cta nav-cta--soon" aria-disabled="true">Launching soon</span>
@@ -250,7 +251,128 @@
       </div>
     </section>
 
-    <section id="how-it-works" class="section section--tint">
+
+    <section class="precision section" style="width:min(var(--max), calc(100% - 40px));margin:0 auto;">
+      <h2>Manage your expenses with precision</h2>
+      <p>Deep-dive features — SMS capture, Sheets sync, review inbox, reports — laid out for clarity and SEO, with room to grow into dedicated guides.</p>
+    </section>
+
+    <section class="showcase" id="manual-voice-entry">
+      <div class="showcase__grid section" style="width:min(var(--max), calc(100% - 40px));margin:0 auto;">
+        <div>
+          <p class="showcase__kicker">Feature</p>
+          <h3>Manual & <span class="accent">voice expense entry</span></h3>
+          <p class="showcase__lead">Digitize spending the moment it happens. Fast forms and voice add keep your expense tracker accurate without spreadsheet busywork.</p>
+          <ul class="checklist"><li><span class="check-icon" aria-hidden="true">✓</span><span>Log amount, category, payment mode, payee, and notes quickly</span></li>
+<li><span class="check-icon" aria-hidden="true">✓</span><span>Switch between money out and money in on the same screen</span></li>
+<li><span class="check-icon" aria-hidden="true">✓</span><span>Use voice add when your hands are full — then confirm and save</span></li></ul>
+          <a class="btn btn--ghost" href="/features/manual-voice-entry/">Learn more</a>
+        </div>
+        <div class="showcase__media">
+          <img src="/images/features/manual-voice.jpg" alt="Manual & voice expense entry" width="800" height="600" loading="lazy" />
+        </div>
+      </div>
+    </section>
+
+    <section class="showcase showcase--flip" id="sms-auto-capture">
+      <div class="showcase__grid section" style="width:min(var(--max), calc(100% - 40px));margin:0 auto;">
+        <div>
+          <p class="showcase__kicker">Feature</p>
+          <h3>Bank & UPI <span class="accent">SMS auto-capture</span></h3>
+          <p class="showcase__lead">SMS permission powers automatic capture from debit and credit alerts. Prefer privacy? Skip SMS and log manually — currency is just a number.</p>
+          <ul class="checklist"><li><span class="check-icon" aria-hidden="true">✓</span><span>Parse common bank and UPI debit/credit messages on-device</span></li>
+<li><span class="check-icon" aria-hidden="true">✓</span><span>Send unclear SMS to the needs-review inbox</span></li>
+<li><span class="check-icon" aria-hidden="true">✓</span><span>No Kharch Log server stores your SMS — matched rows go to your Sheet</span></li></ul>
+          <a class="btn btn--ghost" href="/features/sms-auto-capture/">Learn more</a>
+        </div>
+        <div class="showcase__media">
+          <img src="/images/features/sms.jpg" alt="Bank & UPI SMS auto-capture" width="800" height="600" loading="lazy" />
+        </div>
+      </div>
+    </section>
+
+    <section class="showcase" id="review-inbox">
+      <div class="showcase__grid section" style="width:min(var(--max), calc(100% - 40px));margin:0 auto;">
+        <div>
+          <p class="showcase__kicker">Feature</p>
+          <h3>Needs-<span class="accent">review inbox</span> for unclear SMS</h3>
+          <p class="showcase__lead">Automation should never silently invent spending. Unclear messages wait for your decision — approve, reject, or edit first.</p>
+          <ul class="checklist"><li><span class="check-icon" aria-hidden="true">✓</span><span>See pending SMS-detected transactions in one inbox</span></li>
+<li><span class="check-icon" aria-hidden="true">✓</span><span>Approve clean matches; reject junk or duplicates</span></li>
+<li><span class="check-icon" aria-hidden="true">✓</span><span>Edit category, payee, or amount before sync</span></li></ul>
+          <a class="btn btn--ghost" href="/features/review-inbox/">Learn more</a>
+        </div>
+        <div class="showcase__media">
+          <img src="/images/features/review.jpg" alt="Needs-review inbox for unclear SMS" width="800" height="600" loading="lazy" />
+        </div>
+      </div>
+    </section>
+
+    <section class="showcase showcase--flip" id="google-sheets-sync">
+      <div class="showcase__grid section" style="width:min(var(--max), calc(100% - 40px));margin:0 auto;">
+        <div>
+          <p class="showcase__kicker">Feature</p>
+          <h3>Google Sheets expense sync</h3>
+          <p class="showcase__lead">Your money book lives in your Google Drive. The Android app is the fast front-end; Sheets is the durable ledger.</p>
+          <ul class="checklist"><li><span class="check-icon" aria-hidden="true">✓</span><span>Auto-creates a Kharch Log folder and spreadsheet</span></li>
+<li><span class="check-icon" aria-hidden="true">✓</span><span>Limited drive.file scope — only files the app creates for you</span></li>
+<li><span class="check-icon" aria-hidden="true">✓</span><span>Open on web, pivot, export CSV/PDF, or share the sheet</span></li></ul>
+          <a class="btn btn--ghost" href="/features/google-sheets-sync/">Learn more</a>
+        </div>
+        <div class="showcase__media">
+          <img src="/images/features/sheets.jpg" alt="Google Sheets expense sync" width="800" height="600" loading="lazy" />
+        </div>
+      </div>
+    </section>
+
+    <section class="showcase" id="reports-insights">
+      <div class="showcase__grid section" style="width:min(var(--max), calc(100% - 40px));margin:0 auto;">
+        <div>
+          <p class="showcase__kicker">Feature</p>
+          <h3>Today view & <span class="accent">spending reports</span></h3>
+          <p class="showcase__lead">Know where money went today — then zoom out to category trends when you need the bigger picture.</p>
+          <ul class="checklist"><li><span class="check-icon" aria-hidden="true">✓</span><span>Today dashboard for daily expense awareness</span></li>
+<li><span class="check-icon" aria-hidden="true">✓</span><span>Category breakdowns and history filters</span></li>
+<li><span class="check-icon" aria-hidden="true">✓</span><span>Pair with Sheets charts for deeper analysis</span></li></ul>
+          <a class="btn btn--ghost" href="/features/reports-insights/">Learn more</a>
+        </div>
+        <div class="showcase__media">
+          <img src="/images/features/reports.jpg" alt="Today view & spending reports" width="800" height="600" loading="lazy" />
+        </div>
+      </div>
+    </section>
+
+    <section class="showcase showcase--flip" id="share-invoice">
+      <div class="showcase__grid section" style="width:min(var(--max), calc(100% - 40px));margin:0 auto;">
+        <div>
+          <p class="showcase__kicker">Feature</p>
+          <h3>Share expenses & <span class="accent">invoice PDF</span></h3>
+          <p class="showcase__lead">Turn a logged expense into something you can send — share card or branded invoice PDF from the detail sheet.</p>
+          <ul class="checklist"><li><span class="check-icon" aria-hidden="true">✓</span><span>Share transaction details quickly</span></li>
+<li><span class="check-icon" aria-hidden="true">✓</span><span>Save invoice-style PDF for reimbursements</span></li>
+<li><span class="check-icon" aria-hidden="true">✓</span><span>Keep the source of truth in your Google Sheet</span></li></ul>
+          <a class="btn btn--ghost" href="/features/share-invoice/">Learn more</a>
+        </div>
+        <div class="showcase__media">
+          <img src="/images/features/share.jpg" alt="Share expenses & invoice PDF" width="800" height="600" loading="lazy" />
+        </div>
+      </div>
+    </section>
+
+    <section class="seo-block section" style="width:min(var(--max), calc(100% - 40px));margin:0 auto;">
+      <h2>Free expense tracker &amp; personal finance logging</h2>
+      <p>Kharch Log is a free Android expense tracker for people who want a simple money book: log spending and income in any currency, optionally auto-capture from bank/UPI SMS, and keep every row in a Google Sheet you control. It sits between lightweight trackers (like Fast Budget / Lekhhaa) and spreadsheet ownership — without forcing enterprise expense-management complexity from tools such as Zoho Expense or Kredmint.</p>
+      <h2>What you can track</h2>
+      <ul>
+        <li>Daily expenses and income (manual or voice)</li>
+        <li>UPI and bank SMS debits/credits when permission is granted</li>
+        <li>Categories, payment modes, payees, and notes</li>
+        <li>Today’s spend plus category reports</li>
+        <li>Shared household visibility via your Google Sheet</li>
+      </ul>
+      <p>Browse <a href="/features/">all features</a> or the <a href="/blog/">expense tracking blog</a>.</p>
+    </section>
+        <section id="how-it-works" class="section section--tint">
       <div class="section__head">
         <h2>How it will work</h2>
         <p>From launch day to your first logged expense — no account on our servers, just your Google login.</p>
@@ -357,6 +479,8 @@
       </div>
       <nav aria-label="Footer">
         <a href="/">Home</a>
+        <a href="/features/">Features</a>
+        <a href="/blog/">Blog</a>
         <a href="/privacy/">Privacy Policy</a>
         <a href="/terms/">Terms of Service</a>
         <a href="mailto:kharchlog@gmail.com">Support</a>
