@@ -749,14 +749,15 @@ footer:not(.site-footer) {
 }
 
 .showcase {
-  padding: 12px 0;
-}
-.showcase .showcase__grid.section {
-  padding-top: 0;
-  padding-bottom: 0;
+  padding: 0;
 }
 .showcase + .showcase {
-  padding-top: 4px;
+  margin-top: 25px;
+}
+.showcase .showcase__grid.section,
+.showcase .showcase__inner {
+  padding-top: 0;
+  padding-bottom: 0;
 }
 .showcase__grid {
   display: grid;
