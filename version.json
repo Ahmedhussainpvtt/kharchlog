@@ -1,6 +1,6 @@
 {
-  "versionCode": 158,
-  "versionName": "3.2.58",
-  "apkUrl": "https://raw.githubusercontent.com/Ahmedhussainpvtt/kharchlog/main/KharchLog.apk",
-  "notes": "Voice assistant, native permissions, UI fixes, in-app updates"
+  "versionCode": 159,
+  "versionName": "3.2.59",
+  "apkUrl": "https://raw.githubusercontent.com/Ahmedhussainpvtt/kharchlog/refs/heads/main/KharchLog.apk",
+  "notes": "More padding on app launcher icon"
 }
