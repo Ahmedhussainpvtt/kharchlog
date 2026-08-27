@@ -1,7 +1,7 @@
 /** Public checkout config — secrets stay on Cloud Run only */
 window.KHARCHLOG_PAY = {
   trackerUrl: 'https://kharchlog-license-u4rcttr3nq-el.a.run.app',
-  cashfreeEnv: 'sandbox',
+  cashfreeEnv: 'production',
   amountPaise: 14900,
   currency: 'INR',
   productName: 'Kharch Log Lifetime',
