@@ -3,16 +3,121 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Kharch Log — Payments coming soon</title>
+  <title>Payment status — Kharch Log</title>
   <meta name="robots" content="noindex" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="/styles.css" />
   <link rel="icon" href="/logo.png" />
-  <meta http-equiv="refresh" content="0; url=/pay/" />
 </head>
 <body>
-  <p><a href="/pay/">Payments coming soon</a></p>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a class="brand-lockup" href="/" aria-label="Kharch Log home">
+        <img src="/logo.png" alt="" width="40" height="40" />
+        <span class="brand-lockup__name">Kharch Log</span>
+      </a>
+      <nav class="site-nav" aria-label="Primary">
+        <a href="/pricing/">Pricing</a>
+        <a href="/contact/">Contact</a>
+        <a href="/">Home</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <div class="wrap">
+      <section class="hero pay-hero">
+        <h1 id="title">Confirming payment…</h1>
+        <p class="hero-tagline" id="tagline">Please wait a moment.</p>
+      </section>
+
+      <div class="card pay-card">
+        <p class="pay-status" id="status" aria-live="polite">Verifying with Cashfree…</p>
+        <p class="pay-fine" id="detail"></p>
+        <p class="pay-fine"><a href="/pay/">← Back to pay</a> · <a href="/">Home</a></p>
+      </div>
+    </div>
+  </main>
+
+  <script src="/pay/config.js"></script>
+  <script>
+    (function () {
+      var cfg = window.KHARCHLOG_PAY || {};
+      var params = new URLSearchParams(window.location.search);
+      var orderId =
+        params.get('order_id') ||
+        params.get('orderId') ||
+        params.get('cf_order_id') ||
+        '';
+      var email =
+        (params.get('email') || '').trim().toLowerCase() ||
+        (function () {
+          try {
+            return sessionStorage.getItem('kharchlog_pay_email') || '';
+          } catch (e) {
+            return '';
+          }
+        })();
+
+      var titleEl = document.getElementById('title');
+      var tagEl = document.getElementById('tagline');
+      var statusEl = document.getElementById('status');
+      var detailEl = document.getElementById('detail');
+
+      function fail(msg) {
+        titleEl.textContent = 'Payment not confirmed';
+        tagEl.textContent = 'If money was deducted, email us with your order id.';
+        statusEl.textContent = msg || 'Verification failed';
+        statusEl.className = 'pay-status pay-status-error';
+        detailEl.textContent = orderId ? 'Order: ' + orderId : '';
+      }
+
+      function ok(paidEmail) {
+        titleEl.textContent = 'You’re in';
+        tagEl.textContent = 'Lifetime access unlocked.';
+        statusEl.textContent =
+          'Signed up as ' + (paidEmail || email || 'your Google email') + '. Open the app and sign in with the same account.';
+        statusEl.className = 'pay-status';
+        detailEl.textContent = orderId ? 'Order: ' + orderId : '';
+        try {
+          sessionStorage.removeItem('kharchlog_pay_email');
+        } catch (e) {}
+      }
+
+      if (!cfg.trackerUrl) {
+        fail('Missing trackerUrl in pay/config.js');
+        return;
+      }
+      if (!orderId) {
+        fail('Missing order id — open this page from Cashfree return only');
+        return;
+      }
+
+      fetch(cfg.trackerUrl.replace(/\/$/, '') + '/verify-order', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ orderId: orderId, email: email })
+      })
+        .then(function (r) {
+          return r.json().then(function (data) {
+            return { status: r.status, data: data };
+          });
+        })
+        .then(function (res) {
+          if (res.data && res.data.ok && res.data.paid) {
+            ok(res.data.email);
+          } else {
+            fail((res.data && res.data.error) || 'Order not paid yet');
+          }
+        })
+        .catch(function () {
+          fail('Network error verifying payment');
+        });
+    })();
+  </script>
 </body>
 </html>

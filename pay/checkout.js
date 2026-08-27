@@ -1,6 +1,7 @@
 (function () {
   var cfg = window.KHARCHLOG_PAY || {};
   var emailInput = document.getElementById('email');
+  var phoneInput = document.getElementById('phone');
   var payBtn = document.getElementById('payBtn');
   var statusEl = document.getElementById('status');
 
@@ -17,109 +18,79 @@
   }
 
   function validateConfig() {
-    if (!cfg.razorpayKeyId || cfg.razorpayKeyId.indexOf('REPLACE') >= 0) {
-      setStatus('Payment not configured yet — add your Razorpay Key ID in pay/config.js', true);
+    if (!cfg.trackerUrl) {
+      setStatus('Missing trackerUrl in pay/config.js', true);
       if (payBtn) payBtn.disabled = true;
       return false;
     }
-    if (!cfg.trackerUrl) {
-      setStatus('Missing trackerUrl in pay/config.js', true);
+    if (typeof Cashfree !== 'function') {
+      setStatus('Cashfree SDK failed to load — refresh and try again', true);
       if (payBtn) payBtn.disabled = true;
       return false;
     }
     return true;
   }
 
-  function createOrder(email) {
+  function createOrder(email, phone) {
     return fetch(cfg.trackerUrl.replace(/\/$/, '') + '/create-order', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ email: email })
-    }).then(function (r) { return r.json(); });
-  }
-
-  function markPaid(email, response) {
-    return fetch(cfg.trackerUrl, {
-      method: 'POST',
-      headers: { 'Content-Type': 'text/plain;charset=utf-8' },
-      body: JSON.stringify({
-        action: 'markPaid',
-        email: email,
-        paymentId: response.razorpay_payment_id,
-        orderId: response.razorpay_order_id,
-        signature: response.razorpay_signature
-      })
-    }).then(function (r) { return r.json(); });
+      body: JSON.stringify({ email: email, phone: phone || '' })
+    }).then(function (r) {
+      return r.json();
+    });
   }
 
   function openCheckout() {
     var email = (emailInput.value || '').trim().toLowerCase();
+    var phone = ((phoneInput && phoneInput.value) || '').replace(/\D/g, '').slice(-10);
     if (!email || email.indexOf('@') < 1) {
       setStatus('Enter the Google email you will use to sign in to the app', true);
       emailInput.focus();
       return;
     }
+    if (phone && phone.length !== 10) {
+      setStatus('Enter a valid 10-digit phone, or leave it blank', true);
+      phoneInput.focus();
+      return;
+    }
 
     var ok = window.confirm(
-      'You will sign in to Kharch Log with:\n\n' + email + '\n\n' +
-      'This must be your correct Google account. Continue to pay ₹100?'
+      'You will sign in to Kharch Log with:\n\n' +
+        email +
+        '\n\n' +
+        'This must be your correct Google account. Continue to pay ₹149?'
     );
     if (!ok) return;
 
     setStatus('Creating order…');
     if (payBtn) payBtn.disabled = true;
 
-    createOrder(email)
+    try {
+      sessionStorage.setItem('kharchlog_pay_email', email);
+    } catch (e) {}
+
+    createOrder(email, phone)
       .then(function (orderData) {
-        if (!orderData || !orderData.ok || !orderData.orderId) {
+        if (!orderData || !orderData.ok || !orderData.paymentSessionId) {
           throw new Error((orderData && orderData.error) || 'Could not create order');
         }
 
-        setStatus('Opening Razorpay…');
-
-        var options = {
-          key: cfg.razorpayKeyId,
-          order_id: orderData.orderId,
-          amount: orderData.amount || cfg.amountPaise || 10000,
-          currency: orderData.currency || cfg.currency || 'INR',
-          name: cfg.productName || 'Kharch Log',
-          description: cfg.productDescription || 'Lifetime access',
-          prefill: { email: email },
-          notes: { email: email, product: 'Kharch Log Lifetime' },
-          theme: { color: '#1a6f8d' },
-          config: {
-            display: { save: false }
-          },
-          handler: function (response) {
-            setStatus('Confirming payment…');
-            markPaid(email, response)
-              .then(function (data) {
-                if (data && data.ok && data.paid) {
-                  window.location.href = '/pay/success.html?email=' + encodeURIComponent(email);
-                } else {
-                  setStatus((data && data.error) || 'Payment recorded failed — contact support', true);
-                  if (payBtn) payBtn.disabled = false;
-                }
-              })
-              .catch(function () {
-                setStatus('Could not confirm payment — email support with payment ID: ' + response.razorpay_payment_id, true);
-                if (payBtn) payBtn.disabled = false;
-              });
-          },
-          modal: {
-            ondismiss: function () {
-              setStatus('Payment cancelled');
-              if (payBtn) payBtn.disabled = false;
-            }
-          }
-        };
-
-        var rzp = new Razorpay(options);
-        rzp.on('payment.failed', function (resp) {
-          setStatus('Payment failed: ' + (resp.error && resp.error.description || 'try again'), true);
-          if (payBtn) payBtn.disabled = false;
+        setStatus('Opening Cashfree…');
+        var mode =
+          orderData.env === 'production' || cfg.cashfreeEnv === 'production'
+            ? 'production'
+            : 'sandbox';
+        var cashfree = Cashfree({ mode: mode });
+        return cashfree.checkout({
+          paymentSessionId: orderData.paymentSessionId,
+          redirectTarget: '_self'
         });
-        rzp.open();
+      })
+      .then(function (result) {
+        if (result && result.error) {
+          throw new Error(result.error.message || 'Checkout failed');
+        }
       })
       .catch(function (e) {
         setStatus(e.message || 'Could not start checkout', true);
