@@ -12,7 +12,8 @@
         "bank SMS expense tracker",
         "track UPI spending",
         "automatic expense tracking"
-      ]
+      ],
+      "image": "/images/blog/upi-expense-tracker-stop-losing-small-payments.jpg"
     },
     {
       "slug": "how-to-track-your-spending-every-week",
@@ -26,7 +27,8 @@
         "spending tracker",
         "budget tips",
         "daily expense tracker"
-      ]
+      ],
+      "image": "/images/blog/how-to-track-your-spending-every-week.jpg"
     },
     {
       "slug": "best-free-expense-tracker-app-android",
@@ -39,7 +41,8 @@
         "free expense tracker android",
         "expense tracker app",
         "personal finance app"
-      ]
+      ],
+      "image": "/images/blog/best-free-expense-tracker-app-android.jpg"
     },
     {
       "slug": "how-to-track-expenses-automatically-with-sms",
@@ -51,7 +54,8 @@
         "sms expense tracker",
         "automatic expense tracking",
         "android"
-      ]
+      ],
+      "image": "/images/blog/how-to-track-expenses-automatically-with-sms.jpg"
     },
     {
       "slug": "google-sheets-vs-budget-apps",
@@ -63,7 +67,8 @@
         "google sheets expense tracker",
         "budget app",
         "personal finance"
-      ]
+      ],
+      "image": "/images/blog/google-sheets-vs-budget-apps.jpg"
     },
     {
       "slug": "daily-expense-tracker-habits",
@@ -75,7 +80,8 @@
         "daily expense tracker",
         "spending habits",
         "budget tips"
-      ]
+      ],
+      "image": "/images/blog/daily-expense-tracker-habits.jpg"
     }
   ]
 }

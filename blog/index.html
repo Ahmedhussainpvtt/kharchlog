@@ -47,21 +47,7 @@
       <p>Practical guides on expense tracking, SMS capture, and owning your data in Google Sheets.</p>
     </div>
     <section class="section" style="width:min(var(--max), calc(100% - 40px));margin:0 auto 48px;">
-      <div class="blog-grid" id="blog-grid"><a class="blog-card" href="/blog/how-to-track-expenses-automatically-with-sms/">
-          <span class="blog-card__date">2026-08-27</span>
-          <h2>How to track expenses automatically with bank SMS</h2>
-          <p>Learn how SMS-based expense tracking works on Android, when you need SMS permission, and how Kharch Log keeps data in your Google Sheet.</p>
-        </a>
-<a class="blog-card" href="/blog/google-sheets-vs-budget-apps/">
-          <span class="blog-card__date">2026-08-26</span>
-          <h2>Google Sheets expense tracker vs closed budget apps</h2>
-          <p>Compare keeping expenses in Google Sheets versus locking history inside a budget app. Why ownership matters for long-term tracking.</p>
-        </a>
-<a class="blog-card" href="/blog/daily-expense-tracker-habits/">
-          <span class="blog-card__date">2026-08-25</span>
-          <h2>Daily expense tracker habits that actually stick</h2>
-          <p>Practical habits for a daily expense tracker: log same day, use categories, review weekly. Tips inspired by simple money books.</p>
-        </a></div>
+      <div class="blog-grid" id="blog-grid"><a class="blog-card" href="/blog/upi-expense-tracker-stop-losing-small-payments/"><div class="blog-card__media"><img src="/images/blog/upi-expense-tracker-stop-losing-small-payments.jpg" alt="" width="640" height="360" loading="lazy" /></div><div class="blog-card__body"><span class="blog-card__date">2026-08-30</span><h2>UPI expense tracker: stop losing small payments</h2><p>Small UPI payments add up fast. Learn how a UPI expense tracker and bank SMS auto-capture help you see the full picture without typing every tap.</p></div></a><a class="blog-card" href="/blog/how-to-track-your-spending-every-week/"><div class="blog-card__media"><img src="/images/blog/how-to-track-your-spending-every-week.jpg" alt="" width="640" height="360" loading="lazy" /></div><div class="blog-card__body"><span class="blog-card__date">2026-08-29</span><h2>How to track your spending every week (simple system)</h2><p>A simple weekly system to track your spending: capture daily, categorize, review once a week, and adjust. Built for busy people who abandon complex budgets.</p></div></a><a class="blog-card" href="/blog/best-free-expense-tracker-app-android/"><div class="blog-card__media"><img src="/images/blog/best-free-expense-tracker-app-android.jpg" alt="" width="640" height="360" loading="lazy" /></div><div class="blog-card__body"><span class="blog-card__date">2026-08-28</span><h2>Best free expense tracker app for Android: what to look for</h2><p>A practical buyer’s guide to the best free expense tracker app for Android — SMS capture, Google Sheets sync, categories, privacy, and daily logging.</p></div></a><a class="blog-card" href="/blog/how-to-track-expenses-automatically-with-sms/"><div class="blog-card__media"><img src="/images/blog/how-to-track-expenses-automatically-with-sms.jpg" alt="" width="640" height="360" loading="lazy" /></div><div class="blog-card__body"><span class="blog-card__date">2026-08-27</span><h2>How to track expenses automatically with bank SMS</h2><p>Learn how SMS-based expense tracking works on Android, when you need SMS permission, and how Kharch Log keeps data in your Google Sheet.</p></div></a><a class="blog-card" href="/blog/google-sheets-vs-budget-apps/"><div class="blog-card__media"><img src="/images/blog/google-sheets-vs-budget-apps.jpg" alt="" width="640" height="360" loading="lazy" /></div><div class="blog-card__body"><span class="blog-card__date">2026-08-26</span><h2>Google Sheets expense tracker vs closed budget apps</h2><p>Compare keeping expenses in Google Sheets versus locking history inside a budget app. Why ownership matters for long-term tracking.</p></div></a><a class="blog-card" href="/blog/daily-expense-tracker-habits/"><div class="blog-card__media"><img src="/images/blog/daily-expense-tracker-habits.jpg" alt="" width="640" height="360" loading="lazy" /></div><div class="blog-card__body"><span class="blog-card__date">2026-08-25</span><h2>Daily expense tracker habits that actually stick</h2><p>Practical habits for a daily expense tracker: log same day, use categories, review weekly. Tips inspired by simple money books.</p></div></a></div>
     </section>
     <script>
       // Hydrate from API so daily posts appear after publish without editing this file.
@@ -70,9 +56,12 @@
         const grid = document.getElementById('blog-grid');
         grid.innerHTML = data.posts.map(p => `
           <a class="blog-card" href="${p.url}">
-            <span class="blog-card__date">${p.date}</span>
-            <h2>${p.title}</h2>
-            <p>${p.description}</p>
+            <div class="blog-card__media"><img src="${p.image || ''}" alt="" width="640" height="360" loading="lazy" /></div>
+            <div class="blog-card__body">
+              <span class="blog-card__date">${p.date}</span>
+              <h2>${p.title}</h2>
+              <p>${p.description}</p>
+            </div>
           </a>`).join('');
       }).catch(() => {});
     </script>
