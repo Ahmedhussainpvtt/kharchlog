@@ -28,8 +28,13 @@
         <span class="brand-lockup__name">Kharch Log</span>
       </a>
       <nav class="site-nav" aria-label="Primary">
-        <a href="/#features">Features</a>
-        <a href="/features/">All features</a>
+        <div class="nav-dropdown">
+          <a href="/features/" class="nav-dropdown__trigger" aria-haspopup="true">Features</a>
+          <div class="nav-dropdown__menu" role="menu">
+            <a href="/features/" role="menuitem">All features</a>
+            <a href="/features/manual-voice-entry/">Manual & voice expense entry</a><a href="/features/sms-auto-capture/">Bank & UPI SMS auto-capture</a><a href="/features/review-inbox/">Needs-review inbox for unclear SMS</a><a href="/features/google-sheets-sync/">Google Sheets expense sync</a><a href="/features/reports-insights/">Today view & spending reports</a><a href="/features/share-invoice/">Share expenses & invoice PDF</a>
+          </div>
+        </div>
         <a href="/blog/">Blog</a>
         <a href="/#faq">FAQ</a>
         <a href="/contact/">Contact</a>
@@ -61,34 +66,37 @@
     </section>
     
 <div class="feature-detail section">
+<div class="feature-quick-answer"><p><strong>Quick answer:</strong> Share a transaction card via WhatsApp or email, or save a clean invoice-style PDF — built from an expense you already logged, with your Google Sheet staying the source of truth.</p></div>
 <div class="section__head">
-<h2>From logged expense to shareable proof</h2>
-<p>Freelancers, field staff, and salaried employees often need to send a transaction summary or receipt-style PDF for reimbursement. Kharch Log turns an entry you already logged into a share card or branded invoice PDF — without retyping details into Word or email.</p>
+<h2>From expense log to shareable proof</h2>
+<p>Freelancers, sales teams, and salaried employees often need to prove a spend for reimbursement. Fast Budget focuses on tracking; Kharch Log adds share and PDF export on top of the same entry — no retyping into Word or screenshotting bank apps.</p>
 </div>
 <div class="section__head">
 <h2>How share &amp; invoice PDF works</h2>
-<ol class="steps-inline">
-<li><div><strong>Open transaction detail</strong>Tap any expense to see amount, category, payee, date, and notes.</div></li>
-<li><div><strong>Share or save PDF</strong>Send a formatted summary via WhatsApp, email, or save an invoice-style PDF to Files.</div></li>
-<li><div><strong>Sheet stays authoritative</strong>The share is a snapshot; your Google Sheet remains the source of truth for totals.</div></li>
-</ol>
+<ol class="steps-inline"><li><div><strong>Log the expense</strong>Capture via manual, voice, or approved SMS — amount, payee, category, date.</div></li><li><div><strong>Open transaction detail</strong>Tap the row to see full details and actions.</div></li><li><div><strong>Share or export PDF</strong>Send a formatted card via WhatsApp, email, or save an invoice-style PDF locally.</div></li><li><div><strong>Sheet remains master</strong>The share is a snapshot; totals and history stay in your Google Sheet.</div></li></ol>
+</div>
+<div class="section__head feature-deep">
+<h2>When sharing beats re-explaining</h2>
+<p>FinArt and Fast Budget optimise for tracking and budgets. Kharch Log adds a paperwork layer for the moment someone asks “can you send proof for that ₹840 charge?” — answer in two taps.</p>
+<h3>Not a GST tax invoice</h3><p>Merchant tax invoices come from vendors; this is a personal transaction summary for records.</p><h3>Privacy-safe sharing</h3><p>Only the single transaction is shared — not your entire Sheet or month history.</p>
+<div class="feature-detail__grid"><div class="feature-detail__card"><h3>HR reimbursements</h3><p>Attach PDF when submitting travel, client meals, or supplies.</p></div><div class="feature-detail__card"><h3>Split with friends</h3><p>Share a transaction card after group dinners or trips.</p></div><div class="feature-detail__card"><h3>Freelancer records</h3><p>Keep PDF copies for project billing without a separate invoicing tool.</p></div><div class="feature-detail__card"><h3>WhatsApp-friendly</h3><p>Share cards formatted for messaging apps — common in Indian workflows.</p></div><div class="feature-detail__card"><h3>Branded PDF</h3><p>Clean layout with Kharch Log footer — professional enough for informal reimbursement.</p></div><div class="feature-detail__card"><h3>No extra typing</h3><p>Details come from the entry you already logged — zero duplicate data entry.</p></div></div>
 </div>
 <div class="section__head">
-<h2>When sharing helps</h2>
-<div class="feature-detail__grid">
-<div class="feature-detail__card"><h3>Reimbursements</h3><p>Attach a clean PDF when submitting travel or client expenses to HR.</p></div>
-<div class="feature-detail__card"><h3>Split reminders</h3><p>Share a transaction card when splitting dinner or trip costs with friends.</p></div>
-<div class="feature-detail__card"><h3>Record keeping</h3><p>Save PDFs locally for warranty claims or tax supporting docs.</p></div>
-<div class="feature-detail__card"><h3>Promote the app</h3><p>Share cards include Kharch Log branding — handy if you recommend the tracker to others.</p></div>
+<h2>How Kharch Log compares</h2>
+<div class="feature-compare-wrap">
+<table class="feature-compare">
+<thead><tr><th>Option</th><th>What it gives you</th><th>Where Kharch Log helps</th></tr></thead>
+<tbody><tr><td>Screenshot bank SMS</td><td>Quick but messy and missing category context.</td><td>Structured card with category, payee, and notes.</td></tr><tr><td>Manual Word invoice</td><td>Flexible but slow for every small spend.</td><td>PDF generated from logged data in seconds.</td></tr><tr><td>Fast Budget export</td><td>CSV export on web — good for bulk, not one-off proof.</td><td>Per-transaction share/PDF for immediate requests.</td></tr><tr><td>Email forwarding SMS</td><td>Works once; hard to organise at month end.</td><td>Logged row + PDF + Sheet row — searchable later.</td></tr></tbody>
+</table>
 </div>
 </div>
 <div class="section__head">
 <h2>Common questions</h2>
-<div class="faq-mini">
-<details><summary>Is the PDF a tax invoice?</summary><p>It is a transaction summary for personal records and reimbursement — not a GST tax invoice from a merchant.</p></details>
-<details><summary>Can I share before SMS is approved?</summary><p>Share actions are available on saved transactions — approve pending SMS items first if needed.</p></details>
-<details><summary>Does sharing expose my whole Sheet?</summary><p>No — only the single transaction you share is included in the card or PDF.</p></details>
+<div class="faq-mini"><details><summary>Is the PDF a GST tax invoice?</summary><p>No — it is a transaction summary for personal records and reimbursement.</p></details><details><summary>Can I share pending SMS items?</summary><p>Approve or edit in the review inbox first, then share the saved transaction.</p></details><details><summary>Does sharing expose my whole Sheet?</summary><p>No — only the one transaction you choose.</p></details><details><summary>Can I share income entries?</summary><p>Yes — any saved transaction with share actions available.</p></details><details><summary>Where is the PDF saved?</summary><p>To your device Downloads/Files — you choose where to send it next.</p></details><details><summary>Does the share include my phone number?</summary><p>Only fields from the expense entry — not your SMS or Google account details.</p></details></div>
 </div>
+<div class="section__head">
+<h2>Explore related features</h2>
+<div class="feature-related"><a href="/features/manual-voice-entry/">Manual & voice entry</a><a href="/features/google-sheets-sync/">Google Sheets sync</a><a href="/contact/">Contact support</a></div>
 <p><a href="/features/">All features</a> · <a href="/contact/">Contact us</a></p>
 </div>
 </div>

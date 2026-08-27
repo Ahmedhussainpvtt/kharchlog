@@ -28,8 +28,13 @@
         <span class="brand-lockup__name">Kharch Log</span>
       </a>
       <nav class="site-nav" aria-label="Primary">
-        <a href="/#features">Features</a>
-        <a href="/features/">All features</a>
+        <div class="nav-dropdown">
+          <a href="/features/" class="nav-dropdown__trigger" aria-haspopup="true">Features</a>
+          <div class="nav-dropdown__menu" role="menu">
+            <a href="/features/" role="menuitem">All features</a>
+            <a href="/features/manual-voice-entry/">Manual & voice expense entry</a><a href="/features/sms-auto-capture/">Bank & UPI SMS auto-capture</a><a href="/features/review-inbox/">Needs-review inbox for unclear SMS</a><a href="/features/google-sheets-sync/">Google Sheets expense sync</a><a href="/features/reports-insights/">Today view & spending reports</a><a href="/features/share-invoice/">Share expenses & invoice PDF</a>
+          </div>
+        </div>
         <a href="/blog/">Blog</a>
         <a href="/#faq">FAQ</a>
         <a href="/contact/">Contact</a>
@@ -61,35 +66,38 @@
     </section>
     
 <div class="feature-detail section">
+<div class="feature-quick-answer"><p><strong>Quick answer:</strong> Unclear or low-confidence SMS parses wait in the needs-review inbox — you approve, reject, or edit before anything hits your Google Sheet.</p></div>
 <div class="section__head">
-<h2>Human-in-the-loop expense control</h2>
-<p>Enterprise tools like Kredmint use approval workflows so finance teams catch mistakes before reimbursement. Kharch Log brings a lightweight version to personal tracking: auto-detected SMS never silently becomes a permanent expense until you say so.</p>
+<h2>Human-in-the-loop control for automated capture</h2>
+<p>Automation should reduce typing, not introduce phantom expenses. FinArt and enterprise tools like Kredmint use review workflows; Kharch Log brings a personal version — you are the approver for anything the SMS parser is unsure about.</p>
 </div>
 <div class="section__head">
 <h2>How the review inbox works</h2>
-<ol class="steps-inline">
-<li><div><strong>SMS parser flags uncertainty</strong>Promotional texts, OTPs, balance enquiries, and ambiguous debits stay out of your Sheet.</div></li>
-<li><div><strong>Review pending items</strong>Open the inbox to see amount, payee hint, and original SMS snippet side by side.</div></li>
-<li><div><strong>Approve, reject, or edit</strong>One tap to accept a clean match; reject junk; or fix category and amount before sync.</div></li>
-</ol>
+<ol class="steps-inline"><li><div><strong>SMS arrives</strong>Kharch Log parses the message on-device and scores confidence — amount, merchant, debit vs credit.</div></li><li><div><strong>Unclear → inbox</strong>Promotional SMS, OTPs, balance enquiries, and ambiguous debits stay out of your Sheet until you decide.</div></li><li><div><strong>Review side by side</strong>See parsed amount, category hint, payee, and the original SMS snippet in one place.</div></li><li><div><strong>Approve, reject, or edit</strong>Accept clean matches in one tap; reject junk; fix category or amount before sync.</div></li></ol>
+</div>
+<div class="section__head feature-deep">
+<h2>Why approval beats silent automation</h2>
+<p>Fast Budget can auto-import bank transactions — but wrong categorisation still happens. With SMS parsing, formats vary by bank. A review step keeps your Sheet trustworthy without giving up automation entirely.</p>
+<h3>Lightweight approval workflow</h3><p>Not enterprise expense management — just a personal gate between SMS noise and your ledger.</p><h3>Works with Sheets sync</h3><p>Approved rows append to the same Google Sheet as manual entries — one source of truth.</p>
+<div class="feature-detail__grid"><div class="feature-detail__card"><h3>No phantom expenses</h3><p>Failed parses never inflate monthly totals — you decide what counts.</p></div><div class="feature-detail__card"><h3>Duplicate protection</h3><p>Reject when the same UPI alert was already logged manually or approved once.</p></div><div class="feature-detail__card"><h3>Category cleanup</h3><p>Fix Food vs Groceries before the row syncs — reports stay meaningful.</p></div><div class="feature-detail__card"><h3>Promo &amp; OTP filter</h3><p>Marketing texts and verification codes should not become expenses.</p></div><div class="feature-detail__card"><h3>Edit before commit</h3><p>Adjust payee spelling or amount typos from OCR-style parsing.</p></div><div class="feature-detail__card"><h3>Trust the automation</h3><p>When inbox is empty, you know auto-captured rows are ones you accepted.</p></div></div>
 </div>
 <div class="section__head">
-<h2>Why a review step matters</h2>
-<div class="feature-detail__grid">
-<div class="feature-detail__card"><h3>No phantom expenses</h3><p>Failed parses do not inflate your monthly total — you decide what counts.</p></div>
-<div class="feature-detail__card"><h3>Duplicate protection</h3><p>Reject repeats when the same UPI alert was already logged manually.</p></div>
-<div class="feature-detail__card"><h3>Category cleanup</h3><p>Fix “Swiggy” vs “Food” before the row hits Sheets — reports stay accurate.</p></div>
-<div class="feature-detail__card"><h3>Trust in automation</h3><p>Automation saves time; approval keeps you confident in the numbers.</p></div>
+<h2>How Kharch Log compares</h2>
+<div class="feature-compare-wrap">
+<table class="feature-compare">
+<thead><tr><th>Option</th><th>What it gives you</th><th>Where Kharch Log helps</th></tr></thead>
+<tbody><tr><td>Fully automatic trackers</td><td>Zero taps, but wrong rows slip into reports.</td><td>Automation plus your approval for uncertain SMS.</td></tr><tr><td>Manual-only apps</td><td>Accurate but tedious for 20+ UPI spends per week.</td><td>SMS proposes; you confirm only the unclear ones.</td></tr><tr><td>Spreadsheet formulas</td><td>Can flag duplicates manually — high maintenance.</td><td>Inbox surfaces candidates automatically on-device.</td></tr><tr><td>FinArt-style classify</td><td>Auto-classifies supported messages with platform permissions.</td><td>Kharch Log adds explicit inbox for low-confidence Indian SMS formats.</td></tr></tbody>
+</table>
 </div>
 </div>
 <div class="section__head">
 <h2>Common questions</h2>
-<div class="faq-mini">
-<details><summary>Can I approve from the transaction detail screen?</summary><p>Yes — pending SMS-detected items show approve and reject actions until you decide.</p></details>
-<details><summary>What happens to rejected SMS?</summary><p>They are dismissed and not written to your Google Sheet.</p></details>
-<details><summary>Do manual entries use the inbox?</summary><p>No — only auto-captured SMS that need confirmation appear there.</p></details>
+<div class="faq-mini"><details><summary>Can I approve from transaction detail?</summary><p>Yes — pending SMS items show approve and reject actions until you decide.</p></details><details><summary>What happens to rejected SMS?</summary><p>Dismissed — never written to your Google Sheet.</p></details><details><summary>Do manual entries use the inbox?</summary><p>No — only auto-captured SMS needing confirmation appear there.</p></details><details><summary>How often should I check the inbox?</summary><p>Once daily is enough for most users — or enable notifications if available.</p></details><details><summary>Can I edit then approve?</summary><p>Yes — change category, payee, or amount before syncing.</p></details><details><summary>Does rejection delete the SMS from my phone?</summary><p>No — it only prevents Kharch Log from logging that message as an expense.</p></details></div>
 </div>
-<p><a href="/features/sms-auto-capture/">SMS auto-capture</a> · <a href="/features/google-sheets-sync/">Google Sheets sync</a> · <a href="/contact/">Contact us</a></p>
+<div class="section__head">
+<h2>Explore related features</h2>
+<div class="feature-related"><a href="/features/sms-auto-capture/">SMS auto-capture</a><a href="/features/google-sheets-sync/">Google Sheets sync</a><a href="/blog/upi-expense-tracker-stop-losing-small-payments/">UPI small payments</a></div>
+<p><a href="/features/">All features</a> · <a href="/contact/">Contact us</a></p>
 </div>
 </div>
 

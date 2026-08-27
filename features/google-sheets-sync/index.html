@@ -28,8 +28,13 @@
         <span class="brand-lockup__name">Kharch Log</span>
       </a>
       <nav class="site-nav" aria-label="Primary">
-        <a href="/#features">Features</a>
-        <a href="/features/">All features</a>
+        <div class="nav-dropdown">
+          <a href="/features/" class="nav-dropdown__trigger" aria-haspopup="true">Features</a>
+          <div class="nav-dropdown__menu" role="menu">
+            <a href="/features/" role="menuitem">All features</a>
+            <a href="/features/manual-voice-entry/">Manual & voice expense entry</a><a href="/features/sms-auto-capture/">Bank & UPI SMS auto-capture</a><a href="/features/review-inbox/">Needs-review inbox for unclear SMS</a><a href="/features/google-sheets-sync/">Google Sheets expense sync</a><a href="/features/reports-insights/">Today view & spending reports</a><a href="/features/share-invoice/">Share expenses & invoice PDF</a>
+          </div>
+        </div>
         <a href="/blog/">Blog</a>
         <a href="/#faq">FAQ</a>
         <a href="/contact/">Contact</a>
@@ -61,35 +66,38 @@
     </section>
     
 <div class="feature-detail section">
+<div class="feature-quick-answer"><p><strong>Quick answer:</strong> Every expense Kharch Log saves becomes a row in a Google Sheet you own in Drive — create, export, pivot, and share without a vendor lock-in vault.</p></div>
 <div class="section__head">
 <h2>Your spreadsheet is the system of record</h2>
-<p>Closed budget apps lock history inside their platform. Kharch Log follows the Voice Sheet model: your Google Sheet is the database. The Android app is a fast capture layer; Sheets is where you pivot, chart, share with family, or hand off to an accountant.</p>
+<p>Fast Budget offers online storage on premium tiers; FinArt organises spending inside its app. Kharch Log inverts that: the Android app is the capture layer, Google Sheets is the durable ledger — the model FinArt’s comparison table admits spreadsheets are “customisable but difficult to maintain daily.” Kharch Log automates capture and still leaves you the Sheet.</p>
 </div>
 <div class="section__head">
 <h2>How Google Sheets sync works</h2>
-<ol class="steps-inline">
-<li><div><strong>Sign in with Google</strong>One-time setup links Kharch Log to your Google account.</div></li>
-<li><div><strong>Auto-create folder &amp; sheet</strong>The app creates a Kharch Log folder in Drive and a spreadsheet with structured columns for expenses.</div></li>
-<li><div><strong>Every save syncs</strong>Manual, voice, and approved SMS entries append as rows — open the same Sheet on web or desktop anytime.</div></li>
-</ol>
+<ol class="steps-inline"><li><div><strong>Sign in with Google</strong>One-time OAuth links Kharch Log to your Google account — no separate Kharch Log password.</div></li><li><div><strong>Folder &amp; spreadsheet created</strong>Kharch Log creates a dedicated folder and structured spreadsheet in your Drive.</div></li><li><div><strong>Every entry syncs</strong>Manual, voice, and approved SMS rows append automatically.</div></li><li><div><strong>Use anywhere</strong>Open the same Sheet in a browser, Excel export, or share read access with family.</div></li></ol>
+</div>
+<div class="section__head feature-deep">
+<h2>Sheets ownership without daily spreadsheet pain</h2>
+<p>People search for “expense tracker Excel template” because they want control. Kharch Log gives you a live Sheet without retyping every UPI alert — capture in the app, analyse in Sheets.</p>
+<h3>App + Sheet split</h3><p>Fast entry on phone; heavy analysis on desktop — each tool does what it is best at.</p><h3>Backup by default</h3><p>Google Drive versioning and your Google account security protect the ledger.</p>
+<div class="feature-detail__grid"><div class="feature-detail__card"><h3>You own the file</h3><p>Stop using Kharch Log anytime — history stays in your Google account.</p></div><div class="feature-detail__card"><h3>Limited Drive scope</h3><p>drive.file access — only Kharch Log files, not your entire Drive.</p></div><div class="feature-detail__card"><h3>Household visibility</h3><p>Share the Sheet with a partner; everyone sees the same ledger without a family subscription.</p></div><div class="feature-detail__card"><h3>Pivot &amp; chart</h3><p>Build month-over-month views, category pivots, and tax summaries in Sheets.</p></div><div class="feature-detail__card"><h3>CSV &amp; Excel export</h3><p>Download .xlsx or .csv for accountants or archival.</p></div><div class="feature-detail__card"><h3>No premium paywall for export</h3><p>Unlike tiered budget apps, your data is always in an open format you control.</p></div></div>
 </div>
 <div class="section__head">
-<h2>Why Sheets beats a closed app vault</h2>
-<div class="feature-detail__grid">
-<div class="feature-detail__card"><h3>You own the file</h3><p>Export CSV, duplicate the Sheet, or stop using the app — your history stays in Drive.</p></div>
-<div class="feature-detail__card"><h3>Limited scope</h3><p>Kharch Log uses drive.file access — only files the app creates for you, not your entire Drive.</p></div>
-<div class="feature-detail__card"><h3>Household sharing</h3><p>Share the Sheet with a partner; both see the same live ledger without a “family plan” upsell.</p></div>
-<div class="feature-detail__card"><h3>Excel-friendly</h3><p>Download as .xlsx anytime — great if you outgrow the app but want the same data model.</p></div>
+<h2>How Kharch Log compares</h2>
+<div class="feature-compare-wrap">
+<table class="feature-compare">
+<thead><tr><th>Option</th><th>What it gives you</th><th>Where Kharch Log helps</th></tr></thead>
+<tbody><tr><td>Closed budget app</td><td>Easy start, but history trapped if you leave.</td><td>Sheet in Drive — portable forever.</td></tr><tr><td>Manual Google Sheet</td><td>Full control, zero automation.</td><td>Kharch Log fills rows; you keep the workbook.</td></tr><tr><td>Fast Budget cloud tier</td><td>Data on AppFer servers with subscription.</td><td>Data in your Google Drive under your account.</td></tr><tr><td>FinArt internal ledger</td><td>Rich app reports and budgets inside FinArt.</td><td>Kharch Log: app for capture, Sheets for ownership and custom reports.</td></tr></tbody>
+</table>
 </div>
 </div>
 <div class="section__head">
 <h2>Common questions</h2>
-<div class="faq-mini">
-<details><summary>Can I use my existing spreadsheet?</summary><p>The app creates a dedicated Kharch Log sheet by default. You can still copy rows into any workbook you already use.</p></details>
-<details><summary>Does Kharch Log read my other Drive files?</summary><p>No — only the spreadsheet and folder created for Kharch Log under the limited scope.</p></details>
-<details><summary>What if I delete the app?</summary><p>Your Google Sheet remains in Drive with every row you synced.</p></details>
+<div class="faq-mini"><details><summary>Can I use an existing spreadsheet?</summary><p>Kharch Log creates a dedicated sheet by default; you can copy rows into any workbook.</p></details><details><summary>Does Kharch Log read my other Drive files?</summary><p>No — only files it created under the limited scope.</p></details><details><summary>What if I delete the app?</summary><p>Your Google Sheet remains with every synced row.</p></details><details><summary>Can two people log to one Sheet?</summary><p>Share the Sheet via Google Drive; each person can use Kharch Log on their phone.</p></details><details><summary>Is internet required?</summary><p>Sync needs connectivity; manual entry can queue until online depending on device state.</p></details><details><summary>How is this different from Fast Budget web app?</summary><p>Fast Budget hosts data on their platform; Kharch Log uses your Google Sheet as the database.</p></details></div>
 </div>
-<p><a href="/blog/google-sheets-vs-budget-apps/">Sheets vs budget apps</a> · <a href="/features/">All features</a> · <a href="/contact/">Contact us</a></p>
+<div class="section__head">
+<h2>Explore related features</h2>
+<div class="feature-related"><a href="/blog/google-sheets-vs-budget-apps/">Sheets vs budget apps</a><a href="/features/reports-insights/">Reports & Today view</a><a href="/features/manual-voice-entry/">Manual & voice entry</a></div>
+<p><a href="/features/">All features</a> · <a href="/contact/">Contact us</a></p>
 </div>
 </div>
 

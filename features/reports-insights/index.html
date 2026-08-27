@@ -28,8 +28,13 @@
         <span class="brand-lockup__name">Kharch Log</span>
       </a>
       <nav class="site-nav" aria-label="Primary">
-        <a href="/#features">Features</a>
-        <a href="/features/">All features</a>
+        <div class="nav-dropdown">
+          <a href="/features/" class="nav-dropdown__trigger" aria-haspopup="true">Features</a>
+          <div class="nav-dropdown__menu" role="menu">
+            <a href="/features/" role="menuitem">All features</a>
+            <a href="/features/manual-voice-entry/">Manual & voice expense entry</a><a href="/features/sms-auto-capture/">Bank & UPI SMS auto-capture</a><a href="/features/review-inbox/">Needs-review inbox for unclear SMS</a><a href="/features/google-sheets-sync/">Google Sheets expense sync</a><a href="/features/reports-insights/">Today view & spending reports</a><a href="/features/share-invoice/">Share expenses & invoice PDF</a>
+          </div>
+        </div>
         <a href="/blog/">Blog</a>
         <a href="/#faq">FAQ</a>
         <a href="/contact/">Contact</a>
@@ -61,35 +66,38 @@
     </section>
     
 <div class="feature-detail section">
+<div class="feature-quick-answer"><p><strong>Quick answer:</strong> Kharch Log’s Today view shows same-day spending at a glance; reports break down categories over time — and you can go deeper in your synced Google Sheet.</p></div>
 <div class="section__head">
-<h2>See today first, trends second</h2>
-<p>Personal finance apps like Goodbudget and Monarch lead with dashboards — daily awareness plus category breakdowns. Kharch Log keeps it practical: a Today view for “what did I spend right now?” and reports when you want to zoom out to food, travel, or bills.</p>
+<h2>Your finances at a glance — then drill down</h2>
+<p><a href="https://fastbudget.app/" rel="noopener">Fast Budget</a> promises “your finances at a glance” with customisable overviews and charts. FinArt compares daily pace against prior months so you know mid-month if you are overspending. Kharch Log focuses on practical visibility: Today for immediate awareness, in-app reports for category trends, and Google Sheets for anything more advanced.</p>
 </div>
 <div class="section__head">
 <h2>How reports &amp; Today view work</h2>
-<ol class="steps-inline">
-<li><div><strong>Today dashboard</strong>See same-day debits and credits at a glance — useful after a shopping run or bill-payment day.</div></li>
-<li><div><strong>Filter by date &amp; category</strong>Drill into a week, month, or custom range; slice by category to spot leaks.</div></li>
-<li><div><strong>Continue in Sheets</strong>Export-ready rows in Google Sheets mean you can build pivot tables and charts beyond what the app shows.</div></li>
-</ol>
+<ol class="steps-inline"><li><div><strong>Open Today</strong>See debits and credits logged today — useful right after a shopping trip or bill-payment burst.</div></li><li><div><strong>Browse transactions</strong>Filter history by date range, category, or payment mode to find specific spends.</div></li><li><div><strong>Category breakdown</strong>Reports summarise where money went — food, travel, bills, subscriptions.</div></li><li><div><strong>Continue in Sheets</strong>Export-ready rows mean pivot tables and custom charts on desktop when you outgrow in-app views.</div></li></ol>
+</div>
+<div class="section__head feature-deep">
+<h2>Visibility that leads to better decisions</h2>
+<p>FinArt warns a monthly total only tells you on the 30th. Kharch Log’s Today view gives daily feedback; weekly Sheet reviews catch leaks from small UPI payments that add up silently.</p>
+<h3>Mid-month check-ins</h3><p>FinArt compares day-five spending to prior months. You can replicate that in Sheets; Kharch Log gives the raw daily data.</p><h3>Small UPI leaks</h3><p>₹29 and ₹49 payments disappear individually — category totals expose them in aggregate.</p>
+<div class="feature-detail__grid"><div class="feature-detail__card"><h3>Today dashboard</h3><p>Same-day awareness — the habit FinArt and Fast Budget both depend on for accurate budgets.</p></div><div class="feature-detail__card"><h3>Category reports</h3><p>See which tags dominate — food delivery, fuel, EMI, subscriptions.</p></div><div class="feature-detail__card"><h3>Income vs expense</h3><p>Credits beside debits clarify cash flow, not just spending.</p></div><div class="feature-detail__card"><h3>Date filters</h3><p>This week, this month, or custom ranges for trip or project tracking.</p></div><div class="feature-detail__card"><h3>Sheet-backed charts</h3><p>Build FinArt-style pace charts in Sheets using synced row data.</p></div><div class="feature-detail__card"><h3>Free core reports</h3><p>No paywall on basic visibility — unlike tiered finance apps.</p></div></div>
 </div>
 <div class="section__head">
-<h2>What you can learn from your data</h2>
-<div class="feature-detail__grid">
-<div class="feature-detail__card"><h3>Daily discipline</h3><p>Today view nudges same-day logging — the habit that makes monthly reviews honest.</p></div>
-<div class="feature-detail__card"><h3>Category leaks</h3><p>Food, transport, and subscriptions stand out when you filter by tag over 30 days.</p></div>
-<div class="feature-detail__card"><h3>Income vs spend</h3><p>Money-in rows beside expenses give a clearer picture than debits alone.</p></div>
-<div class="feature-detail__card"><h3>No paywall charts</h3><p>Core reports are free; heavy analysis can always continue in your Sheet.</p></div>
+<h2>How Kharch Log compares</h2>
+<div class="feature-compare-wrap">
+<table class="feature-compare">
+<thead><tr><th>Option</th><th>What it gives you</th><th>Where Kharch Log helps</th></tr></thead>
+<tbody><tr><td>Month-end bank statement</td><td>Accurate but 30 days late.</td><td>Today view plus live Sheet — daily feedback.</td></tr><tr><td>Fast Budget dashboards</td><td>Rich charts inside app; premium for bank sync.</td><td>Kharch Log reports free; Sheets for advanced charts.</td></tr><tr><td>FinArt pace alerts</td><td>Built-in budget pace and notifications.</td><td>Kharch Log: Today + category reports; build pace logic in Sheets if needed.</td></tr><tr><td>Payment app history</td><td>Per-app slice only.</td><td>Cross-bank view in one Sheet regardless of UPI app.</td></tr></tbody>
+</table>
 </div>
 </div>
 <div class="section__head">
 <h2>Common questions</h2>
-<div class="faq-mini">
-<details><summary>Do reports need SMS capture?</summary><p>No — any logged expense (manual, voice, or approved SMS) appears in reports.</p></details>
-<details><summary>Can I see reports on desktop?</summary><p>Yes — open the synced Google Sheet in a browser for charts and pivots.</p></details>
-<details><summary>How often does data update?</summary><p>Reports reflect entries as soon as they sync to your Sheet.</p></details>
+<div class="faq-mini"><details><summary>Do reports require SMS capture?</summary><p>No — manual, voice, and approved SMS entries all appear.</p></details><details><summary>Can I view reports on desktop?</summary><p>Yes — open your synced Google Sheet in a browser.</p></details><details><summary>How often do reports update?</summary><p>As soon as entries sync to your Sheet.</p></details><details><summary>Does Kharch Log set budgets automatically?</summary><p>Not currently — use category totals to inform budgets you track in Sheets.</p></details><details><summary>Can I filter by payee?</summary><p>Transaction list supports search and filters for payee and category.</p></details><details><summary>Is Today view the same as daily budget?</summary><p>Today shows what you logged today — a snapshot, not a spending limit.</p></details></div>
 </div>
-<p><a href="/blog/how-to-track-your-spending-every-week/">Weekly review guide</a> · <a href="/features/google-sheets-sync/">Sheets sync</a> · <a href="/contact/">Contact us</a></p>
+<div class="section__head">
+<h2>Explore related features</h2>
+<div class="feature-related"><a href="/blog/how-to-track-your-spending-every-week/">Weekly review guide</a><a href="/features/google-sheets-sync/">Google Sheets sync</a><a href="/features/sms-auto-capture/">SMS auto-capture</a></div>
+<p><a href="/features/">All features</a> · <a href="/contact/">Contact us</a></p>
 </div>
 </div>
 

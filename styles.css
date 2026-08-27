@@ -118,6 +118,79 @@ a:hover { text-decoration: underline; }
 .site-nav a { color: var(--muted); text-decoration: none; }
 .site-nav a:hover { color: var(--primary); }
 
+.nav-dropdown {
+  position: relative;
+}
+.nav-dropdown__trigger {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  color: var(--muted);
+  text-decoration: none;
+  font-weight: 600;
+}
+.nav-dropdown__trigger::after {
+  content: "";
+  width: 0;
+  height: 0;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-top: 5px solid currentColor;
+  opacity: 0.65;
+  margin-top: 2px;
+}
+.nav-dropdown:hover .nav-dropdown__trigger,
+.nav-dropdown:focus-within .nav-dropdown__trigger {
+  color: var(--primary);
+}
+.nav-dropdown__menu {
+  position: absolute;
+  top: calc(100% + 10px);
+  right: 0;
+  min-width: 260px;
+  padding: 8px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  box-shadow: var(--shadow);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-6px);
+  transition: opacity 0.15s ease, transform 0.15s ease, visibility 0.15s;
+  z-index: 50;
+  display: grid;
+  gap: 2px;
+}
+.nav-dropdown:hover .nav-dropdown__menu,
+.nav-dropdown:focus-within .nav-dropdown__menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+.nav-dropdown__menu a {
+  display: block;
+  padding: 10px 12px;
+  border-radius: 10px;
+  color: var(--text);
+  font-weight: 600;
+  font-size: 0.88rem;
+  line-height: 1.35;
+  text-decoration: none;
+  white-space: nowrap;
+}
+.nav-dropdown__menu a:hover {
+  background: var(--secondary-soft);
+  color: var(--primary);
+  text-decoration: none;
+}
+.nav-dropdown__menu a:first-child {
+  color: var(--secondary-dark);
+  border-bottom: 1px solid var(--line);
+  margin-bottom: 4px;
+  padding-bottom: 12px;
+  border-radius: 10px 10px 0 0;
+}
+
 .nav-cta {
   padding: 8px 14px !important;
   border-radius: 12px;
@@ -724,7 +797,13 @@ footer:not(.site-footer) {
 }
 
 @media (max-width: 640px) {
-  .site-nav a:not(.nav-cta) { display: none; }
+  .site-nav > a:not(.nav-cta) { display: none; }
+  .nav-dropdown__trigger { display: inline-flex !important; }
+  .nav-dropdown__menu {
+    right: auto;
+    left: 0;
+    min-width: min(280px, calc(100vw - 48px));
+  }
   .feature-grid,
   .why-list,
   .trust__list { grid-template-columns: 1fr; }
@@ -856,6 +935,72 @@ footer:not(.site-footer) {
 .feature-detail {
   width: min(var(--max), calc(100% - 40px));
   margin: 0 auto;
+}
+.feature-quick-answer {
+  margin: 0 0 28px;
+  padding: 16px 18px;
+  background: var(--secondary-soft);
+  border: 1px solid rgba(20, 184, 166, 0.25);
+  border-radius: 14px;
+}
+.feature-quick-answer p {
+  margin: 0;
+  color: var(--text);
+  line-height: 1.55;
+}
+.feature-deep h3 {
+  margin: 22px 0 8px;
+  font-size: 1.05rem;
+}
+.feature-deep > p + h3 { margin-top: 18px; }
+.feature-deep > p {
+  color: var(--muted);
+}
+.feature-compare-wrap {
+  overflow-x: auto;
+  margin: 16px 0 8px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: var(--surface);
+}
+.feature-compare {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.92rem;
+}
+.feature-compare th,
+.feature-compare td {
+  padding: 12px 14px;
+  text-align: left;
+  vertical-align: top;
+  border-bottom: 1px solid var(--line);
+}
+.feature-compare th {
+  background: rgba(15, 42, 67, 0.04);
+  font-weight: 700;
+  color: var(--primary);
+}
+.feature-compare tr:last-child td { border-bottom: none; }
+.feature-compare td { color: var(--muted); }
+.feature-compare td:first-child { font-weight: 600; color: var(--text); }
+.feature-related {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 12px 0 16px;
+}
+.feature-related a {
+  padding: 10px 14px;
+  border-radius: 12px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  color: var(--primary);
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-decoration: none !important;
+}
+.feature-related a:hover {
+  background: var(--secondary-soft);
 }
 .feature-detail__grid {
   display: grid;
