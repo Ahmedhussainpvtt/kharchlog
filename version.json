@@ -1,6 +1,6 @@
 {
-  "versionCode": 154,
-  "versionName": "3.2.54",
+  "versionCode": 155,
+  "versionName": "3.2.55",
   "apkUrl": "https://raw.githubusercontent.com/Ahmedhussainpvtt/kharchlog/refs/heads/main/KharchLog.apk",
-  "notes": "Button shimmer on network CTAs, branded AppToast, voice save UI match, bordered Approve/Reject."
+  "notes": "Approve button back to clean primary; Reject keeps red outline."
 }
