@@ -3,7 +3,7 @@ window.KHARCHLOG_PAY = {
   trackerUrl: 'https://kharchlog-license-u4rcttr3nq-el.a.run.app',
   paymentProvider: 'razorpay',
   /** Live Key ID from Razorpay dashboard (public — safe in browser) */
-  razorpayKeyId: 'REPLACE_WITH_LIVE_KEY_ID',
+  razorpayKeyId: 'rzp_live_TVqX95CxZTFsuk',
   amountPaise: 14900,
   currency: 'INR',
   productName: 'Kharch Log Lifetime',
