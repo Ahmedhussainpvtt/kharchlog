@@ -18,7 +18,7 @@
   }
 
   function validateConfig() {
-    if (!cfg.trackerUrl) {
+    if (!cfg.razorpayKeyId) {
       setStatus('Payment is not configured yet. Try again shortly.', true);
       if (payBtn) payBtn.disabled = true;
       return false;
@@ -32,10 +32,11 @@
   }
 
   function apiBase() {
-    return cfg.trackerUrl.replace(/\/$/, '');
+    return (cfg.trackerUrl || '').replace(/\/$/, '');
   }
 
   function createOrder(email, phone) {
+    if (!apiBase()) return Promise.resolve(null);
     return fetch(apiBase() + '/create-order', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
@@ -46,6 +47,7 @@
   }
 
   function markPaid(email, paymentId, orderId, signature) {
+    if (!apiBase()) return Promise.reject(new Error('Payment server not configured'));
     return fetch(apiBase() + '/', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
@@ -59,6 +61,76 @@
       })
     }).then(function (r) {
       return r.json();
+    });
+  }
+
+  function openRazorpayModal(email, phone, orderData) {
+    var keyId = (orderData && orderData.razorpayKeyId) || cfg.razorpayKeyId;
+    var amount = (orderData && orderData.amount) || cfg.amountPaise;
+    var currency = (orderData && orderData.currency) || cfg.currency || 'INR';
+    var orderId = orderData && orderData.orderId;
+
+    if (!keyId || !amount) {
+      return Promise.reject(new Error('Payment is not configured yet'));
+    }
+
+    setStatus('Opening checkout…');
+
+    return new Promise(function (resolve, reject) {
+      var options = {
+        key: keyId,
+        amount: amount,
+        currency: currency,
+        name: cfg.productName || 'Kharch Log',
+        description: cfg.productDescription || 'One-time lifetime access',
+        prefill: {
+          email: email,
+          contact: phone || ''
+        },
+        notes: {
+          email: email
+        },
+        theme: { color: '#0F2A43' },
+        handler: function (response) {
+          setStatus('Confirming payment…');
+          markPaid(
+            email,
+            response.razorpay_payment_id,
+            response.razorpay_order_id,
+            response.razorpay_signature
+          )
+            .then(function (result) {
+              if (!result || !result.ok || !result.paid) {
+                throw new Error((result && result.error) || 'Payment not confirmed on server');
+              }
+              var q =
+                '?paid=1&email=' +
+                encodeURIComponent(result.email || email) +
+                '&order_id=' +
+                encodeURIComponent(response.razorpay_order_id || '');
+              window.location.href = '/staging/pay/success.html' + q;
+              resolve(result);
+            })
+            .catch(reject);
+        },
+        modal: {
+          ondismiss: function () {
+            reject(new Error('Checkout closed'));
+          }
+        }
+      };
+
+      if (orderId) options.order_id = orderId;
+
+      var rzp = new Razorpay(options);
+      rzp.on('payment.failed', function (resp) {
+        var msg =
+          (resp.error && resp.error.description) ||
+          (resp.error && resp.error.reason) ||
+          'Payment failed';
+        reject(new Error(msg));
+      });
+      rzp.open();
     });
   }
 
@@ -93,66 +165,14 @@
 
     createOrder(email, phone)
       .then(function (orderData) {
-        if (!orderData || !orderData.ok || orderData.provider !== 'razorpay' || !orderData.orderId) {
-          throw new Error((orderData && orderData.error) || 'Could not create Razorpay order');
+        if (orderData && orderData.ok && orderData.provider === 'razorpay' && orderData.orderId) {
+          return openRazorpayModal(email, phone, orderData);
         }
-
-        var keyId = orderData.razorpayKeyId || cfg.razorpayKeyId;
-        if (!keyId) throw new Error('Missing Razorpay key id');
-
-        setStatus('Opening checkout…');
-
-        return new Promise(function (resolve, reject) {
-          var options = {
-            key: keyId,
-            amount: orderData.amount,
-            currency: orderData.currency || 'INR',
-            name: cfg.productName || 'Kharch Log',
-            description: cfg.productDescription || 'One-time lifetime access',
-            order_id: orderData.orderId,
-            prefill: {
-              email: email,
-              contact: phone || ''
-            },
-            theme: { color: '#0F2A43' },
-            handler: function (response) {
-              setStatus('Confirming payment…');
-              markPaid(
-                email,
-                response.razorpay_payment_id,
-                response.razorpay_order_id,
-                response.razorpay_signature
-              )
-                .then(function (result) {
-                  if (!result || !result.ok || !result.paid) {
-                    throw new Error((result && result.error) || 'Payment not confirmed');
-                  }
-                  var q =
-                    '?paid=1&email=' +
-                    encodeURIComponent(result.email || email) +
-                    '&order_id=' +
-                    encodeURIComponent(response.razorpay_order_id || '');
-                  window.location.href = '/staging/pay/success.html' + q;
-                  resolve(result);
-                })
-                .catch(reject);
-            },
-            modal: {
-              ondismiss: function () {
-                reject(new Error('Checkout closed'));
-              }
-            }
-          };
-          var rzp = new Razorpay(options);
-          rzp.on('payment.failed', function (resp) {
-            var msg =
-              (resp.error && resp.error.description) ||
-              (resp.error && resp.error.reason) ||
-              'Payment failed';
-            reject(new Error(msg));
-          });
-          rzp.open();
-        });
+        if (orderData && orderData.error) {
+          throw new Error(orderData.error);
+        }
+        // Server not on staging Razorpay yet — open checkout with public key + amount
+        return openRazorpayModal(email, phone, null);
       })
       .catch(function (e) {
         var msg = e && e.message ? e.message : 'Could not start checkout';
@@ -161,7 +181,10 @@
           msg === 'Load failed' ||
           msg === 'NetworkError when attempting to fetch resource.'
         ) {
-          msg = 'Could not reach payment server. Retry in a minute.';
+          return openRazorpayModal(email, phone, null).catch(function (e2) {
+            setStatus((e2 && e2.message) || msg, true);
+            if (payBtn) payBtn.disabled = false;
+          });
         }
         setStatus(msg, true);
         if (payBtn) payBtn.disabled = false;
