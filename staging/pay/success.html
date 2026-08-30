@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Staging payment status — Kharch Log</title>
+  <title>Payment status — Kharch Log</title>
   <meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex" />
   <meta name="googlebot" content="noindex, nofollow" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -11,30 +11,29 @@
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="/styles.css" />
   <link rel="icon" href="/logo.png" />
-  <style>
-    .staging-banner {
-      background: #C2410C;
-      color: #fff;
-      text-align: center;
-      font-weight: 700;
-      font-size: 0.9rem;
-      padding: 10px 16px;
-    }
-  </style>
 </head>
 <body>
-  <div class="staging-banner" role="status">STAGING — test payment result</div>
   <a class="skip-link" href="#main">Skip to content</a>
 
   <header class="site-header">
     <div class="site-header__inner">
-      <a class="brand-lockup" href="/staging/" aria-label="Kharch Log staging">
+      <a class="brand-lockup" href="/" aria-label="Kharch Log home">
         <img src="/logo.png" alt="" width="40" height="40" />
         <span class="brand-lockup__name">Kharch Log</span>
       </a>
       <nav class="site-nav" aria-label="Primary">
-        <a href="/">Production site</a>
-        <a href="/staging/pay/">Test pay again</a>
+        <div class="nav-dropdown">
+          <a href="/features/" class="nav-dropdown__trigger" aria-haspopup="true">Features</a>
+          <div class="nav-dropdown__menu" role="menu">
+            <a href="/features/" role="menuitem">All features</a>
+            <a href="/features/manual-voice-entry/">Manual & voice expense entry</a><a href="/features/sms-auto-capture/">Bank & UPI SMS auto-capture</a><a href="/features/review-inbox/">Needs-review inbox for unclear SMS</a><a href="/features/google-sheets-sync/">Google Sheets expense sync</a><a href="/features/reports-insights/">Today view & spending reports</a><a href="/features/share-invoice/">Share expenses & invoice PDF</a>
+          </div>
+        </div>
+        <a href="/blog/">Blog</a>
+        <a href="/pricing/">Pricing</a>
+        <a href="/faq/">FAQ</a>
+        <a href="/contact/">Contact</a>
+        <a class="nav-cta" href="/staging/pay/">Get lifetime — ₹149</a>
       </nav>
     </div>
   </header>
@@ -49,7 +48,7 @@
       <div class="card pay-card">
         <p class="pay-status" id="status" aria-live="polite">Checking…</p>
         <p class="pay-fine" id="detail"></p>
-        <p class="pay-fine"><a href="/staging/pay/">← Test pay again</a> · <a href="/staging/">Staging home</a></p>
+        <p class="pay-fine"><a href="/staging/pay/">← Back to pay</a> · <a href="/">Home</a></p>
       </div>
     </div>
   </main>
@@ -66,22 +65,32 @@
       var statusEl = document.getElementById('status');
       var detailEl = document.getElementById('detail');
 
-      if (paid && email) {
-        titleEl.textContent = 'Test payment OK';
-        tagEl.textContent = 'Staging license marked paid (test Firestore collection).';
-        statusEl.textContent = 'Test unlock for ' + email + '. Production app still uses production API.';
+      function fail(msg) {
+        titleEl.textContent = 'Payment not confirmed';
+        tagEl.textContent = 'If money was deducted, email us with your order id.';
+        statusEl.textContent = msg || 'Verification failed';
+        statusEl.className = 'pay-status pay-status-error';
+        detailEl.textContent = orderId ? 'Order: ' + orderId : '';
+      }
+
+      function ok(paidEmail) {
+        titleEl.textContent = 'You’re in';
+        tagEl.textContent = 'Lifetime access unlocked.';
+        statusEl.textContent =
+          'Signed up as ' + (paidEmail || email || 'your Google email') + '. Open the app and sign in with the same account.';
         statusEl.className = 'pay-status';
         detailEl.textContent = orderId ? 'Order: ' + orderId : '';
         try {
           sessionStorage.removeItem('kharchlog_staging_pay_email');
         } catch (e) {}
+      }
+
+      if (paid && email) {
+        ok(email);
         return;
       }
 
-      titleEl.textContent = 'No payment confirmed';
-      tagEl.textContent = 'Complete checkout from the staging pay page.';
-      statusEl.textContent = 'Missing paid=1 redirect — start from /staging/pay/';
-      statusEl.className = 'pay-status pay-status-error';
+      fail('Complete payment from the pay page first.');
     })();
   </script>
 </body>

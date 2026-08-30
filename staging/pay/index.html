@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Staging — Buy lifetime (Razorpay test) — Kharch Log</title>
+  <title>Buy lifetime access — Kharch Log</title>
   <meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex" />
   <meta name="googlebot" content="noindex, nofollow" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -11,30 +11,29 @@
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="/styles.css" />
   <link rel="icon" href="/logo.png" />
-  <style>
-    .staging-banner {
-      background: #C2410C;
-      color: #fff;
-      text-align: center;
-      font-weight: 700;
-      font-size: 0.9rem;
-      padding: 10px 16px;
-    }
-  </style>
 </head>
 <body>
-  <div class="staging-banner" role="status">STAGING — Razorpay test checkout only. Does not affect production licenses.</div>
   <a class="skip-link" href="#main">Skip to content</a>
 
   <header class="site-header">
     <div class="site-header__inner">
-      <a class="brand-lockup" href="/staging/" aria-label="Kharch Log staging">
+      <a class="brand-lockup" href="/" aria-label="Kharch Log home">
         <img src="/logo.png" alt="" width="40" height="40" />
         <span class="brand-lockup__name">Kharch Log</span>
       </a>
       <nav class="site-nav" aria-label="Primary">
-        <a href="/">Production site</a>
-        <a href="/staging/">Staging home</a>
+        <div class="nav-dropdown">
+          <a href="/features/" class="nav-dropdown__trigger" aria-haspopup="true">Features</a>
+          <div class="nav-dropdown__menu" role="menu">
+            <a href="/features/" role="menuitem">All features</a>
+            <a href="/features/manual-voice-entry/">Manual & voice expense entry</a><a href="/features/sms-auto-capture/">Bank & UPI SMS auto-capture</a><a href="/features/review-inbox/">Needs-review inbox for unclear SMS</a><a href="/features/google-sheets-sync/">Google Sheets expense sync</a><a href="/features/reports-insights/">Today view & spending reports</a><a href="/features/share-invoice/">Share expenses & invoice PDF</a>
+          </div>
+        </div>
+        <a href="/blog/">Blog</a>
+        <a href="/pricing/">Pricing</a>
+        <a href="/faq/">FAQ</a>
+        <a href="/contact/">Contact</a>
+        <a class="nav-cta" href="/staging/pay/">Get lifetime — ₹149</a>
       </nav>
     </div>
   </header>
@@ -42,17 +41,17 @@
   <main id="main">
     <div class="wrap">
       <section class="hero pay-hero">
-        <h1>Lifetime access (test)</h1>
-        <p class="hero-tagline">Razorpay test mode — ₹149 simulated checkout.</p>
+        <h1>Lifetime access</h1>
+        <p class="hero-tagline">Pay once. Unlock Kharch Log forever.</p>
       </section>
 
       <div class="card pay-card">
         <div class="pay-email-notice" role="note">
-          <strong>Staging only</strong>
-          Paid test users are stored in <code>users_staging</code> on the staging API — not production.
+          <strong>Use your Google sign-in email</strong>
+          The email below must match the Google account you use in the app. Wrong email = no unlock.
         </div>
 
-        <p class="pay-price">₹149 <span class="pay-once">test</span></p>
+        <p class="pay-price">₹149 <span class="pay-once">one-time</span></p>
 
         <label class="pay-label" for="email">Google email</label>
         <input
@@ -66,7 +65,7 @@
           required
         />
 
-        <label class="pay-label" for="phone">Phone (optional)</label>
+        <label class="pay-label" for="phone">Phone (for payment receipt)</label>
         <input
           class="pay-input"
           id="phone"
@@ -78,15 +77,17 @@
           placeholder="10-digit mobile"
         />
 
-        <button type="button" class="btn pay-btn" id="payBtn">Pay ₹149 (test)</button>
+        <p class="pay-email-check">After payment you’ll return here and we unlock that email automatically.</p>
+
+        <button type="button" class="btn pay-btn" id="payBtn">Pay ₹149</button>
         <p class="pay-status" id="status" aria-live="polite"></p>
         <p class="pay-fine">
-          Secure checkout via Razorpay test.
-          Use test card <strong>4111 1111 1111 1111</strong>, any future expiry, any CVV.
+          Secure checkout via Razorpay.
+          Questions? <a href="mailto:kharchlog@gmail.com">kharchlog@gmail.com</a>
         </p>
       </div>
 
-      <p class="back-home"><a href="/staging/">← Staging home</a></p>
+      <p class="back-home"><a href="/">← Back to home</a></p>
     </div>
   </main>
 

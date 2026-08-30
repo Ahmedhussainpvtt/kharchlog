@@ -19,7 +19,7 @@
 
   function validateConfig() {
     if (!cfg.trackerUrl) {
-      setStatus('Missing trackerUrl in staging pay/config.js', true);
+      setStatus('Payment is not configured yet. Try again shortly.', true);
       if (payBtn) payBtn.disabled = true;
       return false;
     }
@@ -76,9 +76,10 @@
     }
 
     var ok = window.confirm(
-      'STAGING TEST ONLY\n\nYou will test pay as:\n\n' +
+      'You will sign in to Kharch Log with:\n\n' +
         email +
-        '\n\nUses Razorpay test mode — no real charge. Continue?'
+        '\n\n' +
+        'This must be your correct Google account. Continue to pay ₹149?'
     );
     if (!ok) return;
 
@@ -98,7 +99,7 @@
         var keyId = orderData.razorpayKeyId || cfg.razorpayKeyId;
         if (!keyId) throw new Error('Missing Razorpay key id');
 
-        setStatus('Opening Razorpay test checkout…');
+        setStatus('Opening checkout…');
 
         return new Promise(function (resolve, reject) {
           var options = {
@@ -106,7 +107,7 @@
             amount: orderData.amount,
             currency: orderData.currency || 'INR',
             name: cfg.productName || 'Kharch Log',
-            description: cfg.productDescription || 'Lifetime access (staging test)',
+            description: cfg.productDescription || 'One-time lifetime access',
             order_id: orderData.orderId,
             prefill: {
               email: email,
@@ -159,7 +160,7 @@
           msg === 'Load failed' ||
           msg === 'NetworkError when attempting to fetch resource.'
         ) {
-          msg = 'Could not reach staging payment server (network/CORS). Retry in a minute.';
+          msg = 'Could not reach payment server. Retry in a minute.';
         }
         setStatus(msg, true);
         if (payBtn) payBtn.disabled = false;

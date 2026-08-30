@@ -5,6 +5,6 @@ window.KHARCHLOG_PAY = {
   razorpayKeyId: 'rzp_test_TVq62QBc2ZMW2K',
   amountPaise: 14900,
   currency: 'INR',
-  productName: 'Kharch Log Lifetime (staging test)',
-  productDescription: 'Razorpay test checkout — does not unlock production app'
+  productName: 'Kharch Log Lifetime',
+  productDescription: 'One-time lifetime access'
 };
