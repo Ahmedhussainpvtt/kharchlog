@@ -4,5 +4,6 @@ Allow: /
 # Thin / utility pages — keep crawl budget on the product home page
 Disallow: /pay/
 Disallow: /pay/success.html
+Disallow: /staging/
 
 Sitemap: https://kharchlog.in/sitemap.xml

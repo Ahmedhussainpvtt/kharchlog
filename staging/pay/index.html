@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en-IN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Staging — Buy lifetime (Razorpay test) — Kharch Log</title>
+  <meta name="robots" content="noindex, nofollow" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/styles.css" />
+  <link rel="icon" href="/logo.png" />
+  <style>
+    .staging-banner {
+      background: #C2410C;
+      color: #fff;
+      text-align: center;
+      font-weight: 700;
+      font-size: 0.9rem;
+      padding: 10px 16px;
+    }
+  </style>
+</head>
+<body>
+  <div class="staging-banner" role="status">STAGING — Razorpay test checkout only. Does not affect production licenses.</div>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a class="brand-lockup" href="/staging/" aria-label="Kharch Log staging">
+        <img src="/logo.png" alt="" width="40" height="40" />
+        <span class="brand-lockup__name">Kharch Log</span>
+      </a>
+      <nav class="site-nav" aria-label="Primary">
+        <a href="/">Production site</a>
+        <a href="/staging/">Staging home</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <div class="wrap">
+      <section class="hero pay-hero">
+        <h1>Lifetime access (test)</h1>
+        <p class="hero-tagline">Razorpay test mode — ₹149 simulated checkout.</p>
+      </section>
+
+      <div class="card pay-card">
+        <div class="pay-email-notice" role="note">
+          <strong>Staging only</strong>
+          Paid test users are stored in <code>users_staging</code> on the staging API — not production.
+        </div>
+
+        <p class="pay-price">₹149 <span class="pay-once">test</span></p>
+
+        <label class="pay-label" for="email">Google email</label>
+        <input
+          class="pay-input"
+          id="email"
+          name="email"
+          type="email"
+          autocomplete="email"
+          inputmode="email"
+          placeholder="you@gmail.com"
+          required
+        />
+
+        <label class="pay-label" for="phone">Phone (optional)</label>
+        <input
+          class="pay-input"
+          id="phone"
+          name="phone"
+          type="tel"
+          autocomplete="tel"
+          inputmode="numeric"
+          maxlength="10"
+          placeholder="10-digit mobile"
+        />
+
+        <button type="button" class="btn pay-btn" id="payBtn">Pay ₹149 (test)</button>
+        <p class="pay-status" id="status" aria-live="polite"></p>
+        <p class="pay-fine">
+          Secure checkout via Razorpay test.
+          Use test card <strong>4111 1111 1111 1111</strong>, any future expiry, any CVV.
+        </p>
+      </div>
+
+      <p class="back-home"><a href="/staging/">← Staging home</a></p>
+    </div>
+  </main>
+
+  <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+  <script src="/staging/pay/config.js"></script>
+  <script src="/staging/pay/checkout.js"></script>
+</body>
+</html>
