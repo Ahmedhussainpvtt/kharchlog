@@ -1,7 +1,9 @@
-/** Public checkout config — secrets stay on Cloud Run only */
+/** Public checkout config — secret stays on Cloud Run only */
 window.KHARCHLOG_PAY = {
   trackerUrl: 'https://kharchlog-license-u4rcttr3nq-el.a.run.app',
-  cashfreeEnv: 'production',
+  paymentProvider: 'razorpay',
+  /** Live Key ID from Razorpay dashboard (public — safe in browser) */
+  razorpayKeyId: 'REPLACE_WITH_LIVE_KEY_ID',
   amountPaise: 14900,
   currency: 'INR',
   productName: 'Kharch Log Lifetime',

@@ -23,21 +23,93 @@
       if (payBtn) payBtn.disabled = true;
       return false;
     }
-    if (typeof Cashfree !== 'function') {
-      setStatus('Cashfree SDK failed to load — refresh and try again', true);
+    if (!cfg.razorpayKeyId) {
+      setStatus('Payment is not configured yet. Try again shortly.', true);
+      if (payBtn) payBtn.disabled = true;
+      return false;
+    }
+    if (typeof Razorpay !== 'function') {
+      setStatus('Razorpay SDK failed to load — refresh and try again', true);
       if (payBtn) payBtn.disabled = true;
       return false;
     }
     return true;
   }
 
+  function apiBase() {
+    return (cfg.trackerUrl || '').replace(/\/$/, '');
+  }
+
   function createOrder(email, phone) {
-    return fetch(cfg.trackerUrl.replace(/\/$/, '') + '/create-order', {
+    return fetch(apiBase() + '/create-order', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ email: email, phone: phone || '' })
     }).then(function (r) {
       return r.json();
+    });
+  }
+
+  function openRazorpayModal(email, phone, orderData) {
+    var keyId = (orderData && orderData.razorpayKeyId) || cfg.razorpayKeyId;
+    var amount = (orderData && orderData.amount) || cfg.amountPaise;
+    var currency = (orderData && orderData.currency) || cfg.currency || 'INR';
+    var orderId = orderData && orderData.orderId;
+
+    if (!keyId || !amount) {
+      return Promise.reject(new Error('Payment is not configured yet'));
+    }
+
+    setStatus('Opening checkout…');
+
+    return new Promise(function (resolve, reject) {
+      var options = {
+        key: keyId,
+        amount: amount,
+        currency: currency,
+        name: cfg.productName || 'Kharch Log',
+        description: cfg.productDescription || 'One-time lifetime access',
+        prefill: {
+          email: email,
+          contact: phone || ''
+        },
+        notes: {
+          email: email
+        },
+        theme: { color: '#0F2A43' },
+        handler: function (response) {
+          var q = new URLSearchParams();
+          q.set('email', email);
+          if (response.razorpay_payment_id) {
+            q.set('payment_id', response.razorpay_payment_id);
+          }
+          if (response.razorpay_order_id) {
+            q.set('order_id', response.razorpay_order_id);
+          }
+          if (response.razorpay_signature) {
+            q.set('signature', response.razorpay_signature);
+          }
+          window.location.href = '/pay/success.html?' + q.toString();
+          resolve({ ok: true });
+        },
+        modal: {
+          ondismiss: function () {
+            reject(new Error('Checkout closed'));
+          }
+        }
+      };
+
+      if (orderId) options.order_id = orderId;
+
+      var rzp = new Razorpay(options);
+      rzp.on('payment.failed', function (resp) {
+        var msg =
+          (resp.error && resp.error.description) ||
+          (resp.error && resp.error.reason) ||
+          'Payment failed';
+        reject(new Error(msg));
+      });
+      rzp.open();
     });
   }
 
@@ -72,30 +144,25 @@
 
     createOrder(email, phone)
       .then(function (orderData) {
-        if (!orderData || !orderData.ok || !orderData.paymentSessionId) {
-          throw new Error((orderData && orderData.error) || 'Could not create order');
+        if (orderData && orderData.ok && orderData.provider === 'razorpay' && orderData.orderId) {
+          return openRazorpayModal(email, phone, orderData);
         }
-
-        setStatus('Opening Cashfree…');
-        var mode =
-          orderData.env === 'production' || cfg.cashfreeEnv === 'production'
-            ? 'production'
-            : 'sandbox';
-        var cashfree = Cashfree({ mode: mode });
-        return cashfree.checkout({
-          paymentSessionId: orderData.paymentSessionId,
-          redirectTarget: '_self'
-        });
-      })
-      .then(function (result) {
-        if (result && result.error) {
-          throw new Error(result.error.message || 'Checkout failed');
+        if (orderData && orderData.error) {
+          throw new Error(orderData.error);
         }
+        return openRazorpayModal(email, phone, null);
       })
       .catch(function (e) {
         var msg = e && e.message ? e.message : 'Could not start checkout';
-        if (msg === 'Failed to fetch' || msg === 'Load failed' || msg === 'NetworkError when attempting to fetch resource.') {
-          msg = 'Could not reach payment server (network/CORS). Retry in a minute.';
+        if (
+          msg === 'Failed to fetch' ||
+          msg === 'Load failed' ||
+          msg === 'NetworkError when attempting to fetch resource.'
+        ) {
+          return openRazorpayModal(email, phone, null).catch(function (e2) {
+            setStatus((e2 && e2.message) || msg, true);
+            if (payBtn) payBtn.disabled = false;
+          });
         }
         setStatus(msg, true);
         if (payBtn) payBtn.disabled = false;
