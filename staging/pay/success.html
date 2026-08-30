@@ -53,12 +53,16 @@
     </div>
   </main>
 
+  <script src="config.js"></script>
   <script>
     (function () {
+      var cfg = window.KHARCHLOG_PAY || {};
       var params = new URLSearchParams(window.location.search);
+      var email = (params.get('email') || '').trim().toLowerCase();
+      var paymentId = (params.get('payment_id') || params.get('paymentId') || '').trim();
+      var orderId = (params.get('order_id') || params.get('orderId') || '').trim();
+      var signature = (params.get('signature') || '').trim();
       var paid = params.get('paid') === '1';
-      var email = (params.get('email') || '').trim();
-      var orderId = params.get('order_id') || params.get('orderId') || '';
 
       var titleEl = document.getElementById('title');
       var tagEl = document.getElementById('tagline');
@@ -67,22 +71,54 @@
 
       function fail(msg) {
         titleEl.textContent = 'Payment not confirmed';
-        tagEl.textContent = 'If money was deducted, email us with your order id.';
+        tagEl.textContent = 'If money was deducted, email us with your payment id.';
         statusEl.textContent = msg || 'Verification failed';
         statusEl.className = 'pay-status pay-status-error';
-        detailEl.textContent = orderId ? 'Order: ' + orderId : '';
+        var parts = [];
+        if (paymentId) parts.push('Payment: ' + paymentId);
+        if (orderId) parts.push('Order: ' + orderId);
+        detailEl.textContent = parts.join(' · ');
       }
 
       function ok(paidEmail) {
         titleEl.textContent = 'You’re in';
         tagEl.textContent = 'Lifetime access unlocked.';
         statusEl.textContent =
-          'Signed up as ' + (paidEmail || email || 'your Google email') + '. Open the app and sign in with the same account.';
+          'Signed up as ' +
+          (paidEmail || email || 'your Google email') +
+          '. Open the app and sign in with the same account.';
         statusEl.className = 'pay-status';
-        detailEl.textContent = orderId ? 'Order: ' + orderId : '';
+        var parts = [];
+        if (paymentId) parts.push('Payment: ' + paymentId);
+        if (orderId) parts.push('Order: ' + orderId);
+        detailEl.textContent = parts.join(' · ');
         try {
           sessionStorage.removeItem('kharchlog_staging_pay_email');
         } catch (e) {}
+      }
+
+      function apiBase() {
+        return (cfg.trackerUrl || '').replace(/\/$/, '');
+      }
+
+      function markPaid() {
+        if (!apiBase()) {
+          return Promise.reject(new Error('Payment server not configured'));
+        }
+        return fetch(apiBase() + '/', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            action: 'markPaid',
+            email: email,
+            paymentId: paymentId,
+            orderId: orderId,
+            signature: signature,
+            staging: true
+          })
+        }).then(function (r) {
+          return r.json();
+        });
       }
 
       if (paid && email) {
@@ -90,7 +126,31 @@
         return;
       }
 
-      fail('Complete payment from the pay page first.');
+      if (!email) {
+        try {
+          email = (sessionStorage.getItem('kharchlog_staging_pay_email') || '').trim().toLowerCase();
+        } catch (e) {}
+      }
+
+      if (!paymentId) {
+        fail('Complete payment from the pay page first.');
+        return;
+      }
+
+      markPaid()
+        .then(function (result) {
+          if (!result || !result.ok || !result.paid) {
+            throw new Error((result && result.error) || 'Payment not confirmed on server');
+          }
+          ok(result.email || email);
+        })
+        .catch(function (e) {
+          var msg = (e && e.message) || 'Verification failed';
+          if (msg === 'Failed to fetch' || msg === 'Load failed') {
+            msg = 'Could not reach payment server — retry in a minute.';
+          }
+          fail(msg);
+        });
     })();
   </script>
 </body>

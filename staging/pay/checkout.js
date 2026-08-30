@@ -46,24 +46,6 @@
     });
   }
 
-  function markPaid(email, paymentId, orderId, signature) {
-    if (!apiBase()) return Promise.reject(new Error('Payment server not configured'));
-    return fetch(apiBase() + '/', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        action: 'markPaid',
-        email: email,
-        paymentId: paymentId,
-        orderId: orderId,
-        signature: signature,
-        staging: true
-      })
-    }).then(function (r) {
-      return r.json();
-    });
-  }
-
   function openRazorpayModal(email, phone, orderData) {
     var keyId = (orderData && orderData.razorpayKeyId) || cfg.razorpayKeyId;
     var amount = (orderData && orderData.amount) || cfg.amountPaise;
@@ -92,26 +74,19 @@
         },
         theme: { color: '#0F2A43' },
         handler: function (response) {
-          setStatus('Confirming payment…');
-          markPaid(
-            email,
-            response.razorpay_payment_id,
-            response.razorpay_order_id,
-            response.razorpay_signature
-          )
-            .then(function (result) {
-              if (!result || !result.ok || !result.paid) {
-                throw new Error((result && result.error) || 'Payment not confirmed on server');
-              }
-              var q =
-                '?paid=1&email=' +
-                encodeURIComponent(result.email || email) +
-                '&order_id=' +
-                encodeURIComponent(response.razorpay_order_id || '');
-              window.location.href = '/staging/pay/success.html' + q;
-              resolve(result);
-            })
-            .catch(reject);
+          var q = new URLSearchParams();
+          q.set('email', email);
+          if (response.razorpay_payment_id) {
+            q.set('payment_id', response.razorpay_payment_id);
+          }
+          if (response.razorpay_order_id) {
+            q.set('order_id', response.razorpay_order_id);
+          }
+          if (response.razorpay_signature) {
+            q.set('signature', response.razorpay_signature);
+          }
+          window.location.href = '/staging/pay/success.html?' + q.toString();
+          resolve({ ok: true });
         },
         modal: {
           ondismiss: function () {
