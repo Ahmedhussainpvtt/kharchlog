@@ -39,7 +39,7 @@
     return fetch(apiBase() + '/create-order', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ email: email, phone: phone || '' })
+      body: JSON.stringify({ email: email, phone: phone || '', staging: true })
     }).then(function (r) {
       return r.json();
     });
@@ -54,7 +54,8 @@
         email: email,
         paymentId: paymentId,
         orderId: orderId,
-        signature: signature
+        signature: signature,
+        staging: true
       })
     }).then(function (r) {
       return r.json();

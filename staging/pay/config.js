@@ -1,7 +1,8 @@
 /** Staging checkout — Razorpay test only. Secret stays on Cloud Run. */
 window.KHARCHLOG_PAY = {
-  trackerUrl: 'https://REPLACE_AFTER_STAGING_DEPLOY',
+  trackerUrl: 'https://kharchlog-license-u4rcttr3nq-el.a.run.app',
   paymentProvider: 'razorpay',
+  staging: true,
   razorpayKeyId: 'rzp_test_TVq62QBc2ZMW2K',
   amountPaise: 14900,
   currency: 'INR',
