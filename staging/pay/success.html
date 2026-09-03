@@ -59,6 +59,7 @@
       var cfg = window.KHARCHLOG_PAY || {};
       var params = new URLSearchParams(window.location.search);
       var email = (params.get('email') || '').trim().toLowerCase();
+      var phone = (params.get('phone') || '').trim();
       var paymentId = (params.get('payment_id') || params.get('paymentId') || '').trim();
       var orderId = (params.get('order_id') || params.get('orderId') || '').trim();
       var signature = (params.get('signature') || '').trim();
@@ -94,6 +95,7 @@
         detailEl.textContent = parts.join(' · ');
         try {
           sessionStorage.removeItem('kharchlog_staging_pay_email');
+          sessionStorage.removeItem('kharchlog_staging_pay_phone');
         } catch (e) {}
       }
 
@@ -111,6 +113,7 @@
           body: JSON.stringify({
             action: 'markPaid',
             email: email,
+            phone: phone,
             paymentId: paymentId,
             orderId: orderId,
             signature: signature,
@@ -129,6 +132,12 @@
       if (!email) {
         try {
           email = (sessionStorage.getItem('kharchlog_staging_pay_email') || '').trim().toLowerCase();
+        } catch (e) {}
+      }
+
+      if (!phone) {
+        try {
+          phone = (sessionStorage.getItem('kharchlog_staging_pay_phone') || '').trim();
         } catch (e) {}
       }
 

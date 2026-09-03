@@ -76,6 +76,7 @@
         handler: function (response) {
           var q = new URLSearchParams();
           q.set('email', email);
+          if (phone) q.set('phone', phone);
           if (response.razorpay_payment_id) {
             q.set('payment_id', response.razorpay_payment_id);
           }
@@ -136,6 +137,7 @@
 
     try {
       sessionStorage.setItem('kharchlog_staging_pay_email', email);
+      if (phone) sessionStorage.setItem('kharchlog_staging_pay_phone', phone);
     } catch (e) {}
 
     createOrder(email, phone)
