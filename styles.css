@@ -106,7 +106,7 @@ a:hover { text-decoration: underline; }
   border-radius: 0;
   box-shadow: none;
   object-fit: contain;
-  background: #fff;
+  background: transparent;
 }
 .brand-lockup__name {
   position: absolute;
@@ -274,7 +274,7 @@ a:hover { text-decoration: underline; }
   gap: 36px;
   align-items: center;
   padding: 56px 0 40px;
-  overflow: hidden;
+  overflow: visible;
 }
 
 .hero__glow {
@@ -335,9 +335,14 @@ a:hover { text-decoration: underline; }
   justify-content: center;
 }
 .hero__visual img {
-  width: min(320px, 100%);
-  border-radius: 28px;
-  box-shadow: var(--shadow);
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  max-height: min(640px, 78vh);
+  border-radius: 0;
+  box-shadow: none;
+  object-fit: contain;
+  background: transparent;
 }
 
 /* —— Trust strip —— */
@@ -657,7 +662,7 @@ a:hover { text-decoration: underline; }
   max-width: 220px;
   border-radius: 0;
   object-fit: contain;
-  background: #fff;
+  background: transparent;
 }
 .site-footer__brand span {
   position: absolute;
