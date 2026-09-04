@@ -1,5 +1,7 @@
 (function () {
   var cfg = window.KHARCHLOG_PAY || {};
+  var firstNameInput = document.getElementById('firstName');
+  var lastNameInput = document.getElementById('lastName');
   var emailInput = document.getElementById('email');
   var phoneInput = document.getElementById('phone');
   var payBtn = document.getElementById('payBtn');
@@ -18,6 +20,11 @@
   }
 
   function validateConfig() {
+    if (!cfg.trackerUrl) {
+      setStatus('Missing trackerUrl in pay/config.js', true);
+      if (payBtn) payBtn.disabled = true;
+      return false;
+    }
     if (!cfg.razorpayKeyId) {
       setStatus('Payment is not configured yet. Try again shortly.', true);
       if (payBtn) payBtn.disabled = true;
@@ -35,22 +42,22 @@
     return (cfg.trackerUrl || '').replace(/\/$/, '');
   }
 
-  function createOrder(email, phone) {
-    if (!apiBase()) return Promise.resolve(null);
+  function createOrder(payload) {
     return fetch(apiBase() + '/create-order', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ email: email, phone: phone || '', staging: true })
+      body: JSON.stringify(payload)
     }).then(function (r) {
       return r.json();
     });
   }
 
-  function openRazorpayModal(email, phone, orderData) {
+  function openRazorpayModal(buyer, orderData) {
     var keyId = (orderData && orderData.razorpayKeyId) || cfg.razorpayKeyId;
     var amount = (orderData && orderData.amount) || cfg.amountPaise;
     var currency = (orderData && orderData.currency) || cfg.currency || 'INR';
     var orderId = orderData && orderData.orderId;
+    var fullName = [buyer.firstName, buyer.lastName].filter(Boolean).join(' ');
 
     if (!keyId || !amount) {
       return Promise.reject(new Error('Payment is not configured yet'));
@@ -66,27 +73,29 @@
         name: cfg.productName || 'Kharch Log',
         description: cfg.productDescription || 'One-time lifetime access',
         prefill: {
-          email: email,
-          contact: phone || ''
+          name: fullName,
+          email: buyer.email,
+          contact: buyer.phone || ''
         },
         notes: {
-          email: email
+          email: buyer.email,
+          firstName: buyer.firstName,
+          lastName: buyer.lastName,
+          name: fullName,
+          product: 'kharchlog',
+          planType: 'lifetime'
         },
         theme: { color: '#0F2A43' },
         handler: function (response) {
           var q = new URLSearchParams();
-          q.set('email', email);
-          if (phone) q.set('phone', phone);
-          if (response.razorpay_payment_id) {
-            q.set('payment_id', response.razorpay_payment_id);
-          }
-          if (response.razorpay_order_id) {
-            q.set('order_id', response.razorpay_order_id);
-          }
-          if (response.razorpay_signature) {
-            q.set('signature', response.razorpay_signature);
-          }
-          window.location.href = '/staging/pay/success.html?' + q.toString();
+          q.set('email', buyer.email);
+          q.set('firstName', buyer.firstName);
+          q.set('lastName', buyer.lastName);
+          if (buyer.phone) q.set('phone', buyer.phone);
+          if (response.razorpay_payment_id) q.set('payment_id', response.razorpay_payment_id);
+          if (response.razorpay_order_id) q.set('order_id', response.razorpay_order_id);
+          if (response.razorpay_signature) q.set('signature', response.razorpay_signature);
+          window.location.href = '/pay/success.html?' + q.toString();
           resolve({ ok: true });
         },
         modal: {
@@ -111,8 +120,21 @@
   }
 
   function openCheckout() {
+    var firstName = ((firstNameInput && firstNameInput.value) || '').trim();
+    var lastName = ((lastNameInput && lastNameInput.value) || '').trim();
     var email = (emailInput.value || '').trim().toLowerCase();
     var phone = ((phoneInput && phoneInput.value) || '').replace(/\D/g, '').slice(-10);
+
+    if (!firstName) {
+      setStatus('First name is required', true);
+      if (firstNameInput) firstNameInput.focus();
+      return;
+    }
+    if (!lastName) {
+      setStatus('Last name is required', true);
+      if (lastNameInput) lastNameInput.focus();
+      return;
+    }
     if (!email || email.indexOf('@') < 1) {
       setStatus('Enter the Google email you will use to sign in to the app', true);
       emailInput.focus();
@@ -124,8 +146,13 @@
       return;
     }
 
+    var buyer = { firstName: firstName, lastName: lastName, email: email, phone: phone };
     var ok = window.confirm(
       'You will sign in to Kharch Log with:\n\n' +
+        firstName +
+        ' ' +
+        lastName +
+        '\n' +
         email +
         '\n\n' +
         'This must be your correct Google account. Continue to pay ₹149?'
@@ -136,33 +163,32 @@
     if (payBtn) payBtn.disabled = true;
 
     try {
-      sessionStorage.setItem('kharchlog_staging_pay_email', email);
-      if (phone) sessionStorage.setItem('kharchlog_staging_pay_phone', phone);
+      sessionStorage.setItem('kharchlog_pay_email', email);
+      sessionStorage.setItem('kharchlog_pay_firstName', firstName);
+      sessionStorage.setItem('kharchlog_pay_lastName', lastName);
+      if (phone) sessionStorage.setItem('kharchlog_pay_phone', phone);
     } catch (e) {}
 
-    createOrder(email, phone)
+    createOrder({
+      email: email,
+      phone: phone || '',
+      firstName: firstName,
+      lastName: lastName,
+      name: firstName + ' ' + lastName,
+      product: 'kharchlog',
+      planType: 'lifetime'
+    })
       .then(function (orderData) {
         if (orderData && orderData.ok && orderData.provider === 'razorpay' && orderData.orderId) {
-          return openRazorpayModal(email, phone, orderData);
+          return openRazorpayModal(buyer, orderData);
         }
         if (orderData && orderData.error) {
           throw new Error(orderData.error);
         }
-        // Server not on staging Razorpay yet — open checkout with public key + amount
-        return openRazorpayModal(email, phone, null);
+        return openRazorpayModal(buyer, null);
       })
       .catch(function (e) {
         var msg = e && e.message ? e.message : 'Could not start checkout';
-        if (
-          msg === 'Failed to fetch' ||
-          msg === 'Load failed' ||
-          msg === 'NetworkError when attempting to fetch resource.'
-        ) {
-          return openRazorpayModal(email, phone, null).catch(function (e2) {
-            setStatus((e2 && e2.message) || msg, true);
-            if (payBtn) payBtn.disabled = false;
-          });
-        }
         setStatus(msg, true);
         if (payBtn) payBtn.disabled = false;
       });

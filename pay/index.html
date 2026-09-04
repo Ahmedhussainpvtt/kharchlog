@@ -21,13 +21,7 @@
         <span class="brand-lockup__name">Kharch Log</span>
       </a>
       <nav class="site-nav" aria-label="Primary">
-        <div class="nav-dropdown">
-          <a href="/features/" class="nav-dropdown__trigger" aria-haspopup="true">Features</a>
-          <div class="nav-dropdown__menu" role="menu">
-            <a href="/features/" role="menuitem">All features</a>
-            <a href="/features/manual-voice-entry/">Manual & voice expense entry</a><a href="/features/sms-auto-capture/">Bank & UPI SMS auto-capture</a><a href="/features/review-inbox/">Needs-review inbox for unclear SMS</a><a href="/features/google-sheets-sync/">Google Sheets expense sync</a><a href="/features/reports-insights/">Today view & spending reports</a><a href="/features/share-invoice/">Share expenses & invoice PDF</a>
-          </div>
-        </div>
+        <a href="/features/">Features</a>
         <a href="/blog/">Blog</a>
         <a href="/pricing/">Pricing</a>
         <a href="/faq/">FAQ</a>
@@ -51,6 +45,12 @@
         </div>
 
         <p class="pay-price">₹149 <span class="pay-once">one-time</span></p>
+
+        <label class="pay-label" for="firstName">First name</label>
+        <input class="pay-input" id="firstName" name="firstName" type="text" autocomplete="given-name" placeholder="First name" required />
+
+        <label class="pay-label" for="lastName">Last name</label>
+        <input class="pay-input" id="lastName" name="lastName" type="text" autocomplete="family-name" placeholder="Last name" required />
 
         <label class="pay-label" for="email">Google email</label>
         <input
@@ -82,7 +82,7 @@
         <p class="pay-status" id="status" aria-live="polite"></p>
         <p class="pay-fine">
           Secure checkout via Razorpay.
-          Questions? <a href="mailto:kharchlog@gmail.com">kharchlog@gmail.com</a>
+          Questions? <a href="mailto:easypeezetools@gmail.com">easypeezetools@gmail.com</a>
         </p>
       </div>
 

@@ -59,6 +59,8 @@
       var params = new URLSearchParams(window.location.search);
       var email = (params.get('email') || '').trim().toLowerCase();
       var phone = (params.get('phone') || '').trim();
+      var firstName = (params.get('firstName') || '').trim();
+      var lastName = (params.get('lastName') || '').trim();
       var paymentId = (params.get('payment_id') || params.get('paymentId') || '').trim();
       var orderId = (params.get('order_id') || params.get('orderId') || '').trim();
       var signature = (params.get('signature') || '').trim();
@@ -94,6 +96,8 @@
         try {
           sessionStorage.removeItem('kharchlog_pay_email');
           sessionStorage.removeItem('kharchlog_pay_phone');
+          sessionStorage.removeItem('kharchlog_pay_firstName');
+          sessionStorage.removeItem('kharchlog_pay_lastName');
         } catch (e) {}
       }
 
@@ -112,13 +116,25 @@
             action: 'markPaid',
             email: email,
             phone: phone,
+            firstName: firstName,
+            lastName: lastName,
+            name: [firstName, lastName].filter(Boolean).join(' '),
             paymentId: paymentId,
             orderId: orderId,
-            signature: signature
+            signature: signature,
+            product: 'kharchlog',
+            planType: 'lifetime'
           })
         }).then(function (r) {
           return r.json();
         });
+      }
+
+      if (!firstName) {
+        try { firstName = (sessionStorage.getItem('kharchlog_pay_firstName') || '').trim(); } catch (e) {}
+      }
+      if (!lastName) {
+        try { lastName = (sessionStorage.getItem('kharchlog_pay_lastName') || '').trim(); } catch (e) {}
       }
 
       if (!email) {
