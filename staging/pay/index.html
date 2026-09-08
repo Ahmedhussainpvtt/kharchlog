@@ -64,16 +64,17 @@
           required
         />
 
-        <label class="pay-label" for="phone">Phone <span class="opt">(optional, for receipt)</span></label>
+        <label class="pay-label" for="phone">Phone <span class="req" aria-hidden="true">*</span></label>
         <input
           class="pay-input"
           id="phone"
           name="phone"
           type="tel"
           autocomplete="tel"
-          inputmode="numeric"
-          maxlength="10"
-          placeholder="10-digit mobile"
+          inputmode="tel"
+          maxlength="20"
+          placeholder="+91 98765 43210"
+          required
         />
 
         <p class="pay-email-check">After payment you’ll return here and we unlock that email automatically.</p>
