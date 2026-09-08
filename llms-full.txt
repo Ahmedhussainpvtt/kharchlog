@@ -1,0 +1,232 @@
+# Kharch Log — llms-full.txt
+
+Generated: 2026-09-08
+Source: https://kharchlog.in/
+Index: https://kharchlog.in/llms.txt
+
+Kharch Log is an Android expense tracker by Easy Peeze Tools. It captures bank/UPI SMS, lets you confirm drafts, and stores expenses in your own Google Sheet. Lifetime unlock INR 149. Your data stays in your Google account - not on our servers as the source of truth.
+
+## Facts
+
+- Product: Kharch Log (Android)
+- Publisher: Easy Peeze Tools (easypeeze.com)
+- Price: INR 149 one-time lifetime
+- Data: Google Sheets + Drive file scope; SMS on-device draft -> your sheet
+- Support: easypeezetools@gmail.com
+- Sister product: Pdf Buddy (Windows PDF editor) at https://easypeeze.com/
+
+## Product
+
+### Home
+URL: https://kharchlog.in/
+Android expense tracker that logs UPI/bank SMS into your Google Sheet. INR 149 lifetime.
+
+### All features
+URL: https://kharchlog.in/features/
+SMS auto-capture, voice entry, Sheets sync, reports, and share invoice.
+
+### Blog index
+URL: https://kharchlog.in/blog/
+Guides on SMS expense tracking, UPI habits, and Sheets vs budget apps.
+
+### FAQ
+URL: https://kharchlog.in/faq/
+Common questions about permissions, Google Sign-In, Sheets, and lifetime access.
+
+### Glossary index
+URL: https://kharchlog.in/glossary/
+Definitions for expense tracking, UPI, SMS capture, and Kharch Log terms.
+
+### Pricing
+URL: https://kharchlog.in/pricing/
+INR 149 one-time lifetime unlock for Kharch Log on Android.
+
+## Features
+
+### Manual Voice Entry
+URL: https://kharchlog.in/features/manual-voice-entry/
+Add expenses by typing or voice when SMS is missing.
+
+### Sms Auto Capture
+URL: https://kharchlog.in/features/sms-auto-capture/
+Read bank/UPI debit SMS and draft expenses automatically.
+
+### Review Inbox
+URL: https://kharchlog.in/features/review-inbox/
+Confirm or edit SMS drafts before they hit your sheet.
+
+### Google Sheets Sync
+URL: https://kharchlog.in/features/google-sheets-sync/
+Store every expense in your own Google Sheet (file-scoped).
+
+### Reports Insights
+URL: https://kharchlog.in/features/reports-insights/
+Month/week/year spend, categories, and carry-forward balance.
+
+### Share Invoice
+URL: https://kharchlog.in/features/share-invoice/
+Share a Pay-to image/PDF/text summary of spending.
+
+## Blog
+
+### How To Track Expenses Automatically With Sms
+URL: https://kharchlog.in/blog/how-to-track-expenses-automatically-with-sms/
+Blog: How To Track Expenses Automatically With Sms.
+
+### Google Sheets Vs Budget Apps
+URL: https://kharchlog.in/blog/google-sheets-vs-budget-apps/
+Blog: Google Sheets Vs Budget Apps.
+
+### Daily Expense Tracker Habits
+URL: https://kharchlog.in/blog/daily-expense-tracker-habits/
+Blog: Daily Expense Tracker Habits.
+
+### How To Track Your Spending Every Week
+URL: https://kharchlog.in/blog/how-to-track-your-spending-every-week/
+Blog: How To Track Your Spending Every Week.
+
+### Upi Expense Tracker Stop Losing Small Payments
+URL: https://kharchlog.in/blog/upi-expense-tracker-stop-losing-small-payments/
+Blog: Upi Expense Tracker Stop Losing Small Payments.
+
+### Best Free Expense Tracker App Android
+URL: https://kharchlog.in/blog/best-free-expense-tracker-app-android/
+Blog: Best Free Expense Tracker App Android.
+
+## Glossary
+
+### Expense Tracker
+URL: https://kharchlog.in/glossary/expense-tracker/
+Glossary: what “Expense Tracker” means and how it relates to the product.
+
+### Daily Expense Tracker
+URL: https://kharchlog.in/glossary/daily-expense-tracker/
+Glossary: what “Daily Expense Tracker” means and how it relates to the product.
+
+### Free Expense Tracker
+URL: https://kharchlog.in/glossary/free-expense-tracker/
+Glossary: what “Free Expense Tracker” means and how it relates to the product.
+
+### Upi Expense Tracker
+URL: https://kharchlog.in/glossary/upi-expense-tracker/
+Glossary: what “Upi Expense Tracker” means and how it relates to the product.
+
+### Bank Sms Expense Tracker
+URL: https://kharchlog.in/glossary/bank-sms-expense-tracker/
+Glossary: what “Bank Sms Expense Tracker” means and how it relates to the product.
+
+### Google Sheets Expense Tracker
+URL: https://kharchlog.in/glossary/google-sheets-expense-tracker/
+Glossary: what “Google Sheets Expense Tracker” means and how it relates to the product.
+
+### Excel Expense Tracker
+URL: https://kharchlog.in/glossary/excel-expense-tracker/
+Glossary: what “Excel Expense Tracker” means and how it relates to the product.
+
+### Income Expense Tracker
+URL: https://kharchlog.in/glossary/income-expense-tracker/
+Glossary: what “Income Expense Tracker” means and how it relates to the product.
+
+### Monthly Expense Tracker
+URL: https://kharchlog.in/glossary/monthly-expense-tracker/
+Glossary: what “Monthly Expense Tracker” means and how it relates to the product.
+
+### Weekly Expense Tracker
+URL: https://kharchlog.in/glossary/weekly-expense-tracker/
+Glossary: what “Weekly Expense Tracker” means and how it relates to the product.
+
+### Personal Finance Tracker
+URL: https://kharchlog.in/glossary/personal-finance-tracker/
+Glossary: what “Personal Finance Tracker” means and how it relates to the product.
+
+### Personal Expense Tracker
+URL: https://kharchlog.in/glossary/personal-expense-tracker/
+Glossary: what “Personal Expense Tracker” means and how it relates to the product.
+
+### Family Expense Tracker
+URL: https://kharchlog.in/glossary/family-expense-tracker/
+Glossary: what “Family Expense Tracker” means and how it relates to the product.
+
+### Budget Tracker
+URL: https://kharchlog.in/glossary/budget-tracker/
+Glossary: what “Budget Tracker” means and how it relates to the product.
+
+### Spending Tracker
+URL: https://kharchlog.in/glossary/spending-tracker/
+Glossary: what “Spending Tracker” means and how it relates to the product.
+
+### Bill Tracker
+URL: https://kharchlog.in/glossary/bill-tracker/
+Glossary: what “Bill Tracker” means and how it relates to the product.
+
+### Expense Ledger
+URL: https://kharchlog.in/glossary/expense-ledger/
+Glossary: what “Expense Ledger” means and how it relates to the product.
+
+### Daily Kharch
+URL: https://kharchlog.in/glossary/daily-kharch/
+Glossary: what “Daily Kharch” means and how it relates to the product.
+
+### Kharch
+URL: https://kharchlog.in/glossary/kharch/
+Glossary: what “Kharch” means and how it relates to the product.
+
+### Sms Permission
+URL: https://kharchlog.in/glossary/sms-permission/
+Glossary: what “Sms Permission” means and how it relates to the product.
+
+### Needs Review Inbox
+URL: https://kharchlog.in/glossary/needs-review-inbox/
+Glossary: what “Needs Review Inbox” means and how it relates to the product.
+
+### Voice Expense Entry
+URL: https://kharchlog.in/glossary/voice-expense-entry/
+Glossary: what “Voice Expense Entry” means and how it relates to the product.
+
+### Expense Category
+URL: https://kharchlog.in/glossary/expense-category/
+Glossary: what “Expense Category” means and how it relates to the product.
+
+### Payment Mode
+URL: https://kharchlog.in/glossary/payment-mode/
+Glossary: what “Payment Mode” means and how it relates to the product.
+
+### Split Expenses
+URL: https://kharchlog.in/glossary/split-expenses/
+Glossary: what “Split Expenses” means and how it relates to the product.
+
+### Household Expense Tracker
+URL: https://kharchlog.in/glossary/household-expense-tracker/
+Glossary: what “Household Expense Tracker” means and how it relates to the product.
+
+### Lifetime Access
+URL: https://kharchlog.in/glossary/lifetime-access/
+Glossary: what “Lifetime Access” means and how it relates to the product.
+
+### Google Drive File Scope
+URL: https://kharchlog.in/glossary/google-drive-file-scope/
+Glossary: what “Google Drive File Scope” means and how it relates to the product.
+
+### Expense Report
+URL: https://kharchlog.in/glossary/expense-report/
+Glossary: what “Expense Report” means and how it relates to the product.
+
+### Invoice Pdf
+URL: https://kharchlog.in/glossary/invoice-pdf/
+Glossary: what “Invoice Pdf” means and how it relates to the product.
+
+### Cash Expense Tracking
+URL: https://kharchlog.in/glossary/cash-expense-tracking/
+Glossary: what “Cash Expense Tracking” means and how it relates to the product.
+
+### Emi Tracking
+URL: https://kharchlog.in/glossary/emi-tracking/
+Glossary: what “Emi Tracking” means and how it relates to the product.
+
+### Savings Rate
+URL: https://kharchlog.in/glossary/savings-rate/
+Glossary: what “Savings Rate” means and how it relates to the product.
+
+### Spreadsheet Money Book
+URL: https://kharchlog.in/glossary/spreadsheet-money-book/
+Glossary: what “Spreadsheet Money Book” means and how it relates to the product.
