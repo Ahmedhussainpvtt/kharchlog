@@ -83,8 +83,7 @@ Contact: easypeezetools@gmail.com
 
 ## Optional
 
+- [About](https://kharchlog.com/about/): About Kharch Log and Easy Peeze Tools — privacy-first, your data stays yours.
 - [Contact](https://kharchlog.com/contact/): Support email and contact for Kharch Log / Easy Peeze Tools.
-- [Privacy](https://kharchlog.com/privacy/): Privacy policy — your expenses stay in your Google account.
-- [Terms](https://kharchlog.com/terms/): Terms of use for Kharch Log.
 - [robots.txt](https://kharchlog.com/robots.txt): Crawl rules and sitemap pointer.
 - [llms-full.txt](https://kharchlog.com/llms-full.txt): Compact product corpus for AI agents.

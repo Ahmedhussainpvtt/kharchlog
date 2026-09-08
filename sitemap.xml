@@ -37,22 +37,16 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://kharchlog.com/about/</loc>
+    <lastmod>2026-09-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://kharchlog.com/contact/</loc>
     <lastmod>2026-09-08</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://kharchlog.com/privacy/</loc>
-    <lastmod>2026-09-08</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://kharchlog.com/terms/</loc>
-    <lastmod>2026-09-08</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.5</priority>
   </url>
   <url>
     <loc>https://kharchlog.com/features/manual-voice-entry/</loc>
