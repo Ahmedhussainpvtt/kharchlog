@@ -1,331 +1,331 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://kharchlog.in/</loc>
+    <loc>https://kharchlog.com/</loc>
     <lastmod>2026-09-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://kharchlog.in/features/</loc>
+    <loc>https://kharchlog.com/features/</loc>
     <lastmod>2026-09-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://kharchlog.in/blog/</loc>
+    <loc>https://kharchlog.com/blog/</loc>
     <lastmod>2026-09-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://kharchlog.in/faq/</loc>
+    <loc>https://kharchlog.com/faq/</loc>
     <lastmod>2026-09-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://kharchlog.in/glossary/</loc>
+    <loc>https://kharchlog.com/glossary/</loc>
     <lastmod>2026-09-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://kharchlog.in/pricing/</loc>
+    <loc>https://kharchlog.com/pricing/</loc>
     <lastmod>2026-09-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://kharchlog.in/contact/</loc>
+    <loc>https://kharchlog.com/contact/</loc>
     <lastmod>2026-09-08</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://kharchlog.in/privacy/</loc>
-    <lastmod>2026-09-08</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://kharchlog.in/terms/</loc>
+    <loc>https://kharchlog.com/privacy/</loc>
     <lastmod>2026-09-08</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://kharchlog.in/features/manual-voice-entry/</loc>
+    <loc>https://kharchlog.com/terms/</loc>
+    <lastmod>2026-09-08</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://kharchlog.com/features/manual-voice-entry/</loc>
     <lastmod>2026-09-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://kharchlog.in/features/sms-auto-capture/</loc>
+    <loc>https://kharchlog.com/features/sms-auto-capture/</loc>
     <lastmod>2026-09-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://kharchlog.in/features/review-inbox/</loc>
+    <loc>https://kharchlog.com/features/review-inbox/</loc>
     <lastmod>2026-09-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://kharchlog.in/features/google-sheets-sync/</loc>
+    <loc>https://kharchlog.com/features/google-sheets-sync/</loc>
     <lastmod>2026-09-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://kharchlog.in/features/reports-insights/</loc>
+    <loc>https://kharchlog.com/features/reports-insights/</loc>
     <lastmod>2026-09-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://kharchlog.in/features/share-invoice/</loc>
+    <loc>https://kharchlog.com/features/share-invoice/</loc>
     <lastmod>2026-09-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://kharchlog.in/glossary/expense-tracker/</loc>
+    <loc>https://kharchlog.com/glossary/expense-tracker/</loc>
     <lastmod>2026-09-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://kharchlog.in/glossary/daily-expense-tracker/</loc>
+    <loc>https://kharchlog.com/glossary/daily-expense-tracker/</loc>
     <lastmod>2026-09-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://kharchlog.in/glossary/free-expense-tracker/</loc>
+    <loc>https://kharchlog.com/glossary/free-expense-tracker/</loc>
     <lastmod>2026-09-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://kharchlog.in/glossary/upi-expense-tracker/</loc>
+    <loc>https://kharchlog.com/glossary/upi-expense-tracker/</loc>
     <lastmod>2026-09-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://kharchlog.in/glossary/bank-sms-expense-tracker/</loc>
+    <loc>https://kharchlog.com/glossary/bank-sms-expense-tracker/</loc>
     <lastmod>2026-09-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://kharchlog.in/glossary/google-sheets-expense-tracker/</loc>
+    <loc>https://kharchlog.com/glossary/google-sheets-expense-tracker/</loc>
     <lastmod>2026-09-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://kharchlog.in/glossary/excel-expense-tracker/</loc>
+    <loc>https://kharchlog.com/glossary/excel-expense-tracker/</loc>
     <lastmod>2026-09-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://kharchlog.in/glossary/income-expense-tracker/</loc>
+    <loc>https://kharchlog.com/glossary/income-expense-tracker/</loc>
     <lastmod>2026-09-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://kharchlog.in/glossary/monthly-expense-tracker/</loc>
+    <loc>https://kharchlog.com/glossary/monthly-expense-tracker/</loc>
     <lastmod>2026-09-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://kharchlog.in/glossary/weekly-expense-tracker/</loc>
+    <loc>https://kharchlog.com/glossary/weekly-expense-tracker/</loc>
     <lastmod>2026-09-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://kharchlog.in/glossary/personal-finance-tracker/</loc>
+    <loc>https://kharchlog.com/glossary/personal-finance-tracker/</loc>
     <lastmod>2026-09-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://kharchlog.in/glossary/personal-expense-tracker/</loc>
+    <loc>https://kharchlog.com/glossary/personal-expense-tracker/</loc>
     <lastmod>2026-09-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://kharchlog.in/glossary/family-expense-tracker/</loc>
+    <loc>https://kharchlog.com/glossary/family-expense-tracker/</loc>
     <lastmod>2026-09-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://kharchlog.in/glossary/budget-tracker/</loc>
+    <loc>https://kharchlog.com/glossary/budget-tracker/</loc>
     <lastmod>2026-09-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://kharchlog.in/glossary/spending-tracker/</loc>
+    <loc>https://kharchlog.com/glossary/spending-tracker/</loc>
     <lastmod>2026-09-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://kharchlog.in/glossary/bill-tracker/</loc>
+    <loc>https://kharchlog.com/glossary/bill-tracker/</loc>
     <lastmod>2026-09-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://kharchlog.in/glossary/expense-ledger/</loc>
+    <loc>https://kharchlog.com/glossary/expense-ledger/</loc>
     <lastmod>2026-09-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://kharchlog.in/glossary/daily-kharch/</loc>
+    <loc>https://kharchlog.com/glossary/daily-kharch/</loc>
     <lastmod>2026-09-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://kharchlog.in/glossary/kharch/</loc>
+    <loc>https://kharchlog.com/glossary/kharch/</loc>
     <lastmod>2026-09-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://kharchlog.in/glossary/sms-permission/</loc>
+    <loc>https://kharchlog.com/glossary/sms-permission/</loc>
     <lastmod>2026-09-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://kharchlog.in/glossary/needs-review-inbox/</loc>
+    <loc>https://kharchlog.com/glossary/needs-review-inbox/</loc>
     <lastmod>2026-09-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://kharchlog.in/glossary/voice-expense-entry/</loc>
+    <loc>https://kharchlog.com/glossary/voice-expense-entry/</loc>
     <lastmod>2026-09-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://kharchlog.in/glossary/expense-category/</loc>
+    <loc>https://kharchlog.com/glossary/expense-category/</loc>
     <lastmod>2026-09-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://kharchlog.in/glossary/payment-mode/</loc>
+    <loc>https://kharchlog.com/glossary/payment-mode/</loc>
     <lastmod>2026-09-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://kharchlog.in/glossary/split-expenses/</loc>
+    <loc>https://kharchlog.com/glossary/split-expenses/</loc>
     <lastmod>2026-09-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://kharchlog.in/glossary/household-expense-tracker/</loc>
+    <loc>https://kharchlog.com/glossary/household-expense-tracker/</loc>
     <lastmod>2026-09-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://kharchlog.in/glossary/lifetime-access/</loc>
+    <loc>https://kharchlog.com/glossary/lifetime-access/</loc>
     <lastmod>2026-09-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://kharchlog.in/glossary/google-drive-file-scope/</loc>
+    <loc>https://kharchlog.com/glossary/google-drive-file-scope/</loc>
     <lastmod>2026-09-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://kharchlog.in/glossary/expense-report/</loc>
+    <loc>https://kharchlog.com/glossary/expense-report/</loc>
     <lastmod>2026-09-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://kharchlog.in/glossary/invoice-pdf/</loc>
+    <loc>https://kharchlog.com/glossary/invoice-pdf/</loc>
     <lastmod>2026-09-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://kharchlog.in/glossary/cash-expense-tracking/</loc>
+    <loc>https://kharchlog.com/glossary/cash-expense-tracking/</loc>
     <lastmod>2026-09-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://kharchlog.in/glossary/emi-tracking/</loc>
+    <loc>https://kharchlog.com/glossary/emi-tracking/</loc>
     <lastmod>2026-09-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://kharchlog.in/glossary/savings-rate/</loc>
+    <loc>https://kharchlog.com/glossary/savings-rate/</loc>
     <lastmod>2026-09-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://kharchlog.in/glossary/spreadsheet-money-book/</loc>
+    <loc>https://kharchlog.com/glossary/spreadsheet-money-book/</loc>
     <lastmod>2026-09-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://kharchlog.in/blog/how-to-track-expenses-automatically-with-sms/</loc>
+    <loc>https://kharchlog.com/blog/how-to-track-expenses-automatically-with-sms/</loc>
     <lastmod>2026-08-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://kharchlog.in/blog/google-sheets-vs-budget-apps/</loc>
+    <loc>https://kharchlog.com/blog/google-sheets-vs-budget-apps/</loc>
     <lastmod>2026-08-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://kharchlog.in/blog/daily-expense-tracker-habits/</loc>
+    <loc>https://kharchlog.com/blog/daily-expense-tracker-habits/</loc>
     <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://kharchlog.in/blog/how-to-track-your-spending-every-week/</loc>
+    <loc>https://kharchlog.com/blog/how-to-track-your-spending-every-week/</loc>
     <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://kharchlog.in/blog/upi-expense-tracker-stop-losing-small-payments/</loc>
+    <loc>https://kharchlog.com/blog/upi-expense-tracker-stop-losing-small-payments/</loc>
     <lastmod>2026-08-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://kharchlog.in/blog/best-free-expense-tracker-app-android/</loc>
+    <loc>https://kharchlog.com/blog/best-free-expense-tracker-app-android/</loc>
     <lastmod>2026-08-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>

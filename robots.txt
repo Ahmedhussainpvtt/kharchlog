@@ -8,7 +8,7 @@ Disallow: /staging/
 
 # AI / LLM discovery (AIO / GEO)
 # https://llmstxt.org
-# llms.txt: https://kharchlog.in/llms.txt
-# llms-full.txt: https://kharchlog.in/llms-full.txt
+# llms.txt: https://kharchlog.com/llms.txt
+# llms-full.txt: https://kharchlog.com/llms-full.txt
 
-Sitemap: https://kharchlog.in/sitemap.xml
+Sitemap: https://kharchlog.com/sitemap.xml
