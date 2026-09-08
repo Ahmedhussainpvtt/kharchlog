@@ -130,11 +130,6 @@
       if (firstNameInput) firstNameInput.focus();
       return;
     }
-    if (!lastName) {
-      setStatus('Last name is required', true);
-      if (lastNameInput) lastNameInput.focus();
-      return;
-    }
     if (!email || email.indexOf('@') < 1) {
       setStatus('Enter the Google email you will use to sign in to the app', true);
       emailInput.focus();
@@ -147,11 +142,10 @@
     }
 
     var buyer = { firstName: firstName, lastName: lastName, email: email, phone: phone };
+    var displayName = [firstName, lastName].filter(Boolean).join(' ');
     var ok = window.confirm(
       'You will sign in to Kharch Log with:\n\n' +
-        firstName +
-        ' ' +
-        lastName +
+        displayName +
         '\n' +
         email +
         '\n\n' +
@@ -174,7 +168,7 @@
       phone: phone || '',
       firstName: firstName,
       lastName: lastName,
-      name: firstName + ' ' + lastName,
+      name: [firstName, lastName].filter(Boolean).join(' '),
       product: 'kharchlog',
       planType: 'lifetime'
     })
