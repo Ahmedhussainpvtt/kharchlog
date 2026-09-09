@@ -1,6 +1,6 @@
 {
-  "versionCode": 171,
-  "versionName": "3.2.71",
+  "versionCode": 172,
+  "versionName": "3.2.72",
   "apkUrl": "https://storage.googleapis.com/easypeezetools-logos/KharchLog.apk",
-  "notes": "Skip declined/failed card and NACH bounce SMS so they are not logged as spends. Stronger mandate/AutoPay setup filtering."
+  "notes": "Check for updates and Download and install use the same yellow loading border as other buttons."
 }
