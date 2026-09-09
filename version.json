@@ -1,6 +1,6 @@
 {
-  "versionCode": 172,
-  "versionName": "3.2.72",
+  "versionCode": 173,
+  "versionName": "3.2.73",
   "apkUrl": "https://storage.googleapis.com/easypeezetools-logos/KharchLog.apk",
-  "notes": "Check for updates and Download and install use the same yellow loading border as other buttons."
+  "notes": "24h license cache; shimmer while rechecking payment"
 }
