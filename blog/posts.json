@@ -1,6 +1,63 @@
 {
-  "updated": "2026-08-27",
+  "updated": "2026-09-09",
   "posts": [
+    {
+      "slug": "lifetime-vs-subscription-expense-apps-india",
+      "title": "Lifetime vs subscription expense apps in India (₹149 reality check)",
+      "description": "Why Indian users hate monthly budget-app fees — and when a one-time lifetime unlock + Google Sheets ownership beats SaaS subscriptions.",
+      "date": "2026-09-09",
+      "url": "/blog/lifetime-vs-subscription-expense-apps-india/",
+      "image": "/og-image.jpg",
+      "tags": [
+        "lifetime expense tracker",
+        "no subscription",
+        "₹149",
+        "budget app India"
+      ]
+    },
+    {
+      "slug": "install-kharch-log-apk-android",
+      "title": "How to install Kharch Log APK on Android (safe sideload)",
+      "description": "Step-by-step: download the official Kharch Log APK from kharchlog.com, allow install from browser, and unlock with the same Google email you paid with.",
+      "date": "2026-09-09",
+      "url": "/blog/install-kharch-log-apk-android/",
+      "image": "/og-image.jpg",
+      "tags": [
+        "install APK",
+        "Android sideload",
+        "Kharch Log download",
+        "expense tracker APK"
+      ]
+    },
+    {
+      "slug": "expense-tracker-without-bank-login",
+      "title": "Expense tracker without bank login (SMS-only India)",
+      "description": "Track PhonePe, GPay and bank spends without net banking passwords. How SMS-based expense trackers work on Android — and privacy trade-offs.",
+      "date": "2026-09-09",
+      "url": "/blog/expense-tracker-without-bank-login/",
+      "image": "/og-image.jpg",
+      "tags": [
+        "no bank login",
+        "SMS expense tracker",
+        "PhonePe",
+        "GPay",
+        "UPI"
+      ]
+    },
+    {
+      "slug": "expense-tracker-india-no-form-16",
+      "title": "Expense tracker for India: no Form 16, no accounting software",
+      "description": "Kharch Log is for daily kharch and UPI — not Form 16, ITR filing, or Tally. Who should use a personal expense tracker vs tax software.",
+      "date": "2026-09-09",
+      "url": "/blog/expense-tracker-india-no-form-16/",
+      "image": "/og-image.jpg",
+      "tags": [
+        "form 16",
+        "expense tracker india",
+        "daily kharch",
+        "ITR"
+      ]
+    },
     {
       "slug": "how-to-track-expenses-automatically-with-sms",
       "title": "How to track expenses automatically with bank SMS",
@@ -8,7 +65,11 @@
       "date": "2026-08-27",
       "url": "/blog/how-to-track-expenses-automatically-with-sms/",
       "image": "/images/blog/how-to-track-expenses-automatically-with-sms.jpg",
-      "tags": ["sms expense tracker", "automatic expense tracking", "android"]
+      "tags": [
+        "sms expense tracker",
+        "automatic expense tracking",
+        "android"
+      ]
     },
     {
       "slug": "google-sheets-vs-budget-apps",
@@ -17,7 +78,11 @@
       "date": "2026-08-26",
       "url": "/blog/google-sheets-vs-budget-apps/",
       "image": "/images/blog/google-sheets-vs-budget-apps.jpg",
-      "tags": ["google sheets expense tracker", "budget app", "personal finance"]
+      "tags": [
+        "google sheets expense tracker",
+        "budget app",
+        "personal finance"
+      ]
     },
     {
       "slug": "daily-expense-tracker-habits",
@@ -26,7 +91,11 @@
       "date": "2026-08-25",
       "url": "/blog/daily-expense-tracker-habits/",
       "image": "/images/blog/daily-expense-tracker-habits.jpg",
-      "tags": ["daily expense tracker", "spending habits", "budget tips"]
+      "tags": [
+        "daily expense tracker",
+        "spending habits",
+        "budget tips"
+      ]
     },
     {
       "slug": "how-to-track-your-spending-every-week",
@@ -35,7 +104,10 @@
       "date": "2026-08-24",
       "url": "/blog/how-to-track-your-spending-every-week/",
       "image": "/images/blog/how-to-track-your-spending-every-week.jpg",
-      "tags": ["weekly spending", "expense review"]
+      "tags": [
+        "weekly spending",
+        "expense review"
+      ]
     },
     {
       "slug": "upi-expense-tracker-stop-losing-small-payments",
@@ -44,7 +116,10 @@
       "date": "2026-08-23",
       "url": "/blog/upi-expense-tracker-stop-losing-small-payments/",
       "image": "/images/blog/upi-expense-tracker-stop-losing-small-payments.jpg",
-      "tags": ["upi", "sms"]
+      "tags": [
+        "upi",
+        "sms"
+      ]
     },
     {
       "slug": "best-free-expense-tracker-app-android",
@@ -53,7 +128,10 @@
       "date": "2026-08-22",
       "url": "/blog/best-free-expense-tracker-app-android/",
       "image": "/images/blog/best-free-expense-tracker-app-android.jpg",
-      "tags": ["android", "expense tracker"]
+      "tags": [
+        "android",
+        "expense tracker"
+      ]
     }
   ]
 }

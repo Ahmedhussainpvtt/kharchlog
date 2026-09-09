@@ -2,7 +2,7 @@
 
 > Kharch Log is an Android expense tracker by Easy Peeze Tools. It captures bank/UPI SMS, lets you confirm drafts, and stores expenses in your own Google Sheet. Lifetime unlock INR 149. Your data stays in your Google account - not on our servers as the source of truth.
 
-Last updated: 2026-09-08
+Last updated: 2026-09-09
 Canonical site: https://kharchlog.com/
 Sitemap: https://kharchlog.com/sitemap.xml
 Full corpus: https://kharchlog.com/llms-full.txt
@@ -37,6 +37,10 @@ Contact: easypeezetools@gmail.com
 
 ## Blog
 
+- [Lifetime Vs Subscription Expense Apps India](https://kharchlog.com/blog/lifetime-vs-subscription-expense-apps-india/): Blog: Lifetime Vs Subscription Expense Apps India.
+- [Install Kharch Log Apk Android](https://kharchlog.com/blog/install-kharch-log-apk-android/): Blog: Install Kharch Log Apk Android.
+- [Expense Tracker Without Bank Login](https://kharchlog.com/blog/expense-tracker-without-bank-login/): Blog: Expense Tracker Without Bank Login.
+- [Expense Tracker India No Form 16](https://kharchlog.com/blog/expense-tracker-india-no-form-16/): Blog: Expense Tracker India No Form 16.
 - [How To Track Expenses Automatically With Sms](https://kharchlog.com/blog/how-to-track-expenses-automatically-with-sms/): Blog: How To Track Expenses Automatically With Sms.
 - [Google Sheets Vs Budget Apps](https://kharchlog.com/blog/google-sheets-vs-budget-apps/): Blog: Google Sheets Vs Budget Apps.
 - [Daily Expense Tracker Habits](https://kharchlog.com/blog/daily-expense-tracker-habits/): Blog: Daily Expense Tracker Habits.
@@ -80,6 +84,14 @@ Contact: easypeezetools@gmail.com
 - [Emi Tracking](https://kharchlog.com/glossary/emi-tracking/): Glossary: what “Emi Tracking” means and how it relates to the product.
 - [Savings Rate](https://kharchlog.com/glossary/savings-rate/): Glossary: what “Savings Rate” means and how it relates to the product.
 - [Spreadsheet Money Book](https://kharchlog.com/glossary/spreadsheet-money-book/): Glossary: what “Spreadsheet Money Book” means and how it relates to the product.
+- [Form 16 Not Needed](https://kharchlog.com/glossary/form-16-not-needed/): Glossary: what “Form 16 Not Needed” means and how it relates to the product.
+- [No Bank Login Expense Tracker](https://kharchlog.com/glossary/no-bank-login-expense-tracker/): Glossary: what “No Bank Login Expense Tracker” means and how it relates to the product.
+- [Android Apk Expense Tracker](https://kharchlog.com/glossary/android-apk-expense-tracker/): Glossary: what “Android Apk Expense Tracker” means and how it relates to the product.
+- [Phonepe Gpay Expense Tracker](https://kharchlog.com/glossary/phonepe-gpay-expense-tracker/): Glossary: what “Phonepe Gpay Expense Tracker” means and how it relates to the product.
+- [Roommate Expense Tracker](https://kharchlog.com/glossary/roommate-expense-tracker/): Glossary: what “Roommate Expense Tracker” means and how it relates to the product.
+- [No Subscription Expense Tracker](https://kharchlog.com/glossary/no-subscription-expense-tracker/): Glossary: what “No Subscription Expense Tracker” means and how it relates to the product.
+- [Hisab Kitab](https://kharchlog.com/glossary/hisab-kitab/): Glossary: what “Hisab Kitab” means and how it relates to the product.
+- [Offline Expense Tracker](https://kharchlog.com/glossary/offline-expense-tracker/): Glossary: what “Offline Expense Tracker” means and how it relates to the product.
 
 ## Optional
 

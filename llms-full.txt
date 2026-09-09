@@ -1,6 +1,6 @@
 # Kharch Log — llms-full.txt
 
-Generated: 2026-09-08
+Generated: 2026-09-09
 Source: https://kharchlog.com/
 Index: https://kharchlog.com/llms.txt
 
@@ -68,6 +68,22 @@ URL: https://kharchlog.com/features/share-invoice/
 Share a Pay-to image/PDF/text summary of spending.
 
 ## Blog
+
+### Lifetime Vs Subscription Expense Apps India
+URL: https://kharchlog.com/blog/lifetime-vs-subscription-expense-apps-india/
+Blog: Lifetime Vs Subscription Expense Apps India.
+
+### Install Kharch Log Apk Android
+URL: https://kharchlog.com/blog/install-kharch-log-apk-android/
+Blog: Install Kharch Log Apk Android.
+
+### Expense Tracker Without Bank Login
+URL: https://kharchlog.com/blog/expense-tracker-without-bank-login/
+Blog: Expense Tracker Without Bank Login.
+
+### Expense Tracker India No Form 16
+URL: https://kharchlog.com/blog/expense-tracker-india-no-form-16/
+Blog: Expense Tracker India No Form 16.
 
 ### How To Track Expenses Automatically With Sms
 URL: https://kharchlog.com/blog/how-to-track-expenses-automatically-with-sms/
@@ -230,3 +246,35 @@ Glossary: what “Savings Rate” means and how it relates to the product.
 ### Spreadsheet Money Book
 URL: https://kharchlog.com/glossary/spreadsheet-money-book/
 Glossary: what “Spreadsheet Money Book” means and how it relates to the product.
+
+### Form 16 Not Needed
+URL: https://kharchlog.com/glossary/form-16-not-needed/
+Glossary: what “Form 16 Not Needed” means and how it relates to the product.
+
+### No Bank Login Expense Tracker
+URL: https://kharchlog.com/glossary/no-bank-login-expense-tracker/
+Glossary: what “No Bank Login Expense Tracker” means and how it relates to the product.
+
+### Android Apk Expense Tracker
+URL: https://kharchlog.com/glossary/android-apk-expense-tracker/
+Glossary: what “Android Apk Expense Tracker” means and how it relates to the product.
+
+### Phonepe Gpay Expense Tracker
+URL: https://kharchlog.com/glossary/phonepe-gpay-expense-tracker/
+Glossary: what “Phonepe Gpay Expense Tracker” means and how it relates to the product.
+
+### Roommate Expense Tracker
+URL: https://kharchlog.com/glossary/roommate-expense-tracker/
+Glossary: what “Roommate Expense Tracker” means and how it relates to the product.
+
+### No Subscription Expense Tracker
+URL: https://kharchlog.com/glossary/no-subscription-expense-tracker/
+Glossary: what “No Subscription Expense Tracker” means and how it relates to the product.
+
+### Hisab Kitab
+URL: https://kharchlog.com/glossary/hisab-kitab/
+Glossary: what “Hisab Kitab” means and how it relates to the product.
+
+### Offline Expense Tracker
+URL: https://kharchlog.com/glossary/offline-expense-tracker/
+Glossary: what “Offline Expense Tracker” means and how it relates to the product.
