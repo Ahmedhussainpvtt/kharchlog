@@ -2,63 +2,6 @@
   "updated": "2026-09-09",
   "posts": [
     {
-      "slug": "lifetime-vs-subscription-expense-apps-india",
-      "title": "Lifetime vs subscription expense apps in India (₹149 reality check)",
-      "description": "Why Indian users hate monthly budget-app fees — and when a one-time lifetime unlock + Google Sheets ownership beats SaaS subscriptions.",
-      "date": "2026-09-09",
-      "url": "/blog/lifetime-vs-subscription-expense-apps-india/",
-      "image": "/og-image.jpg",
-      "tags": [
-        "lifetime expense tracker",
-        "no subscription",
-        "₹149",
-        "budget app India"
-      ]
-    },
-    {
-      "slug": "install-kharch-log-apk-android",
-      "title": "How to install Kharch Log APK on Android (safe sideload)",
-      "description": "Step-by-step: download the official Kharch Log APK from kharchlog.com, allow install from browser, and unlock with the same Google email you paid with.",
-      "date": "2026-09-09",
-      "url": "/blog/install-kharch-log-apk-android/",
-      "image": "/og-image.jpg",
-      "tags": [
-        "install APK",
-        "Android sideload",
-        "Kharch Log download",
-        "expense tracker APK"
-      ]
-    },
-    {
-      "slug": "expense-tracker-without-bank-login",
-      "title": "Expense tracker without bank login (SMS-only India)",
-      "description": "Track PhonePe, GPay and bank spends without net banking passwords. How SMS-based expense trackers work on Android — and privacy trade-offs.",
-      "date": "2026-09-09",
-      "url": "/blog/expense-tracker-without-bank-login/",
-      "image": "/og-image.jpg",
-      "tags": [
-        "no bank login",
-        "SMS expense tracker",
-        "PhonePe",
-        "GPay",
-        "UPI"
-      ]
-    },
-    {
-      "slug": "expense-tracker-india-no-form-16",
-      "title": "Expense tracker for India: no Form 16, no accounting software",
-      "description": "Kharch Log is for daily kharch and UPI — not Form 16, ITR filing, or Tally. Who should use a personal expense tracker vs tax software.",
-      "date": "2026-09-09",
-      "url": "/blog/expense-tracker-india-no-form-16/",
-      "image": "/og-image.jpg",
-      "tags": [
-        "form 16",
-        "expense tracker india",
-        "daily kharch",
-        "ITR"
-      ]
-    },
-    {
       "slug": "how-to-track-expenses-automatically-with-sms",
       "title": "How to track expenses automatically with bank SMS",
       "description": "Learn how SMS-based expense tracking works on Android, when you need SMS permission, and how Kharch Log keeps data in your Google Sheet.",
@@ -95,42 +38,6 @@
         "daily expense tracker",
         "spending habits",
         "budget tips"
-      ]
-    },
-    {
-      "slug": "how-to-track-your-spending-every-week",
-      "title": "How to track your spending every week (simple system)",
-      "description": "A simple weekly review rhythm so small UPI spends stop disappearing — and your Google Sheet stays honest.",
-      "date": "2026-08-24",
-      "url": "/blog/how-to-track-your-spending-every-week/",
-      "image": "/images/blog/how-to-track-your-spending-every-week.jpg",
-      "tags": [
-        "weekly spending",
-        "expense review"
-      ]
-    },
-    {
-      "slug": "upi-expense-tracker-stop-losing-small-payments",
-      "title": "UPI expense tracker: stop losing small payments",
-      "description": "Why tiny UPI transfers vanish from memory — and how SMS capture plus a review inbox fixes the leak.",
-      "date": "2026-08-23",
-      "url": "/blog/upi-expense-tracker-stop-losing-small-payments/",
-      "image": "/images/blog/upi-expense-tracker-stop-losing-small-payments.jpg",
-      "tags": [
-        "upi",
-        "sms"
-      ]
-    },
-    {
-      "slug": "best-free-expense-tracker-app-android",
-      "title": "Best free expense tracker app for Android: what to look for",
-      "description": "What free usually costs in ads and locked data — and what Kharch Log does differently with Sheets ownership.",
-      "date": "2026-08-22",
-      "url": "/blog/best-free-expense-tracker-app-android/",
-      "image": "/images/blog/best-free-expense-tracker-app-android.jpg",
-      "tags": [
-        "android",
-        "expense tracker"
       ]
     }
   ]

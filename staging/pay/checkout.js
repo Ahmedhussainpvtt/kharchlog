@@ -224,7 +224,11 @@
     if (!ok) return;
 
     setStatus('Creating order…');
-    if (payBtn) payBtn.disabled = true;
+    if (payBtn) {
+      payBtn.disabled = true;
+      payBtn.classList.add('is-busy');
+      payBtn.setAttribute('aria-busy', 'true');
+    }
 
     try {
       sessionStorage.setItem('kharchlog_pay_email', email);
@@ -243,6 +247,11 @@
       planType: 'lifetime'
     })
       .then(function (orderData) {
+        if (payBtn) {
+          payBtn.classList.remove('is-busy');
+          payBtn.classList.add('is-success');
+          payBtn.removeAttribute('aria-busy');
+        }
         if (orderData && orderData.ok && orderData.provider === 'razorpay' && orderData.orderId) {
           return openRazorpayModal(buyer, orderData);
         }
@@ -254,7 +263,12 @@
       .catch(function (e) {
         var msg = e && e.message ? e.message : 'Could not start checkout';
         setStatus(msg, true);
-        if (payBtn) payBtn.disabled = false;
+        if (payBtn) {
+          payBtn.disabled = false;
+          payBtn.classList.remove('is-busy');
+          payBtn.classList.remove('is-success');
+          payBtn.removeAttribute('aria-busy');
+        }
       });
   }
 
