@@ -25,6 +25,8 @@ Contact: easypeezetools@gmail.com
 - [FAQ](https://kharchlog.com/faq/): Common questions about permissions, Google Sign-In, Sheets, and lifetime access.
 - [Glossary index](https://kharchlog.com/glossary/): Definitions for expense tracking, UPI, SMS capture, and Kharch Log terms.
 - [Pricing](https://kharchlog.com/pricing/): INR 149 one-time lifetime unlock for Kharch Log on Android.
+- [Install guides](https://kharchlog.com/install/): How to install Kharch Log APK — unknown apps, Play Protect, small-company reassurance.
+- [About](https://kharchlog.com/about/): About Kharch Log and Easy Peeze Tools — privacy-first, your data stays yours.
 
 ## Features
 
@@ -88,7 +90,6 @@ Contact: easypeezetools@gmail.com
 
 ## Optional
 
-- [About](https://kharchlog.com/about/): About Kharch Log and Easy Peeze Tools — privacy-first, your data stays yours.
 - [Contact](https://kharchlog.com/contact/): Support email and contact for Kharch Log / Easy Peeze Tools.
 - [robots.txt](https://kharchlog.com/robots.txt): Crawl rules and sitemap pointer.
 - [llms-full.txt](https://kharchlog.com/llms-full.txt): Compact product corpus for AI agents.

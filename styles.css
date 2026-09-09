@@ -1324,6 +1324,32 @@ footer:not(.site-footer) {
   color: var(--muted);
   font-size: 1.05rem;
 }
+.install-calm {
+  margin: 0 0 28px;
+  padding: 20px 22px;
+  border-radius: 16px;
+  border: 1px solid rgba(0, 196, 154, 0.35);
+  background: linear-gradient(135deg, rgba(208, 247, 239, 0.85), rgba(214, 235, 255, 0.75));
+  box-shadow: 0 8px 24px rgba(15, 42, 67, 0.06);
+}
+.install-calm h2 {
+  margin: 0 0 10px;
+  font-size: 1.25rem;
+  letter-spacing: -0.02em;
+}
+.install-calm p {
+  margin: 0 0 10px;
+  color: var(--text);
+  line-height: 1.55;
+}
+.install-calm p:last-child { margin-bottom: 0; }
+.install-calm__rule {
+  font-weight: 600;
+}
+.install-calm--soft {
+  background: var(--surface);
+  border-color: var(--line);
+}
 
 .seo-block {
   padding: 48px 0;

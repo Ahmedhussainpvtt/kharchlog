@@ -41,6 +41,14 @@ Definitions for expense tracking, UPI, SMS capture, and Kharch Log terms.
 URL: https://kharchlog.com/pricing/
 INR 149 one-time lifetime unlock for Kharch Log on Android.
 
+### Install guides
+URL: https://kharchlog.com/install/
+How to install Kharch Log APK — unknown apps, Play Protect, small-company reassurance.
+
+### About
+URL: https://kharchlog.com/about/
+About Kharch Log and Easy Peeze Tools — privacy-first, your data stays yours.
+
 ## Features
 
 ### Manual Voice Entry
