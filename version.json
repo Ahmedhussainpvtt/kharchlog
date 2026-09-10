@@ -1,6 +1,6 @@
 {
-  "versionCode": 183,
-  "versionName": "3.2.83",
+  "versionCode": 184,
+  "versionName": "3.2.84",
   "apkUrl": "https://raw.githubusercontent.com/Ahmedhussainpvtt/kharchlog/main/KharchLog.apk",
-  "notes": "Sign-in + buy CTAs; permission wizard never re-asks after grants / Settings return."
+  "notes": "Update button installs APK in-app (sideload); Play builds use Play Store."
 }
