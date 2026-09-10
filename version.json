@@ -1,6 +1,6 @@
 {
-  "versionCode": 180,
-  "versionName": "3.2.80",
+  "versionCode": 181,
+  "versionName": "3.2.81",
   "apkUrl": "https://storage.googleapis.com/easypeezetools-logos/KharchLog.apk",
-  "notes": "Lifetime unlock UI now shows ₹149 (was incorrectly ₹100)."
+  "notes": "Sign-out clears profile; update Later asks again next open; signed-out gate shows ₹149."
 }
