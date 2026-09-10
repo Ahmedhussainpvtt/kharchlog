@@ -1,6 +1,6 @@
 {
-  "versionCode": 182,
-  "versionName": "3.2.82",
+  "versionCode": 183,
+  "versionName": "3.2.83",
   "apkUrl": "https://raw.githubusercontent.com/Ahmedhussainpvtt/kharchlog/main/KharchLog.apk",
-  "notes": ""
+  "notes": "Sign-in + buy CTAs; permission wizard never re-asks after grants / Settings return."
 }
