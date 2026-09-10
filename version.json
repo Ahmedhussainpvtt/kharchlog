@@ -1,6 +1,6 @@
 {
-  "versionCode": 181,
-  "versionName": "3.2.81",
-  "apkUrl": "https://storage.googleapis.com/easypeezetools-logos/KharchLog.apk",
-  "notes": "Sign-out clears profile; update Later asks again next open; signed-out gate shows ₹149."
+  "versionCode": 182,
+  "versionName": "3.2.82",
+  "apkUrl": "https://raw.githubusercontent.com/Ahmedhussainpvtt/kharchlog/main/KharchLog.apk",
+  "notes": "APK downloads from GitHub only (GCS removed)."
 }
