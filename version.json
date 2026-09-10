@@ -1,6 +1,6 @@
 {
-  "versionCode": 175,
-  "versionName": "3.2.75",
+  "versionCode": 180,
+  "versionName": "3.2.80",
   "apkUrl": "https://storage.googleapis.com/easypeezetools-logos/KharchLog.apk",
-  "notes": "targetSdk 36 for Play + public update"
+  "notes": "Lifetime unlock UI now shows ₹149 (was incorrectly ₹100)."
 }
