@@ -1,6 +1,6 @@
 # Kharch Log — llms-full.txt
 
-Generated: 2026-09-10
+Generated: 2026-09-12
 Source: https://kharchlog.com/
 Index: https://kharchlog.com/llms.txt
 
