@@ -6,6 +6,30 @@
   var phoneInput = document.getElementById('phone');
   var payBtn = document.getElementById('payBtn');
   var statusEl = document.getElementById('status');
+  var priceEl = document.getElementById('pay-price');
+  var params = new URLSearchParams(window.location.search);
+  var currency = (params.get('currency') || cfg.currency || 'INR').toUpperCase() === 'USD' ? 'USD' : 'INR';
+
+  function priceLabel() {
+    return currency === 'USD' ? '$2' : '₹149';
+  }
+
+  function syncCurrencyUi() {
+    if (priceEl) {
+      priceEl.innerHTML = priceLabel() + ' <span class="pay-once">one-time</span>';
+    }
+    document.querySelectorAll('.pay-currency__btn').forEach(function (btn) {
+      btn.classList.toggle('is-active', btn.getAttribute('data-currency') === currency);
+    });
+  }
+
+  syncCurrencyUi();
+  document.querySelectorAll('.pay-currency__btn').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      currency = btn.getAttribute('data-currency') === 'USD' ? 'USD' : 'INR';
+      syncCurrencyUi();
+    });
+  });
 
   function setStatus(msg, isError) {
     if (!statusEl) return;
@@ -146,7 +170,8 @@
           lastName: buyer.lastName,
           name: fullName,
           product: 'kharchlog',
-          planType: 'lifetime'
+          planType: 'lifetime',
+      staging: !!(cfg.staging)
         },
         theme: { color: '#0F2A43' },
         handler: function (response) {
@@ -219,7 +244,7 @@
         '\n' +
         phone +
         '\n\n' +
-        'This must be your correct Google account. Continue to pay ₹149?'
+        'This must be your correct Google account. Continue to pay ' + priceLabel() + '?'
     );
     if (!ok) return;
 
@@ -244,7 +269,9 @@
       lastName: lastName,
       name: displayName,
       product: 'kharchlog',
-      planType: 'lifetime'
+      planType: 'lifetime',
+      staging: !!(cfg.staging),
+      currency: currency
     })
       .then(function (orderData) {
         if (payBtn) {

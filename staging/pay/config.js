@@ -5,7 +5,8 @@ window.KHARCHLOG_PAY = {
   staging: true,
   razorpayKeyId: 'rzp_test_TVq62QBc2ZMW2K',
   amountPaise: 14900,
+  amountUsdCents: 200,
   currency: 'INR',
-  productName: 'Kharch Log Lifetime',
-  productDescription: 'One-time lifetime access'
+  productName: 'Kharch Log Lifetime (STAGING)',
+  productDescription: 'Staging test — one-time lifetime access'
 };
