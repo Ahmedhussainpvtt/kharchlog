@@ -5,6 +5,7 @@ window.KHARCHLOG_PAY = {
   /** Live Key ID from Razorpay dashboard (public — safe in browser) */
   razorpayKeyId: 'rzp_live_TVqX95CxZTFsuk',
   amountPaise: 14900,
+  amountUsdCents: 200,
   currency: 'INR',
   productName: 'Kharch Log Lifetime',
   productDescription: 'One-time lifetime access'
