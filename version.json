@@ -1,6 +1,6 @@
 {
-  "versionCode": 186,
-  "versionName": "3.2.86",
+  "versionCode": 187,
+  "versionName": "3.2.87",
   "apkUrl": "https://raw.githubusercontent.com/Ahmedhussainpvtt/kharchlog/main/KharchLog.apk",
-  "notes": "After Google sign-in the app links your Kharch Log sheet automatically — no need to tap Sync sheet."
+  "notes": "Bug fixes and improvements."
 }
