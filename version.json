@@ -1,6 +1,6 @@
 {
-  "versionCode": 184,
-  "versionName": "3.2.84",
+  "versionCode": 185,
+  "versionName": "3.2.85",
   "apkUrl": "https://raw.githubusercontent.com/Ahmedhussainpvtt/kharchlog/main/KharchLog.apk",
-  "notes": ""
+  "notes": "SMS fixes: skip carrier/credit-limit alerts; Payment CRED only for CRED app; auto-add only clear debit/credit verbs; weak SMS go to Needs review."
 }
