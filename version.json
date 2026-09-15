@@ -1,6 +1,6 @@
 {
-  "versionCode": 185,
-  "versionName": "3.2.85",
+  "versionCode": 186,
+  "versionName": "3.2.86",
   "apkUrl": "https://raw.githubusercontent.com/Ahmedhussainpvtt/kharchlog/main/KharchLog.apk",
-  "notes": "SMS fixes: skip carrier/credit-limit alerts; Payment CRED only for CRED app; auto-add only clear debit/credit verbs; weak SMS go to Needs review."
+  "notes": "After Google sign-in the app links your Kharch Log sheet automatically — no need to tap Sync sheet."
 }
