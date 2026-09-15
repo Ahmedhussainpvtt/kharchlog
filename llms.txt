@@ -2,7 +2,7 @@
 
 > Kharch Log is an Android expense tracker by Easy Peeze Tools. It captures bank/UPI SMS, lets you confirm drafts, and stores expenses in your own Google Sheet. Lifetime unlock INR 149. Your data stays in your Google account - not on our servers as the source of truth.
 
-Last updated: 2026-09-14
+Last updated: 2026-09-15
 Canonical site: https://kharchlog.com/
 Sitemap: https://kharchlog.com/sitemap.xml
 Full corpus: https://kharchlog.com/llms-full.txt
@@ -39,6 +39,19 @@ Contact: easypeezetools@gmail.com
 
 ## Blog
 
+- [Mid Month Budget Alerts Catch Leaks](https://kharchlog.com/blog/mid-month-budget-alerts-catch-leaks/): Blog: Mid Month Budget Alerts Catch Leaks.
+- [Account Aggregator Vs Sms Expense Tracker](https://kharchlog.com/blog/account-aggregator-vs-sms-expense-tracker/): Blog: Account Aggregator Vs Sms Expense Tracker.
+- [Gpay Phonepe Vs Bank Sms Expense Ledger](https://kharchlog.com/blog/gpay-phonepe-vs-bank-sms-expense-ledger/): Blog: Gpay Phonepe Vs Bank Sms Expense Ledger.
+- [Weekly Spending Review 20 Minutes](https://kharchlog.com/blog/weekly-spending-review-20-minutes/): Blog: Weekly Spending Review 20 Minutes.
+- [Expense Categories Indian Household](https://kharchlog.com/blog/expense-categories-indian-household/): Blog: Expense Categories Indian Household.
+- [Track Cash Expenses India No Sms](https://kharchlog.com/blog/track-cash-expenses-india-no-sms/): Blog: Track Cash Expenses India No Sms.
+- [Lifetime Vs Subscription Expense Apps India](https://kharchlog.com/blog/lifetime-vs-subscription-expense-apps-india/): Blog: Lifetime Vs Subscription Expense Apps India.
+- [Install Kharch Log Apk Android](https://kharchlog.com/blog/install-kharch-log-apk-android/): Blog: Install Kharch Log Apk Android.
+- [Expense Tracker Without Bank Login](https://kharchlog.com/blog/expense-tracker-without-bank-login/): Blog: Expense Tracker Without Bank Login.
+- [Expense Tracker India No Form 16](https://kharchlog.com/blog/expense-tracker-india-no-form-16/): Blog: Expense Tracker India No Form 16.
+- [Upi Expense Tracker Stop Losing Small Payments](https://kharchlog.com/blog/upi-expense-tracker-stop-losing-small-payments/): Blog: Upi Expense Tracker Stop Losing Small Payments.
+- [How To Track Your Spending Every Week](https://kharchlog.com/blog/how-to-track-your-spending-every-week/): Blog: How To Track Your Spending Every Week.
+- [Best Free Expense Tracker App Android](https://kharchlog.com/blog/best-free-expense-tracker-app-android/): Blog: Best Free Expense Tracker App Android.
 - [How To Track Expenses Automatically With Sms](https://kharchlog.com/blog/how-to-track-expenses-automatically-with-sms/): Blog: How To Track Expenses Automatically With Sms.
 - [Google Sheets Vs Budget Apps](https://kharchlog.com/blog/google-sheets-vs-budget-apps/): Blog: Google Sheets Vs Budget Apps.
 - [Daily Expense Tracker Habits](https://kharchlog.com/blog/daily-expense-tracker-habits/): Blog: Daily Expense Tracker Habits.
