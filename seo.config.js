@@ -18,6 +18,7 @@ module.exports = {
     favicon: 'https://kharchlog.com/favicon.png',
     twitterCard: 'summary_large_image',
     author: 'Kharch Log',
+    gtagId: 'G-NDJG1DYZFX',
   },
 
   organization: {
