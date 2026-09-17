@@ -219,12 +219,16 @@
     if (!clientId) {
       return Promise.reject(new Error('PayPal is not configured'));
     }
+    var sandbox = String(cfg.paypalMode || 'sandbox').toLowerCase() !== 'live';
+    var sdkHost = sandbox ? 'https://www.sandbox.paypal.com/sdk/js' : 'https://www.paypal.com/sdk/js';
+    var qs =
+      'client-id=' +
+      encodeURIComponent(clientId) +
+      '&currency=USD&intent=capture&components=buttons' +
+      (sandbox ? '&buyer-country=US' : '');
     paypalSdkReady = new Promise(function (resolve, reject) {
       var s = document.createElement('script');
-      s.src =
-        'https://www.paypal.com/sdk/js?client-id=' +
-        encodeURIComponent(clientId) +
-        '&currency=USD&intent=capture';
+      s.src = sdkHost + '?' + qs;
       s.onload = function () {
         resolve();
       };
@@ -311,8 +315,13 @@
             onCancel: function () {
               setStatus('PayPal checkout cancelled');
             },
-            onError: function () {
-              setStatus('PayPal checkout failed — try again', true);
+            onError: function (err) {
+              var detail = (err && (err.message || err)) || '';
+              setStatus(
+                'PayPal checkout failed — log in with a sandbox Personal buyer account (not guest card). ' +
+                  detail,
+                true
+              );
             }
           })
           .render('#paypal-buttons');
