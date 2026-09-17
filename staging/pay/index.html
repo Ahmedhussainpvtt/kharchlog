@@ -61,9 +61,8 @@
         <p class="pay-price" id="pay-price">₹149 <span class="pay-once">one-time</span></p>
         <div class="pay-currency" role="group" aria-label="Currency">
           <button type="button" class="pay-currency__btn is-active" data-currency="INR" id="currencyInr">Pay in ₹ INR</button>
-          <button type="button" class="pay-currency__btn pay-currency__btn--soon" data-currency="USD" id="currencyUsd"
-                  disabled aria-disabled="true">
-            Pay in $ USD <span class="pay-currency__soon">Coming soon</span>
+          <button type="button" class="pay-currency__btn" data-currency="USD" id="currencyUsd">
+            Pay in $ USD
           </button>
         </div>
 
@@ -98,12 +97,13 @@
           required
         />
 
-        <p class="pay-email-check">After payment you’ll return here and we unlock that email automatically.</p>
+        <p class="pay-email-check">Staging only — a successful payment does <strong>not</strong> unlock the app.</p>
 
         <button type="button" class="btn pay-btn" id="payBtn">Pay ₹149</button>
+        <div id="paypal-buttons" class="paypal-buttons" hidden></div>
         <p class="pay-status" id="status" aria-live="polite"></p>
-        <p class="pay-fine">
-          Secure checkout via Razorpay.
+        <p class="pay-fine" id="pay-fine">
+          Secure checkout via Razorpay (INR) or PayPal sandbox (USD).
           Questions? <a href="mailto:easypeezetools@gmail.com">easypeezetools@gmail.com</a>
         </p>
       </div>

@@ -167,6 +167,10 @@
         ok(email);
         return;
       }
+      if (provider === 'paypal' && params.get('staging') === '1') {
+        fail('Staging PayPal payments do not unlock production access.');
+        return;
+      }
 
       if (!paymentId) {
         fail('Complete payment from the pay page first.');

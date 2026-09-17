@@ -4,11 +4,8 @@ window.KHARCHLOG_PAY = {
   paymentProvider: 'razorpay',
   /** Live Key ID from Razorpay dashboard (public — safe in browser) */
   razorpayKeyId: 'rzp_live_TVqX95CxZTFsuk',
-  /** PayPal sandbox Client ID (public). Swap to Live when ready. */
-  paypalClientId:
-    'BAArjySr8FEOyBr__W27sM7Hg_yxQXVdvmArD4Ccuhj7ZkhnsQ2xWVhZDVV05eD1cz5wrStuAmeu4N-qOU',
-  paypalMode: 'sandbox',
-  usdEnabled: true,
+  /** USD / PayPal is staging-only until Live credentials are ready. */
+  usdEnabled: false,
   amountPaise: 14900,
   amountUsdCents: 200,
   currency: 'INR',

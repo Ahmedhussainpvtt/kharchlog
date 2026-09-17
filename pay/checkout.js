@@ -260,7 +260,8 @@
                 name: buyer.displayName,
                 product: 'kharchlog',
                 planType: 'lifetime',
-                currency: 'USD'
+                currency: 'USD',
+                staging: !!cfg.staging
               }).then(function (orderData) {
                 if (!orderData || !orderData.ok || orderData.provider !== 'paypal' || !orderData.orderId) {
                   throw new Error((orderData && orderData.error) || 'Could not start PayPal checkout');
@@ -284,7 +285,8 @@
                 firstName: buyer.firstName,
                 lastName: buyer.lastName,
                 product: 'kharchlog',
-                planType: 'lifetime'
+                planType: 'lifetime',
+                staging: !!cfg.staging
               }).then(function (result) {
                 if (!result || !result.ok) {
                   throw new Error((result && result.error) || 'PayPal capture failed');
@@ -297,8 +299,10 @@
                 q.set('provider', 'paypal');
                 if (result.paymentId) q.set('payment_id', result.paymentId);
                 if (result.orderId) q.set('order_id', result.orderId);
-                q.set('paid', '1');
-                window.location.href = '/pay/success.html?' + q.toString();
+                q.set('paid', result.paid ? '1' : '0');
+                if (result.staging) q.set('staging', '1');
+                if (result.message) q.set('msg', result.message);
+                window.location.href = (cfg.staging ? 'success.html?' : '/pay/success.html?') + q.toString();
               });
             },
             onCancel: function () {
@@ -425,7 +429,8 @@
       name: buyer.displayName,
       product: 'kharchlog',
       planType: 'lifetime',
-      currency: currency
+      currency: currency,
+      staging: !!cfg.staging
     })
       .then(function (orderData) {
         if (payBtn) {
