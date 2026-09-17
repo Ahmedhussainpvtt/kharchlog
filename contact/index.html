@@ -181,7 +181,7 @@
     window.__contactCaptchaOk = false;
     var TO = 'easypeezetools@gmail.com';
     var API = 'https://kharchlog-license-u4rcttr3nq-el.a.run.app/contact';
-    var SUBJECT = 'Contact — Kharch Log (kharchlog.com)';
+    var SITE = 'Kharch Log';
     var SOURCE = 'kharchlog.com/contact';
     var sending = false;
 
@@ -244,7 +244,7 @@
         name: name,
         email: email,
         message: message,
-        _subject: SUBJECT,
+        _subject: name + ' - New Message on ' + SITE,
         _template: 'table',
         _captcha: 'false',
         'g-recaptcha-response': token,
