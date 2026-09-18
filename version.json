@@ -1,6 +1,6 @@
 {
-  "versionCode": 202,
-  "versionName": "3.2.102",
+  "versionCode": 203,
+  "versionName": "3.2.103",
   "apkUrl": "https://raw.githubusercontent.com/Ahmedhussainpvtt/kharchlog/main/KharchLog.apk",
-  "notes": ""
+  "notes": "Google profile photo on home. Super Admin shows the same Google picture after the next license check."
 }
