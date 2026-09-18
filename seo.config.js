@@ -19,6 +19,7 @@ module.exports = {
     twitterCard: 'summary_large_image',
     author: 'Kharch Log',
     gtagId: 'G-NDJG1DYZFX',
+    amplitudeApiKey: '67d580c08d457990405291aae28f5a41',
   },
 
   organization: {
