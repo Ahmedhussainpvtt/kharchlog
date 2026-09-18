@@ -1,6 +1,6 @@
 {
-  "versionCode": 200,
-  "versionName": "3.2.100",
+  "versionCode": 201,
+  "versionName": "3.2.101",
   "apkUrl": "https://raw.githubusercontent.com/Ahmedhussainpvtt/kharchlog/main/KharchLog.apk",
-  "notes": "Faster home after Google sign-in, and the new notification sound."
+  "notes": "Bug fixes and important updates."
 }
