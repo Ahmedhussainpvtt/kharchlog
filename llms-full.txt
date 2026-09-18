@@ -1,4 +1,4 @@
-# Kharch Log — llms-full.txt
+# Kharch Log - llms-full.txt
 
 Generated: 2026-09-18
 Source: https://kharchlog.com/
@@ -23,7 +23,7 @@ Android expense tracker that logs UPI/bank SMS into your Google Sheet. INR 149 l
 
 ### About
 URL: https://kharchlog.com/about/
-About Kharch Log and Easy Peeze Tools — privacy-first, your data stays yours.
+About Kharch Log and Easy Peeze Tools - privacy-first, your data stays yours.
 
 ### Blog index
 URL: https://kharchlog.com/blog/
@@ -43,7 +43,7 @@ Definitions for expense tracking, UPI, SMS capture, and Kharch Log terms.
 
 ### Install guides
 URL: https://kharchlog.com/install/
-How to install Kharch Log APK — unknown apps, Play Protect, small-company reassurance.
+How to install Kharch Log APK - unknown apps, Play Protect, small-company reassurance.
 
 ### Pricing
 URL: https://kharchlog.com/pricing/

@@ -1,5 +1,5 @@
 /**
- * Kharch Log — SEO source of truth.
+ * Kharch Log - SEO source of truth.
  * Run: npm run seo:kharch   (or npm run seo)
  * Wired into: scripts/update-website.ps1
  */
@@ -10,7 +10,7 @@ module.exports = {
     locale: 'en_IN',
     language: 'en-IN',
     themeColor: '#0F2A43',
-    defaultTitle: 'Kharch Log — Best Free Expense Tracker for Android India',
+    defaultTitle: 'Kharch Log - Best Free Expense Tracker for Android India',
     titleTemplate: '%s | Kharch Log',
     defaultDescription:
       'Daily expense tracker for India: UPI & bank SMS auto-capture, Google Sheets sync, no bank login. Lifetime ₹149.',
@@ -59,38 +59,38 @@ module.exports = {
   pages: {
     '/': {
       title:
-        'Kharch Log — Best Free Expense Tracker for Android India | UPI SMS + Google Sheets | ₹149 Lifetime',
+        'Kharch Log - Best Free Expense Tracker for Android India | UPI SMS + Google Sheets | ₹149 Lifetime',
       description:
-        'Best free-to-try expense tracker for Android in India. UPI & bank SMS auto-capture, no bank login, daily kharch in your Google Sheet. Lifetime ₹149 — not Form 16 / tax software.',
+        'Best free-to-try expense tracker for Android in India. UPI & bank SMS auto-capture, no bank login, daily kharch in your Google Sheet. Lifetime ₹149 - not Form 16 / tax software.',
       changefreq: 'weekly',
       priority: 1.0,
       schemaType: 'WebSite',
     },
     '/features/': {
-      title: 'Features — SMS capture, Sheets sync, reports',
+      title: 'Features - SMS capture, Sheets sync, reports',
       description: 'Kharch Log features: bank SMS auto-capture, review inbox, Google Sheets sync, reports, and share invoice.',
       priority: 0.9,
       changefreq: 'monthly',
     },
     '/pricing/': {
-      title: 'Pricing — ₹149 lifetime',
+      title: 'Pricing - ₹149 lifetime',
       description: 'Kharch Log lifetime unlock ₹149 (or $2 USD via Easy Peeze PayPal). No subscription.',
       priority: 0.8,
     },
     '/blog/': {
-      title: 'Blog — expense tracking tips for India',
+      title: 'Blog - expense tracking tips for India',
       description: 'Guides on UPI tracking, SMS expense capture, weekly reviews, and lifetime vs subscription apps.',
       priority: 0.9,
       changefreq: 'weekly',
     },
     '/faq/': {
-      title: 'FAQ — Kharch Log',
+      title: 'FAQ - Kharch Log',
       description: 'Common questions about SMS permissions, Google Sheets, pricing, and privacy.',
       priority: 0.8,
       schemaType: 'FAQPage',
     },
     '/play/': {
-      title: 'Play Store testers — Kharch Log is coming to Google Play',
+      title: 'Play Store testers - Kharch Log is coming to Google Play',
       description:
         'Kharch Log is going live on Google Play in the next couple of days. Join the beta testing program or keep using the official APK.',
       priority: 0.85,
@@ -98,22 +98,22 @@ module.exports = {
     },
     '/install/': {
       title: 'Install Kharch Log APK',
-      description: 'Download and install the Kharch Log Android APK safely — signed releases from kharchlog.com.',
+      description: 'Download and install the Kharch Log Android APK safely - signed releases from kharchlog.com.',
       priority: 0.9,
     },
     '/glossary/': {
-      title: 'Glossary — expense tracking terms',
+      title: 'Glossary - expense tracking terms',
       description: 'Short definitions for UPI expense tracking, bank SMS, daily kharch, and related terms.',
       priority: 0.7,
     },
     '/about/': {
       title: 'About Kharch Log',
-      description: 'Kharch Log is an Android expense tracker by Easy Peeze Tools — SMS + Sheets, built for India.',
+      description: 'Kharch Log is an Android expense tracker by Easy Peeze Tools - SMS + Sheets, built for India.',
       priority: 0.7,
     },
     '/contact/': {
       title: 'Contact Kharch Log',
-      description: 'Support for Kharch Log — email easypeezetools@gmail.com.',
+      description: 'Support for Kharch Log - email easypeezetools@gmail.com.',
       priority: 0.5,
       changefreq: 'yearly',
     },

@@ -12,7 +12,7 @@
   {
     "slug": "daily-expense-tracker",
     "term": "Daily expense tracker",
-    "definition": "A habit and tool for logging spends the same day they happen — cash, UPI, or cards — instead of reconstructing the week from memory.",
+    "definition": "A habit and tool for logging spends the same day they happen - cash, UPI, or cards - instead of reconstructing the week from memory.",
     "related": [
       "daily-kharch",
       "spending-tracker",
@@ -31,7 +31,7 @@
   {
     "slug": "upi-expense-tracker",
     "term": "UPI expense tracker",
-    "definition": "An expense tracker built for India’s Unified Payments Interface — capturing small transfers that are easy to forget after a busy day.",
+    "definition": "An expense tracker built for India’s Unified Payments Interface - capturing small transfers that are easy to forget after a busy day.",
     "related": [
       "bank-sms-expense-tracker",
       "daily-kharch",
@@ -51,7 +51,7 @@
   {
     "slug": "google-sheets-expense-tracker",
     "term": "Google Sheets expense tracker",
-    "definition": "Keeping your money book in a Google Sheet you own in Drive — often paired with a mobile app that appends rows instead of locking history in a vendor cloud.",
+    "definition": "Keeping your money book in a Google Sheet you own in Drive - often paired with a mobile app that appends rows instead of locking history in a vendor cloud.",
     "related": [
       "excel-expense-tracker",
       "expense-ledger",
@@ -91,7 +91,7 @@
   {
     "slug": "weekly-expense-tracker",
     "term": "Weekly expense tracker",
-    "definition": "A short review cadence — usually Sunday — to catch missed UPI payments and reset categories before the next week.",
+    "definition": "A short review cadence - usually Sunday - to catch missed UPI payments and reset categories before the next week.",
     "related": [
       "daily-expense-tracker",
       "spending-tracker"
@@ -100,7 +100,7 @@
   {
     "slug": "personal-finance-tracker",
     "term": "Personal finance tracker",
-    "definition": "A system for an individual’s cash flow: income, expenses, bills, and savings — not enterprise accounting software.",
+    "definition": "A system for an individual’s cash flow: income, expenses, bills, and savings - not enterprise accounting software.",
     "related": [
       "personal-expense-tracker",
       "budget-tracker",
@@ -110,7 +110,7 @@
   {
     "slug": "personal-expense-tracker",
     "term": "Personal expense tracker",
-    "definition": "Expense tracking for one person or household ledger shared with family — categories like food, travel, rent, and UPI transfers.",
+    "definition": "Expense tracking for one person or household ledger shared with family - categories like food, travel, rent, and UPI transfers.",
     "related": [
       "family-expense-tracker",
       "daily-kharch",
@@ -120,7 +120,7 @@
   {
     "slug": "family-expense-tracker",
     "term": "Family expense tracker",
-    "definition": "A shared money book where partners or household members see the same ledger — often via a shared Google Sheet.",
+    "definition": "A shared money book where partners or household members see the same ledger - often via a shared Google Sheet.",
     "related": [
       "personal-expense-tracker",
       "split-expenses",
@@ -140,7 +140,7 @@
   {
     "slug": "spending-tracker",
     "term": "Spending tracker",
-    "definition": "Focus on money out — cash, UPI, cards — with categories and dates so you can spot leaks like food delivery or transfers.",
+    "definition": "Focus on money out - cash, UPI, cards - with categories and dates so you can spot leaks like food delivery or transfers.",
     "related": [
       "daily-expense-tracker",
       "upi-expense-tracker",
@@ -159,7 +159,7 @@
   {
     "slug": "expense-ledger",
     "term": "Expense ledger",
-    "definition": "The durable list of dated transactions — traditionally a notebook or Excel sheet; in Kharch Log, your Google Sheet is the ledger.",
+    "definition": "The durable list of dated transactions - traditionally a notebook or Excel sheet; in Kharch Log, your Google Sheet is the ledger.",
     "related": [
       "google-sheets-expense-tracker",
       "excel-expense-tracker"
@@ -168,7 +168,7 @@
   {
     "slug": "daily-kharch",
     "term": "Daily kharch",
-    "definition": "Everyday spending in Indian usage — chai, auto, UPI to friends, kirana — the small amounts that vanish without a daily log.",
+    "definition": "Everyday spending in Indian usage - chai, auto, UPI to friends, kirana - the small amounts that vanish without a daily log.",
     "related": [
       "upi-expense-tracker",
       "daily-expense-tracker",
@@ -178,7 +178,7 @@
   {
     "slug": "kharch",
     "term": "Kharch",
-    "definition": "Hindi/Urdu for expense or spending. “Kharch Log” means a log of your spends — the core idea behind the app.",
+    "definition": "Hindi/Urdu for expense or spending. “Kharch Log” means a log of your spends - the core idea behind the app.",
     "related": [
       "daily-kharch",
       "expense-tracker"
@@ -196,7 +196,7 @@
   {
     "slug": "needs-review-inbox",
     "term": "Needs-review inbox",
-    "definition": "A queue for SMS-detected transactions that are unclear or incomplete — approve, reject, or edit before they become permanent ledger rows.",
+    "definition": "A queue for SMS-detected transactions that are unclear or incomplete - approve, reject, or edit before they become permanent ledger rows.",
     "related": [
       "bank-sms-expense-tracker",
       "upi-expense-tracker"
@@ -205,7 +205,7 @@
   {
     "slug": "voice-expense-entry",
     "term": "Voice expense entry",
-    "definition": "Adding a spend by speaking amount and details, then confirming — useful when your hands are full after a purchase.",
+    "definition": "Adding a spend by speaking amount and details, then confirming - useful when your hands are full after a purchase.",
     "related": [
       "expense-tracker",
       "daily-expense-tracker"
@@ -223,7 +223,7 @@
   {
     "slug": "payment-mode",
     "term": "Payment mode",
-    "definition": "How you paid — UPI, cash, card, net banking — so you can separate wallet spends from cash without mixing them in reports.",
+    "definition": "How you paid - UPI, cash, card, net banking - so you can separate wallet spends from cash without mixing them in reports.",
     "related": [
       "upi-expense-tracker",
       "expense-tracker"
@@ -241,7 +241,7 @@
   {
     "slug": "household-expense-tracker",
     "term": "Household expense tracker",
-    "definition": "Tracking common home costs — groceries, help, utilities, EMI — in one ledger visible to the household.",
+    "definition": "Tracking common home costs - groceries, help, utilities, EMI - in one ledger visible to the household.",
     "related": [
       "family-expense-tracker",
       "bill-tracker"
@@ -258,7 +258,7 @@
   {
     "slug": "google-drive-file-scope",
     "term": "Google Drive file scope",
-    "definition": "Limited OAuth access (drive.file) so an app can only use Drive files it creates for you — not your entire Drive.",
+    "definition": "Limited OAuth access (drive.file) so an app can only use Drive files it creates for you - not your entire Drive.",
     "related": [
       "google-sheets-expense-tracker"
     ]
@@ -275,7 +275,7 @@
   {
     "slug": "invoice-pdf",
     "term": "Invoice PDF",
-    "definition": "A shareable PDF of a logged expense for reimbursements or records — while the Google Sheet remains the source of truth.",
+    "definition": "A shareable PDF of a logged expense for reimbursements or records - while the Google Sheet remains the source of truth.",
     "related": [
       "expense-tracker",
       "expense-ledger"
@@ -284,7 +284,7 @@
   {
     "slug": "cash-expense-tracking",
     "term": "Cash expense tracking",
-    "definition": "Logging physical cash spends that never appear in bank SMS — still critical for honest daily kharch totals.",
+    "definition": "Logging physical cash spends that never appear in bank SMS - still critical for honest daily kharch totals.",
     "related": [
       "voice-expense-entry",
       "daily-expense-tracker"
@@ -311,7 +311,7 @@
   {
     "slug": "spreadsheet-money-book",
     "term": "Spreadsheet money book",
-    "definition": "Using Excel or Google Sheets as your primary finance record — flexible and portable if capture stays complete.",
+    "definition": "Using Excel or Google Sheets as your primary finance record - flexible and portable if capture stays complete.",
     "related": [
       "excel-expense-tracker",
       "google-sheets-expense-tracker"
@@ -320,7 +320,7 @@
   {
     "slug": "form-16-not-needed",
     "term": "Form 16 not needed",
-    "definition": "Kharch Log is a personal daily expense tracker — not tax software. You do not need Form 16 to use it, and it does not generate Form 16 or file ITR for you.",
+    "definition": "Kharch Log is a personal daily expense tracker - not tax software. You do not need Form 16 to use it, and it does not generate Form 16 or file ITR for you.",
     "related": [
       "expense-tracker",
       "personal-finance-tracker",
@@ -340,7 +340,7 @@
   {
     "slug": "android-apk-expense-tracker",
     "term": "Android APK expense tracker",
-    "definition": "An Android expense tracker you install from a signed APK download (sideload) rather than only from Play Store — useful when the developer ships direct updates from their site.",
+    "definition": "An Android expense tracker you install from a signed APK download (sideload) rather than only from Play Store - useful when the developer ships direct updates from their site.",
     "related": [
       "free-expense-tracker",
       "lifetime-access"
@@ -349,7 +349,7 @@
   {
     "slug": "phonepe-gpay-expense-tracker",
     "term": "PhonePe GPay expense tracker",
-    "definition": "Tracking spends across PhonePe, Google Pay, Paytm and other UPI apps in one ledger — usually via bank/UPI SMS, not by linking each wallet login.",
+    "definition": "Tracking spends across PhonePe, Google Pay, Paytm and other UPI apps in one ledger - usually via bank/UPI SMS, not by linking each wallet login.",
     "related": [
       "upi-expense-tracker",
       "bank-sms-expense-tracker",
@@ -359,7 +359,7 @@
   {
     "slug": "roommate-expense-tracker",
     "term": "Roommate expense tracker",
-    "definition": "A shared money book for PG or flatmates — often a Google Sheet plus an Android logger so rent, groceries, and UPI splits stay visible to everyone who has Sheet access.",
+    "definition": "A shared money book for PG or flatmates - often a Google Sheet plus an Android logger so rent, groceries, and UPI splits stay visible to everyone who has Sheet access.",
     "related": [
       "split-expenses",
       "family-expense-tracker",
@@ -378,7 +378,7 @@
   {
     "slug": "hisab-kitab",
     "term": "Hisab kitab",
-    "definition": "Hindi/Urdu for a simple money account or ledger — the everyday hisab of cash and UPI that Kharch Log keeps in your Google Sheet.",
+    "definition": "Hindi/Urdu for a simple money account or ledger - the everyday hisab of cash and UPI that Kharch Log keeps in your Google Sheet.",
     "related": [
       "daily-kharch",
       "expense-ledger",

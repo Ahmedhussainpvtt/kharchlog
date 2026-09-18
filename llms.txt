@@ -20,12 +20,12 @@ Contact: easypeezetools@gmail.com
 ## Product
 
 - [Home](https://kharchlog.com/): Android expense tracker that logs UPI/bank SMS into your Google Sheet. INR 149 lifetime.
-- [About](https://kharchlog.com/about/): About Kharch Log and Easy Peeze Tools — privacy-first, your data stays yours.
+- [About](https://kharchlog.com/about/): About Kharch Log and Easy Peeze Tools - privacy-first, your data stays yours.
 - [Blog index](https://kharchlog.com/blog/): Guides on SMS expense tracking, UPI habits, and Sheets vs budget apps.
 - [FAQ](https://kharchlog.com/faq/): Common questions about permissions, Google Sign-In, Sheets, and lifetime access.
 - [All features](https://kharchlog.com/features/): SMS auto-capture, voice entry, Sheets sync, reports, and share invoice.
 - [Glossary index](https://kharchlog.com/glossary/): Definitions for expense tracking, UPI, SMS capture, and Kharch Log terms.
-- [Install guides](https://kharchlog.com/install/): How to install Kharch Log APK — unknown apps, Play Protect, small-company reassurance.
+- [Install guides](https://kharchlog.com/install/): How to install Kharch Log APK - unknown apps, Play Protect, small-company reassurance.
 - [Pricing](https://kharchlog.com/pricing/): INR 149 one-time lifetime unlock for Kharch Log on Android.
 
 ## Features
