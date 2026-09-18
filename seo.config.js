@@ -89,6 +89,13 @@ module.exports = {
       priority: 0.8,
       schemaType: 'FAQPage',
     },
+    '/play/': {
+      title: 'Play Store testers — Kharch Log is coming to Google Play',
+      description:
+        'Kharch Log is going live on Google Play in the next couple of days. Join the beta testing program or keep using the official APK.',
+      priority: 0.85,
+      changefreq: 'weekly',
+    },
     '/install/': {
       title: 'Install Kharch Log APK',
       description: 'Download and install the Kharch Log Android APK safely — signed releases from kharchlog.com.',
