@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en-IN">
+<head>
+<!-- Amplitude -->
+<script src="https://cdn.amplitude.com/script/67d580c08d457990405291aae28f5a41.js"></script><script>window.amplitude.add(window.sessionReplay.plugin({sampleRate: 1}));window.amplitude.init('67d580c08d457990405291aae28f5a41', {"fetchRemoteConfig":true,"autocapture":true});</script>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-NDJG1DYZFX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-NDJG1DYZFX');
+</script>
+
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>OTT, SIMs and SIPs: a subscription audit with an Expense tracker | Kharch Log Blog</title>
+  <meta name="description" content="Silent auto-debits eat UPI headroom. Walk through a 30-minute subscription audit using an Expense tracker and your Google Sheet, then cancel or keep with intent." />
+  <meta name="keywords" content="Expense tracker, subscriptions, UPI, spending leaks, India" />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+  <link rel="canonical" href="https://kharchlog.com/blog/subscription-audit-expense-tracker-india/" />
+  <link rel="stylesheet" href="/styles.css" />
+  <link rel="icon" href="https://kharchlog.com/favicon.png" type="image/png" />
+  <link rel="apple-touch-icon" href="https://kharchlog.com/apple-touch-icon.png" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="OTT, SIMs and SIPs: a subscription audit with an Expense tracker | Kharch Log Blog" />
+  <meta property="og:description" content="Silent auto-debits eat UPI headroom. Walk through a 30-minute subscription audit using an Expense tracker and your Google Sheet, then cancel or keep with intent." />
+  <meta property="og:url" content="https://kharchlog.com/blog/subscription-audit-expense-tracker-india/" />
+  <meta property="og:image" content="https://kharchlog.com/og-image.jpg" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "OTT, SIMs and SIPs: a subscription audit with an Expense tracker",
+    "description": "Silent auto-debits eat UPI headroom. Walk through a 30-minute subscription audit using an Expense tracker and your Google Sheet, then cancel or keep with intent.",
+    "datePublished": "2026-09-18",
+    "dateModified": "2026-09-18",
+    "author": { "@type": "Organization", "name": "Kharch Log", "parentOrganization": { "@type": "Organization", "name": "Easy Peeze Tools" } },
+    "publisher": { "@type": "Organization", "name": "Kharch Log", "logo": { "@type": "ImageObject", "url": "https://kharchlog.com/logo.png" } },
+    "mainEntityOfPage": "https://kharchlog.com/blog/subscription-audit-expense-tracker-india/",
+    "image": "https://kharchlog.com/og-image.jpg",
+    "keywords": "Expense tracker, subscriptions, UPI, spending leaks, India"
+  }
+  </script>
+  <meta name="googlebot" content="index, follow" />
+  <meta name="author" content="Kharch Log" />
+  <meta name="theme-color" content="#0F2A43" />
+  <meta name="application-name" content="Kharch Log" />
+  <link rel="sitemap" href="https://kharchlog.com/sitemap.xml" type="application/xml" title="Sitemap" />
+  <meta property="og:site_name" content="Kharch Log" />
+  <meta property="og:locale" content="en_IN" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="OTT, SIMs and SIPs: a subscription audit with an Expense tracker | Kharch Log Blog" />
+  <meta name="twitter:description" content="Silent auto-debits eat UPI headroom. Walk through a 30-minute subscription audit using an Expense tracker and your Google Sheet, then cancel or keep with intent." />
+  <meta name="twitter:image" content="https://kharchlog.com/og-image.jpg" />
+  <script type="application/ld+json" id="seo-jsonld">
+{
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://kharchlog.com/#organization",
+        "name": "Kharch Log",
+        "url": "https://kharchlog.com/",
+        "logo": "https://kharchlog.com/logo.png",
+        "email": "easypeezetools@gmail.com",
+        "parentOrganization": {
+          "@type": "Organization",
+          "name": "Easy Peeze Tools",
+          "url": "https://easypeeze.com/"
+        },
+        "sameAs": [
+          "https://easypeeze.com/"
+        ]
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://kharchlog.com/blog/subscription-audit-expense-tracker-india/#webpage",
+        "url": "https://kharchlog.com/blog/subscription-audit-expense-tracker-india/",
+        "name": "OTT, SIMs and SIPs: a subscription audit with an Expense tracker | Kharch Log Blog",
+        "description": "Silent auto-debits eat UPI headroom. Walk through a 30-minute subscription audit using an Expense tracker and your Google Sheet, then cancel or keep with intent.",
+        "isPartOf": {
+          "@id": "https://kharchlog.com/#website"
+        },
+        "publisher": {
+          "@id": "https://kharchlog.com/#organization"
+        },
+        "inLanguage": "en-IN"
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a class="brand-lockup" href="/" aria-label="Kharch Log home">
+        <img src="https://kharchlog.com/logo.png" alt="" />
+        <span class="brand-lockup__name">Kharch Log</span>
+      </a>
+      <nav class="site-nav" aria-label="Primary">
+        <a href="/features/">Features</a>
+        <a href="/blog/">Blog</a>
+        <a href="/pricing/">Pricing</a>
+        <a href="/about/">About</a>
+        <a href="/faq/">FAQ</a>
+        <a href="/contact/">Contact</a>
+        <a class="nav-cta" href="/pay/">Get lifetime - ₹149</a>
+      </nav>
+    </div>
+  </header>
+  <main id="main">
+    <div class="page-hero section" style="width:min(var(--max), calc(100% - 40px));margin:0 auto;">
+      <p class="crumbs"><a href="/">Home</a> / <a href="/blog/">Blog</a> / OTT, SIMs and SIPs: a subscription audit with an Expense tracker</p>
+      <h1>OTT, SIMs and SIPs: a subscription audit with an Expense tracker</h1>
+      <p class="blog-card__date">2026-09-18</p>
+      <p>Silent auto-debits eat UPI headroom. Walk through a 30-minute subscription audit using an Expense tracker and your Google Sheet, then cancel or keep with intent.</p>
+    </div>
+    <article class="section prose" style="max-width:720px;margin:0 auto 48px;padding:0 20px;">
+<p>OTT, cloud storage, extra SIMs, gym, and “free trials” that billed anyway: none of these look large in isolation. Together they are a second EMI. A 30-minute pass in your <strong>Expense tracker</strong> is cheaper than another annual plan you forgot.</p>
+<h2>Pull the last 90 days</h2>
+<ol>
+<li>Open the Kharch Log Sheet (or Today / reports in the app).</li>
+<li>Filter payees: Netflix, Amazon, Google, Jio, Airtel, Spotify, gym, VPN.</li>
+<li>Mark each as keep, share with family, or cancel this week.</li>
+</ol>
+<h2>UPI auto-pay vs card standing instructions</h2>
+<p>Some renewals hit UPI autopay, some hit a card that only appears in bank SMS. That is why app-only histories miss rows. Bank SMS into an <strong>Expense tracker</strong> is the wider net. See <a href="/blog/how-to-track-expenses-automatically-with-sms/">SMS auto-capture</a>.</p>
+<h2>Family plans vs five logins</h2>
+<p>One household often pays for three OTT apps. Put the payer in the Sheet notes. If a sibling should chip in, the row is the reminder. A shared Sheet is enough; you do not need a bank-login money app.</p>
+<h2>After you cancel</h2>
+<p>Leave the old payee mapped. If a debit sneaks back, <a href="/features/review-inbox/">needs-review</a> still flags it. Lifetime Kharch Log is ₹149 so the audit is not fighting a subscription of its own. Related: <a href="/blog/lifetime-vs-subscription-expense-apps-india/">lifetime vs subscription apps</a>.</p>
+      <p><a class="btn" href="/pay/">Get Kharch Log lifetime - ₹149</a>
+      <a class="btn btn--ghost" href="/features/">See features</a></p>
+    </article>
+  </main>
+  <footer class="site-footer">
+    <div class="site-footer__inner">
+      <div class="site-footer__brand">
+        <img src="https://kharchlog.com/logo.png" alt="" />
+        <span>Kharch Log</span>
+      </div>
+      <nav aria-label="Footer">
+        <a href="/">Home</a>
+        <a href="/features/">Features</a>
+        <a href="/blog/">Blog</a>
+        <a href="/about/">About</a>
+        <a href="/glossary/">Glossary</a>
+        <a href="https://easypeeze.com/privacy/">Privacy Policy</a>
+        <a href="https://easypeeze.com/terms/">Terms of Service</a>
+        <a href="mailto:kharchlog@gmail.com">Support</a>
+      </nav>
+      <p class="site-footer__copy">© 2026 Kharch Log - an Easy Peeze Tools product. Your data stays yours.</p>
+    </div>
+  </footer>
+  <script src="../../site-motion.js" defer></script>
+</body>
+</html>
