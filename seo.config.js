@@ -75,7 +75,7 @@ module.exports = {
     },
     '/pricing/': {
       title: 'Pricing - ₹149 lifetime',
-      description: 'Kharch Log lifetime unlock ₹149 (or $2 USD via Easy Peeze PayPal). No subscription.',
+      description: 'Kharch Log lifetime unlock ₹149 (or $2 USD). No subscription.',
       priority: 0.8,
     },
     '/blog/': {
