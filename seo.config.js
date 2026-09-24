@@ -28,7 +28,7 @@ module.exports = {
     name: 'Kharch Log',
     url: 'https://kharchlog.com/',
     logo: 'https://kharchlog.com/logo.png',
-    email: 'easypeezetools@gmail.com',
+    email: 'support@easypeeze.com',
     parentOrganization: {
       '@type': 'Organization',
       name: 'Easy Peeze Tools',
@@ -114,7 +114,7 @@ module.exports = {
     },
     '/contact/': {
       title: 'Contact Kharch Log',
-      description: 'Support for Kharch Log - email easypeezetools@gmail.com.',
+      description: 'Support for Kharch Log - email support@easypeeze.com.',
       priority: 0.5,
       changefreq: 'yearly',
     },

@@ -17,7 +17,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Contact Kharch Log</title>
-  <meta name="description" content="Support for Kharch Log - email easypeezetools@gmail.com." />
+  <meta name="description" content="Support for Kharch Log - email support@easypeeze.com." />
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
   <link rel="canonical" href="https://kharchlog.com/contact/" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -27,7 +27,7 @@
   <link rel="icon" href="https://kharchlog.com/favicon.png" type="image/png" />
   <link rel="apple-touch-icon" href="https://kharchlog.com/apple-touch-icon.png" />
   <meta property="og:title" content="Contact Kharch Log" />
-  <meta property="og:description" content="Support for Kharch Log - email easypeezetools@gmail.com." />
+  <meta property="og:description" content="Support for Kharch Log - email support@easypeeze.com." />
   <meta property="og:url" content="https://kharchlog.com/contact/" />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="https://kharchlog.com/og-image.jpg" />
@@ -40,9 +40,9 @@
   <meta property="og:locale" content="en_IN" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Contact Kharch Log" />
-  <meta name="twitter:description" content="Support for Kharch Log - email easypeezetools@gmail.com." />
+  <meta name="twitter:description" content="Support for Kharch Log - email support@easypeeze.com." />
   <meta name="twitter:image" content="https://kharchlog.com/og-image.jpg" />
-                                                                  <script type="application/ld+json" id="seo-jsonld">
+                                                              <script type="application/ld+json" id="seo-jsonld">
 {
     "@context": "https://schema.org",
     "@graph": [
@@ -52,7 +52,7 @@
         "name": "Kharch Log",
         "url": "https://kharchlog.com/",
         "logo": "https://kharchlog.com/logo.png",
-        "email": "easypeezetools@gmail.com",
+        "email": "support@easypeeze.com",
         "parentOrganization": {
           "@type": "Organization",
           "name": "Easy Peeze Tools",
@@ -67,7 +67,7 @@
         "@id": "https://kharchlog.com/contact/#webpage",
         "url": "https://kharchlog.com/contact/",
         "name": "Contact Kharch Log",
-        "description": "Support for Kharch Log - email easypeezetools@gmail.com.",
+        "description": "Support for Kharch Log - email support@easypeeze.com.",
         "isPartOf": {
           "@id": "https://kharchlog.com/#website"
         },
@@ -149,9 +149,9 @@
 
         <p class="contact-note">
           Or email:
-          <a href="mailto:easypeezetools@gmail.com?subject=Kharch%20Log%20support">easypeezetools@gmail.com</a>
+          <a href="mailto:support@easypeeze.com?subject=Kharch%20Log%20support">support@easypeeze.com</a>
           ·
-          <a href="mailto:kharchlog@gmail.com?subject=Kharch%20Log%20support">kharchlog@gmail.com</a>.
+          <a href="mailto:support@easypeeze.com?subject=Kharch%20Log%20support">support@easypeeze.com</a>.
           Business: <strong>Easy Peeze Tools</strong> (India) · Product: Kharch Log ·
           Pricing: ₹149 lifetime ·
           <a href="/about/">About</a> ·
@@ -193,7 +193,7 @@
     var statusEl = document.getElementById('contact-status');
     if (!form || !btn) return;
     window.__contactCaptchaOk = false;
-    var TO = 'easypeezetools@gmail.com';
+    var TO = 'support@easypeeze.com';
     var API = 'https://kharchlog-license-u4rcttr3nq-el.a.run.app/contact';
     var SITE = 'Kharch Log';
     var SOURCE = 'kharchlog.com/contact';
@@ -295,7 +295,7 @@
           var mailOk = mail.httpOk && mail.j && (mail.j.success === true || mail.j.success === 'true');
           var apiOk = api.httpOk && api.j && api.j.ok === true;
           if (!mailOk && !apiOk) {
-            var msg = (mail.j && mail.j.message) || (api.j && api.j.error) || 'Could not send. Email easypeezetools@gmail.com instead.';
+            var msg = (mail.j && mail.j.message) || (api.j && api.j.error) || 'Could not send. Email support@easypeeze.com instead.';
             throw new Error(msg);
           }
           form.reset();
@@ -305,7 +305,7 @@
           setTimeout(function () { btn.classList.remove('is-success'); }, 800);
         })
         .catch(function (err) {
-          setStatus((err && err.message) || 'Could not send. Email easypeezetools@gmail.com instead.', true);
+          setStatus((err && err.message) || 'Could not send. Email support@easypeeze.com instead.', true);
           resetCaptcha();
         })
         .finally(function () { setBusy(false); });
@@ -336,7 +336,7 @@
             <a href="https://easypeeze.com/terms/" role="menuitem">Terms of Service</a>
           </div>
         </div>
-        <a href="mailto:kharchlog@gmail.com">Support</a>
+        <a href="mailto:support@easypeeze.com">Support</a>
       </nav>
       <p class="site-footer__copy">© 2026 Kharch Log - an Easy Peeze Tools product</p>
     </div>
