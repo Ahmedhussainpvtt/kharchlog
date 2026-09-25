@@ -48,8 +48,8 @@ module.exports = {
     ].join('\n'),
   },
 
-  excludeFromSitemap: ['/pay/'],
-  skipPaths: [],
+  excludeFromSitemap: ['/pay/', '/404.html'],
+  skipPaths: ['/lost/'],
 
   defaults: {
     changefreq: 'monthly',
