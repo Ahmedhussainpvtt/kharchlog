@@ -1,6 +1,8 @@
 {
-  "versionCode": 219,
-  "versionName": "3.2.119",
+  "versionCode": 225,
+  "versionName": "3.2.125",
   "apkUrl": "https://raw.githubusercontent.com/Ahmedhussainpvtt/kharchlog/main/KharchLog.apk",
-  "notes": "UI enhancements and small improvements"
+  "force": true,
+  "minVersionCode": 225,
+  "notes": "App update is required to continue using the app. We have fixed some UI enhancements and security enhancements. Please update the app to continue using it."
 }
