@@ -1,8 +1,8 @@
 {
-  "versionCode": 233,
-  "versionName": "3.2.133",
+  "versionCode": 234,
+  "versionName": "3.2.134",
   "apkUrl": "https://raw.githubusercontent.com/Ahmedhussainpvtt/kharchlog/main/KharchLog.apk",
   "force": true,
-  "minVersionCode": 233,
-  "notes": "Manage income and expense categories in Settings. Light, dark, or match your phone. Home totals count up, including pull to refresh. If Google access fails, sign in again when asked."
+  "minVersionCode": 234,
+  "notes": "In-app updates now download from GitHub."
 }
