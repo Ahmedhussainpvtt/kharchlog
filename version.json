@@ -4,5 +4,5 @@
   "apkUrl": "https://raw.githubusercontent.com/Ahmedhussainpvtt/kharchlog/main/KharchLog.apk",
   "force": true,
   "minVersionCode": 227,
-  "notes": "Bug fixes and small improvements"
+  "notes": "New: dark, light, or match-phone theme. Multilingual support. Other updates."
 }
