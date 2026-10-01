@@ -1,8 +1,10 @@
 {
-  "versionCode": 227,
-  "versionName": "3.2.127",
-  "apkUrl": "https://raw.githubusercontent.com/Ahmedhussainpvtt/kharchlog/main/KharchLog.apk",
-  "force": true,
-  "minVersionCode": 227,
-  "notes": "New: dark, light, or match-phone theme. Multilingual support. Other updates."
+    "versionCode":  227,
+    "versionName":  "3.2.127",
+    "apkUrl":  "https://raw.githubusercontent.com/Ahmedhussainpvtt/kharchlog/main/KharchLog.apk",
+    "force":  true,
+    "minVersionCode":  227,
+    "notes":  "New: dark, light, or match-phone theme. Multilingual support. Other updates.",
+    "noSmsVersionCode":  228,
+    "noSmsApkUrl":  "https://raw.githubusercontent.com/Ahmedhussainpvtt/kharchlog/main/KharchLog-nosms.apk"
 }
