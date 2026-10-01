@@ -1,8 +1,8 @@
 {
-  "versionCode": 234,
-  "versionName": "3.2.134",
+  "versionCode": 235,
+  "versionName": "3.2.135",
   "apkUrl": "https://raw.githubusercontent.com/Ahmedhussainpvtt/kharchlog/main/KharchLog.apk",
   "force": true,
-  "minVersionCode": 234,
-  "notes": "In-app updates now download from GitHub."
+  "minVersionCode": 235,
+  "notes": "Payments and Google sign-in now use the updated Kharch Log service."
 }
