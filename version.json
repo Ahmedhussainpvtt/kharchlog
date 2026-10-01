@@ -1,8 +1,8 @@
 {
-  "versionCode": 237,
-  "versionName": "3.2.137",
+  "versionCode": 238,
+  "versionName": "3.2.138",
   "apkUrl": "https://raw.githubusercontent.com/Ahmedhussainpvtt/kharchlog/main/KharchLog.apk",
   "force": true,
-  "minVersionCode": 237,
-  "notes": "Categories shimmer while they load. Income includes Rental and Dividend. Categories in Settings has a new icon."
+  "minVersionCode": 238,
+  "notes": "The update prompt says New update available. On Google Play, Update installs in the app and reopens Kharch Log."
 }
