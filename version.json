@@ -1,6 +1,8 @@
 {
-  "versionCode": 225,
-  "versionName": "3.2.125",
+  "versionCode": 227,
+  "versionName": "3.2.127",
   "apkUrl": "https://raw.githubusercontent.com/Ahmedhussainpvtt/kharchlog/main/KharchLog.apk",
-  "notes": ""
+  "force": true,
+  "minVersionCode": 227,
+  "notes": "Bug fixes and small improvements"
 }
