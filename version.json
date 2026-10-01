@@ -1,8 +1,8 @@
 {
-  "versionCode": 235,
-  "versionName": "3.2.135",
+  "versionCode": 236,
+  "versionName": "3.2.136",
   "apkUrl": "https://raw.githubusercontent.com/Ahmedhussainpvtt/kharchlog/main/KharchLog.apk",
   "force": true,
-  "minVersionCode": 235,
-  "notes": "Payments and Google sign-in now use the updated Kharch Log service."
+  "minVersionCode": 236,
+  "notes": "If Profile has no UPI ID, Share grays out Add QR and says to add one in settings. Urdu in the language list stays on the left and still reads right to left."
 }
