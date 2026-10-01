@@ -1,8 +1,8 @@
 {
-  "versionCode": 236,
-  "versionName": "3.2.136",
+  "versionCode": 237,
+  "versionName": "3.2.137",
   "apkUrl": "https://raw.githubusercontent.com/Ahmedhussainpvtt/kharchlog/main/KharchLog.apk",
   "force": true,
-  "minVersionCode": 236,
-  "notes": "If Profile has no UPI ID, Share grays out Add QR and says to add one in settings. Urdu in the language list stays on the left and still reads right to left."
+  "minVersionCode": 237,
+  "notes": "Categories shimmer while they load. Income includes Rental and Dividend. Categories in Settings has a new icon."
 }
