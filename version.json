@@ -4,5 +4,5 @@
   "apkUrl": "https://raw.githubusercontent.com/Ahmedhussainpvtt/kharchlog/main/KharchLog.apk",
   "force": true,
   "minVersionCode": 241,
-  "notes": "Share text shows Pay via UPI, then a pay link on its own line. Shared cards and invoice PDFs stay white in dark mode. Language changes apply right away. If a language still has to download, a progress bar shows the percent. Hindi labels use everyday words."
+  "notes": "Share text shows Pay via UPI, then a pay link on its own line. Shared cards and invoice PDFs stay white in dark mode. Language bug fixes."
 }
