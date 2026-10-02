@@ -1,8 +1,8 @@
 {
-  "versionCode": 241,
-  "versionName": "3.2.141",
+  "versionCode": 244,
+  "versionName": "3.2.144",
   "apkUrl": "https://raw.githubusercontent.com/Ahmedhussainpvtt/kharchlog/main/KharchLog.apk",
   "force": true,
-  "minVersionCode": 241,
-  "notes": "Share text shows Pay via UPI, then a pay link on its own line. Shared cards and invoice PDFs stay white in dark mode. Language bug fixes."
+  "minVersionCode": 244,
+  "notes": "Spending chart flips to Income when you swipe left or right. A hint next to the heading says which side you can open. The ring spins while the card turns."
 }
