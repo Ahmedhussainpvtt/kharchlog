@@ -1,8 +1,8 @@
 {
-  "versionCode": 239,
-  "versionName": "3.2.139",
+  "versionCode": 240,
+  "versionName": "3.2.140",
   "apkUrl": "https://raw.githubusercontent.com/Ahmedhussainpvtt/kharchlog/main/KharchLog.apk",
   "force": true,
-  "minVersionCode": 239,
-  "notes": "Income categories now include Salary, Business, Freelance, Investments, Interest, Dividend, Rental Income, Gifts, Bonus, Commission, Pension, Scholarship, Agriculture, Personal, Pocket Money, and Other Income. Health is now Health & Medical."
+  "minVersionCode": 240,
+  "notes": "The website APK and Google Play build are the same version. Play updates install inside the app."
 }
