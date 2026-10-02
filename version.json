@@ -1,8 +1,8 @@
 {
-  "versionCode": 244,
-  "versionName": "3.2.144",
+  "versionCode": 246,
+  "versionName": "3.2.146",
   "apkUrl": "https://raw.githubusercontent.com/Ahmedhussainpvtt/kharchlog/main/KharchLog.apk",
   "force": true,
-  "minVersionCode": 244,
-  "notes": "Languages now change as soon as you select one. If one still downloads, you see the percent. Hindi and the other languages use everyday words. Swipe the spending chart left or right. It flips and shows Income."
+  "minVersionCode": 246,
+  "notes": "Text is larger and easier to read. Hindi, Telugu, Urdu, Chinese, Japanese, and Korean are a little bigger than the other languages."
 }
