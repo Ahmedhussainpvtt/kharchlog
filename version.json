@@ -1,8 +1,8 @@
 {
-  "versionCode": 246,
-  "versionName": "3.2.146",
+  "versionCode": 247,
+  "versionName": "3.2.147",
   "apkUrl": "https://raw.githubusercontent.com/Ahmedhussainpvtt/kharchlog/main/KharchLog.apk",
   "force": true,
-  "minVersionCode": 246,
-  "notes": "Text is larger and easier to read. Hindi, Telugu, Urdu, Chinese, Japanese, and Korean are a little bigger than the other languages."
+  "minVersionCode": 247,
+  "notes": "Sub text in English, French, Spanish, and German is a little smaller."
 }
