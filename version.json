@@ -1,8 +1,8 @@
 {
-  "versionCode": 247,
-  "versionName": "3.2.147",
+  "versionCode": 248,
+  "versionName": "3.2.148",
   "apkUrl": "https://raw.githubusercontent.com/Ahmedhussainpvtt/kharchlog/main/KharchLog.apk",
   "force": true,
-  "minVersionCode": 247,
-  "notes": "Sub text in English, French, Spanish, and German is a little smaller."
+  "minVersionCode": 248,
+  "notes": "The home chart uses the category you already saved for that person. Logged SMS shows up when you reopen the app. The sheet stays in a Kharch Log folder. If the sheet or folder was deleted, adding an expense restores it from trash or makes a new one. Missing column titles are filled in when you add an expense."
 }
