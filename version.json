@@ -1,8 +1,8 @@
 {
-  "versionCode": 249,
-  "versionName": "3.2.149",
+  "versionCode": 250,
+  "versionName": "3.2.150",
   "apkUrl": "https://raw.githubusercontent.com/Ahmedhussainpvtt/kharchlog/main/KharchLog.apk",
   "force": true,
-  "minVersionCode": 249,
-  "notes": "Only the header row is dark green. Expense rows stay white."
+  "minVersionCode": 250,
+  "notes": "Sync sheet puts the sheet back if it was deleted. It restores the Kharch Log folder. Missing tabs and column titles are filled in."
 }
