@@ -1,8 +1,8 @@
 {
-  "versionCode": 250,
-  "versionName": "3.2.150",
+  "versionCode": 258,
+  "versionName": "3.2.158",
   "apkUrl": "https://raw.githubusercontent.com/Ahmedhussainpvtt/kharchlog/main/KharchLog.apk",
   "force": true,
-  "minVersionCode": 250,
-  "notes": "Sync sheet puts the sheet back if it was deleted. It restores the Kharch Log folder. Missing tabs and column titles are filled in."
+  "minVersionCode": 258,
+  "notes": "Sign-in stays put until you accept the terms. Delete account is in a danger zone and removes the Kharch Log folder from Drive. Bulk category edit shows progress. Background access opens the right settings for your phone."
 }
