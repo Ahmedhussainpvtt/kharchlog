@@ -1,8 +1,8 @@
 {
-  "versionCode": 260,
-  "versionName": "3.2.160",
+  "versionCode": 261,
+  "versionName": "3.2.161",
   "apkUrl": "https://raw.githubusercontent.com/Ahmedhussainpvtt/kharchlog/main/KharchLog.apk",
   "force": true,
-  "minVersionCode": 260,
-  "notes": "After a Play update finishes downloading, Kharch Log installs and opens again."
+  "minVersionCode": 261,
+  "notes": "After an update finishes downloading, Kharch Log installs and opens again. Sign in, Close your account, and those screens follow the language you picked. The button now says Close your account."
 }
