@@ -1,8 +1,8 @@
 {
-  "versionCode": 258,
-  "versionName": "3.2.158",
+  "versionCode": 259,
+  "versionName": "3.2.159",
   "apkUrl": "https://raw.githubusercontent.com/Ahmedhussainpvtt/kharchlog/main/KharchLog.apk",
   "force": true,
-  "minVersionCode": 258,
-  "notes": "Delete account option inside Settings. Bulk edit or delete inside details."
+  "minVersionCode": 259,
+  "notes": "EMI and Refund are default categories. An SMS that says refund is tagged Refund. Sign in sits in its own box. Agree to the Privacy Policy and Terms or the button tells you to."
 }
