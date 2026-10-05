@@ -1,8 +1,8 @@
 {
-  "versionCode": 259,
-  "versionName": "3.2.159",
+  "versionCode": 260,
+  "versionName": "3.2.160",
   "apkUrl": "https://raw.githubusercontent.com/Ahmedhussainpvtt/kharchlog/main/KharchLog.apk",
   "force": true,
-  "minVersionCode": 259,
-  "notes": "EMI and Refund are default categories. An SMS that says refund is tagged Refund. Sign in sits in its own box. Agree to the Privacy Policy and Terms or the button tells you to."
+  "minVersionCode": 260,
+  "notes": "After a Play update finishes downloading, Kharch Log installs and opens again."
 }
