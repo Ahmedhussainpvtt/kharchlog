@@ -4,5 +4,5 @@
   "apkUrl": "https://raw.githubusercontent.com/Ahmedhussainpvtt/kharchlog/main/KharchLog.apk",
   "force": true,
   "minVersionCode": 258,
-  "notes": "Sign-in stays put until you accept the terms. Delete account is in a danger zone and removes the Kharch Log folder from Drive. Bulk category edit shows progress. Background access opens the right settings for your phone."
+  "notes": "Delete account option inside Settings. Bulk edit or delete inside details."
 }
