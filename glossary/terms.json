@@ -257,8 +257,8 @@
   },
   {
     "slug": "google-drive-file-scope",
-    "term": "Google Drive file scope",
-    "definition": "Limited OAuth access (drive.file) so an app can only use Drive files it creates for you - not your entire Drive.",
+    "term": "Google Drive access",
+    "definition": "Kharch Log can use only the Google Drive files it creates for you, not your entire Drive.",
     "related": [
       "google-sheets-expense-tracker"
     ]
