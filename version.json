@@ -1,8 +1,8 @@
 {
-  "versionCode": 262,
-  "versionName": "3.2.162",
+  "versionCode": 267,
+  "versionName": "3.2.167",
   "apkUrl": "https://raw.githubusercontent.com/Ahmedhussainpvtt/kharchlog/main/KharchLog.apk",
   "force": true,
-  "minVersionCode": 262,
-  "notes": "Sign-in and sync errors now tell you what to do, without technical details. If you closed your account, you can sign in again with the same email and start a new one."
+  "minVersionCode": 267,
+  "notes": "New sound when money is logged. Report a bug and Request a feature send from the app. Send stays off until the details are 50 characters. Check for updates is gone from Settings. The app still checks when you open it."
 }
