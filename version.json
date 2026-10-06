@@ -1,8 +1,8 @@
 {
-  "versionCode": 280,
-  "versionName": "3.2.180",
+  "versionCode": 281,
+  "versionName": "3.2.181",
   "apkUrl": "https://raw.githubusercontent.com/Ahmedhussainpvtt/kharchlog/main/KharchLog.apk",
   "force": true,
-  "minVersionCode": 280,
-  "notes": "Money in and money out notices now show the Kharch Log logo and the brand blue. The title follows your language."
+  "minVersionCode": 281,
+  "notes": "Kharch Log notices now use the Easy Peeze connection."
 }
