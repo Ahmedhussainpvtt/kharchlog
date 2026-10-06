@@ -1,8 +1,8 @@
 {
-  "versionCode": 279,
-  "versionName": "3.2.179",
+  "versionCode": 280,
+  "versionName": "3.2.180",
   "apkUrl": "https://raw.githubusercontent.com/Ahmedhussainpvtt/kharchlog/main/KharchLog.apk",
   "force": true,
-  "minVersionCode": 279,
-  "notes": "Four payments to the same person in one minute are all saved when the seconds differ. A different amount is saved too. Only the same reference number is skipped."
+  "minVersionCode": 280,
+  "notes": "Money in and money out notices now show the Kharch Log logo and the brand blue. The title follows your language."
 }
