@@ -1,8 +1,8 @@
 {
-  "versionCode": 278,
-  "versionName": "3.2.178",
+  "versionCode": 279,
+  "versionName": "3.2.179",
   "apkUrl": "https://raw.githubusercontent.com/Ahmedhussainpvtt/kharchlog/main/KharchLog.apk",
   "force": true,
-  "minVersionCode": 278,
-  "notes": "Urdu in Settings now starts from the right. The swipe line on the spending chart stays on the left. The credits note sits under the totals, and that card is a little smaller."
+  "minVersionCode": 279,
+  "notes": "Four payments to the same person in one minute are all saved when the seconds differ. A different amount is saved too. Only the same reference number is skipped."
 }
