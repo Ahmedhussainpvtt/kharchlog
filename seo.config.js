@@ -69,13 +69,13 @@ module.exports = {
     },
     '/features/': {
       title: 'Features - SMS capture, Sheets sync, reports',
-      description: 'Kharch Log features: bank SMS auto-capture, review inbox, Google Sheets sync, reports, and share invoice.',
+      description: 'Kharch Log features: bank SMS auto-capture, review inbox, Google Sheets sync, reports, share invoice, and Credits.',
       priority: 0.9,
       changefreq: 'monthly',
     },
     '/pricing/': {
       title: 'Pricing - ₹149 lifetime',
-      description: 'Kharch Log lifetime unlock ₹149 (or $2 USD). No subscription.',
+      description: 'Kharch Log lifetime unlock ₹149. No subscription. Prices in INR for India.',
       priority: 0.8,
     },
     '/blog/': {

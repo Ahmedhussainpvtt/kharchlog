@@ -1,6 +1,6 @@
 # Kharch Log - llms-full.txt
 
-Generated: 2026-09-26
+Generated: 2026-10-06
 Source: https://kharchlog.com/
 Index: https://kharchlog.com/llms.txt
 
@@ -50,6 +50,10 @@ URL: https://kharchlog.com/pricing/
 INR 149 one-time lifetime unlock for Kharch Log on Android.
 
 ## Features
+
+### Credits
+URL: https://kharchlog.com/features/credits/
+Track money you gave someone: given, returned, and still due.
 
 ### Google Sheets Sync
 URL: https://kharchlog.com/features/google-sheets-sync/

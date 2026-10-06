@@ -2,7 +2,7 @@
 
 > Kharch Log is an Android expense tracker by Easy Peeze Tools. It captures bank/UPI SMS, lets you confirm drafts, and stores expenses in your own Google Sheet. Lifetime unlock INR 149. Your data stays in your Google account - not on our servers as the source of truth.
 
-Last updated: 2026-09-26
+Last updated: 2026-10-06
 Canonical site: https://kharchlog.com/
 Sitemap: https://kharchlog.com/sitemap.xml
 Full corpus: https://kharchlog.com/llms-full.txt
@@ -30,6 +30,7 @@ Contact: support@easypeeze.com
 
 ## Features
 
+- [Credits](https://kharchlog.com/features/credits/): Track money you gave someone: given, returned, and still due.
 - [Google Sheets Sync](https://kharchlog.com/features/google-sheets-sync/): Store every expense in your own Google Sheet (file-scoped).
 - [Manual Voice Entry](https://kharchlog.com/features/manual-voice-entry/): Add expenses by typing or voice when SMS is missing.
 - [Reports Insights](https://kharchlog.com/features/reports-insights/): Month/week/year spend, categories, and carry-forward balance.
