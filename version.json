@@ -1,8 +1,8 @@
 {
-  "versionCode": 267,
-  "versionName": "3.2.167",
+  "versionCode": 277,
+  "versionName": "3.2.177",
   "apkUrl": "https://raw.githubusercontent.com/Ahmedhussainpvtt/kharchlog/main/KharchLog.apk",
   "force": true,
-  "minVersionCode": 267,
-  "notes": "New sound when money is logged. Report a bug and Request a feature send from the app. Send stays off until the details are 50 characters. Check for updates is gone from Settings. The app still checks when you open it."
+  "minVersionCode": 277,
+  "notes": "New Credits tab to track money you gave, money that came back, and what is still due. Reminders on the due date and the next 2 mornings. Share a picture or a PDF bill, including each payment from history. Hindi, Urdu, Telugu, and other languages use their own simple words."
 }
