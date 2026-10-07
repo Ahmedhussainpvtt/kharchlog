@@ -1,8 +1,8 @@
 {
-  "versionCode": 281,
-  "versionName": "3.2.181",
+  "versionCode": 282,
+  "versionName": "3.2.182",
   "apkUrl": "https://raw.githubusercontent.com/Ahmedhussainpvtt/kharchlog/main/KharchLog.apk",
   "force": true,
-  "minVersionCode": 281,
-  "notes": "Kharch Log notices now use the Easy Peeze connection."
+  "minVersionCode": 282,
+  "notes": "Credit shares now include the amount due, the due date, and how to pay. A return share says what was received and what is still due. Hold a return to select several and delete them. Battery and autostart steps follow your phone brand."
 }
