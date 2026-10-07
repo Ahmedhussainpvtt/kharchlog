@@ -1,8 +1,8 @@
 {
-  "versionCode": 287,
-  "versionName": "3.2.187",
+  "versionCode": 288,
+  "versionName": "3.2.188",
   "apkUrl": "https://raw.githubusercontent.com/Ahmedhussainpvtt/kharchlog/main/KharchLog.apk",
   "force": true,
-  "minVersionCode": 287,
-  "notes": "Credit shares include a link so the other person can add or update the same credit in Kharch Log. Home greeting uses your first name. The Google sign-in border follows the button shape. If you skip Autostart, Kharch Log asks again."
+  "minVersionCode": 288,
+  "notes": "Borrowed From credits do not include the add link on the main share. Share each repayment on its own so the other person can record that payment."
 }
