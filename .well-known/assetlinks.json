@@ -1,0 +1,12 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.kharchlog.app",
+      "sha256_cert_fingerprints": [
+        "DA:DE:14:F4:C2:68:AD:F6:A9:1F:E2:5A:70:6C:A0:A1:01:5F:51:D5:0E:EF:6B:6A:0F:46:7D:FD:CF:57:8D:17"
+      ]
+    }
+  }
+]

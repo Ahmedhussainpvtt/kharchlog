@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>Open Kharch Log</title>
+  <link rel="icon" href="/favicon.png" type="image/png" />
+  <style>
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      text-align: center;
+      font-family: "Segoe UI", system-ui, sans-serif;
+      background: #F8FAFC;
+      color: #1F2937;
+    }
+    a {
+      display: inline-block;
+      margin: 8px;
+      color: #0066CC;
+      font-weight: 600;
+    }
+    .open {
+      background: #0085FF;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 999px;
+      padding: 12px 20px;
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <p id="status">Opening Kharch Log</p>
+    <p><a class="open" id="open" href="kharchlog://credit">Click here</a></p>
+    <p><a href="/install/">Get the app</a></p>
+  </div>
+  <script>
+    (function () {
+      var params = new URLSearchParams(location.search);
+      var token = params.get("d") || "";
+      if (!token) {
+        document.getElementById("status").textContent = "This link is missing the credit.";
+        return;
+      }
+      var app = "kharchlog://credit?d=" + encodeURIComponent(token);
+      document.getElementById("open").href = app;
+      var fallback = encodeURIComponent(location.origin + "/install/");
+      var intent = "intent://credit?d=" + encodeURIComponent(token) +
+        "#Intent;scheme=kharchlog;package=com.kharchlog.app;S.browser_fallback_url=" +
+        fallback + ";end";
+      location.replace(intent);
+    })();
+  </script>
+</body>
+</html>
