@@ -1,8 +1,8 @@
 {
-  "versionCode": 288,
-  "versionName": "3.2.188",
+  "versionCode": 289,
+  "versionName": "3.2.189",
   "apkUrl": "https://raw.githubusercontent.com/Ahmedhussainpvtt/kharchlog/main/KharchLog.apk",
   "force": true,
-  "minVersionCode": 288,
-  "notes": "Borrowed From credits do not include the add link on the main share. Share each repayment on its own so the other person can record that payment."
+  "minVersionCode": 289,
+  "notes": "Borrowed From credits no longer show the main share button. Share each repayment on its own so the other person can record that payment."
 }
