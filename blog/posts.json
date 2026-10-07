@@ -1,6 +1,291 @@
 {
-  "updated": "2026-09-18",
+  "updated": "2026-10-07",
   "posts": [
+    {
+      "slug": "catch-up-after-a-week-away-from-the-sheet",
+      "title": "Catch up after a week away from the Sheet",
+      "description": "SMS kept arriving while you were away. Sort that week by amount in your Google Sheet, fix the large rows, drop duplicates, add cash you remember, and stop.",
+      "date": "2026-10-07",
+      "url": "/blog/catch-up-after-a-week-away-from-the-sheet/",
+      "image": "/images/blog/catch-up-after-a-week-away-from-the-sheet.jpg",
+      "tags": [
+        "Expense tracker",
+        "India",
+        "Weekly review",
+        "UPI",
+        "Google Sheets"
+      ]
+    },
+    {
+      "slug": "train-flight-and-hotel-upi-trip-cost",
+      "title": "Train, flight, and hotel: what one trip actually cost",
+      "description": "The ticket is not the trip. Tag the train or flight, hotel, cabs, and meals with one trip name in your Google Sheet and sum that filter when you get home.",
+      "date": "2026-10-06",
+      "url": "/blog/train-flight-and-hotel-upi-trip-cost/",
+      "image": "/images/blog/train-flight-and-hotel-upi-trip-cost.jpg",
+      "tags": [
+        "Expense tracker",
+        "India",
+        "Travel",
+        "UPI",
+        "Google Sheets"
+      ]
+    },
+    {
+      "slug": "annual-insurance-premium-month",
+      "title": "Annual insurance premium month: health and vehicle",
+      "description": "A yearly health or vehicle premium is one large debit, not a weekly leak. Log it on the day it leaves, and use a monthly set-aside so your Google Sheet is not surprised.",
+      "date": "2026-10-05",
+      "url": "/blog/annual-insurance-premium-month/",
+      "image": "/images/blog/annual-insurance-premium-month.jpg",
+      "tags": [
+        "Expense tracker",
+        "India",
+        "Insurance",
+        "UPI",
+        "Google Sheets"
+      ]
+    },
+    {
+      "slug": "refunds-and-reversals-in-the-expense-sheet",
+      "title": "Refunds and reversals: do not leave a returned spend as a loss",
+      "description": "A refund or a failed UPI is not new income. Match the credit to the original debit in your Google Sheet so a cancelled spend does not stay on the books as a loss.",
+      "date": "2026-10-04",
+      "url": "/blog/refunds-and-reversals-in-the-expense-sheet/",
+      "image": "/images/blog/refunds-and-reversals-in-the-expense-sheet.jpg",
+      "tags": [
+        "Expense tracker",
+        "India",
+        "Refunds",
+        "UPI",
+        "Google Sheets"
+      ]
+    },
+    {
+      "slug": "atm-withdrawal-and-the-cash-that-vanishes",
+      "title": "ATM cash and the notes that vanish without an SMS",
+      "description": "An ATM withdrawal moves money into your pocket. Log the cash spends or the withdrawal, not both, so the month in your Google Sheet is not doubled.",
+      "date": "2026-10-03",
+      "url": "/blog/atm-withdrawal-and-the-cash-that-vanishes/",
+      "image": "/images/blog/atm-withdrawal-and-the-cash-that-vanishes.jpg",
+      "tags": [
+        "Expense tracker",
+        "India",
+        "Cash",
+        "ATM",
+        "Google Sheets"
+      ]
+    },
+    {
+      "slug": "flatmate-electricity-and-wifi-splits",
+      "title": "Flatmate splits: electricity, wifi, and the maid",
+      "description": "One flatmate often pays the bill and collects shares. Log the bill once in your Google Sheet and the repayments as transfers so the home cost is not tripled.",
+      "date": "2026-10-02",
+      "url": "/blog/flatmate-electricity-and-wifi-splits/",
+      "image": "/images/blog/flatmate-electricity-and-wifi-splits.jpg",
+      "tags": [
+        "Expense tracker",
+        "India",
+        "Flatmates",
+        "UPI",
+        "Google Sheets"
+      ]
+    },
+    {
+      "slug": "first-day-of-month-sheet-reset",
+      "title": "1 October: close September and start the new month in the Sheet",
+      "description": "On the 1st, finish September's blank categories, write three totals, and set October caps only after rent, EMIs, and savings are listed in the same Google Sheet.",
+      "date": "2026-10-01",
+      "url": "/blog/first-day-of-month-sheet-reset/",
+      "image": "/images/blog/first-day-of-month-sheet-reset.jpg",
+      "tags": [
+        "Expense tracker",
+        "India",
+        "Monthly budget",
+        "Google Sheets",
+        "UPI"
+      ]
+    },
+    {
+      "slug": "freelancer-client-upi-on-personal-phone",
+      "title": "Client UPI on the same phone as household spend",
+      "description": "Freelance payments, software bills, and the kirana share one phone. Label business in and business out in your Google Sheet so a client credit is not treated as spendable pay.",
+      "date": "2026-09-30",
+      "url": "/blog/freelancer-client-upi-on-personal-phone/",
+      "image": "/images/blog/freelancer-client-upi-on-personal-phone.jpg",
+      "tags": [
+        "Expense tracker",
+        "India",
+        "Freelance",
+        "UPI",
+        "Google Sheets"
+      ]
+    },
+    {
+      "slug": "money-sent-to-parents-each-month",
+      "title": "Money sent to parents each month: how to record it",
+      "description": "A monthly transfer home is a real outflow. Give it a family category in your Google Sheet so extras do not hide inside misc or become the new regular amount.",
+      "date": "2026-09-29",
+      "url": "/blog/money-sent-to-parents-each-month/",
+      "image": "/images/blog/money-sent-to-parents-each-month.jpg",
+      "tags": [
+        "Expense tracker",
+        "India",
+        "Family",
+        "UPI",
+        "Google Sheets"
+      ]
+    },
+    {
+      "slug": "weekend-food-delivery-leak",
+      "title": "Weekend food delivery: the Swiggy and Zomato leak",
+      "description": "Friday to Sunday orders look like single treats. Add fees and tips in your Google Sheet, set a cap on Friday, and check it before a third order.",
+      "date": "2026-09-28",
+      "url": "/blog/weekend-food-delivery-leak/",
+      "image": "/images/blog/weekend-food-delivery-leak.jpg",
+      "tags": [
+        "Expense tracker",
+        "India",
+        "Food delivery",
+        "UPI",
+        "Google Sheets"
+      ]
+    },
+    {
+      "slug": "sip-and-rd-are-not-the-same-as-spending",
+      "title": "SIP and RD are not the same as spending",
+      "description": "A SIP or RD debit leaves your account, but it is not wasted spend. Label it as savings in your Google Sheet so groceries are not blamed for money you moved on purpose.",
+      "date": "2026-09-27",
+      "url": "/blog/sip-and-rd-are-not-the-same-as-spending/",
+      "image": "/images/blog/sip-and-rd-are-not-the-same-as-spending.jpg",
+      "tags": [
+        "Expense tracker",
+        "India",
+        "SIP",
+        "Savings",
+        "Google Sheets"
+      ]
+    },
+    {
+      "slug": "rent-paid-by-upi-month-record",
+      "title": "Rent paid by UPI: what to store so you can show it later",
+      "description": "A rent UPI needs the month, the landlord, and the reference already in the SMS. Keep that in your Google Sheet so you can show the payment without a gallery of screenshots.",
+      "date": "2026-09-26",
+      "url": "/blog/rent-paid-by-upi-month-record/",
+      "image": "/images/blog/rent-paid-by-upi-month-record.jpg",
+      "tags": [
+        "Expense tracker",
+        "India",
+        "Rent",
+        "UPI",
+        "Google Sheets"
+      ]
+    },
+    {
+      "slug": "pharmacy-and-lab-bills-upi",
+      "title": "Pharmacy and lab bills: keep them out of groceries",
+      "description": "Medicine, lab tests, and chemist cash are health costs. File them in your Google Sheet apart from groceries so a medical month does not look like a food leak.",
+      "date": "2026-09-25",
+      "url": "/blog/pharmacy-and-lab-bills-upi/",
+      "image": "/images/blog/pharmacy-and-lab-bills-upi.jpg",
+      "tags": [
+        "Expense tracker",
+        "India",
+        "Health",
+        "UPI",
+        "Google Sheets"
+      ]
+    },
+    {
+      "slug": "fuel-fastag-toll-commute-cost",
+      "title": "Petrol and FASTag: track the real commute cost",
+      "description": "Pump payments and FASTag tolls are both the cost of getting to work. Add them in one Google Sheet, separate from weekend trips, without counting a tag recharge twice.",
+      "date": "2026-09-24",
+      "url": "/blog/fuel-fastag-toll-commute-cost/",
+      "image": "/images/blog/fuel-fastag-toll-commute-cost.jpg",
+      "tags": [
+        "Expense tracker",
+        "India",
+        "Commute",
+        "FASTag",
+        "UPI"
+      ]
+    },
+    {
+      "slug": "school-fee-term-payments-in-the-sheet",
+      "title": "School fees, books and bus: term payments in the Sheet",
+      "description": "Term fees, bus, books and annual charges hit in a cluster. Split them in your Google Sheet so a fee month is a plan, not a shock you blame on groceries.",
+      "date": "2026-09-23",
+      "url": "/blog/school-fee-term-payments-in-the-sheet/",
+      "image": "/images/blog/school-fee-term-payments-in-the-sheet.jpg",
+      "tags": [
+        "Expense tracker",
+        "India",
+        "School fees",
+        "UPI",
+        "Google Sheets"
+      ]
+    },
+    {
+      "slug": "credit-card-bill-and-upi-do-not-double-count",
+      "title": "Credit card swipe and the later bill: do not double count",
+      "description": "The card swipe is the spend. The UPI you send later to pay the card bill is a settlement. Log them differently in your Google Sheet so the month is not doubled.",
+      "date": "2026-09-22",
+      "url": "/blog/credit-card-bill-and-upi-do-not-double-count/",
+      "image": "/images/blog/credit-card-bill-and-upi-do-not-double-count.jpg",
+      "tags": [
+        "Expense tracker",
+        "India",
+        "Credit card",
+        "UPI",
+        "Google Sheets"
+      ]
+    },
+    {
+      "slug": "kirana-cash-plus-upi-same-ledger",
+      "title": "Kirana cash plus UPI: keep one grocery ledger",
+      "description": "The neighbourhood shop often takes notes for loose items and UPI for the rest. Log both in the same Google Sheet so the monthly grocery number is real.",
+      "date": "2026-09-21",
+      "url": "/blog/kirana-cash-plus-upi-same-ledger/",
+      "image": "/images/blog/kirana-cash-plus-upi-same-ledger.jpg",
+      "tags": [
+        "Expense tracker",
+        "India",
+        "Groceries",
+        "Cash",
+        "UPI"
+      ]
+    },
+    {
+      "slug": "couple-shared-upi-one-google-sheet",
+      "title": "Two UPI apps, one Google Sheet: a shared ledger for couples",
+      "description": "Two people and two UPI apps still need one household total. Point both phones at the same Google Sheet, mark who paid, and settle the gap without counting it twice.",
+      "date": "2026-09-20",
+      "url": "/blog/couple-shared-upi-one-google-sheet/",
+      "image": "/images/blog/couple-shared-upi-one-google-sheet.jpg",
+      "tags": [
+        "Expense tracker",
+        "India",
+        "Couples",
+        "UPI",
+        "Google Sheets"
+      ]
+    },
+    {
+      "slug": "festival-season-kharch-plan-expense-tracker",
+      "title": "Festival season kharch: gifts, travel and clothes in an Expense tracker",
+      "description": "Gifts, train tickets, clothes and sweets bunch into one festival window. Cap them in Kharch Log and read the spike from your own Google Sheet before the salary is gone.",
+      "date": "2026-09-19",
+      "url": "/blog/festival-season-kharch-plan-expense-tracker/",
+      "image": "/images/blog/festival-season-kharch-plan-expense-tracker.jpg",
+      "tags": [
+        "Expense tracker",
+        "India",
+        "Festival budget",
+        "UPI",
+        "Google Sheets"
+      ]
+    },
     {
       "slug": "subscription-audit-expense-tracker-india",
       "title": "OTT, SIMs and SIPs: a subscription audit with an Expense tracker",
