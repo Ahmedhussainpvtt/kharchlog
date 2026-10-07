@@ -1,8 +1,8 @@
 {
-  "versionCode": 284,
-  "versionName": "3.2.184",
+  "versionCode": 287,
+  "versionName": "3.2.187",
   "apkUrl": "https://raw.githubusercontent.com/Ahmedhussainpvtt/kharchlog/main/KharchLog.apk",
   "force": true,
-  "minVersionCode": 284,
-  "notes": "On Samsung, set Kharch Log battery to Optimized, then add it under Never sleeping apps."
+  "minVersionCode": 287,
+  "notes": "Credit shares include a link so the other person can add or update the same credit in Kharch Log. Home greeting uses your first name. The Google sign-in border follows the button shape. If you skip Autostart, Kharch Log asks again."
 }
