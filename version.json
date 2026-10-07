@@ -1,8 +1,8 @@
 {
-  "versionCode": 282,
-  "versionName": "3.2.182",
+  "versionCode": 283,
+  "versionName": "3.2.183",
   "apkUrl": "https://raw.githubusercontent.com/Ahmedhussainpvtt/kharchlog/main/KharchLog.apk",
   "force": true,
-  "minVersionCode": 282,
+  "minVersionCode": 283,
   "notes": "Credit shares now include the amount due, the due date, and how to pay. A return share says what was received and what is still due. Hold a return to select several and delete them. Battery and autostart steps follow your phone brand."
 }
