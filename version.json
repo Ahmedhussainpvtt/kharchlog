@@ -4,5 +4,5 @@
   "apkUrl": "https://raw.githubusercontent.com/Ahmedhussainpvtt/kharchlog/main/KharchLog.apk",
   "force": true,
   "minVersionCode": 290,
-  "notes": "Kharch Log asks for your date of birth before you continue. The app is only for people 18 or older. If you are 18 or older, that date is saved."
+  "notes": "Kharch Log asks for your date of birth before you continue. The app is only for people 18 or older."
 }
