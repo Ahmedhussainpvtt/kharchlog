@@ -1,8 +1,8 @@
 {
-  "versionCode": 290,
-  "versionName": "3.2.190",
+  "versionCode": 291,
+  "versionName": "3.2.191",
   "apkUrl": "https://raw.githubusercontent.com/Ahmedhussainpvtt/kharchlog/main/KharchLog.apk",
   "force": true,
-  "minVersionCode": 290,
-  "notes": "Kharch Log asks for your date of birth before you continue. The app is only for people 18 or older."
+  "minVersionCode": 291,
+  "notes": "Date of birth is asked on the home screen before you continue. After you confirm you are 18 or older, it is not shown in the app."
 }
