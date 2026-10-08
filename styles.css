@@ -172,9 +172,18 @@ a:hover { text-decoration: underline; }
 .nav-dropdown:focus-within .nav-dropdown__trigger {
   color: var(--primary);
 }
+/* Invisible pad as wide as the menu, so the cursor can move from the label onto a link. */
+.nav-dropdown::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  right: 0;
+  width: 280px;
+  height: 16px;
+}
 .nav-dropdown__menu {
   position: absolute;
-  top: calc(100% + 10px);
+  top: calc(100% + 8px);
   right: 0;
   min-width: 260px;
   padding: 8px;
@@ -1073,9 +1082,17 @@ a:hover { text-decoration: underline; }
   display: inline-flex;
   align-items: center;
 }
+.site-footer .nav-dropdown::after {
+  top: auto;
+  bottom: 100%;
+  right: auto;
+  left: 0;
+  width: 240px;
+  height: 16px;
+}
 .site-footer .nav-dropdown__menu {
   top: auto;
-  bottom: calc(100% + 10px);
+  bottom: calc(100% + 8px);
   right: auto;
   left: 0;
   transform: translateY(6px);
@@ -2703,6 +2720,7 @@ body > .site-footer {
     letter-spacing: 0.06em;
   }
   .site-header.nav-ready .site-nav .nav-dropdown__trigger::after { display: none; }
+  .site-header.nav-ready .site-nav .nav-dropdown::after { display: none; }
   .site-header.nav-ready .site-nav .nav-dropdown__menu {
     position: static;
     top: auto;
