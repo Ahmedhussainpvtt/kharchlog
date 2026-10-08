@@ -1,8 +1,8 @@
 {
-  "versionCode": 289,
-  "versionName": "3.2.189",
+  "versionCode": 290,
+  "versionName": "3.2.190",
   "apkUrl": "https://raw.githubusercontent.com/Ahmedhussainpvtt/kharchlog/main/KharchLog.apk",
   "force": true,
-  "minVersionCode": 289,
-  "notes": "Borrowed From credits no longer show the main share button. Share each repayment on its own so the other person can record that payment."
+  "minVersionCode": 290,
+  "notes": "Kharch Log asks for your date of birth before you continue. The app is only for people 18 or older. If you are 18 or older, that date is saved."
 }
