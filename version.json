@@ -1,8 +1,8 @@
 {
-  "versionCode": 292,
-  "versionName": "3.2.192",
+  "versionCode": 293,
+  "versionName": "3.2.193",
   "apkUrl": "https://raw.githubusercontent.com/Ahmedhussainpvtt/kharchlog/main/KharchLog.apk",
   "force": true,
-  "minVersionCode": 292,
-  "notes": "Date of birth is asked on the home screen before you continue. After you confirm you are 18 or older, it is not shown in the app."
+  "minVersionCode": 293,
+  "notes": "The Google sign-in button border now follows the round button."
 }
