@@ -1,8 +1,8 @@
 {
-  "versionCode": 293,
-  "versionName": "3.2.193",
+  "versionCode": 294,
+  "versionName": "3.2.194",
   "apkUrl": "https://raw.githubusercontent.com/Ahmedhussainpvtt/kharchlog/main/KharchLog.apk",
   "force": true,
-  "minVersionCode": 293,
-  "notes": "The Google sign-in button border now follows the round button."
+  "minVersionCode": 294,
+  "notes": "Under 18 dates cannot continue. The sheet says Kharch Log is only for users 18 or older. Screens sit under the status bar and the gesture bar."
 }
