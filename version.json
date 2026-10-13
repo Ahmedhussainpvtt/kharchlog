@@ -1,8 +1,8 @@
 {
-  "versionCode": 295,
-  "versionName": "3.2.195",
+  "versionCode": 296,
+  "versionName": "3.2.196",
   "apkUrl": "https://raw.githubusercontent.com/Ahmedhussainpvtt/kharchlog/main/KharchLog.apk",
   "force": true,
-  "minVersionCode": 295,
-  "notes": "The app opens again. Under 18 dates cannot continue. The sheet says Kharch Log is only for users 18 or older. Screens sit under the status bar and the gesture bar."
+  "minVersionCode": 296,
+  "notes": "Home balance updates after you delete an expense and come back. The details list no longer flashes empty. Chart labels stay out from under the add button."
 }
