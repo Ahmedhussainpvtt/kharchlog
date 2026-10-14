@@ -1,8 +1,8 @@
 {
-  "versionCode": 296,
-  "versionName": "3.2.196",
+  "versionCode": 300,
+  "versionName": "3.2.200",
   "apkUrl": "https://raw.githubusercontent.com/Ahmedhussainpvtt/kharchlog/main/KharchLog.apk",
   "force": true,
-  "minVersionCode": 296,
-  "notes": "First release of Kharch Log, your money book. UPI and bank SMS are read on the phone. No bank login. Unclear SMS stay in Needs review until you approve them. Expenses, income, categories, and notes sync to your Google Sheet. Home, week, month, and year charts, plus Insights. Credits for money given or borrowed. WhatsApp share and a PDF bill. Add by voice. Filter details. Dark mode follows your phone. Lifetime access is ₹149."
+  "minVersionCode": 300,
+  "notes": "Closing Kharch Log from recent apps keeps you signed in. After you agree to the privacy policy, that sign-in stays."
 }
