@@ -1,8 +1,8 @@
 {
-  "versionCode": 300,
-  "versionName": "3.2.200",
+  "versionCode": 301,
+  "versionName": "3.2.201",
   "apkUrl": "https://raw.githubusercontent.com/Ahmedhussainpvtt/kharchlog/main/KharchLog.apk",
   "force": true,
-  "minVersionCode": 300,
-  "notes": "Closing Kharch Log from recent apps keeps you signed in. After you agree to the privacy policy, that sign-in stays."
+  "minVersionCode": 301,
+  "notes": "The sign-in message stays on Peezy until you sign in. A name you save comes back after you sign out. Your profile photo stays when you change your name. Sync Sheet applies the same header style to new columns."
 }
