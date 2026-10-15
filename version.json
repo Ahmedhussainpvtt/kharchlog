@@ -1,8 +1,8 @@
 {
-  "versionCode": 302,
-  "versionName": "3.2.202",
+  "versionCode": 303,
+  "versionName": "3.2.203",
   "apkUrl": "https://raw.githubusercontent.com/Ahmedhussainpvtt/kharchlog/main/KharchLog.apk",
   "force": true,
-  "minVersionCode": 302,
-  "notes": "A bank or UPI SMS now logs while you are signed in. Kharch Log no longer asks you to sign in again for that message."
+  "minVersionCode": 303,
+  "notes": "Insights waits until you pick both dates, then Apply. The report does not change until then."
 }
