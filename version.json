@@ -1,8 +1,8 @@
 {
-  "versionCode": 301,
-  "versionName": "3.2.201",
+  "versionCode": 302,
+  "versionName": "3.2.202",
   "apkUrl": "https://raw.githubusercontent.com/Ahmedhussainpvtt/kharchlog/main/KharchLog.apk",
   "force": true,
-  "minVersionCode": 301,
-  "notes": "The sign-in message stays on Peezy until you sign in. A name you save comes back after you sign out. Your profile photo stays when you change your name. Sync Sheet applies the same header style to new columns."
+  "minVersionCode": 302,
+  "notes": "A bank or UPI SMS now logs while you are signed in. Kharch Log no longer asks you to sign in again for that message."
 }
