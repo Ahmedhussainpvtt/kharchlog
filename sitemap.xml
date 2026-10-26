@@ -571,12 +571,6 @@
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://kharchlog.com/play/</loc>
-    <lastmod>2026-10-22</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://kharchlog.com/pricing/</loc>
     <lastmod>2026-10-22</lastmod>
     <changefreq>monthly</changefreq>

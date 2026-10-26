@@ -108,7 +108,7 @@ Contact: support@easypeeze.com
 ## Optional
 
 - [Contact](https://kharchlog.com/contact/): Support email and contact for Kharch Log / Easy Peeze Tools.
-- [Play](https://kharchlog.com/play/): Play.
+- [Google Play](https://play.google.com/store/apps/details?id=com.kharchlog.app): Install Kharch Log from the Play Store.
 - [Refund](https://kharchlog.com/refund/): Refund.
 - [robots.txt](https://kharchlog.com/robots.txt): Crawl rules and sitemap pointer.
 - [llms-full.txt](https://kharchlog.com/llms-full.txt): Compact product corpus for AI agents.
