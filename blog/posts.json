@@ -1,6 +1,66 @@
 {
-  "updated": "2026-10-07",
+  "updated": "2026-10-30",
   "posts": [
+    {
+      "slug": "kharch-log-now-on-google-play",
+      "title": "Kharch Log is now on Google Play: what changes for you",
+      "description": "Kharch Log is live on Google Play. Your Google Sheet and lifetime access stay the same, updates arrive automatically, and SMS keep logging with the app closed.",
+      "date": "2026-10-30",
+      "url": "/blog/kharch-log-now-on-google-play/",
+      "image": "/images/blog/kharch-log-now-on-google-play.jpg",
+      "tags": [
+        "Expense tracker",
+        "India",
+        "Google Play",
+        "Kharch Log",
+        "Updates"
+      ]
+    },
+    {
+      "slug": "diwali-2026-budget-dhanteras-to-bhai-dooj",
+      "title": "Diwali 2026 budget: track Dhanteras to Bhai Dooj in one Sheet",
+      "description": "Diwali 2026 runs 6 to 11 November. Set one festival number, label the big UPI and card rows the same day, handle cash and shagun, and review once after Bhai Dooj.",
+      "date": "2026-10-30",
+      "url": "/blog/diwali-2026-budget-dhanteras-to-bhai-dooj/",
+      "image": "/images/blog/diwali-2026-budget-dhanteras-to-bhai-dooj.jpg",
+      "tags": [
+        "Expense tracker",
+        "India",
+        "Diwali",
+        "Budget",
+        "UPI"
+      ]
+    },
+    {
+      "slug": "festive-sale-no-cost-emi-cashback-tracking",
+      "title": "Festive sales: no-cost EMI, cashback, and the refund that comes later",
+      "description": "Record the real price on the order day, keep no-cost EMI from doubling the purchase, link cashback and refunds back to the order, and check what the sale cost.",
+      "date": "2026-10-30",
+      "url": "/blog/festive-sale-no-cost-emi-cashback-tracking/",
+      "image": "/images/blog/festive-sale-no-cost-emi-cashback-tracking.jpg",
+      "tags": [
+        "Expense tracker",
+        "India",
+        "Festive sale",
+        "EMI",
+        "Cashback"
+      ]
+    },
+    {
+      "slug": "wedding-season-shagun-gifts-and-travel",
+      "title": "Wedding season: shagun, gifts, and travel without losing track",
+      "description": "Tag every row with the wedding name, add a cash row for each shagun envelope, use Credits for shared gifts, and see what each wedding really cost.",
+      "date": "2026-10-30",
+      "url": "/blog/wedding-season-shagun-gifts-and-travel/",
+      "image": "/images/blog/wedding-season-shagun-gifts-and-travel.jpg",
+      "tags": [
+        "Expense tracker",
+        "India",
+        "Wedding season",
+        "Shagun",
+        "Cash"
+      ]
+    },
     {
       "slug": "catch-up-after-a-week-away-from-the-sheet",
       "title": "Catch up after a week away from the Sheet",
