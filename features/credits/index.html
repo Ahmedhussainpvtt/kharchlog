@@ -7,8 +7,8 @@
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-NDJG1DYZFX');(function(){var on=0,ev=['scroll','wheel','pointerdown','pointermove','keydown','touchstart'];function go(){if(on++)return;ev.forEach(function(n){removeEventListener(n,go,true)});function add(s,cb){var e=document.createElement('script');e.src=s;e.async=true;if(cb)e.onload=cb;document.head.appendChild(e)}add('https://www.googletagmanager.com/gtag/js?id=G-NDJG1DYZFX');add('https://cdn.amplitude.com/script/67d580c08d457990405291aae28f5a41.js',function(){try{window.amplitude.add(window.sessionReplay.plugin({sampleRate:1}));window.amplitude.init('67d580c08d457990405291aae28f5a41',{"fetchRemoteConfig":true,"autocapture":true})}catch(e){}});}ev.forEach(function(n){addEventListener(n,go,{capture:true,passive:true})});if(document.readyState==='complete')setTimeout(go,6000);else addEventListener('load',function(){setTimeout(go,6000)})})();</script>
 <!-- /Analytics -->
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Credits - money you gave someone | Kharch Log</title>
-  <meta name="description" content="Track money you gave someone in Kharch Log. See money given, money back, and what is still due. Add a return, share a bill, and get a due-date reminder." />
+  <title>Money Lending Tracker: Track Money Lent & Borrowed | Kharch Log</title>
+  <meta name="description" content="Track money you lent or borrowed: amount given, money back, still due and due dates, with reminders, WhatsApp nudges and a PDF bill with UPI QR." />
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
   <link rel="canonical" href="https://kharchlog.com/features/credits/" />
   <link rel="preload" href="/fonts/manrope.woff2" as="font" type="font/woff2" crossorigin data-perf-font />
@@ -2645,11 +2645,11 @@ min-height: 42px;
 }</style>
   <link rel="icon" href="https://kharchlog.com/favicon.png" type="image/png" />
   <link rel="apple-touch-icon" href="https://kharchlog.com/apple-touch-icon.png" />
-  <meta property="og:title" content="Credits - money you gave someone | Kharch Log" />
-  <meta property="og:description" content="Track money you gave someone in Kharch Log. See money given, money back, and what is still due. Add a return, share a bill, and get a due-date reminder." />
+  <meta property="og:title" content="Money Lending Tracker: Track Money Lent &amp; Borrowed | Kharch Log" />
+  <meta property="og:description" content="Track money you lent or borrowed: amount given, money back, still due and due dates, with reminders, WhatsApp nudges and a PDF bill with UPI QR." />
   <meta property="og:url" content="https://kharchlog.com/features/credits/" />
   <meta property="og:type" content="website" />
-  <meta property="og:image" content="https://kharchlog.com/og-image.jpg" />
+  <meta property="og:image" content="https://kharchlog.com/images/app/kl-og-1200.jpg" />
   <meta name="googlebot" content="index, follow" />
   <meta name="author" content="Kharch Log" />
   <meta name="theme-color" content="#0F2A43" />
@@ -2658,9 +2658,9 @@ min-height: 42px;
   <meta property="og:site_name" content="Kharch Log" />
   <meta property="og:locale" content="en_IN" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Credits - money you gave someone | Kharch Log" />
-  <meta name="twitter:description" content="Track money you gave someone in Kharch Log. See money given, money back, and what is still due. Add a return, share a bill, and get a due-date reminder." />
-  <meta name="twitter:image" content="https://kharchlog.com/og-image.jpg" />
+  <meta name="twitter:title" content="Money Lending Tracker: Track Money Lent &amp; Borrowed | Kharch Log" />
+  <meta name="twitter:description" content="Track money you lent or borrowed: amount given, money back, still due and due dates, with reminders, WhatsApp nudges and a PDF bill with UPI QR." />
+  <meta name="twitter:image" content="https://kharchlog.com/images/app/kl-og-1200.jpg" />
   <script type="application/ld+json" id="seo-jsonld">
 {
     "@context": "https://schema.org",
@@ -2685,8 +2685,8 @@ min-height: 42px;
         "@type": "WebPage",
         "@id": "https://kharchlog.com/features/credits/#webpage",
         "url": "https://kharchlog.com/features/credits/",
-        "name": "Credits - money you gave someone | Kharch Log",
-        "description": "Track money you gave someone in Kharch Log. See money given, money back, and what is still due. Add a return, share a bill, and get a due-date reminder.",
+        "name": "Money Lending Tracker: Track Money Lent & Borrowed | Kharch Log",
+        "description": "Track money you lent or borrowed: amount given, money back, still due and due dates, with reminders, WhatsApp nudges and a PDF bill with UPI QR.",
         "isPartOf": {
           "@id": "https://kharchlog.com/#website"
         },
@@ -2698,6 +2698,103 @@ min-height: 42px;
     ]
   }
   </script>
+<style data-page="kl-app">
+.hero__visual--app img{width:100%;max-width:600px;max-height:none;height:auto;aspect-ratio:auto;object-fit:contain;border-radius:28px;box-shadow:0 24px 48px rgba(15,42,67,.12)}
+.showcase__media--app{max-height:none;border:0;box-shadow:none;background:transparent;border-radius:0;overflow:visible}
+.showcase__media--app img{max-height:none;height:auto;aspect-ratio:6/5;object-fit:contain;border-radius:24px}
+.kl-pills{list-style:none;display:flex;flex-wrap:wrap;gap:8px;margin:16px 0 0;padding:0}
+.kl-pills li{padding:6px 12px;border-radius:999px;background:var(--surface);border:1px solid var(--line);font-size:.86rem;font-weight:700}
+.kl-cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:18px}
+.kl-card{display:flex;flex-direction:column;border:1px solid var(--line);border-radius:20px;background:var(--surface);overflow:hidden;text-decoration:none;color:inherit;box-shadow:var(--shadow)}
+.kl-card img{width:100%;height:auto;aspect-ratio:6/5;object-fit:cover;display:block}
+.kl-card div{padding:14px 16px 18px}
+.kl-card h2,.kl-card h3{margin:0 0 6px;font-size:1.08rem}
+.kl-card p{margin:0;font-size:.94rem;opacity:.85}
+#compare .compare-table td:nth-child(2){font-weight:700;color:var(--text)}
+.feature-detail .section__head{max-width:52rem}
+.feature-detail ol.steps-inline{grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+.feature-detail ol.steps-inline li::before{grid-row:1 / span 2}
+.kl-prose{max-width:820px}
+.kl-prose h2{margin-top:32px}
+@media (max-width:900px){.hero__visual--app img{width:100%!important;max-width:100%}}
+</style>
+<script type="application/ld+json" data-page="kl-app">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://kharchlog.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Features",
+          "item": "https://kharchlog.com/features/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Credits",
+          "item": "https://kharchlog.com/features/credits/"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://kharchlog.com/features/credits/#faq",
+      "url": "https://kharchlog.com/features/credits/",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Can I track money I borrowed?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Credits tracks both money you gave and money you owe."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I get a reminder?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, a notification on the due date and after it, until the credit is paid."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I record partial repayment?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Add each return and the amount still due updates."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I send a reminder on WhatsApp?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Tap the reminder to share a polite message, or share a PDF bill with a UPI QR."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is it in my Google Sheet?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, on a Credits tab in your Kharch Log spreadsheet."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -2731,52 +2828,68 @@ min-height: 42px;
   <main id="main">
     <div class="page-hero section" style="width:min(var(--max), calc(100% - 40px));margin:0 auto;">
       <p class="crumbs"><a href="/">Home</a> / <a href="/features/">Features</a> / Credits</p>
-      <h1>Credits</h1>
-      <p>Keep track of money you have given, payments received, and what is still due.</p>
+      <h1>Money lending tracker: who owes you, and when</h1>
+      <p>Lent ₹25,000 to a friend or borrowed from family? Credits keeps money given, money back and what is still due, with a reminder on the due date.</p>
     </div>
 
     <section class="showcase">
       <div class="showcase__grid showcase__inner" style="width:min(var(--max), calc(100% - 40px));margin:0 auto;">
         <div>
-          <ul class="checklist">
-            <li><span class="check-icon" aria-hidden="true">✓</span><span>See money given, money back, and still due</span></li><li><span class="check-icon" aria-hidden="true">✓</span><span>Add a return when someone pays you back</span></li><li><span class="check-icon" aria-hidden="true">✓</span><span>Share a bill and get a reminder on the due date</span></li>
-          </ul>
-          <p class="hero__actions"><a class="btn" href="https://easypeeze.com/pricing/#kharch-log" target="_blank" rel="noopener">Get lifetime - ₹149</a><a class="btn btn--play" href="https://play.google.com/store/apps/details?id=com.kharchlog.app" aria-label="Get it on Google Play"><span class="btn--play__text"><span class="btn--play__kicker">GET IT ON</span><span class="btn--play__brand">Google Play</span></span></a></p>
+          <ul class="checklist"><li><span class="check-icon" aria-hidden="true">✓</span><span>Money given, money back and still due</span></li><li><span class="check-icon" aria-hidden="true">✓</span><span>A due date for every person, with a reminder</span></li><li><span class="check-icon" aria-hidden="true">✓</span><span>Part payments update what is still due</span></li><li><span class="check-icon" aria-hidden="true">✓</span><span>WhatsApp reminder and PDF bill with UPI QR</span></li></ul>
+          <p class="hero__actions"><a class="btn btn--play" href="https://play.google.com/store/apps/details?id=com.kharchlog.app" aria-label="Get it on Google Play"><span class="btn--play__text"><span class="btn--play__kicker">GET IT ON</span><span class="btn--play__brand">Google Play</span></span></a><a class="btn" href="https://easypeeze.com/pricing/#kharch-log" target="_blank" rel="noopener">Get lifetime - ₹149</a></p>
         </div>
-        <div class="showcase__media">
-          <img src="/images/features/credits-960.webp" srcset="/images/features/credits-480.webp 480w, /images/features/credits-960.webp 960w, /images/features/credits-1400.webp 1400w" sizes="(max-width: 760px) 92vw, 760px" decoding="async" alt="Credits screen with money given, money back, and still due" width="800" height="600" />
+        <div class="showcase__media showcase__media--app">
+          <img src="/images/app/kl-credits-1200.webp" srcset="/images/app/kl-credits-600.webp 600w, /images/app/kl-credits-1200.webp 1200w" sizes="(max-width: 900px) 92vw, 560px" alt="Credits in Kharch Log: money given, money back and borrowers with due dates" width="1200" height="1000" fetchpriority="high" />
         </div>
       </div>
     </section>
 
 <div class="feature-detail section">
-<div class="feature-quick-answer"><p><strong>Quick answer:</strong> Credits is a screen for money you gave someone. It shows the total still due, each person, and every return. The same rows land on a Credits tab in your Google Sheet.</p></div>
-<div class="section__head">
-<h2>A place for money you lent</h2>
-<p>Daily expenses stay on the home screen. Credits is separate, for money you expect back: a friend, a relative, or a small advance. You see what you gave, what came back, and what is still due.</p>
-</div>
-<div class="section__head">
-<h2>How Credits works</h2>
-<ol class="steps-inline"><li><div><strong>Open Credits</strong>The fourth tab on the home screen. The card shows money given, money back, and the total still due.</div></li><li><div><strong>Add a person</strong>Name, amount, the date you gave it, and an optional due date.</div></li><li><div><strong>Add a return</strong>When they pay you back, log the amount. The still-due number updates.</div></li><li><div><strong>Share or remind</strong>Send an image or a PDF bill. On the due date, Kharch Log reminds you that morning and the next two mornings.</div></li></ol>
+<div class="feature-quick-answer"><p><strong>Quick answer:</strong> Credits in Kharch Log is a simple money lending tracker. Add money you gave or borrowed with a due date, record part payments as they come back, and Kharch Log shows what is still due, reminds you on the due date and lets you send a polite reminder or a PDF bill.</p></div>
+<div class="section__head feature-deep">
+<h2>Why track money you lend</h2>
+<p>Lending to friends and family is normal in India, and so is forgetting who owes what. Notes and chats get lost. Credits keeps one clear list: each person, the amount, the due date and what has come back, so nobody has to remember and nobody feels awkward.</p>
 </div>
 <div class="section__head feature-deep">
-<h2>What you can do on the screen</h2>
-<p>The intro under the totals card says it in your language: keep track of money you have given, payments received, and what is still due.</p>
-<div class="feature-detail__grid"><div class="feature-detail__card"><h3>One card for the totals</h3><p>Money given, money back, and still due stay together so you do not add them by hand.</p></div><div class="feature-detail__card"><h3>Each person</h3><p>Open a borrower to see the history of what you gave and what they returned.</p></div><div class="feature-detail__card"><h3>Due-date reminder</h3><p>If you set a due date, the app reminds you that morning and for the next two mornings.</p></div><div class="feature-detail__card"><h3>Share a bill</h3><p>Share a return as an image or a PDF. The header and footer match an expense share.</p></div><div class="feature-detail__card"><h3>Your Google Sheet</h3><p>Credits sync to a Credits tab in the Sheet Kharch Log already keeps in your Drive.</p></div><div class="feature-detail__card"><h3>Your language</h3><p>The screen follows the language you pick in Settings, including Hindi, Telugu, and Urdu.</p></div></div>
+<h2>Reminders that stay polite</h2>
+<p>On the due date you get a notification. Tap it to send a ready message such as <em>"Hi Rahul. The ₹25,000 I gave you is due today. Thanks!"</em> on WhatsApp, or share a PDF bill with what is still due and a QR to pay you by UPI.</p>
 </div>
+<div class="section__head feature-deep">
+<h2>In your Google Sheet too</h2>
+<p>Credits rows are also written to a Credits tab in your Kharch Log Sheet, so the record is yours and easy to share.</p>
+</div>
+<div class="feature-detail__grid"><div class="feature-detail__card"><h3>They owe you</h3><p>Total still due across everyone.</p></div><div class="feature-detail__card"><h3>Money you owe</h3><p>Track borrowing the same way.</p></div><div class="feature-detail__card"><h3>Part payments</h3><p>Still due updates automatically.</p></div><div class="feature-detail__card"><h3>Due date reminders</h3><p>Today, yesterday and overdue nudges.</p></div><div class="feature-detail__card"><h3>WhatsApp nudge</h3><p>A ready, polite message.</p></div><div class="feature-detail__card"><h3>Credits tab</h3><p>Every credit in your Google Sheet.</p></div></div>
+<div class="section__head">
+<h2>How it works</h2>
+<ol class="steps-inline"><li><strong>Open Credits</strong><span>From the bottom bar.</span></li><li><strong>Add a credit</strong><span>Person, amount and due date.</span></li><li><strong>Record returns</strong><span>Add each part payment.</span></li><li><strong>Get reminded</strong><span>Send a reminder or bill on the due date.</span></li></ol>
+</div>
+</div>
+
+    <section class="showcase showcase--flip">
+      <div class="showcase__grid showcase__inner" style="width:min(var(--max), calc(100% - 40px));margin:0 auto;">
+        <div>
+          <p class="showcase__kicker">Get paid back</p>
+          <h3>A QR on every bill <span class="accent">from your UPI ID</span></h3>
+          <p class="showcase__lead">Add your UPI ID in your profile and Credits bills include a QR so people can pay you back in one scan.</p>
+          <ul class="checklist"><li><span class="check-icon" aria-hidden="true">✓</span><span>Your name on every bill</span></li><li><span class="check-icon" aria-hidden="true">✓</span><span>UPI ID and Pay QR</span></li><li><span class="check-icon" aria-hidden="true">✓</span><span>Share on WhatsApp</span></li></ul>
+        </div>
+        <div class="showcase__media showcase__media--app">
+          <img src="/images/app/kl-share-1200.webp" srcset="/images/app/kl-share-600.webp 600w, /images/app/kl-share-1200.webp 1200w" sizes="(max-width: 900px) 92vw, 560px" alt="Kharch Log profile with UPI ID used on bills" width="1200" height="1000" loading="lazy" decoding="async" />
+        </div>
+      </div>
+    </section>
+
+<div class="feature-detail section">
 <div class="section__head">
 <h2>Common questions</h2>
-<div class="faq-mini"><details><summary>Is Credits the same as a bank credit or a credit card?</summary><p>No. It is money you gave someone and still expect back.</p></details><details><summary>Does it mix with daily expenses?</summary><p>No. Expenses stay on the home screen. Credits has its own tab and its own Sheet tab.</p></details><details><summary>Can I record a partial return?</summary><p>Yes. Add a return for the amount they paid. Still due is what is left.</p></details><details><summary>When does the reminder show?</summary><p>On the due date, then the next two mornings, if money is still due.</p></details><details><summary>Can I share it on WhatsApp?</summary><p>Yes. Share an image or a PDF bill from the history of a return.</p></details></div>
+<div class="faq-mini"><details><summary>Can I track money I borrowed?</summary><p>Yes. Credits tracks both money you gave and money you owe.</p></details><details><summary>Do I get a reminder?</summary><p>Yes, a notification on the due date and after it, until the credit is paid.</p></details><details><summary>Can I record partial repayment?</summary><p>Yes. Add each return and the amount still due updates.</p></details><details><summary>Can I send a reminder on WhatsApp?</summary><p>Yes. Tap the reminder to share a polite message, or share a PDF bill with a UPI QR.</p></details><details><summary>Is it in my Google Sheet?</summary><p>Yes, on a Credits tab in your Kharch Log spreadsheet.</p></details></div>
 </div>
 <div class="section__head">
 <h2>Explore related features</h2>
-<div class="feature-related"><a href="/features/share-invoice/">Share expenses and invoice PDF</a><a href="/features/google-sheets-sync/">Google Sheets sync</a><a href="/#languages">Languages</a></div>
-<p><a href="/features/">All features</a> - <a href="/contact/">Contact us</a></p>
+<div class="feature-related"><a href="/features/share-invoice/">Share receipt and PDF bill</a><a href="/features/google-sheets-sync/">Google Sheets sync</a><a href="/features/">All features</a></div>
+<p><a href="https://easypeeze.com/privacy/">Privacy policy</a> - <a href="/contact/">Contact us</a></p>
 </div>
 </div>
-
-
-  <p class="seo-phrase">Kharch Log is an <strong>Expense tracker</strong> for Android that keeps UPI and cash in your Google Sheet.</p>
   </main>
 
   <footer class="site-footer">
