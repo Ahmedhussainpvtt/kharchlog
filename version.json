@@ -1,8 +1,8 @@
 {
-  "versionCode": 303,
-  "versionName": "3.2.203",
+  "versionCode": 309,
+  "versionName": "3.2.209",
   "apkUrl": "https://raw.githubusercontent.com/Ahmedhussainpvtt/kharchlog/main/KharchLog.apk",
-  "force": true,
+  "force": false,
   "minVersionCode": 303,
-  "notes": "Insights waits until you pick both dates, then Apply. The report does not change until then."
+  "notes": "New voice assistant: speak an expense in English, Hindi or Telugu, check what will be added, then say confirm. Payment alerts now appear the moment your bank SMS arrives. Deleted entries are no longer skipped when the same SMS arrives again."
 }
