@@ -69,10 +69,49 @@ module.exports = {
       schemaType: 'WebSite',
     },
     '/features/': {
-      title: 'Features - SMS capture, Sheets sync, reports',
-      description: 'Kharch Log features: bank SMS auto-capture, review inbox, Google Sheets sync, reports, share invoice, and Credits.',
+      title: 'Kharch Log Features: UPI SMS Capture, Google Sheets, Credits',
+      description: 'All Kharch Log features: UPI and bank SMS auto-capture, Needs review inbox, Google Sheets sync, voice entry, insights, Credits and shareable receipts.',
       priority: 0.9,
       changefreq: 'monthly',
+    },
+    '/features/sms-auto-capture/': {
+      title: 'SMS Expense Tracker: Auto-Capture UPI & Bank SMS | Kharch Log',
+      description:
+        'Track expenses automatically from bank and UPI SMS on Android. PhonePe, Google Pay and Paytm payments logged in seconds to your Google Sheet. No bank login.',
+      priority: 0.9,
+    },
+    '/features/review-inbox/': {
+      title: 'Needs Review Inbox for Bank SMS Expenses | Kharch Log',
+      description:
+        "Unclear bank and UPI SMS wait in Kharch Log's Needs review inbox. Approve, edit or reject before they count, so your expense tracker stays accurate.",
+      priority: 0.8,
+    },
+    '/features/google-sheets-sync/': {
+      title: 'Google Sheets Expense Tracker Sync | Kharch Log',
+      description: 'Every Kharch Log entry becomes a row in your own Google Sheet, with a tab for every month. No bank login, lifetime ₹149.',
+      priority: 0.8,
+    },
+    '/features/manual-voice-entry/': {
+      title: 'Manual & Voice Expense Entry | Kharch Log',
+      description: 'Add cash and non-SMS spends by tap or voice. Amount, category, payee and notes in one screen.',
+      priority: 0.8,
+    },
+    '/features/reports-insights/': {
+      title: 'Spending Reports & Insights | Kharch Log',
+      description: 'See expenses and income by category for any week, month or date range in Kharch Log.',
+      priority: 0.8,
+    },
+    '/features/share-invoice/': {
+      title: 'Share Payment Receipt & PDF Bill with UPI QR | Kharch Log',
+      description:
+        'Share any UPI payment as a clean receipt on WhatsApp, or save a PDF bill with your name, UPI ID and a QR to pay. Built into Kharch Log for Android.',
+      priority: 0.8,
+    },
+    '/features/credits/': {
+      title: 'Money Lending Tracker: Track Money Lent & Borrowed | Kharch Log',
+      description:
+        'Track money you lent or borrowed: amount given, money back, still due and due dates, with reminders, WhatsApp nudges and a PDF bill with UPI QR.',
+      priority: 0.8,
     },
     '/pricing/': {
       title: 'Pricing - ₹149 lifetime',
