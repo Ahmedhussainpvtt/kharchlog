@@ -1,6 +1,276 @@
 {
-  "updated": "2026-10-30",
+  "updated": "2026-11-17",
   "posts": [
+    {
+      "slug": "first-december-sheet-reset-after-festivals",
+      "title": "First December Sheet reset after the festivals",
+      "description": "Start December with clean categories, fresh caps and EMI reminders in Kharch Log after November's festival noise.",
+      "date": "2026-11-17",
+      "url": "/blog/first-december-sheet-reset-after-festivals/",
+      "image": "/images/blog/first-december-sheet-reset-after-festivals.jpg",
+      "tags": [
+        "Expense tracker",
+        "India",
+        "Month reset",
+        "December",
+        "Google Sheets"
+      ]
+    },
+    {
+      "slug": "november-month-end-festival-hangover",
+      "title": "November month-end: read the festival hangover before December starts",
+      "description": "Before November closes, total festival categories, card EMI notes and cash gaps in Kharch Log. December planning needs that hangover number.",
+      "date": "2026-11-16",
+      "url": "/blog/november-month-end-festival-hangover/",
+      "image": "/images/blog/november-month-end-festival-hangover.jpg",
+      "tags": [
+        "Expense tracker",
+        "India",
+        "Month end",
+        "Diwali",
+        "Google Sheets"
+      ]
+    },
+    {
+      "slug": "guru-nanak-jayanti-travel-langar-spend",
+      "title": "Guru Nanak Jayanti: travel, langar contributions and leave-day spends",
+      "description": "On 24 November 2026, travel and langar contributions show up as UPI. Tag them once in Kharch Log so the day is visible without mixing into Diwali leftovers.",
+      "date": "2026-11-15",
+      "url": "/blog/guru-nanak-jayanti-travel-langar-spend/",
+      "image": "/images/blog/guru-nanak-jayanti-travel-langar-spend.jpg",
+      "tags": [
+        "Expense tracker",
+        "India",
+        "Guru Nanak Jayanti",
+        "Travel",
+        "UPI"
+      ]
+    },
+    {
+      "slug": "advance-tax-is-not-an-expense-row",
+      "title": "Advance tax is not a lifestyle expense: label it so the Sheet does not panic",
+      "description": "Paying advance tax in December looks like a huge expense if it sits in Food-level categories. Mark tax outflows clearly in Kharch Log.",
+      "date": "2026-11-14",
+      "url": "/blog/advance-tax-is-not-an-expense-row/",
+      "image": "/images/blog/advance-tax-is-not-an-expense-row.jpg",
+      "tags": [
+        "Expense tracker",
+        "India",
+        "Advance tax",
+        "Salary",
+        "Google Sheets"
+      ]
+    },
+    {
+      "slug": "school-winter-trip-money-in-sheet",
+      "title": "School winter trip money: track fees, pocket money and parent UPI",
+      "description": "Winter school trips ask for fees, kit and pocket money. Keep each child's outflows labelled in Kharch Log so the trip has one total.",
+      "date": "2026-11-13",
+      "url": "/blog/school-winter-trip-money-in-sheet/",
+      "image": "/images/blog/school-winter-trip-money-in-sheet.jpg",
+      "tags": [
+        "Expense tracker",
+        "India",
+        "School",
+        "Kids",
+        "UPI"
+      ]
+    },
+    {
+      "slug": "winter-clothes-heater-purchase-track",
+      "title": "Winter clothes and heaters: keep post-Diwali shopping out of the festival bucket",
+      "description": "Heater and jacket purchases after Diwali are winter needs, not festival gifts. Categorise them cleanly in Kharch Log so November totals stay meaningful.",
+      "date": "2026-11-12",
+      "url": "/blog/winter-clothes-heater-purchase-track/",
+      "image": "/images/blog/winter-clothes-heater-purchase-track.jpg",
+      "tags": [
+        "Expense tracker",
+        "India",
+        "Winter",
+        "Shopping",
+        "Google Sheets"
+      ]
+    },
+    {
+      "slug": "mid-november-festive-sms-catch-up",
+      "title": "Mid-November catch-up: clean the festive SMS pile in one sitting",
+      "description": "If Diwali week buried you in SMS rows, spend one mid-November evening fixing categories, duplicates and cash gaps in the Sheet Kharch Log fills.",
+      "date": "2026-11-11",
+      "url": "/blog/mid-november-festive-sms-catch-up/",
+      "image": "/images/blog/mid-november-festive-sms-catch-up.jpg",
+      "tags": [
+        "Expense tracker",
+        "India",
+        "Weekly review",
+        "SMS",
+        "Google Sheets"
+      ]
+    },
+    {
+      "slug": "post-diwali-returns-refunds-sheet",
+      "title": "Post-Diwali returns: match every refund to the original debit",
+      "description": "Festive returns and failed UPI credits should clear the original spend in your Sheet. Do not leave Diwali purchases looking permanently expensive.",
+      "date": "2026-11-10",
+      "url": "/blog/post-diwali-returns-refunds-sheet/",
+      "image": "/images/blog/post-diwali-returns-refunds-sheet.jpg",
+      "tags": [
+        "Expense tracker",
+        "India",
+        "Refunds",
+        "Diwali",
+        "UPI"
+      ]
+    },
+    {
+      "slug": "diwali-day-festival-category-review",
+      "title": "Diwali day review: twenty minutes to total the festival categories",
+      "description": "On or just after Diwali day, filter gifts, travel and food in your Google Sheet. Write the three totals beside the caps before the week blurs.",
+      "date": "2026-11-09",
+      "url": "/blog/diwali-day-festival-category-review/",
+      "image": "/images/blog/diwali-day-festival-category-review.jpg",
+      "tags": [
+        "Expense tracker",
+        "India",
+        "Diwali",
+        "Weekly review",
+        "Google Sheets"
+      ]
+    },
+    {
+      "slug": "bali-pratipada-family-lunch-spends",
+      "title": "Bali Pratipada family lunch: track the host spend and the guest UPI",
+      "description": "Bali Pratipada on 10 November 2026 brings family lunches and host costs. Log groceries, catering and guest transfers so the day has a total.",
+      "date": "2026-11-08",
+      "url": "/blog/bali-pratipada-family-lunch-spends/",
+      "image": "/images/blog/bali-pratipada-family-lunch-spends.jpg",
+      "tags": [
+        "Expense tracker",
+        "India",
+        "Diwali",
+        "Family",
+        "UPI"
+      ]
+    },
+    {
+      "slug": "diwali-amavasya-shopping-day-budget",
+      "title": "Diwali Amavasya shopping day: a hard cap for the loudest UPI day",
+      "description": "Diwali Amavasya on 8 November 2026 packs last-minute shopping into one noisy day. Set a same-day cap in your Sheet and check it before each UPI.",
+      "date": "2026-11-07",
+      "url": "/blog/diwali-amavasya-shopping-day-budget/",
+      "image": "/images/blog/diwali-amavasya-shopping-day-budget.jpg",
+      "tags": [
+        "Expense tracker",
+        "India",
+        "Diwali",
+        "Budget",
+        "UPI"
+      ]
+    },
+    {
+      "slug": "diwali-travel-home-full-trip-cost",
+      "title": "Diwali travel home: ticket, cab, food, and the quiet extras",
+      "description": "The IRCTC SMS is not the trip cost. Tag every Diwali travel debit with one trip name in Kharch Log and sum it when you return.",
+      "date": "2026-11-06",
+      "url": "/blog/diwali-travel-home-full-trip-cost/",
+      "image": "/images/blog/diwali-travel-home-full-trip-cost.jpg",
+      "tags": [
+        "Expense tracker",
+        "India",
+        "Travel",
+        "Diwali",
+        "UPI"
+      ]
+    },
+    {
+      "slug": "cash-shagun-gifts-no-sms",
+      "title": "Cash shagun and envelopes: record the gifts SMS will never see",
+      "description": "Shagun envelopes and cash gifts leave no bank SMS. Add them in Kharch Log the same day or your Diwali Sheet will lie.",
+      "date": "2026-11-05",
+      "url": "/blog/cash-shagun-gifts-no-sms/",
+      "image": "/images/blog/cash-shagun-gifts-no-sms.jpg",
+      "tags": [
+        "Expense tracker",
+        "India",
+        "Cash",
+        "Shagun",
+        "Diwali"
+      ]
+    },
+    {
+      "slug": "festive-credit-card-emi-after-diwali",
+      "title": "Festive credit-card EMI: do not let Diwali hide inside minimum due",
+      "description": "No-cost EMI and festive card offers push Diwali into next year's statements. Log the purchase now and note the EMI so Kharch Log's Sheet stays honest.",
+      "date": "2026-11-04",
+      "url": "/blog/festive-credit-card-emi-after-diwali/",
+      "image": "/images/blog/festive-credit-card-emi-after-diwali.jpg",
+      "tags": [
+        "Expense tracker",
+        "India",
+        "Credit card",
+        "EMI",
+        "Diwali"
+      ]
+    },
+    {
+      "slug": "diwali-sweets-gifts-upi-flood",
+      "title": "Diwali sweets and gifts: survive the UPI flood without losing the total",
+      "description": "Mithai, dry fruit and small gifts create dozens of UPI SMS. Use Kharch Log categories and a daily sort so the flood does not hide the real festival total.",
+      "date": "2026-11-03",
+      "url": "/blog/diwali-sweets-gifts-upi-flood/",
+      "image": "/images/blog/diwali-sweets-gifts-upi-flood.jpg",
+      "tags": [
+        "Expense tracker",
+        "India",
+        "Diwali",
+        "UPI",
+        "Google Sheets"
+      ]
+    },
+    {
+      "slug": "dhanteras-gold-silver-purchase-expense",
+      "title": "Dhanteras gold or silver: put the purchase in the Sheet the same night",
+      "description": "Dhanteras shopping is easy to remember as a blessing and easy to forget as a debit. Log the UPI or card spend in Kharch Log with shop and weight notes.",
+      "date": "2026-11-02",
+      "url": "/blog/dhanteras-gold-silver-purchase-expense/",
+      "image": "/images/blog/dhanteras-gold-silver-purchase-expense.jpg",
+      "tags": [
+        "Expense tracker",
+        "India",
+        "Dhanteras",
+        "Gold",
+        "Google Sheets"
+      ]
+    },
+    {
+      "slug": "festival-advance-from-office-in-the-sheet",
+      "title": "Festival advance from the office: log the credit and the spend separately",
+      "description": "A Diwali advance is not free money. Record the credit in your Google Sheet, then track the UPI that spends it so November does not look richer than it is.",
+      "date": "2026-11-01",
+      "url": "/blog/festival-advance-from-office-in-the-sheet/",
+      "image": "/images/blog/festival-advance-from-office-in-the-sheet.jpg",
+      "tags": [
+        "Expense tracker",
+        "India",
+        "Festival advance",
+        "Salary",
+        "Google Sheets"
+      ]
+    },
+    {
+      "slug": "november-salary-week-before-diwali-spike",
+      "title": "November salary week: see the Diwali spike before the money is gone",
+      "description": "Salary lands, then Diwali shopping starts. Open the Google Sheet Kharch Log fills in the first week of November and cap gifts, travel and sweets before UPI runs ahead.",
+      "date": "2026-10-31",
+      "url": "/blog/november-salary-week-before-diwali-spike/",
+      "image": "/images/blog/november-salary-week-before-diwali-spike.jpg",
+      "tags": [
+        "Expense tracker",
+        "India",
+        "Diwali",
+        "Salary",
+        "Google Sheets"
+      ]
+    },
     {
       "slug": "kharch-log-now-on-google-play",
       "title": "Kharch Log is now on Google Play: what changes for you",

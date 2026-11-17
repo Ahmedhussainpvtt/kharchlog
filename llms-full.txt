@@ -1,6 +1,6 @@
 # Kharch Log - llms-full.txt
 
-Generated: 2026-10-06
+Generated: 2026-11-17
 Source: https://kharchlog.com/
 Index: https://kharchlog.com/llms.txt
 
@@ -85,13 +85,69 @@ Read bank/UPI debit SMS and draft expenses automatically.
 URL: https://kharchlog.com/blog/account-aggregator-vs-sms-expense-tracker/
 Blog: Account Aggregator Vs Sms Expense Tracker.
 
+### Advance Tax Is Not An Expense Row
+URL: https://kharchlog.com/blog/advance-tax-is-not-an-expense-row/
+Blog: Advance Tax Is Not An Expense Row.
+
+### Annual Insurance Premium Month
+URL: https://kharchlog.com/blog/annual-insurance-premium-month/
+Blog: Annual Insurance Premium Month.
+
+### Atm Withdrawal And The Cash That Vanishes
+URL: https://kharchlog.com/blog/atm-withdrawal-and-the-cash-that-vanishes/
+Blog: Atm Withdrawal And The Cash That Vanishes.
+
+### Bali Pratipada Family Lunch Spends
+URL: https://kharchlog.com/blog/bali-pratipada-family-lunch-spends/
+Blog: Bali Pratipada Family Lunch Spends.
+
 ### Best Free Expense Tracker App Android
 URL: https://kharchlog.com/blog/best-free-expense-tracker-app-android/
 Blog: Best Free Expense Tracker App Android.
 
+### Cash Shagun Gifts No Sms
+URL: https://kharchlog.com/blog/cash-shagun-gifts-no-sms/
+Blog: Cash Shagun Gifts No Sms.
+
+### Catch Up After A Week Away From The Sheet
+URL: https://kharchlog.com/blog/catch-up-after-a-week-away-from-the-sheet/
+Blog: Catch Up After A Week Away From The Sheet.
+
+### Couple Shared Upi One Google Sheet
+URL: https://kharchlog.com/blog/couple-shared-upi-one-google-sheet/
+Blog: Couple Shared Upi One Google Sheet.
+
+### Credit Card Bill And Upi Do Not Double Count
+URL: https://kharchlog.com/blog/credit-card-bill-and-upi-do-not-double-count/
+Blog: Credit Card Bill And Upi Do Not Double Count.
+
 ### Daily Expense Tracker Habits
 URL: https://kharchlog.com/blog/daily-expense-tracker-habits/
 Blog: Daily Expense Tracker Habits.
+
+### Dhanteras Gold Silver Purchase Expense
+URL: https://kharchlog.com/blog/dhanteras-gold-silver-purchase-expense/
+Blog: Dhanteras Gold Silver Purchase Expense.
+
+### Diwali 2026 Budget Dhanteras To Bhai Dooj
+URL: https://kharchlog.com/blog/diwali-2026-budget-dhanteras-to-bhai-dooj/
+Blog: Diwali 2026 Budget Dhanteras To Bhai Dooj.
+
+### Diwali Amavasya Shopping Day Budget
+URL: https://kharchlog.com/blog/diwali-amavasya-shopping-day-budget/
+Blog: Diwali Amavasya Shopping Day Budget.
+
+### Diwali Day Festival Category Review
+URL: https://kharchlog.com/blog/diwali-day-festival-category-review/
+Blog: Diwali Day Festival Category Review.
+
+### Diwali Sweets Gifts Upi Flood
+URL: https://kharchlog.com/blog/diwali-sweets-gifts-upi-flood/
+Blog: Diwali Sweets Gifts Upi Flood.
+
+### Diwali Travel Home Full Trip Cost
+URL: https://kharchlog.com/blog/diwali-travel-home-full-trip-cost/
+Blog: Diwali Travel Home Full Trip Cost.
 
 ### Expense Categories Indian Household
 URL: https://kharchlog.com/blog/expense-categories-indian-household/
@@ -105,6 +161,42 @@ Blog: Expense Tracker India No Form 16.
 URL: https://kharchlog.com/blog/expense-tracker-without-bank-login/
 Blog: Expense Tracker Without Bank Login.
 
+### Festival Advance From Office In The Sheet
+URL: https://kharchlog.com/blog/festival-advance-from-office-in-the-sheet/
+Blog: Festival Advance From Office In The Sheet.
+
+### Festival Season Kharch Plan Expense Tracker
+URL: https://kharchlog.com/blog/festival-season-kharch-plan-expense-tracker/
+Blog: Festival Season Kharch Plan Expense Tracker.
+
+### Festive Credit Card Emi After Diwali
+URL: https://kharchlog.com/blog/festive-credit-card-emi-after-diwali/
+Blog: Festive Credit Card Emi After Diwali.
+
+### Festive Sale No Cost Emi Cashback Tracking
+URL: https://kharchlog.com/blog/festive-sale-no-cost-emi-cashback-tracking/
+Blog: Festive Sale No Cost Emi Cashback Tracking.
+
+### First Day Of Month Sheet Reset
+URL: https://kharchlog.com/blog/first-day-of-month-sheet-reset/
+Blog: First Day Of Month Sheet Reset.
+
+### First December Sheet Reset After Festivals
+URL: https://kharchlog.com/blog/first-december-sheet-reset-after-festivals/
+Blog: First December Sheet Reset After Festivals.
+
+### Flatmate Electricity And Wifi Splits
+URL: https://kharchlog.com/blog/flatmate-electricity-and-wifi-splits/
+Blog: Flatmate Electricity And Wifi Splits.
+
+### Freelancer Client Upi On Personal Phone
+URL: https://kharchlog.com/blog/freelancer-client-upi-on-personal-phone/
+Blog: Freelancer Client Upi On Personal Phone.
+
+### Fuel Fastag Toll Commute Cost
+URL: https://kharchlog.com/blog/fuel-fastag-toll-commute-cost/
+Blog: Fuel Fastag Toll Commute Cost.
+
 ### Google Sheets Vs Budget Apps
 URL: https://kharchlog.com/blog/google-sheets-vs-budget-apps/
 Blog: Google Sheets Vs Budget Apps.
@@ -112,6 +204,10 @@ Blog: Google Sheets Vs Budget Apps.
 ### Gpay Phonepe Vs Bank Sms Expense Ledger
 URL: https://kharchlog.com/blog/gpay-phonepe-vs-bank-sms-expense-ledger/
 Blog: Gpay Phonepe Vs Bank Sms Expense Ledger.
+
+### Guru Nanak Jayanti Travel Langar Spend
+URL: https://kharchlog.com/blog/guru-nanak-jayanti-travel-langar-spend/
+Blog: Guru Nanak Jayanti Travel Langar Spend.
 
 ### How To Track Expenses Automatically With Sms
 URL: https://kharchlog.com/blog/how-to-track-expenses-automatically-with-sms/
@@ -125,6 +221,14 @@ Blog: How To Track Your Spending Every Week.
 URL: https://kharchlog.com/blog/install-kharch-log-apk-android/
 Blog: Install Kharch Log Apk Android.
 
+### Kharch Log Now On Google Play
+URL: https://kharchlog.com/blog/kharch-log-now-on-google-play/
+Blog: Kharch Log Now On Google Play.
+
+### Kirana Cash Plus Upi Same Ledger
+URL: https://kharchlog.com/blog/kirana-cash-plus-upi-same-ledger/
+Blog: Kirana Cash Plus Upi Same Ledger.
+
 ### Lifetime Vs Subscription Expense Apps India
 URL: https://kharchlog.com/blog/lifetime-vs-subscription-expense-apps-india/
 Blog: Lifetime Vs Subscription Expense Apps India.
@@ -133,9 +237,53 @@ Blog: Lifetime Vs Subscription Expense Apps India.
 URL: https://kharchlog.com/blog/mid-month-budget-alerts-catch-leaks/
 Blog: Mid Month Budget Alerts Catch Leaks.
 
+### Mid November Festive Sms Catch Up
+URL: https://kharchlog.com/blog/mid-november-festive-sms-catch-up/
+Blog: Mid November Festive Sms Catch Up.
+
+### Money Sent To Parents Each Month
+URL: https://kharchlog.com/blog/money-sent-to-parents-each-month/
+Blog: Money Sent To Parents Each Month.
+
+### November Month End Festival Hangover
+URL: https://kharchlog.com/blog/november-month-end-festival-hangover/
+Blog: November Month End Festival Hangover.
+
+### November Salary Week Before Diwali Spike
+URL: https://kharchlog.com/blog/november-salary-week-before-diwali-spike/
+Blog: November Salary Week Before Diwali Spike.
+
+### Pharmacy And Lab Bills Upi
+URL: https://kharchlog.com/blog/pharmacy-and-lab-bills-upi/
+Blog: Pharmacy And Lab Bills Upi.
+
+### Post Diwali Returns Refunds Sheet
+URL: https://kharchlog.com/blog/post-diwali-returns-refunds-sheet/
+Blog: Post Diwali Returns Refunds Sheet.
+
+### Refunds And Reversals In The Expense Sheet
+URL: https://kharchlog.com/blog/refunds-and-reversals-in-the-expense-sheet/
+Blog: Refunds And Reversals In The Expense Sheet.
+
+### Rent Paid By Upi Month Record
+URL: https://kharchlog.com/blog/rent-paid-by-upi-month-record/
+Blog: Rent Paid By Upi Month Record.
+
 ### Salary Cycle Emi Expense Tracker India
 URL: https://kharchlog.com/blog/salary-cycle-emi-expense-tracker-india/
 Blog: Salary Cycle Emi Expense Tracker India.
+
+### School Fee Term Payments In The Sheet
+URL: https://kharchlog.com/blog/school-fee-term-payments-in-the-sheet/
+Blog: School Fee Term Payments In The Sheet.
+
+### School Winter Trip Money In Sheet
+URL: https://kharchlog.com/blog/school-winter-trip-money-in-sheet/
+Blog: School Winter Trip Money In Sheet.
+
+### Sip And Rd Are Not The Same As Spending
+URL: https://kharchlog.com/blog/sip-and-rd-are-not-the-same-as-spending/
+Blog: Sip And Rd Are Not The Same As Spending.
 
 ### Subscription Audit Expense Tracker India
 URL: https://kharchlog.com/blog/subscription-audit-expense-tracker-india/
@@ -145,6 +293,10 @@ Blog: Subscription Audit Expense Tracker India.
 URL: https://kharchlog.com/blog/track-cash-expenses-india-no-sms/
 Blog: Track Cash Expenses India No Sms.
 
+### Train Flight And Hotel Upi Trip Cost
+URL: https://kharchlog.com/blog/train-flight-and-hotel-upi-trip-cost/
+Blog: Train Flight And Hotel Upi Trip Cost.
+
 ### Two Phone Personal Office Expense Tracker
 URL: https://kharchlog.com/blog/two-phone-personal-office-expense-tracker/
 Blog: Two Phone Personal Office Expense Tracker.
@@ -153,9 +305,21 @@ Blog: Two Phone Personal Office Expense Tracker.
 URL: https://kharchlog.com/blog/upi-expense-tracker-stop-losing-small-payments/
 Blog: Upi Expense Tracker Stop Losing Small Payments.
 
+### Wedding Season Shagun Gifts And Travel
+URL: https://kharchlog.com/blog/wedding-season-shagun-gifts-and-travel/
+Blog: Wedding Season Shagun Gifts And Travel.
+
+### Weekend Food Delivery Leak
+URL: https://kharchlog.com/blog/weekend-food-delivery-leak/
+Blog: Weekend Food Delivery Leak.
+
 ### Weekly Spending Review 20 Minutes
 URL: https://kharchlog.com/blog/weekly-spending-review-20-minutes/
 Blog: Weekly Spending Review 20 Minutes.
+
+### Winter Clothes Heater Purchase Track
+URL: https://kharchlog.com/blog/winter-clothes-heater-purchase-track/
+Blog: Winter Clothes Heater Purchase Track.
 
 ## Glossary
 
