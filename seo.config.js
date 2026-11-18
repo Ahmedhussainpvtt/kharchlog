@@ -60,13 +60,13 @@ module.exports = {
 
   pages: {
     '/': {
-      title:
-        'Kharch Log - Best Free Expense Tracker for Android India | UPI SMS + Google Sheets | ₹149 Lifetime',
+      title: 'Kharch Log - Best Free Expense Tracker for Android India',
       description:
         'Best free-to-try expense tracker for Android in India. UPI & bank SMS auto-capture, no bank login, daily kharch in your Google Sheet. Lifetime ₹149 - not Form 16 / tax software.',
       changefreq: 'weekly',
       priority: 1.0,
       schemaType: 'WebSite',
+      dateModified: '2026-11-18',
     },
     '/features/': {
       title: 'Kharch Log Features: UPI SMS Capture, Google Sheets, Credits',
