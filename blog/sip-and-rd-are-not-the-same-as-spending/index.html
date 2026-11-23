@@ -2050,11 +2050,12 @@ border: 1px solid var(--line);
 border-radius: 16px;
 text-decoration: none !important;
 color: inherit;
-transition: transform 0.15s ease, box-shadow 0.15s ease;
+transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1), border-color 0.35s ease, box-shadow 0.4s ease;
 }
 .blog-card:hover {
-transform: translateY(-2px);
-box-shadow: 0 10px 24px rgba(15, 42, 67, 0.1);
+transform: translateY(-8px);
+border-color: rgba(0, 133, 255, 0.35);
+box-shadow: 0 24px 60px rgba(15, 42, 67, 0.12);
 }
 .blog-card__media {
 aspect-ratio: 16 / 9;
@@ -2065,6 +2066,10 @@ overflow: hidden;
 width: 100%;
 height: 100%;
 object-fit: cover;
+transition: transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.blog-card:hover .blog-card__media img {
+transform: scale(1.05);
 }
 .blog-card__body {
 display: grid;
@@ -2100,6 +2105,148 @@ box-shadow: 0 10px 28px rgba(15, 42, 67, 0.1);
 width: 100%;
 aspect-ratio: 16 / 9;
 object-fit: cover;
+}
+.blog-meta {
+display: flex;
+flex-wrap: wrap;
+gap: 0.65rem 1.25rem;
+margin-top: 1rem;
+color: var(--muted);
+font-size: 0.9rem;
+}
+.blog-article-section {
+width: min(var(--max), calc(100% - 40px));
+margin: 0 auto;
+padding-bottom: 48px;
+}
+.blog-layout {
+display: grid;
+grid-template-columns: 220px minmax(0, 1fr);
+gap: 2rem;
+align-items: start;
+}
+.blog-toc {
+position: sticky;
+top: 5.5rem;
+padding: 1rem;
+border: 1px solid var(--line);
+border-radius: 16px;
+background: var(--surface);
+font-size: 0.86rem;
+}
+.blog-toc strong {
+display: block;
+margin-bottom: 0.65rem;
+font-weight: 700;
+}
+.blog-toc ol {
+margin: 0;
+padding-left: 1.1rem;
+color: var(--muted);
+display: grid;
+gap: 0.4rem;
+}
+.blog-toc a {
+color: var(--muted);
+transition: color 0.2s ease;
+}
+.blog-toc a:hover,
+.blog-toc a.is-active {
+color: var(--primary-text);
+font-weight: 700;
+}
+.blog-layout .prose.blog-article {
+max-width: none;
+margin: 0;
+padding: 0;
+}
+img.blog-cover {
+width: 100%;
+aspect-ratio: 16 / 9;
+object-fit: cover;
+border-radius: 18px;
+border: 1px solid var(--line);
+margin: 0 0 1.5rem;
+box-shadow: 0 10px 28px rgba(15, 42, 67, 0.1);
+}
+.blog-article h2 {
+scroll-margin-top: 5.5rem;
+}
+.blog-article h3 {
+font-size: 1.05rem;
+margin: 1.25rem 0 0.45rem;
+letter-spacing: -0.02em;
+}
+.blog-cta {
+margin-top: 2.5rem;
+padding: 1.5rem;
+border-radius: 18px;
+border: 1px solid var(--line);
+background:
+radial-gradient(500px 180px at 10% 0%, rgba(0, 196, 154, 0.14), transparent 60%),
+var(--bg-end);
+}
+.blog-cta h2 {
+margin-top: 0;
+}
+.blog-cta .hero__actions,
+.blog-cta .blog-cta__actions {
+display: flex;
+flex-wrap: wrap;
+gap: 0.75rem;
+margin-top: 1rem;
+}
+.blog-related {
+width: min(var(--max), calc(100% - 40px));
+margin: 0 auto 48px;
+padding-top: 8px;
+}
+.blog-related__title {
+margin: 0 0 1rem;
+font-size: 1.35rem;
+letter-spacing: -0.02em;
+}
+.page-hero:has(+ .blog-article-section) h1,
+.page-hero:has(+ .blog-article-section) > p,
+.page-hero:has(+ .blog-article-section) .blog-meta {
+animation: blog-hero-in 0.55s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+.page-hero:has(+ .blog-article-section) > p {
+animation-delay: 0.08s;
+}
+.page-hero:has(+ .blog-article-section) .blog-meta {
+animation-delay: 0.16s;
+}
+@keyframes blog-hero-in {
+from {
+opacity: 0;
+transform: translateY(14px);
+}
+to {
+opacity: 1;
+transform: none;
+}
+}
+@media (max-width: 900px) {
+.blog-layout {
+grid-template-columns: 1fr;
+}
+.blog-toc {
+position: static;
+}
+}
+@media (prefers-reduced-motion: reduce) {
+.page-hero:has(+ .blog-article-section) h1,
+.page-hero:has(+ .blog-article-section) > p,
+.page-hero:has(+ .blog-article-section) .blog-meta {
+animation: none;
+}
+.blog-card:hover {
+transform: none;
+}
+.blog-card:hover .blog-card__media img {
+transform: none;
+}
 }
 .prose {
 max-width: 720px;
@@ -2732,17 +2879,33 @@ min-height: 42px;
       </nav>
     </div>
   </header>
-  <main id="main">
+    <main id="main">
     <div class="page-hero section" style="width:min(var(--max), calc(100% - 40px));margin:0 auto;">
       <p class="crumbs"><a href="/">Home</a> / <a href="/blog/">Blog</a> / SIP and RD are not the same as spending</p>
       <h1>SIP and RD are not the same as spending</h1>
-      <p class="blog-card__date">2026-09-27</p>
       <p>A SIP or RD debit leaves your account, but it is not wasted spend. Label it as savings in your Google Sheet so groceries are not blamed for money you moved on purpose.</p>
+      <div class="blog-meta">
+        <span>Last updated: <time datetime="2026-09-27">27 September 2026</time></span>
+        <span>Written by Kharch Log</span>
+        <span>Expert written and reviewed</span>
+      </div>
     </div>
-    <article class="section prose" style="max-width:720px;margin:0 auto 48px;padding:0 20px;">
-<figure class="prose-figure"><img src="/images/blog/sip-and-rd-are-not-the-same-as-spending-960.webp" srcset="/images/blog/sip-and-rd-are-not-the-same-as-spending-480.webp 480w, /images/blog/sip-and-rd-are-not-the-same-as-spending-960.webp 960w, /images/blog/sip-and-rd-are-not-the-same-as-spending-1400.webp 1400w" sizes="(max-width: 760px) 92vw, 760px" decoding="async" alt="SIP and RD are not the same as spending" width="1400" height="900" /></figure>
+    <section class="section blog-article-section">
+      <div class="blog-layout">
+          <aside class="blog-toc" aria-label="Table of contents">
+            <strong>Table of contents</strong>
+            <ol>
+              <li><a href="#label-the-mandate-the-day-the-sms-arrives">Label the mandate the day the SMS arrives</a></li>
+              <li><a href="#rd-and-ppf-are-savings-an-emi-is-not">RD and PPF are savings, an EMI is not</a></li>
+              <li><a href="#keep-savings-out-of-the-food-review">Keep savings out of the food review</a></li>
+              <li><a href="#look-at-what-left-not-only-at-the-label">Look at what left, not only at the label</a></li>
+              <li><a href="#questions-people-actually-ask">Questions people actually ask</a></li>
+            </ol>
+          </aside>
+        <article class="prose blog-article">
+          <img class="blog-cover" src="/images/blog/sip-and-rd-are-not-the-same-as-spending-960.webp" srcset="/images/blog/sip-and-rd-are-not-the-same-as-spending-480.webp 480w, /images/blog/sip-and-rd-are-not-the-same-as-spending-960.webp 960w, /images/blog/sip-and-rd-are-not-the-same-as-spending-1400.webp 1400w" sizes="(max-width: 760px) 92vw, 760px" decoding="async" alt="SIP and RD are not the same as spending" width="1400" height="900" />
 <p>A SIP leaving by auto-debit feels like spending because the balance drops. It is not the same as a food order. The money moved from your account into a fund or a recurring deposit you still own. If the tracker calls that a leak, you will cut groceries to fix a choice you made on purpose. Kharch Log will see the bank SMS on your Android phone and put it in your Google Sheet. There is no bank login. You have to label the row, because the SMS usually looks like any other debit.</p>
-<h2>Label the mandate the day the SMS arrives</h2>
+<h2 id="label-the-mandate-the-day-the-sms-arrives">Label the mandate the day the SMS arrives</h2>
 <p>When the auto-debit SMS arrives, file it as savings or investment, not as bills and not as misc. Put SIP and a short name you will recognise in the note. The amount and the date are the cash leaving your bank. If two SIPs go on the same day, keep two rows, or you will not know which mandate to change. The app can file the SMS. It will not know that a registrar name means a mutual fund. The first label is yours, and the same payee is easier next month.</p>
 <p>A failed SIP that returns the next day is not lower spending. Match the credit to the debit. If you leave the debit and ignore the credit, your savings total lies. If the mandate fails and the money stays in the account, do not type a wish. The Sheet records what the bank did. Note a missed SIP in the header so the gap is visible without a fake debit. Next month the SMS will create the real row if it runs.</p>
 <ul>
@@ -2751,10 +2914,10 @@ min-height: 42px;
 <li>Match a next-day credit to a failed debit</li>
 <li>A missed month is a header note, not an invented row</li>
 </ul>
-<h2>RD and PPF are savings, an EMI is not</h2>
+<h2 id="rd-and-ppf-are-savings-an-emi-is-not">RD and PPF are savings, an EMI is not</h2>
 <p>An RD instalment is money you still own, just less liquid. Label it RD, not rent, even if the amount is round and monthly. A PPF debit is also savings. The lock-in is a reason to name it clearly, not a reason to call it regret. Bills are gone. PPF is still yours. The note can say PPF and the financial year. The app does not connect to a fund house or a bank portal. The bank SMS is the feed, so the label is what makes the row true.</p>
 <p>A loan EMI is not a SIP. Do not file an EMI as savings to flatter the month. If you already logged the purchase, the principal you repay is a transfer against that debt. If you never logged the purchase, you may log the EMI as the monthly cost instead. Do not do both. Interest shown on its own is a fee, not savings. Write EMI in the note so it cannot hide among SIPs on auto-debit day.</p>
-<h2>Keep savings out of the food review</h2>
+<h2 id="keep-savings-out-of-the-food-review">Keep savings out of the food review</h2>
 <p>Build two totals. Spending is rent, food, commute, school, health, and the rest of life. Allocation is SIP, RD, and PPF. The balance treats both as identical. The Sheet can show spending without the allocation, which is how you judge a leak. It can also show allocation so you do not plan a trip with money already sent away. A review that blames groceries because the SIP ran is looking at the wrong pile. Filter savings out before you judge food.</p>
 <p>If the SIP is larger than you can afford, that is cashflow, not a food mystery. Lower the mandate, and until it changes the SMS will keep the old amount. Note the date you asked for the change. Do not edit past rows to the new amount. Past rows are what left the account. Future rows appear when the bank sends the new debit. Do not rewrite history so the month looks calmer. A calmer month is a mandate that fits, next to an honest spending total.</p>
 <ul>
@@ -2763,17 +2926,25 @@ min-height: 42px;
 <li>Do not edit old SIP rows after you change a mandate</li>
 <li>A failed mandate is a gap, not a frugal month</li>
 </ul>
-<h2>Look at what left, not only at the label</h2>
+<h2 id="look-at-what-left-not-only-at-the-label">Look at what left, not only at the label</h2>
 <p>Savings is not spare cash you forgot. The day after salary, list rent, EMIs, and the SIP total before you plan the rest. If those three are heavier than you meant, the month becomes card float or skipped bills. The amounts are already in the Sheet, so you are not opening three apps. A header cell with committed money versus salary is enough. The app does not change your mandates. It shows the debit so the commitment is visible on the 2nd, not when the balance is already thin.</p>
 <p>Once a quarter, sum savings and compare it with what you think you invest. A missing month is a failed mandate, not a frugal month. An extra row may be a lump sum, which is fine if the note says so. A lump sum is not your regular SIP and it is not monthly spend. If you redeem, the credit is not salary. Do not inflate the food budget because a fund paid you back. Match the credit to the goal in the note. Otherwise it looks like a windfall and leaves again.</p>
-<h2>Questions people actually ask</h2>
+<h2 id="questions-people-actually-ask">Questions people actually ask</h2>
 <p><strong>Should SIPs be inside my spending total?</strong> No, not in the total you use to judge leaks. They still count as cash that left the account, which is a different total. Keep spending without them, and a committed total with rent, EMI, and SIP. One blended number makes you feel either falsely poor or falsely rich. A filter on the label is what splits the two.</p>
 <p><strong>The SMS name is not my fund. Is it still the SIP?</strong> Match the amount and the date to the mandate you set. The SMS name is often not the fund name you remember. Once it matches, write your short name in the note and keep the bank payee as sent. If the amount matches nothing, do not label it savings. Check before you call a strange debit virtuous.</p>
 <p><strong>I paused a SIP. Should I delete the old rows?</strong> Past months should stay. A pause does not rewrite them. This month should have no new debit if the pause worked. If an SMS still arrives, the pause failed and the row is real. Fix the mandate, and do not delete the row to match a wish. The Sheet follows the bank. Your plan belongs in a header note until the debit actually stops.</p>
 <p>Label SIP, RD, and PPF as savings so a food review does not treat them as waste. Cash you still need to type by hand is covered in <a href="/blog/track-cash-expenses-india-no-sms/">tracking cash without an SMS</a>. Automatic rows are explained on the <a href="/features/">Kharch Log features</a> page. Keep a spending total and a committed total, and read both after salary.</p>
-      <p><a class="btn" href="/pay/">Get Kharch Log lifetime - ₹149</a>
-      <a class="btn btn--ghost" href="/features/">See features</a></p>
-    </article>
+          <div class="blog-cta">
+            <h2>Ready to track every rupee?</h2>
+            <p>Kharch Log syncs to your Google Sheet. One-time unlock, no subscription.</p>
+            <div class="blog-cta__actions">
+              <a class="btn" href="/pay/" rel="noopener">Get lifetime - ₹149</a>
+              <a class="btn btn--ghost" href="/features/">See features</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
   </main>
   <footer class="site-footer">
     <div class="site-footer__inner">

@@ -2050,11 +2050,12 @@ border: 1px solid var(--line);
 border-radius: 16px;
 text-decoration: none !important;
 color: inherit;
-transition: transform 0.15s ease, box-shadow 0.15s ease;
+transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1), border-color 0.35s ease, box-shadow 0.4s ease;
 }
 .blog-card:hover {
-transform: translateY(-2px);
-box-shadow: 0 10px 24px rgba(15, 42, 67, 0.1);
+transform: translateY(-8px);
+border-color: rgba(0, 133, 255, 0.35);
+box-shadow: 0 24px 60px rgba(15, 42, 67, 0.12);
 }
 .blog-card__media {
 aspect-ratio: 16 / 9;
@@ -2065,6 +2066,10 @@ overflow: hidden;
 width: 100%;
 height: 100%;
 object-fit: cover;
+transition: transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.blog-card:hover .blog-card__media img {
+transform: scale(1.05);
 }
 .blog-card__body {
 display: grid;
@@ -2100,6 +2105,148 @@ box-shadow: 0 10px 28px rgba(15, 42, 67, 0.1);
 width: 100%;
 aspect-ratio: 16 / 9;
 object-fit: cover;
+}
+.blog-meta {
+display: flex;
+flex-wrap: wrap;
+gap: 0.65rem 1.25rem;
+margin-top: 1rem;
+color: var(--muted);
+font-size: 0.9rem;
+}
+.blog-article-section {
+width: min(var(--max), calc(100% - 40px));
+margin: 0 auto;
+padding-bottom: 48px;
+}
+.blog-layout {
+display: grid;
+grid-template-columns: 220px minmax(0, 1fr);
+gap: 2rem;
+align-items: start;
+}
+.blog-toc {
+position: sticky;
+top: 5.5rem;
+padding: 1rem;
+border: 1px solid var(--line);
+border-radius: 16px;
+background: var(--surface);
+font-size: 0.86rem;
+}
+.blog-toc strong {
+display: block;
+margin-bottom: 0.65rem;
+font-weight: 700;
+}
+.blog-toc ol {
+margin: 0;
+padding-left: 1.1rem;
+color: var(--muted);
+display: grid;
+gap: 0.4rem;
+}
+.blog-toc a {
+color: var(--muted);
+transition: color 0.2s ease;
+}
+.blog-toc a:hover,
+.blog-toc a.is-active {
+color: var(--primary-text);
+font-weight: 700;
+}
+.blog-layout .prose.blog-article {
+max-width: none;
+margin: 0;
+padding: 0;
+}
+img.blog-cover {
+width: 100%;
+aspect-ratio: 16 / 9;
+object-fit: cover;
+border-radius: 18px;
+border: 1px solid var(--line);
+margin: 0 0 1.5rem;
+box-shadow: 0 10px 28px rgba(15, 42, 67, 0.1);
+}
+.blog-article h2 {
+scroll-margin-top: 5.5rem;
+}
+.blog-article h3 {
+font-size: 1.05rem;
+margin: 1.25rem 0 0.45rem;
+letter-spacing: -0.02em;
+}
+.blog-cta {
+margin-top: 2.5rem;
+padding: 1.5rem;
+border-radius: 18px;
+border: 1px solid var(--line);
+background:
+radial-gradient(500px 180px at 10% 0%, rgba(0, 196, 154, 0.14), transparent 60%),
+var(--bg-end);
+}
+.blog-cta h2 {
+margin-top: 0;
+}
+.blog-cta .hero__actions,
+.blog-cta .blog-cta__actions {
+display: flex;
+flex-wrap: wrap;
+gap: 0.75rem;
+margin-top: 1rem;
+}
+.blog-related {
+width: min(var(--max), calc(100% - 40px));
+margin: 0 auto 48px;
+padding-top: 8px;
+}
+.blog-related__title {
+margin: 0 0 1rem;
+font-size: 1.35rem;
+letter-spacing: -0.02em;
+}
+.page-hero:has(+ .blog-article-section) h1,
+.page-hero:has(+ .blog-article-section) > p,
+.page-hero:has(+ .blog-article-section) .blog-meta {
+animation: blog-hero-in 0.55s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+.page-hero:has(+ .blog-article-section) > p {
+animation-delay: 0.08s;
+}
+.page-hero:has(+ .blog-article-section) .blog-meta {
+animation-delay: 0.16s;
+}
+@keyframes blog-hero-in {
+from {
+opacity: 0;
+transform: translateY(14px);
+}
+to {
+opacity: 1;
+transform: none;
+}
+}
+@media (max-width: 900px) {
+.blog-layout {
+grid-template-columns: 1fr;
+}
+.blog-toc {
+position: static;
+}
+}
+@media (prefers-reduced-motion: reduce) {
+.page-hero:has(+ .blog-article-section) h1,
+.page-hero:has(+ .blog-article-section) > p,
+.page-hero:has(+ .blog-article-section) .blog-meta {
+animation: none;
+}
+.blog-card:hover {
+transform: none;
+}
+.blog-card:hover .blog-card__media img {
+transform: none;
+}
 }
 .prose {
 max-width: 720px;
@@ -2732,18 +2879,35 @@ min-height: 42px;
       </nav>
     </div>
   </header>
-  <main id="main">
+    <main id="main">
     <div class="page-hero section" style="width:min(var(--max), calc(100% - 40px));margin:0 auto;">
       <p class="crumbs"><a href="/">Home</a> / <a href="/blog/">Blog</a> / Wedding season: shagun, gifts, and travel without losing track</p>
       <h1>Wedding season: shagun, gifts, and travel without losing track</h1>
-      <p class="blog-card__date">2026-10-30</p>
       <p>Tag every row with the wedding name, add a cash row for each shagun envelope, use Credits for shared gifts, and see what each wedding really cost.</p>
+      <div class="blog-meta">
+        <span>Last updated: <time datetime="2026-10-30">30 October 2026</time></span>
+        <span>Written by Kharch Log</span>
+        <span>Expert written and reviewed</span>
+      </div>
     </div>
-    <article class="section prose" style="max-width:720px;margin:0 auto 48px;padding:0 20px;">
-<figure class="prose-figure"><img src="/images/blog/wedding-season-shagun-gifts-and-travel-960.webp" srcset="/images/blog/wedding-season-shagun-gifts-and-travel-480.webp 480w, /images/blog/wedding-season-shagun-gifts-and-travel-960.webp 960w, /images/blog/wedding-season-shagun-gifts-and-travel-1400.webp 1400w" sizes="(max-width: 760px) 92vw, 760px" decoding="async" alt="Wedding season: shagun, gifts, and travel without losing track" width="1400" height="900" /></figure>
+    <section class="section blog-article-section">
+      <div class="blog-layout">
+          <aside class="blog-toc" aria-label="Table of contents">
+            <strong>Table of contents</strong>
+            <ol>
+              <li><a href="#one-tag-per-wedding">One tag per wedding</a></li>
+              <li><a href="#shagun-and-gifts">Shagun and gifts</a></li>
+              <li><a href="#outfits-tailoring-and-the-small-extras">Outfits, tailoring, and the small extras</a></li>
+              <li><a href="#travel-and-stay">Travel and stay</a></li>
+              <li><a href="#if-the-wedding-is-in-your-family">If the wedding is in your family</a></li>
+              <li><a href="#questions-people-actually-ask">Questions people actually ask</a></li>
+            </ol>
+          </aside>
+        <article class="prose blog-article">
+          <img class="blog-cover" src="/images/blog/wedding-season-shagun-gifts-and-travel-960.webp" srcset="/images/blog/wedding-season-shagun-gifts-and-travel-480.webp 480w, /images/blog/wedding-season-shagun-gifts-and-travel-960.webp 960w, /images/blog/wedding-season-shagun-gifts-and-travel-1400.webp 1400w" sizes="(max-width: 760px) 92vw, 760px" decoding="async" alt="Wedding season: shagun, gifts, and travel without losing track" width="1400" height="900" />
 <p>Wedding season in India starts soon after Diwali and runs through the winter. For guests, it means shagun envelopes, gifts, outfits, tailoring, travel, and sometimes a hotel. For families with a wedding in the house, it means far more. Either way, the money moves in small and large pieces over many weeks, some by UPI, some by card, and a lot in cash. By February it is hard to say what the season cost. This post shows a simple way to keep wedding spending clear without turning a celebration into accounting.</p>
 <p>Kharch Log saves bank and UPI SMS into your Google Sheet, so the digital part is already recorded. The steps below are about labelling those rows well and adding the cash you hand over.</p>
-<h2>One tag per wedding</h2>
+<h2 id="one-tag-per-wedding">One tag per wedding</h2>
 <p>The most useful habit is a wedding name in the note. "Riya wedding" or "Cousin Amir nikah" on every related row. Outfits, the gift, the shagun, the train ticket, the hotel night, the tailor. A single tag lets you filter one wedding and see its total in seconds. Categories still matter, so the outfit stays under clothing and the ticket under travel, but the note is what connects them.</p>
 <p>If you attend four weddings in a season, you will have four tags. That is the point. You can see which wedding cost what, and next year you can plan for the ones that involve travel.</p>
 <ul>
@@ -2751,29 +2915,37 @@ min-height: 42px;
 <li>Keep normal categories: clothing, gifts, travel, stay</li>
 <li>Filter by the note to see one wedding's total</li>
 </ul>
-<h2>Shagun and gifts</h2>
+<h2 id="shagun-and-gifts">Shagun and gifts</h2>
 <p>Shagun is usually cash in an envelope, sometimes UPI to the couple or their parents. UPI shagun already has an SMS row, so give it the gift category and the wedding tag. Cash shagun needs one row added by hand, because there is no SMS. Add it on the day you give it, while you remember the amount. A cash envelope is exactly the kind of spending that vanishes from memory by the end of the month.</p>
 <p>Gifts bought online or in a shop follow the same rule: gift category, wedding tag. If a group of friends pools money for one gift, record only your share. If you paid the full amount and friends paid you back by UPI, those credits are not income. Use the <a href="/features/credits/">Credits</a> screen in Kharch Log to track who still owes their share, and mark it settled when they pay.</p>
-<h2>Outfits, tailoring, and the small extras</h2>
+<h2 id="outfits-tailoring-and-the-small-extras">Outfits, tailoring, and the small extras</h2>
 <p>Wedding outfits rarely cost one payment. There is the fabric or the outfit, the tailor, alterations, matching footwear, a dupatta, and sometimes jewellery on rent. Each payment is small enough to ignore and large enough to matter together. Label each one with the wedding tag as it happens, or batch them at the weekend by sorting the week by amount. The tag makes the true cost of "one outfit" visible, which is often a surprise.</p>
 <ul>
 <li>Tailor and alteration payments get the same wedding tag</li>
 <li>Rented jewellery: record the deposit and the refund together</li>
 <li>Beauty, mehendi, and salon visits belong to the wedding too</li>
 </ul>
-<h2>Travel and stay</h2>
+<h2 id="travel-and-stay">Travel and stay</h2>
 <p>Out-of-town weddings add tickets, cabs, and hotel nights. These are the largest rows of the season and the easiest to label because they arrive as clear SMS. Give them the travel category and the wedding tag on the day you book. If the family books a block of rooms and you pay your part later, record your share, and use Credits if someone paid for you. Our post on <a href="/blog/train-flight-and-hotel-upi-trip-cost/">what one trip actually cost</a> walks through travel rows in detail.</p>
-<h2>If the wedding is in your family</h2>
+<h2 id="if-the-wedding-is-in-your-family">If the wedding is in your family</h2>
 <p>A wedding at home can involve lakhs of rupees, many vendors, advances, and balance payments. The same tag method still works, with one change: add a short vendor name to every note, such as "caterer advance" or "decor balance". Advances paid months earlier are easy to forget when the balance comes due. A filter by vendor shows exactly what was paid and what is left. Keep receipts as photos or PDFs in one folder, and note the receipt in the row.</p>
 <p>Gifts received at a family wedding are income. Some families record each envelope, others record one total after counting. Either is fine. Record it as income so the wedding total shows both what went out and what came back.</p>
-<h2>Questions people actually ask</h2>
+<h2 id="questions-people-actually-ask">Questions people actually ask</h2>
 <p><strong>Should shagun count as an expense?</strong> Yes. It is money that leaves your pocket. Give it a gift category and the wedding tag. Over a season, shagun alone can be a large number worth knowing.</p>
 <p><strong>A friend paid for my ticket. How do I record it?</strong> Add the ticket as your spending, and in Credits record that you owe your friend. When you pay them back, mark it settled. Your spending stays correct and the debt is not forgotten.</p>
 <p><strong>I give cash at most weddings. Is that too much typing?</strong> One row per envelope, added on the day, takes a few seconds. If you withdraw cash specifically for shagun, you can treat the withdrawal as the spending instead. Pick one method and keep it for the season.</p>
 <p>Wedding season is for celebrating people you love. A tag per wedding, a cash row for each envelope, and Credits for shared costs keep the money clear with very little effort. Kharch Log saves the UPI and card SMS into your Google Sheet. See all the <a href="/features/">features</a>, or start with <a href="/blog/daily-expense-tracker-habits/">daily expense tracker habits</a>.</p>
-      <p><a class="btn" href="/pay/">Get Kharch Log lifetime - ₹149</a>
-      <a class="btn btn--ghost" href="/features/">See features</a></p>
-    </article>
+          <div class="blog-cta">
+            <h2>Ready to track every rupee?</h2>
+            <p>Kharch Log syncs to your Google Sheet. One-time unlock, no subscription.</p>
+            <div class="blog-cta__actions">
+              <a class="btn" href="/pay/" rel="noopener">Get lifetime - ₹149</a>
+              <a class="btn btn--ghost" href="/features/">See features</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
   </main>
   <footer class="site-footer">
     <div class="site-footer__inner">

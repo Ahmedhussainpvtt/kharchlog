@@ -2050,11 +2050,12 @@ border: 1px solid var(--line);
 border-radius: 16px;
 text-decoration: none !important;
 color: inherit;
-transition: transform 0.15s ease, box-shadow 0.15s ease;
+transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1), border-color 0.35s ease, box-shadow 0.4s ease;
 }
 .blog-card:hover {
-transform: translateY(-2px);
-box-shadow: 0 10px 24px rgba(15, 42, 67, 0.1);
+transform: translateY(-8px);
+border-color: rgba(0, 133, 255, 0.35);
+box-shadow: 0 24px 60px rgba(15, 42, 67, 0.12);
 }
 .blog-card__media {
 aspect-ratio: 16 / 9;
@@ -2065,6 +2066,10 @@ overflow: hidden;
 width: 100%;
 height: 100%;
 object-fit: cover;
+transition: transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.blog-card:hover .blog-card__media img {
+transform: scale(1.05);
 }
 .blog-card__body {
 display: grid;
@@ -2100,6 +2105,148 @@ box-shadow: 0 10px 28px rgba(15, 42, 67, 0.1);
 width: 100%;
 aspect-ratio: 16 / 9;
 object-fit: cover;
+}
+.blog-meta {
+display: flex;
+flex-wrap: wrap;
+gap: 0.65rem 1.25rem;
+margin-top: 1rem;
+color: var(--muted);
+font-size: 0.9rem;
+}
+.blog-article-section {
+width: min(var(--max), calc(100% - 40px));
+margin: 0 auto;
+padding-bottom: 48px;
+}
+.blog-layout {
+display: grid;
+grid-template-columns: 220px minmax(0, 1fr);
+gap: 2rem;
+align-items: start;
+}
+.blog-toc {
+position: sticky;
+top: 5.5rem;
+padding: 1rem;
+border: 1px solid var(--line);
+border-radius: 16px;
+background: var(--surface);
+font-size: 0.86rem;
+}
+.blog-toc strong {
+display: block;
+margin-bottom: 0.65rem;
+font-weight: 700;
+}
+.blog-toc ol {
+margin: 0;
+padding-left: 1.1rem;
+color: var(--muted);
+display: grid;
+gap: 0.4rem;
+}
+.blog-toc a {
+color: var(--muted);
+transition: color 0.2s ease;
+}
+.blog-toc a:hover,
+.blog-toc a.is-active {
+color: var(--primary-text);
+font-weight: 700;
+}
+.blog-layout .prose.blog-article {
+max-width: none;
+margin: 0;
+padding: 0;
+}
+img.blog-cover {
+width: 100%;
+aspect-ratio: 16 / 9;
+object-fit: cover;
+border-radius: 18px;
+border: 1px solid var(--line);
+margin: 0 0 1.5rem;
+box-shadow: 0 10px 28px rgba(15, 42, 67, 0.1);
+}
+.blog-article h2 {
+scroll-margin-top: 5.5rem;
+}
+.blog-article h3 {
+font-size: 1.05rem;
+margin: 1.25rem 0 0.45rem;
+letter-spacing: -0.02em;
+}
+.blog-cta {
+margin-top: 2.5rem;
+padding: 1.5rem;
+border-radius: 18px;
+border: 1px solid var(--line);
+background:
+radial-gradient(500px 180px at 10% 0%, rgba(0, 196, 154, 0.14), transparent 60%),
+var(--bg-end);
+}
+.blog-cta h2 {
+margin-top: 0;
+}
+.blog-cta .hero__actions,
+.blog-cta .blog-cta__actions {
+display: flex;
+flex-wrap: wrap;
+gap: 0.75rem;
+margin-top: 1rem;
+}
+.blog-related {
+width: min(var(--max), calc(100% - 40px));
+margin: 0 auto 48px;
+padding-top: 8px;
+}
+.blog-related__title {
+margin: 0 0 1rem;
+font-size: 1.35rem;
+letter-spacing: -0.02em;
+}
+.page-hero:has(+ .blog-article-section) h1,
+.page-hero:has(+ .blog-article-section) > p,
+.page-hero:has(+ .blog-article-section) .blog-meta {
+animation: blog-hero-in 0.55s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+.page-hero:has(+ .blog-article-section) > p {
+animation-delay: 0.08s;
+}
+.page-hero:has(+ .blog-article-section) .blog-meta {
+animation-delay: 0.16s;
+}
+@keyframes blog-hero-in {
+from {
+opacity: 0;
+transform: translateY(14px);
+}
+to {
+opacity: 1;
+transform: none;
+}
+}
+@media (max-width: 900px) {
+.blog-layout {
+grid-template-columns: 1fr;
+}
+.blog-toc {
+position: static;
+}
+}
+@media (prefers-reduced-motion: reduce) {
+.page-hero:has(+ .blog-article-section) h1,
+.page-hero:has(+ .blog-article-section) > p,
+.page-hero:has(+ .blog-article-section) .blog-meta {
+animation: none;
+}
+.blog-card:hover {
+transform: none;
+}
+.blog-card:hover .blog-card__media img {
+transform: none;
+}
 }
 .prose {
 max-width: 720px;
@@ -2732,17 +2879,33 @@ min-height: 42px;
       </nav>
     </div>
   </header>
-  <main id="main">
+    <main id="main">
     <div class="page-hero section" style="width:min(var(--max), calc(100% - 40px));margin:0 auto;">
       <p class="crumbs"><a href="/">Home</a> / <a href="/blog/">Blog</a> / Petrol and FASTag: track the real commute cost</p>
       <h1>Petrol and FASTag: track the real commute cost</h1>
-      <p class="blog-card__date">2026-09-24</p>
       <p>Pump payments and FASTag tolls are both the cost of getting to work. Add them in one Google Sheet, separate from weekend trips, without counting a tag recharge twice.</p>
+      <div class="blog-meta">
+        <span>Last updated: <time datetime="2026-09-24">24 September 2026</time></span>
+        <span>Written by Kharch Log</span>
+        <span>Expert written and reviewed</span>
+      </div>
     </div>
-    <article class="section prose" style="max-width:720px;margin:0 auto 48px;padding:0 20px;">
-<figure class="prose-figure"><img src="/images/blog/fuel-fastag-toll-commute-cost-960.webp" srcset="/images/blog/fuel-fastag-toll-commute-cost-480.webp 480w, /images/blog/fuel-fastag-toll-commute-cost-960.webp 960w, /images/blog/fuel-fastag-toll-commute-cost-1400.webp 1400w" sizes="(max-width: 760px) 92vw, 760px" decoding="async" alt="Petrol and FASTag: track the real commute cost" width="1400" height="900" /></figure>
+    <section class="section blog-article-section">
+      <div class="blog-layout">
+          <aside class="blog-toc" aria-label="Table of contents">
+            <strong>Table of contents</strong>
+            <ol>
+              <li><a href="#put-pump-and-toll-in-one-commute-bucket">Put pump and toll in one commute bucket</a></li>
+              <li><a href="#make-cryptic-pump-sms-readable">Make cryptic pump SMS readable</a></li>
+              <li><a href="#read-three-numbers-on-the-last-sunday">Read three numbers on the last Sunday</a></li>
+              <li><a href="#cash-at-the-pump-and-a-second-vehicle">Cash at the pump and a second vehicle</a></li>
+              <li><a href="#questions-people-actually-ask">Questions people actually ask</a></li>
+            </ol>
+          </aside>
+        <article class="prose blog-article">
+          <img class="blog-cover" src="/images/blog/fuel-fastag-toll-commute-cost-960.webp" srcset="/images/blog/fuel-fastag-toll-commute-cost-480.webp 480w, /images/blog/fuel-fastag-toll-commute-cost-960.webp 960w, /images/blog/fuel-fastag-toll-commute-cost-1400.webp 1400w" sizes="(max-width: 760px) 92vw, 760px" decoding="async" alt="Petrol and FASTag: track the real commute cost" width="1400" height="900" />
 <p>The drive to work is not just the number on the petrol pump. It is the pump, the FASTag toll, the paid parking, and the occasional cab when the vehicle is in the garage. Each one sends a different SMS, and none of them says commute. If you leave them uncategorised, fuel looks cheap and tolls look like random debits. Kharch Log can place those bank and UPI alerts in your Google Sheet. You do not share a bank password. Once a month you add the rows and see what it costs to reach work.</p>
-<h2>Put pump and toll in one commute bucket</h2>
+<h2 id="put-pump-and-toll-in-one-commute-bucket">Put pump and toll in one commute bucket</h2>
 <p>Label the petrol pump and the FASTag debit as commute, unless the trip was clearly personal. A Sunday highway run is travel, not the office commute, so the note should say so. Parking near the office is commute. Parking at a mall is not. The SMS for FASTag often names the tag issuer or a toll plaza, not the road you remember. Write the route in the note the first few times, until you trust the payee. After that, the category can stay commute without a long story.</p>
 <p>FASTag can show a recharge from your bank and also a toll debit from the tag balance. If you log both as commute, you count the same money twice: once when you loaded the tag, again when the plaza used it. Pick one. The cleaner choice is to log toll debits as commute and treat the recharge as a transfer into the tag. If your SMS only shows the recharge, log the recharge as commute and do not invent toll rows you cannot see. Kharch Log only has the SMS you received. Write the method in the header so next month stays consistent.</p>
 <ul>
@@ -2751,10 +2914,10 @@ min-height: 42px;
 <li>Toll debit as commute, tag recharge as a transfer</li>
 <li>If you never get toll SMS, log the recharge and do not invent plazas</li>
 </ul>
-<h2>Make cryptic pump SMS readable</h2>
+<h2 id="make-cryptic-pump-sms-readable">Make cryptic pump SMS readable</h2>
 <p>Pump SMS text is often a company code plus a locality you do not use in speech. Remember the road, and put a plain name in the note once. The amount still tells the truth: a full tank is not a snack. If two pumps share a similar SMS, the note is how you see which one is on the office route. Do this the day it happens. A month later every pump looks the same and you will mark a wedding trip as commute. That mistake makes the job look more expensive than the drive you actually do.</p>
 <p>CNG and diesel follow the same rule as petrol. The fuel type can live in the note if you care, but the category stays commute when the vehicle gets you to work. A company cab you pay and then claim should be marked reimbursable the day you pay. When the office pays you back, that credit cancels the cab. It is not income to spend. If you forget the mark, your commute total stays high and you will plan around a cost that already came back. Write claim pending in the note. Clear it when the credit SMS arrives.</p>
-<h2>Read three numbers on the last Sunday</h2>
+<h2 id="read-three-numbers-on-the-last-sunday">Read three numbers on the last Sunday</h2>
 <p>On the last Sunday, filter commute and read three numbers: fuel, toll and FASTag, and cabs or parking. You do not need kilometres to learn something. If fuel jumped and your route did not, the price changed or someone else used the vehicle. If tolls jumped, you took a different road or the recharge method double counted. Write a one-line reason in the header. Next month you will not remember. Kharch Log does not calculate your mileage. It gives you the rupees, which is what leaves the account. Mileage can wait until the rupees are honest.</p>
 <p>Compare with last month only after reimbursements are cleared. A claim that arrives on the 2nd belongs against the previous commute, with a note, or this month looks cheap and last month looks worse. Weekend trips stay in travel so the office cost is not punished for a holiday. If you use the vehicle for both, a rough split is enough: office days versus the trip. Do not chase exact litres. A slightly rough commute total you repeat is more useful than a perfect formula you skip. The Sheet is for the decision to carpool, change timing, or stay on the toll road.</p>
 <ul>
@@ -2763,17 +2926,25 @@ min-height: 42px;
 <li>Weekend travel stays out of the office number</li>
 <li>A rough split beats a formula you never open</li>
 </ul>
-<h2>Cash at the pump and a second vehicle</h2>
+<h2 id="cash-at-the-pump-and-a-second-vehicle">Cash at the pump and a second vehicle</h2>
 <p>Some pumps still take cash for part of the fill, or a canister. The SMS will be short of the amount you remember. Add the cash the same day under commute, or your fuel line will drift down and you will trust it. A puncture shop on the work vehicle is commute too. Those stops are easy to forget because they are small. Type them with the pump row. A month of forgotten notes is real money. Keep that cash out of groceries even if the habit feels similar.</p>
 <p>If the household has two vehicles, put the vehicle in the note. A work bike and a family car are different decisions. A combined fuel number can hide a thirsty car behind a small bike. You can still sum them for the household. Filters need the split first. Kharch Log will not know which vehicle you used. The note is a few words, typed while the SMS is fresh. When the number is stable for three months, you know the cost of reaching work. Then a hike in pump price is visible on its own.</p>
-<h2>Questions people actually ask</h2>
+<h2 id="questions-people-actually-ask">Questions people actually ask</h2>
 <p><strong>Is a FASTag recharge spending?</strong> Only if you have no toll SMS and you chose to treat the recharge as the commute cost. If toll SMS arrives as the tag is used, the recharge is a transfer and the toll is the expense. Doing both doubles the road. Write the choice once at the top of the Sheet. Set it in the first month so later SMS follow the same label.</p>
 <p><strong>Do I need to track kilometres?</strong> Rupees are what the account loses, and they are already in the SMS. Kilometres help later if you want a per km figure for a job change or a move. If you add them, put them in the note, not in the amount column. A wrong amount breaks the month. A missing kilometre only skips a ratio.</p>
 <p><strong>What if the office pays a fuel allowance?</strong> The allowance is income or a reimbursement, not negative fuel, unless it is paid against specific slips. If it is a fixed part of salary, your commute is still the full pump and toll cost. Do not hide fuel because an allowance exists. If it is a claim you file, mark those rows reimbursable and clear them when the credit arrives. The leftover is the commute you truly bear.</p>
 <p>Add pump UPI and FASTag tolls in one commute filter, and do not count a tag recharge twice. How bank SMS becomes rows is in the <a href="/blog/how-to-track-expenses-automatically-with-sms/">automatic SMS tracking guide</a>. The <a href="/features/">Kharch Log features</a> page lists what the Android app captures. Read the three commute numbers once a month before you judge the salary.</p>
-      <p><a class="btn" href="/pay/">Get Kharch Log lifetime - ₹149</a>
-      <a class="btn btn--ghost" href="/features/">See features</a></p>
-    </article>
+          <div class="blog-cta">
+            <h2>Ready to track every rupee?</h2>
+            <p>Kharch Log syncs to your Google Sheet. One-time unlock, no subscription.</p>
+            <div class="blog-cta__actions">
+              <a class="btn" href="/pay/" rel="noopener">Get lifetime - ₹149</a>
+              <a class="btn btn--ghost" href="/features/">See features</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
   </main>
   <footer class="site-footer">
     <div class="site-footer__inner">

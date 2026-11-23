@@ -2050,11 +2050,12 @@ border: 1px solid var(--line);
 border-radius: 16px;
 text-decoration: none !important;
 color: inherit;
-transition: transform 0.15s ease, box-shadow 0.15s ease;
+transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1), border-color 0.35s ease, box-shadow 0.4s ease;
 }
 .blog-card:hover {
-transform: translateY(-2px);
-box-shadow: 0 10px 24px rgba(15, 42, 67, 0.1);
+transform: translateY(-8px);
+border-color: rgba(0, 133, 255, 0.35);
+box-shadow: 0 24px 60px rgba(15, 42, 67, 0.12);
 }
 .blog-card__media {
 aspect-ratio: 16 / 9;
@@ -2065,6 +2066,10 @@ overflow: hidden;
 width: 100%;
 height: 100%;
 object-fit: cover;
+transition: transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.blog-card:hover .blog-card__media img {
+transform: scale(1.05);
 }
 .blog-card__body {
 display: grid;
@@ -2100,6 +2105,148 @@ box-shadow: 0 10px 28px rgba(15, 42, 67, 0.1);
 width: 100%;
 aspect-ratio: 16 / 9;
 object-fit: cover;
+}
+.blog-meta {
+display: flex;
+flex-wrap: wrap;
+gap: 0.65rem 1.25rem;
+margin-top: 1rem;
+color: var(--muted);
+font-size: 0.9rem;
+}
+.blog-article-section {
+width: min(var(--max), calc(100% - 40px));
+margin: 0 auto;
+padding-bottom: 48px;
+}
+.blog-layout {
+display: grid;
+grid-template-columns: 220px minmax(0, 1fr);
+gap: 2rem;
+align-items: start;
+}
+.blog-toc {
+position: sticky;
+top: 5.5rem;
+padding: 1rem;
+border: 1px solid var(--line);
+border-radius: 16px;
+background: var(--surface);
+font-size: 0.86rem;
+}
+.blog-toc strong {
+display: block;
+margin-bottom: 0.65rem;
+font-weight: 700;
+}
+.blog-toc ol {
+margin: 0;
+padding-left: 1.1rem;
+color: var(--muted);
+display: grid;
+gap: 0.4rem;
+}
+.blog-toc a {
+color: var(--muted);
+transition: color 0.2s ease;
+}
+.blog-toc a:hover,
+.blog-toc a.is-active {
+color: var(--primary-text);
+font-weight: 700;
+}
+.blog-layout .prose.blog-article {
+max-width: none;
+margin: 0;
+padding: 0;
+}
+img.blog-cover {
+width: 100%;
+aspect-ratio: 16 / 9;
+object-fit: cover;
+border-radius: 18px;
+border: 1px solid var(--line);
+margin: 0 0 1.5rem;
+box-shadow: 0 10px 28px rgba(15, 42, 67, 0.1);
+}
+.blog-article h2 {
+scroll-margin-top: 5.5rem;
+}
+.blog-article h3 {
+font-size: 1.05rem;
+margin: 1.25rem 0 0.45rem;
+letter-spacing: -0.02em;
+}
+.blog-cta {
+margin-top: 2.5rem;
+padding: 1.5rem;
+border-radius: 18px;
+border: 1px solid var(--line);
+background:
+radial-gradient(500px 180px at 10% 0%, rgba(0, 196, 154, 0.14), transparent 60%),
+var(--bg-end);
+}
+.blog-cta h2 {
+margin-top: 0;
+}
+.blog-cta .hero__actions,
+.blog-cta .blog-cta__actions {
+display: flex;
+flex-wrap: wrap;
+gap: 0.75rem;
+margin-top: 1rem;
+}
+.blog-related {
+width: min(var(--max), calc(100% - 40px));
+margin: 0 auto 48px;
+padding-top: 8px;
+}
+.blog-related__title {
+margin: 0 0 1rem;
+font-size: 1.35rem;
+letter-spacing: -0.02em;
+}
+.page-hero:has(+ .blog-article-section) h1,
+.page-hero:has(+ .blog-article-section) > p,
+.page-hero:has(+ .blog-article-section) .blog-meta {
+animation: blog-hero-in 0.55s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+.page-hero:has(+ .blog-article-section) > p {
+animation-delay: 0.08s;
+}
+.page-hero:has(+ .blog-article-section) .blog-meta {
+animation-delay: 0.16s;
+}
+@keyframes blog-hero-in {
+from {
+opacity: 0;
+transform: translateY(14px);
+}
+to {
+opacity: 1;
+transform: none;
+}
+}
+@media (max-width: 900px) {
+.blog-layout {
+grid-template-columns: 1fr;
+}
+.blog-toc {
+position: static;
+}
+}
+@media (prefers-reduced-motion: reduce) {
+.page-hero:has(+ .blog-article-section) h1,
+.page-hero:has(+ .blog-article-section) > p,
+.page-hero:has(+ .blog-article-section) .blog-meta {
+animation: none;
+}
+.blog-card:hover {
+transform: none;
+}
+.blog-card:hover .blog-card__media img {
+transform: none;
+}
 }
 .prose {
 max-width: 720px;
@@ -2732,17 +2879,33 @@ min-height: 42px;
       </nav>
     </div>
   </header>
-  <main id="main">
+    <main id="main">
     <div class="page-hero section" style="width:min(var(--max), calc(100% - 40px));margin:0 auto;">
       <p class="crumbs"><a href="/">Home</a> / <a href="/blog/">Blog</a> / Flatmate splits: electricity, wifi, and the maid</p>
       <h1>Flatmate splits: electricity, wifi, and the maid</h1>
-      <p class="blog-card__date">2026-10-02</p>
       <p>One flatmate often pays the bill and collects shares. Log the bill once in your Google Sheet and the repayments as transfers so the home cost is not tripled.</p>
+      <div class="blog-meta">
+        <span>Last updated: <time datetime="2026-10-02">2 October 2026</time></span>
+        <span>Written by Kharch Log</span>
+        <span>Expert written and reviewed</span>
+      </div>
     </div>
-    <article class="section prose" style="max-width:720px;margin:0 auto 48px;padding:0 20px;">
-<figure class="prose-figure"><img src="/images/blog/flatmate-electricity-and-wifi-splits-960.webp" srcset="/images/blog/flatmate-electricity-and-wifi-splits-480.webp 480w, /images/blog/flatmate-electricity-and-wifi-splits-960.webp 960w, /images/blog/flatmate-electricity-and-wifi-splits-1400.webp 1400w" sizes="(max-width: 760px) 92vw, 760px" decoding="async" alt="Flatmate splits: electricity, wifi, and the maid" width="1400" height="900" /></figure>
+    <section class="section blog-article-section">
+      <div class="blog-layout">
+          <aside class="blog-toc" aria-label="Table of contents">
+            <strong>Table of contents</strong>
+            <ol>
+              <li><a href="#one-method-for-power-wifi-and-the-maid">One method for power, wifi, and the maid</a></li>
+              <li><a href="#match-a-share-to-the-bill-it-closes">Match a share to the bill it closes</a></li>
+              <li><a href="#wifi-plans-and-power-periods">Wifi plans and power periods</a></li>
+              <li><a href="#keep-the-ledger-on-the-sheet-you-already-use">Keep the ledger on the Sheet you already use</a></li>
+              <li><a href="#questions-people-actually-ask">Questions people actually ask</a></li>
+            </ol>
+          </aside>
+        <article class="prose blog-article">
+          <img class="blog-cover" src="/images/blog/flatmate-electricity-and-wifi-splits-960.webp" srcset="/images/blog/flatmate-electricity-and-wifi-splits-480.webp 480w, /images/blog/flatmate-electricity-and-wifi-splits-960.webp 960w, /images/blog/flatmate-electricity-and-wifi-splits-1400.webp 1400w" sizes="(max-width: 760px) 92vw, 760px" decoding="async" alt="Flatmate splits: electricity, wifi, and the maid" width="1400" height="900" />
 <p>Shared flats break a ledger in a specific way. One person pays the power bill, another pays wifi, and someone pays the maid. Then UPI transfers chase those bills around the flat. If every payment is labelled utilities, the home looks far more expensive than it is. Each phone can send its own bank SMS into one Google Sheet. Kharch Log does that without a bank login. The bill is the expense. The share that comes back is a transfer. Your cost is what you paid minus what returned.</p>
-<h2>One method for power, wifi, and the maid</h2>
+<h2 id="one-method-for-power-wifi-and-the-maid">One method for power, wifi, and the maid</h2>
 <p>Use one method for electricity, wifi, and the maid. The person who pays the outside party logs the full amount in that category. Roommates who pay you later are not a second bill. Their UPI is a transfer. Your note on the bill lists the shares. If each person pays the provider directly, log only your own SMS. Do not also log a full bill you did not pay. Mixing both methods in one month doubles the cost. Write the method in the header so the flat does not renegotiate it weekly.</p>
 <p>Cash for the maid is the row most flats lose, because there is often no SMS. The person who paid types household help the same day, with the month. Incoming UPI shares are transfers, not a second salary for the maid. If everyone pays the maid directly in cash, each person types only their own notes. Do not combine that with a full-bill row. One method is easier to audit than four memories. Type the cash the same day, before the group chat scrolls away.</p>
 <ul>
@@ -2751,10 +2914,10 @@ min-height: 42px;
 <li>Never both in the same month</li>
 <li>Maid cash is typed the same day by the person who paid</li>
 </ul>
-<h2>Match a share to the bill it closes</h2>
+<h2 id="match-a-share-to-the-bill-it-closes">Match a share to the bill it closes</h2>
 <p>Put the payer's name on the bill and the word share on the settlement. You will not remember the queue a month later. If the share arrives next month, say which bill it closes. A credit in October for a September bill should not loosen October's food cap. Match it in the note. The credit is not new income. The SMS shows the money. The note is what ties it to last month's bill.</p>
 <p>Do not chase a perfect split to the rupee. If the shares in the note add to the SMS, the split is good enough. Ignoring a leftover amount makes it the payer's silent cost every month. Write the UPI you actually received, not the ideal share from a chat. The gap can be noted as the payer's extra. If the flat agrees the payer absorbs round-off, say that once in the header. Then stop debating it in the rows. Record the amounts that happened.</p>
-<h2>Wifi plans and power periods</h2>
+<h2 id="wifi-plans-and-power-periods">Wifi plans and power periods</h2>
 <p>Home wifi is often one broadband debit, sometimes with rental bundled in. Log the full debit as internet. Shares back to the payer are transfers. If the plan price changes, write new plan and the month in the note. Do not keep collecting the old share after the SMS has changed. Update the header figure the day the bill is higher. A personal mobile recharge is not the flat's wifi. Keep it out of the split. Similar SMS text is why the note has to say flat wifi or personal data.</p>
 <p>Put the billing period in the electricity note, not only the word power. A high bill is easier to read when the dates are written. Late fees should be visible in the note, not folded into a vague higher bill. If an employer pays back a work-from-home slice, mark only that slice. Clear it when the credit arrives. Do not clear the entire bill if only a part was claimed. Flat shares apply to what remains. Otherwise the flat subsidises a claim that already came back.</p>
 <ul>
@@ -2763,17 +2926,25 @@ min-height: 42px;
 <li>Personal mobile recharge stays out of the flat split</li>
 <li>A partial reimbursement clears only that slice</li>
 </ul>
-<h2>Keep the ledger on the Sheet you already use</h2>
+<h2 id="keep-the-ledger-on-the-sheet-you-already-use">Keep the ledger on the Sheet you already use</h2>
 <p>A shared Sheet with consistent notes can replace a separate split app. Filter utilities, internet, and household help, plus the share transfers. Once a month the payer checks that each bill has its incoming shares. That is about ten minutes. If someone has not paid, keep the full bill. The missing share is a note, not a reason to delete the expense. Deleting the bill because a roommate is late makes the payer look falsely frugal. The original SMS stays.</p>
 <p>When someone moves out, note the last month they share. Stop using their name on new bills. Returning their deposit is a transfer if it is their money going back. It is an expense only if the flat is paying for damage. Say which in the note. Remove their name from the header or the next split will still expect them. Keep old months in the Sheet. Do not start a new file just because the flat changed.</p>
-<h2>Questions people actually ask</h2>
+<h2 id="questions-people-actually-ask">Questions people actually ask</h2>
 <p><strong>Can the payer log only their own share?</strong> Logging only your share hides the full bill and a later hike. Logging the full bill plus transfers shows the household cost and your net. Use the full bill when the account is in your name. Use only your share when you never see the total. Write the method down so a new flatmate can follow it.</p>
 <p><strong>Nobody wants to type the maid's cash. What then?</strong> If nobody types it, household help stays near zero while the cash is gone. One person can type the full amount the same day. A group chat does not add the month up. If others refuse, the payer should still log the full cash in their own Sheet. Their spending is real even if the flat will not look at it.</p>
 <p><strong>Is shared wifi a personal subscription?</strong> Not if the flat shares it. Personal subscriptions are things only you use. Flat wifi is internet, and the shares are transfers. A streaming plan only you watch can stay personal. Do not hide the broadband inside personal subscriptions. That makes the flat's cost look like your private lifestyle. The label matters when someone compares spending.</p>
 <p>Log the full electricity, wifi, or maid payment once, and label roommate UPI as transfers against that bill. Categories for a household are sketched in <a href="/blog/expense-categories-indian-household/">household expense categories</a>. Capture is listed on the <a href="/features/">Kharch Log features</a> page. Check shares once a month, and do not delete the bill while you wait.</p>
-      <p><a class="btn" href="/pay/">Get Kharch Log lifetime - ₹149</a>
-      <a class="btn btn--ghost" href="/features/">See features</a></p>
-    </article>
+          <div class="blog-cta">
+            <h2>Ready to track every rupee?</h2>
+            <p>Kharch Log syncs to your Google Sheet. One-time unlock, no subscription.</p>
+            <div class="blog-cta__actions">
+              <a class="btn" href="/pay/" rel="noopener">Get lifetime - ₹149</a>
+              <a class="btn btn--ghost" href="/features/">See features</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
   </main>
   <footer class="site-footer">
     <div class="site-footer__inner">

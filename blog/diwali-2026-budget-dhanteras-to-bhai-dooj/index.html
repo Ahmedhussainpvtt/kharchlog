@@ -2050,11 +2050,12 @@ border: 1px solid var(--line);
 border-radius: 16px;
 text-decoration: none !important;
 color: inherit;
-transition: transform 0.15s ease, box-shadow 0.15s ease;
+transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1), border-color 0.35s ease, box-shadow 0.4s ease;
 }
 .blog-card:hover {
-transform: translateY(-2px);
-box-shadow: 0 10px 24px rgba(15, 42, 67, 0.1);
+transform: translateY(-8px);
+border-color: rgba(0, 133, 255, 0.35);
+box-shadow: 0 24px 60px rgba(15, 42, 67, 0.12);
 }
 .blog-card__media {
 aspect-ratio: 16 / 9;
@@ -2065,6 +2066,10 @@ overflow: hidden;
 width: 100%;
 height: 100%;
 object-fit: cover;
+transition: transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.blog-card:hover .blog-card__media img {
+transform: scale(1.05);
 }
 .blog-card__body {
 display: grid;
@@ -2100,6 +2105,148 @@ box-shadow: 0 10px 28px rgba(15, 42, 67, 0.1);
 width: 100%;
 aspect-ratio: 16 / 9;
 object-fit: cover;
+}
+.blog-meta {
+display: flex;
+flex-wrap: wrap;
+gap: 0.65rem 1.25rem;
+margin-top: 1rem;
+color: var(--muted);
+font-size: 0.9rem;
+}
+.blog-article-section {
+width: min(var(--max), calc(100% - 40px));
+margin: 0 auto;
+padding-bottom: 48px;
+}
+.blog-layout {
+display: grid;
+grid-template-columns: 220px minmax(0, 1fr);
+gap: 2rem;
+align-items: start;
+}
+.blog-toc {
+position: sticky;
+top: 5.5rem;
+padding: 1rem;
+border: 1px solid var(--line);
+border-radius: 16px;
+background: var(--surface);
+font-size: 0.86rem;
+}
+.blog-toc strong {
+display: block;
+margin-bottom: 0.65rem;
+font-weight: 700;
+}
+.blog-toc ol {
+margin: 0;
+padding-left: 1.1rem;
+color: var(--muted);
+display: grid;
+gap: 0.4rem;
+}
+.blog-toc a {
+color: var(--muted);
+transition: color 0.2s ease;
+}
+.blog-toc a:hover,
+.blog-toc a.is-active {
+color: var(--primary-text);
+font-weight: 700;
+}
+.blog-layout .prose.blog-article {
+max-width: none;
+margin: 0;
+padding: 0;
+}
+img.blog-cover {
+width: 100%;
+aspect-ratio: 16 / 9;
+object-fit: cover;
+border-radius: 18px;
+border: 1px solid var(--line);
+margin: 0 0 1.5rem;
+box-shadow: 0 10px 28px rgba(15, 42, 67, 0.1);
+}
+.blog-article h2 {
+scroll-margin-top: 5.5rem;
+}
+.blog-article h3 {
+font-size: 1.05rem;
+margin: 1.25rem 0 0.45rem;
+letter-spacing: -0.02em;
+}
+.blog-cta {
+margin-top: 2.5rem;
+padding: 1.5rem;
+border-radius: 18px;
+border: 1px solid var(--line);
+background:
+radial-gradient(500px 180px at 10% 0%, rgba(0, 196, 154, 0.14), transparent 60%),
+var(--bg-end);
+}
+.blog-cta h2 {
+margin-top: 0;
+}
+.blog-cta .hero__actions,
+.blog-cta .blog-cta__actions {
+display: flex;
+flex-wrap: wrap;
+gap: 0.75rem;
+margin-top: 1rem;
+}
+.blog-related {
+width: min(var(--max), calc(100% - 40px));
+margin: 0 auto 48px;
+padding-top: 8px;
+}
+.blog-related__title {
+margin: 0 0 1rem;
+font-size: 1.35rem;
+letter-spacing: -0.02em;
+}
+.page-hero:has(+ .blog-article-section) h1,
+.page-hero:has(+ .blog-article-section) > p,
+.page-hero:has(+ .blog-article-section) .blog-meta {
+animation: blog-hero-in 0.55s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+.page-hero:has(+ .blog-article-section) > p {
+animation-delay: 0.08s;
+}
+.page-hero:has(+ .blog-article-section) .blog-meta {
+animation-delay: 0.16s;
+}
+@keyframes blog-hero-in {
+from {
+opacity: 0;
+transform: translateY(14px);
+}
+to {
+opacity: 1;
+transform: none;
+}
+}
+@media (max-width: 900px) {
+.blog-layout {
+grid-template-columns: 1fr;
+}
+.blog-toc {
+position: static;
+}
+}
+@media (prefers-reduced-motion: reduce) {
+.page-hero:has(+ .blog-article-section) h1,
+.page-hero:has(+ .blog-article-section) > p,
+.page-hero:has(+ .blog-article-section) .blog-meta {
+animation: none;
+}
+.blog-card:hover {
+transform: none;
+}
+.blog-card:hover .blog-card__media img {
+transform: none;
+}
 }
 .prose {
 max-width: 720px;
@@ -2732,18 +2879,35 @@ min-height: 42px;
       </nav>
     </div>
   </header>
-  <main id="main">
+    <main id="main">
     <div class="page-hero section" style="width:min(var(--max), calc(100% - 40px));margin:0 auto;">
       <p class="crumbs"><a href="/">Home</a> / <a href="/blog/">Blog</a> / Diwali 2026 budget: track Dhanteras to Bhai Dooj in one Sheet</p>
       <h1>Diwali 2026 budget: track Dhanteras to Bhai Dooj in one Sheet</h1>
-      <p class="blog-card__date">2026-10-30</p>
       <p>Diwali 2026 runs 6 to 11 November. Set one festival number, label the big UPI and card rows the same day, handle cash and shagun, and review once after Bhai Dooj.</p>
+      <div class="blog-meta">
+        <span>Last updated: <time datetime="2026-10-30">30 October 2026</time></span>
+        <span>Written by Kharch Log</span>
+        <span>Expert written and reviewed</span>
+      </div>
     </div>
-    <article class="section prose" style="max-width:720px;margin:0 auto 48px;padding:0 20px;">
-<figure class="prose-figure"><img src="/images/blog/diwali-2026-budget-dhanteras-to-bhai-dooj-960.webp" srcset="/images/blog/diwali-2026-budget-dhanteras-to-bhai-dooj-480.webp 480w, /images/blog/diwali-2026-budget-dhanteras-to-bhai-dooj-960.webp 960w, /images/blog/diwali-2026-budget-dhanteras-to-bhai-dooj-1400.webp 1400w" sizes="(max-width: 760px) 92vw, 760px" decoding="async" alt="Diwali 2026 budget: track Dhanteras to Bhai Dooj in one Sheet" width="1400" height="900" /></figure>
+    <section class="section blog-article-section">
+      <div class="blog-layout">
+          <aside class="blog-toc" aria-label="Table of contents">
+            <strong>Table of contents</strong>
+            <ol>
+              <li><a href="#set-one-festival-number-before-dhanteras">Set one festival number before Dhanteras</a></li>
+              <li><a href="#label-the-big-rows-the-same-day">Label the big rows the same day</a></li>
+              <li><a href="#cash-shagun-and-staff-gifts">Cash, shagun, and staff gifts</a></li>
+              <li><a href="#sale-orders-that-arrive-after-the-festival">Sale orders that arrive after the festival</a></li>
+              <li><a href="#review-once-on-12-november">Review once on 12 November</a></li>
+              <li><a href="#questions-people-actually-ask">Questions people actually ask</a></li>
+            </ol>
+          </aside>
+        <article class="prose blog-article">
+          <img class="blog-cover" src="/images/blog/diwali-2026-budget-dhanteras-to-bhai-dooj-960.webp" srcset="/images/blog/diwali-2026-budget-dhanteras-to-bhai-dooj-480.webp 480w, /images/blog/diwali-2026-budget-dhanteras-to-bhai-dooj-960.webp 960w, /images/blog/diwali-2026-budget-dhanteras-to-bhai-dooj-1400.webp 1400w" sizes="(max-width: 760px) 92vw, 760px" decoding="async" alt="Diwali 2026 budget: track Dhanteras to Bhai Dooj in one Sheet" width="1400" height="900" />
 <p>Diwali 2026 runs from Dhanteras on Friday, 6 November, to Bhai Dooj on Wednesday, 11 November, with Lakshmi Puja on Sunday, 8 November. Those six days carry more spending than most families see in a normal month: gold or utensils on Dhanteras, sweets and dry fruit boxes, new clothes, diyas and lights, gifts for staff and relatives, travel home, and the sale orders that arrive in between. None of that is wrong. The problem is only that it blurs together, and in December you are left with a card bill and no clear picture of what the festival actually cost.</p>
 <p>This guide sets up a festival budget that takes ten minutes before Dhanteras and a few minutes a day after. It works with the bank and UPI SMS Kharch Log already stores in your Google Sheet, so you are labelling, not typing.</p>
-<h2>Set one festival number before Dhanteras</h2>
+<h2 id="set-one-festival-number-before-dhanteras">Set one festival number before Dhanteras</h2>
 <p>Pick a single total for the whole festival and write it in your Sheet as a note on the first row of November, for example "Diwali 2026 budget ₹40,000". One number is easier to respect than ten small ones. If you want more control, split it into four buckets only: gold and big purchases, gifts and sweets, home and pooja, and travel. More buckets than that and you will stop labelling by the second day.</p>
 <p>Look at last year if you have it. Filter last October or November, sort by amount, and add up the festival rows. That gives you an honest starting point instead of a hopeful one. If last year went over, the new number does not need to be lower. It needs to be decided before the shopping starts, not discovered after.</p>
 <ul>
@@ -2752,10 +2916,10 @@ min-height: 42px;
 <li>Last year's total as the reality check</li>
 <li>Decide the number before Dhanteras, not after</li>
 </ul>
-<h2>Label the big rows the same day</h2>
+<h2 id="label-the-big-rows-the-same-day">Label the big rows the same day</h2>
 <p>Every UPI payment and card swipe sends an SMS, and Kharch Log saves it as a row with the amount, the payee, and the time. During Diwali, the habit that matters is labelling the large rows the same evening. A jeweller payment on Dhanteras, the electronics order, the train or flight home: give each one the festival category before you sleep. Large rows are where the budget is won or lost, and they are the ones you will not remember correctly a week later.</p>
 <p>Small rows can wait. Sweets from three shops, a ₹60 diya stall, flowers on the morning of the puja: these add up, but they are easy to batch on the weekend. Sort the week by amount, label from the top, and stop when the remaining rows are small. A festival week does not need a perfect ledger. It needs the big money named.</p>
-<h2>Cash, shagun, and staff gifts</h2>
+<h2 id="cash-shagun-and-staff-gifts">Cash, shagun, and staff gifts</h2>
 <p>Diwali still runs on cash in many homes. Envelopes for the maid, the driver, the building guard, and the newspaper vendor. Cash gifts for children. Money for a local stall that does not take UPI. None of this sends an SMS, so it is the part that disappears. Decide one method and keep it. Either add a single cash row for each envelope you give, or treat the ATM withdrawal itself as festival spending and do not add the envelopes on top. Mixing both counts the same money twice.</p>
 <p>Gifts you receive matter too. A relative who hands you an envelope, or a bonus that arrives just before the festival, is income. Log it as income, not as a reduction of your spending, so the festival total stays honest and you can see both sides. Kharch Log keeps income and spending in separate columns of the same Sheet, so this takes one tap.</p>
 <ul>
@@ -2764,19 +2928,27 @@ min-height: 42px;
 <li>Gifts and bonuses received go in as income</li>
 <li>Staff gifts belong in the festival bucket, not in household</li>
 </ul>
-<h2>Sale orders that arrive after the festival</h2>
+<h2 id="sale-orders-that-arrive-after-the-festival">Sale orders that arrive after the festival</h2>
 <p>The festive sales overlap with Diwali, and the money does not always move on the day you click buy. A no-cost EMI order shows up as a large card debit or as monthly instalments. A cashback lands weeks later. A return becomes a refund in December. Label the order as festival spending when it is placed, and when the refund or cashback arrives, link it back to that order instead of calling it income. Our post on <a href="/blog/refunds-and-reversals-in-the-expense-sheet/">refunds and reversals</a> shows how to keep that clean.</p>
-<h2>Review once on 12 November</h2>
+<h2 id="review-once-on-12-november">Review once on 12 November</h2>
 <p>The day after Bhai Dooj, filter 6 to 11 November and look at one number: total festival spending against the budget you wrote down. If you are under, good. If you are over, find the two largest rows and ask whether they were planned. Usually one or two unplanned purchases explain most of the gap, and that is worth knowing before next year.</p>
 <p>Write a one-line note for next Diwali: "2026 cost ₹46,500, gifts went over". Next year you will start from a real figure. That single note is more useful than any spreadsheet template.</p>
-<h2>Questions people actually ask</h2>
+<h2 id="questions-people-actually-ask">Questions people actually ask</h2>
 <p><strong>Should gold bought on Dhanteras count as spending?</strong> Count it in the festival total so the month makes sense, and add a note like "gold, asset". Some families track gold separately as savings. Either is fine. What matters is that you choose once and do not hide the row.</p>
 <p><strong>My card bill comes in December. Which month is the spending?</strong> The day you bought it. Kharch Log saves each card swipe from the bank SMS on the day it happens. The December bill payment is a transfer from your account to the card, not new spending. Label it as a card payment so it does not double the festival.</p>
 <p><strong>Do I have to label every sweet box?</strong> No. Label the large rows the same day and batch the small ones once at the weekend. If a few tiny rows stay unlabelled, note their total and move on.</p>
 <p>Diwali is for family, not for spreadsheets. A single budget number, same-day labels on the big rows, and one review after Bhai Dooj give you a clear picture with very little effort. Kharch Log saves the SMS into your Google Sheet while you celebrate. See how on the <a href="/features/sms-auto-capture/">SMS auto-capture page</a>.</p>
-      <p><a class="btn" href="/pay/">Get Kharch Log lifetime - ₹149</a>
-      <a class="btn btn--ghost" href="/features/">See features</a></p>
-    </article>
+          <div class="blog-cta">
+            <h2>Ready to track every rupee?</h2>
+            <p>Kharch Log syncs to your Google Sheet. One-time unlock, no subscription.</p>
+            <div class="blog-cta__actions">
+              <a class="btn" href="/pay/" rel="noopener">Get lifetime - ₹149</a>
+              <a class="btn btn--ghost" href="/features/">See features</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
   </main>
   <footer class="site-footer">
     <div class="site-footer__inner">

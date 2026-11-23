@@ -2051,11 +2051,12 @@ border: 1px solid var(--line);
 border-radius: 16px;
 text-decoration: none !important;
 color: inherit;
-transition: transform 0.15s ease, box-shadow 0.15s ease;
+transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1), border-color 0.35s ease, box-shadow 0.4s ease;
 }
 .blog-card:hover {
-transform: translateY(-2px);
-box-shadow: 0 10px 24px rgba(15, 42, 67, 0.1);
+transform: translateY(-8px);
+border-color: rgba(0, 133, 255, 0.35);
+box-shadow: 0 24px 60px rgba(15, 42, 67, 0.12);
 }
 .blog-card__media {
 aspect-ratio: 16 / 9;
@@ -2066,6 +2067,10 @@ overflow: hidden;
 width: 100%;
 height: 100%;
 object-fit: cover;
+transition: transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.blog-card:hover .blog-card__media img {
+transform: scale(1.05);
 }
 .blog-card__body {
 display: grid;
@@ -2101,6 +2106,148 @@ box-shadow: 0 10px 28px rgba(15, 42, 67, 0.1);
 width: 100%;
 aspect-ratio: 16 / 9;
 object-fit: cover;
+}
+.blog-meta {
+display: flex;
+flex-wrap: wrap;
+gap: 0.65rem 1.25rem;
+margin-top: 1rem;
+color: var(--muted);
+font-size: 0.9rem;
+}
+.blog-article-section {
+width: min(var(--max), calc(100% - 40px));
+margin: 0 auto;
+padding-bottom: 48px;
+}
+.blog-layout {
+display: grid;
+grid-template-columns: 220px minmax(0, 1fr);
+gap: 2rem;
+align-items: start;
+}
+.blog-toc {
+position: sticky;
+top: 5.5rem;
+padding: 1rem;
+border: 1px solid var(--line);
+border-radius: 16px;
+background: var(--surface);
+font-size: 0.86rem;
+}
+.blog-toc strong {
+display: block;
+margin-bottom: 0.65rem;
+font-weight: 700;
+}
+.blog-toc ol {
+margin: 0;
+padding-left: 1.1rem;
+color: var(--muted);
+display: grid;
+gap: 0.4rem;
+}
+.blog-toc a {
+color: var(--muted);
+transition: color 0.2s ease;
+}
+.blog-toc a:hover,
+.blog-toc a.is-active {
+color: var(--primary-text);
+font-weight: 700;
+}
+.blog-layout .prose.blog-article {
+max-width: none;
+margin: 0;
+padding: 0;
+}
+img.blog-cover {
+width: 100%;
+aspect-ratio: 16 / 9;
+object-fit: cover;
+border-radius: 18px;
+border: 1px solid var(--line);
+margin: 0 0 1.5rem;
+box-shadow: 0 10px 28px rgba(15, 42, 67, 0.1);
+}
+.blog-article h2 {
+scroll-margin-top: 5.5rem;
+}
+.blog-article h3 {
+font-size: 1.05rem;
+margin: 1.25rem 0 0.45rem;
+letter-spacing: -0.02em;
+}
+.blog-cta {
+margin-top: 2.5rem;
+padding: 1.5rem;
+border-radius: 18px;
+border: 1px solid var(--line);
+background:
+radial-gradient(500px 180px at 10% 0%, rgba(0, 196, 154, 0.14), transparent 60%),
+var(--bg-end);
+}
+.blog-cta h2 {
+margin-top: 0;
+}
+.blog-cta .hero__actions,
+.blog-cta .blog-cta__actions {
+display: flex;
+flex-wrap: wrap;
+gap: 0.75rem;
+margin-top: 1rem;
+}
+.blog-related {
+width: min(var(--max), calc(100% - 40px));
+margin: 0 auto 48px;
+padding-top: 8px;
+}
+.blog-related__title {
+margin: 0 0 1rem;
+font-size: 1.35rem;
+letter-spacing: -0.02em;
+}
+.page-hero:has(+ .blog-article-section) h1,
+.page-hero:has(+ .blog-article-section) > p,
+.page-hero:has(+ .blog-article-section) .blog-meta {
+animation: blog-hero-in 0.55s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+.page-hero:has(+ .blog-article-section) > p {
+animation-delay: 0.08s;
+}
+.page-hero:has(+ .blog-article-section) .blog-meta {
+animation-delay: 0.16s;
+}
+@keyframes blog-hero-in {
+from {
+opacity: 0;
+transform: translateY(14px);
+}
+to {
+opacity: 1;
+transform: none;
+}
+}
+@media (max-width: 900px) {
+.blog-layout {
+grid-template-columns: 1fr;
+}
+.blog-toc {
+position: static;
+}
+}
+@media (prefers-reduced-motion: reduce) {
+.page-hero:has(+ .blog-article-section) h1,
+.page-hero:has(+ .blog-article-section) > p,
+.page-hero:has(+ .blog-article-section) .blog-meta {
+animation: none;
+}
+.blog-card:hover {
+transform: none;
+}
+.blog-card:hover .blog-card__media img {
+transform: none;
+}
 }
 .prose {
 max-width: 720px;
@@ -2744,23 +2891,33 @@ min-height: 42px;
       </nav>
     </div>
   </header>
-  <main id="main">
+    <main id="main">
     <div class="page-hero section" style="width:min(var(--max), calc(100% - 40px));margin:0 auto;">
       <p class="crumbs"><a href="/">Home</a> / <a href="/blog/">Blog</a> / Best free expense tracker app for Android: what to look for</p>
       <h1>Best free expense tracker app for Android: what to look for</h1>
-      <p class="blog-card__date">2026-08-28</p>
-      <p>A practical buyer's guide to the best free expense tracker app for Android - SMS capture, Google Sheets sync, categories, privacy, and daily logging.</p>
-    </div>
-        <div class="section blog-cover-wrap">
-      <div class="blog-cover">
-        <img src="/images/blog/best-free-expense-tracker-app-android-960.webp" srcset="/images/blog/best-free-expense-tracker-app-android-480.webp 480w, /images/blog/best-free-expense-tracker-app-android-960.webp 960w, /images/blog/best-free-expense-tracker-app-android-1350.webp 1350w" sizes="(max-width: 760px) 92vw, 760px" decoding="async" alt="" width="1200" height="675" />
+      <p>A practical buyer&#x27;s guide to the best free expense tracker app for Android - SMS capture, Google Sheets sync, categories, privacy, and daily logging.</p>
+      <div class="blog-meta">
+        <span>Last updated: <time datetime="2026-08-28">28 August 2026</time></span>
+        <span>Written by Kharch Log</span>
+        <span>Expert written and reviewed</span>
       </div>
     </div>
-    <article class="prose">
-
+    <section class="section blog-article-section">
+      <div class="blog-layout">
+          <aside class="blog-toc" aria-label="Table of contents">
+            <strong>Table of contents</strong>
+            <ol>
+              <li><a href="#what-best-should-mean-for-a-free-expense-tracker">What &quot;best&quot; should mean for a free expense tracker</a></li>
+              <li><a href="#free-expense-tracker-android-checklist">Free expense tracker Android checklist</a></li>
+              <li><a href="#bank-sync-apps-vs-sms-sheets">Bank-sync apps vs SMS + Sheets</a></li>
+              <li><a href="#where-kharch-log-fits">Where Kharch Log fits</a></li>
+            </ol>
+          </aside>
+        <article class="prose blog-article">
+          <img class="blog-cover" src="/images/blog/best-free-expense-tracker-app-android-960.webp" srcset="/images/blog/best-free-expense-tracker-app-android-480.webp 480w, /images/blog/best-free-expense-tracker-app-android-960.webp 960w, /images/blog/best-free-expense-tracker-app-android-1350.webp 1350w" sizes="(max-width: 760px) 92vw, 760px" decoding="async" alt="" width="1200" height="675" />
 <p>Searching for the <strong>best free expense tracker app</strong> usually means you want three things: fast logging, a clear picture of spending, and data you still own next year. This guide breaks down what actually matters on Android - and how a sheet-backed money book like Kharch Log fits next to bank-sync budget apps.</p>
 
-<h2>What "best" should mean for a free expense tracker</h2>
+<h2 id="what-best-should-mean-for-a-free-expense-tracker">What "best" should mean for a free expense tracker</h2>
 <p>App-store ratings help, but features decide whether you stick with it. Prioritize:</p>
 <ul>
   <li><strong>Speed</strong> - can you log a purchase in under 20 seconds?</li>
@@ -2770,7 +2927,7 @@ min-height: 42px;
   <li><strong>Automation that fits India</strong> - SMS capture for UPI/card alerts (permission required)</li>
 </ul>
 
-<h2>Free expense tracker Android checklist</h2>
+<h2 id="free-expense-tracker-android-checklist">Free expense tracker Android checklist</h2>
 <ol>
   <li><strong>Manual entry that doesn't feel heavy</strong> - amount, category, note, done.</li>
   <li><strong>Voice or shortcuts</strong> - useful when you're commuting or shopping.</li>
@@ -2779,15 +2936,24 @@ min-height: 42px;
   <li><strong>Cloud you understand</strong> - Drive/Sheets vs a closed vendor vault.</li>
 </ol>
 
-<h2>Bank-sync apps vs SMS + Sheets</h2>
+<h2 id="bank-sync-apps-vs-sms-sheets">Bank-sync apps vs SMS + Sheets</h2>
 <p>Tools in the Monarch / Goodbudget style shine when every account syncs into one dashboard. The tradeoff is lock-in and subscriptions. An <strong>SMS expense tracker</strong> plus <strong>Google Sheets expense tracker</strong> workflow is different: you capture from messages you already get, then keep the ledger in Drive. Currency is just a number - any currency works for logging.</p>
 
-<h2>Where Kharch Log fits</h2>
+<h2 id="where-kharch-log-fits">Where Kharch Log fits</h2>
 <p>Kharch Log is built as an Android expense tracker with manual + voice entry, bank/UPI SMS capture (SMS permission required), a needs-review inbox, and sync to <em>your</em> Google Sheet - not a Kharch Log server ledger. See <a href="/features/">all features</a> and <a href="/features/google-sheets-sync/">Sheets sync</a>.</p>
 
 <p><strong>Related reading:</strong> <a href="/blog/google-sheets-vs-budget-apps/">Sheets vs closed budget apps</a> - <a href="/blog/how-to-track-expenses-automatically-with-sms/">SMS auto-tracking</a></p>
-
-    </article>
+          <div class="blog-cta">
+            <h2>Ready to track every rupee?</h2>
+            <p>Kharch Log syncs to your Google Sheet. One-time unlock, no subscription.</p>
+            <div class="blog-cta__actions">
+              <a class="btn" href="/pay/" rel="noopener">Get lifetime - ₹149</a>
+              <a class="btn btn--ghost" href="/features/">See features</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
   </main>
   <footer class="site-footer">
     <div class="site-footer__inner">

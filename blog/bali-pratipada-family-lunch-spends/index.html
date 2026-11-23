@@ -2050,11 +2050,12 @@ border: 1px solid var(--line);
 border-radius: 16px;
 text-decoration: none !important;
 color: inherit;
-transition: transform 0.15s ease, box-shadow 0.15s ease;
+transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1), border-color 0.35s ease, box-shadow 0.4s ease;
 }
 .blog-card:hover {
-transform: translateY(-2px);
-box-shadow: 0 10px 24px rgba(15, 42, 67, 0.1);
+transform: translateY(-8px);
+border-color: rgba(0, 133, 255, 0.35);
+box-shadow: 0 24px 60px rgba(15, 42, 67, 0.12);
 }
 .blog-card__media {
 aspect-ratio: 16 / 9;
@@ -2065,6 +2066,10 @@ overflow: hidden;
 width: 100%;
 height: 100%;
 object-fit: cover;
+transition: transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.blog-card:hover .blog-card__media img {
+transform: scale(1.05);
 }
 .blog-card__body {
 display: grid;
@@ -2100,6 +2105,148 @@ box-shadow: 0 10px 28px rgba(15, 42, 67, 0.1);
 width: 100%;
 aspect-ratio: 16 / 9;
 object-fit: cover;
+}
+.blog-meta {
+display: flex;
+flex-wrap: wrap;
+gap: 0.65rem 1.25rem;
+margin-top: 1rem;
+color: var(--muted);
+font-size: 0.9rem;
+}
+.blog-article-section {
+width: min(var(--max), calc(100% - 40px));
+margin: 0 auto;
+padding-bottom: 48px;
+}
+.blog-layout {
+display: grid;
+grid-template-columns: 220px minmax(0, 1fr);
+gap: 2rem;
+align-items: start;
+}
+.blog-toc {
+position: sticky;
+top: 5.5rem;
+padding: 1rem;
+border: 1px solid var(--line);
+border-radius: 16px;
+background: var(--surface);
+font-size: 0.86rem;
+}
+.blog-toc strong {
+display: block;
+margin-bottom: 0.65rem;
+font-weight: 700;
+}
+.blog-toc ol {
+margin: 0;
+padding-left: 1.1rem;
+color: var(--muted);
+display: grid;
+gap: 0.4rem;
+}
+.blog-toc a {
+color: var(--muted);
+transition: color 0.2s ease;
+}
+.blog-toc a:hover,
+.blog-toc a.is-active {
+color: var(--primary-text);
+font-weight: 700;
+}
+.blog-layout .prose.blog-article {
+max-width: none;
+margin: 0;
+padding: 0;
+}
+img.blog-cover {
+width: 100%;
+aspect-ratio: 16 / 9;
+object-fit: cover;
+border-radius: 18px;
+border: 1px solid var(--line);
+margin: 0 0 1.5rem;
+box-shadow: 0 10px 28px rgba(15, 42, 67, 0.1);
+}
+.blog-article h2 {
+scroll-margin-top: 5.5rem;
+}
+.blog-article h3 {
+font-size: 1.05rem;
+margin: 1.25rem 0 0.45rem;
+letter-spacing: -0.02em;
+}
+.blog-cta {
+margin-top: 2.5rem;
+padding: 1.5rem;
+border-radius: 18px;
+border: 1px solid var(--line);
+background:
+radial-gradient(500px 180px at 10% 0%, rgba(0, 196, 154, 0.14), transparent 60%),
+var(--bg-end);
+}
+.blog-cta h2 {
+margin-top: 0;
+}
+.blog-cta .hero__actions,
+.blog-cta .blog-cta__actions {
+display: flex;
+flex-wrap: wrap;
+gap: 0.75rem;
+margin-top: 1rem;
+}
+.blog-related {
+width: min(var(--max), calc(100% - 40px));
+margin: 0 auto 48px;
+padding-top: 8px;
+}
+.blog-related__title {
+margin: 0 0 1rem;
+font-size: 1.35rem;
+letter-spacing: -0.02em;
+}
+.page-hero:has(+ .blog-article-section) h1,
+.page-hero:has(+ .blog-article-section) > p,
+.page-hero:has(+ .blog-article-section) .blog-meta {
+animation: blog-hero-in 0.55s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+.page-hero:has(+ .blog-article-section) > p {
+animation-delay: 0.08s;
+}
+.page-hero:has(+ .blog-article-section) .blog-meta {
+animation-delay: 0.16s;
+}
+@keyframes blog-hero-in {
+from {
+opacity: 0;
+transform: translateY(14px);
+}
+to {
+opacity: 1;
+transform: none;
+}
+}
+@media (max-width: 900px) {
+.blog-layout {
+grid-template-columns: 1fr;
+}
+.blog-toc {
+position: static;
+}
+}
+@media (prefers-reduced-motion: reduce) {
+.page-hero:has(+ .blog-article-section) h1,
+.page-hero:has(+ .blog-article-section) > p,
+.page-hero:has(+ .blog-article-section) .blog-meta {
+animation: none;
+}
+.blog-card:hover {
+transform: none;
+}
+.blog-card:hover .blog-card__media img {
+transform: none;
+}
 }
 .prose {
 max-width: 720px;
@@ -2732,17 +2879,34 @@ min-height: 42px;
       </nav>
     </div>
   </header>
-  <main id="main">
+    <main id="main">
     <div class="page-hero section" style="width:min(var(--max), calc(100% - 40px));margin:0 auto;">
       <p class="crumbs"><a href="/">Home</a> / <a href="/blog/">Blog</a> / Bali Pratipada family lunch: track the host spend and the guest UPI</p>
       <h1>Bali Pratipada family lunch: track the host spend and the guest UPI</h1>
-      <p class="blog-card__date">2026-11-08</p>
       <p>Bali Pratipada on 10 November 2026 brings family lunches and host costs. Log groceries, catering and guest transfers so the day has a total.</p>
+      <div class="blog-meta">
+        <span>Last updated: <time datetime="2026-11-08">8 November 2026</time></span>
+        <span>Written by Kharch Log</span>
+        <span>Expert written and reviewed</span>
+      </div>
     </div>
-    <article class="section prose" style="max-width:720px;margin:0 auto 48px;padding:0 20px;">
-<figure class="prose-figure"><img src="/images/blog/bali-pratipada-family-lunch-spends-960.webp" srcset="/images/blog/bali-pratipada-family-lunch-spends-480.webp 480w, /images/blog/bali-pratipada-family-lunch-spends-960.webp 960w, /images/blog/bali-pratipada-family-lunch-spends-1400.webp 1400w" sizes="(max-width: 760px) 92vw, 760px" decoding="async" alt="Bali Pratipada family lunch: track the host spend and the guest UPI" width="1400" height="900" /></figure>
+    <section class="section blog-article-section">
+      <div class="blog-layout">
+          <aside class="blog-toc" aria-label="Table of contents">
+            <strong>Table of contents</strong>
+            <ol>
+              <li><a href="#host-view">Host view</a></li>
+              <li><a href="#guest-view">Guest view</a></li>
+              <li><a href="#leftover-shopping-the-next-morning">Leftover shopping the next morning</a></li>
+              <li><a href="#net-cost-once">Net cost once</a></li>
+              <li><a href="#a-practical-checklist-you-can-reuse">A practical checklist you can reuse</a></li>
+              <li><a href="#questions-people-actually-ask">Questions people actually ask</a></li>
+            </ol>
+          </aside>
+        <article class="prose blog-article">
+          <img class="blog-cover" src="/images/blog/bali-pratipada-family-lunch-spends-960.webp" srcset="/images/blog/bali-pratipada-family-lunch-spends-480.webp 480w, /images/blog/bali-pratipada-family-lunch-spends-960.webp 960w, /images/blog/bali-pratipada-family-lunch-spends-1400.webp 1400w" sizes="(max-width: 760px) 92vw, 760px" decoding="async" alt="Bali Pratipada family lunch: track the host spend and the guest UPI" width="1400" height="900" />
 <p>Bali Pratipada (often the Diwali padwa lunch day) falls on Tuesday, 10 November 2026 in many regional calendars. Hosts buy groceries or hire catering. Guests send UPI for sweets or travel help. Without labels, the Sheet looks like random Food rows. With labels, you know what hosting cost this year.</p>
-<h2>Host view</h2>
+<h2 id="host-view">Host view</h2>
 <p>Tag groceries and catering with Host-Diwali-Lunch or similar. Include the gas cylinder top-up if you bought it for the gathering. Add hired help cash as manual rows.</p>
 <p>If cousins contribute via UPI, those credits reduce the net host cost. Note them against the same tag instead of celebrating them as random income.</p>
 <ul>
@@ -2751,16 +2915,16 @@ min-height: 42px;
 <li>Disposable plates and cleaning if relevant</li>
 <li>Guest contributions as credits linked to the tag</li>
 </ul>
-<h2>Guest view</h2>
+<h2 id="guest-view">Guest view</h2>
 <p>Your UPI to the host is a gift or family transfer with a clear note. Do not file it as your own grocery.</p>
 <p>Travel to the lunch stays under travel or the Diwali trip tag if you already use one.</p>
-<h2>Leftover shopping the next morning</h2>
+<h2 id="leftover-shopping-the-next-morning">Leftover shopping the next morning</h2>
 <p>Post-party grocery returns or half-price sweet restocks can wait for a clear head. If you must buy, keep them out of the host tag unless they were truly for the event.</p>
 <p>Kharch Log SMS capture will catch the UPI. Manual cash for the society sweeper tip still needs typing.</p>
-<h2>Net cost once</h2>
+<h2 id="net-cost-once">Net cost once</h2>
 <p>After the day, sum host debits minus guest credits. That net is what you compare next year.</p>
 <p>Features overview: <a href="/features/">Kharch Log features</a>.</p>
-<h2>A practical checklist you can reuse</h2>
+<h2 id="a-practical-checklist-you-can-reuse">A practical checklist you can reuse</h2>
 <p>Re-open this page the next time the same situation appears. The checklist under Bali Pratipada family lunch: track the host spend and the guest UPI is meant to be boring on purpose: same order, same names, same place on the disk or in the Sheet. Boring is how you avoid a second scramble. Write the date you last followed the steps in a note at the top of the folder or the month tab, so you know whether the pack is fresh.</p>
 <p>If two people share the work, put one name as owner for bali pratipada family lunch spends. Two owners without a rule create two half-finished packs. Keep originals when you merge or categorise, and only send the cleaned pack outward. That habit survives busy weeks better than a perfect system you abandon.</p>
 <p>When a portal, a CA, or a family member asks for one item, send that item. Do not forward the whole archive. Smaller sends are easier to verify and safer when the file carries personal numbers. After they confirm, you still keep your own copy where you can find it without searching chat history.</p>
@@ -2770,15 +2934,23 @@ min-height: 42px;
 <li>Originals kept, cleaned pack sent outward</li>
 <li>Date stamp on the folder or month tab</li>
 </ul>
-<h2>Questions people actually ask</h2>
+<h2 id="questions-people-actually-ask">Questions people actually ask</h2>
 <p><strong>We hosted at a restaurant.</strong> One bill row with Host tag. Split notes if people repaid their share.</p>
 <p><strong>Multiple households co-hosted.</strong> Each Sheet records what left that household. Settling between hosts can be a transfer row with a note.</p>
 <p><strong>Is prasad shopping Food or Festival?</strong> Festival or Host tag is clearer for the annual comparison.</p>
 <p><strong>How often should I repeat this cleanup?</strong> Repeat when the season or the deadline returns, not every idle evening. A dated pack or a dated Sheet total is enough to know you are current.</p>
 <p>Hosting has a net cost. Find it once in <a href="/features/">Kharch Log</a> while the day is still fresh.</p>
-      <p><a class="btn" href="/pay/">Get Kharch Log lifetime - ₹149</a>
-      <a class="btn btn--ghost" href="/features/">See features</a></p>
-    </article>
+          <div class="blog-cta">
+            <h2>Ready to track every rupee?</h2>
+            <p>Kharch Log syncs to your Google Sheet. One-time unlock, no subscription.</p>
+            <div class="blog-cta__actions">
+              <a class="btn" href="/pay/" rel="noopener">Get lifetime - ₹149</a>
+              <a class="btn btn--ghost" href="/features/">See features</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
   </main>
   <footer class="site-footer">
     <div class="site-footer__inner">

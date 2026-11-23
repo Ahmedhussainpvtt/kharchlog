@@ -2050,11 +2050,12 @@ border: 1px solid var(--line);
 border-radius: 16px;
 text-decoration: none !important;
 color: inherit;
-transition: transform 0.15s ease, box-shadow 0.15s ease;
+transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1), border-color 0.35s ease, box-shadow 0.4s ease;
 }
 .blog-card:hover {
-transform: translateY(-2px);
-box-shadow: 0 10px 24px rgba(15, 42, 67, 0.1);
+transform: translateY(-8px);
+border-color: rgba(0, 133, 255, 0.35);
+box-shadow: 0 24px 60px rgba(15, 42, 67, 0.12);
 }
 .blog-card__media {
 aspect-ratio: 16 / 9;
@@ -2065,6 +2066,10 @@ overflow: hidden;
 width: 100%;
 height: 100%;
 object-fit: cover;
+transition: transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.blog-card:hover .blog-card__media img {
+transform: scale(1.05);
 }
 .blog-card__body {
 display: grid;
@@ -2100,6 +2105,148 @@ box-shadow: 0 10px 28px rgba(15, 42, 67, 0.1);
 width: 100%;
 aspect-ratio: 16 / 9;
 object-fit: cover;
+}
+.blog-meta {
+display: flex;
+flex-wrap: wrap;
+gap: 0.65rem 1.25rem;
+margin-top: 1rem;
+color: var(--muted);
+font-size: 0.9rem;
+}
+.blog-article-section {
+width: min(var(--max), calc(100% - 40px));
+margin: 0 auto;
+padding-bottom: 48px;
+}
+.blog-layout {
+display: grid;
+grid-template-columns: 220px minmax(0, 1fr);
+gap: 2rem;
+align-items: start;
+}
+.blog-toc {
+position: sticky;
+top: 5.5rem;
+padding: 1rem;
+border: 1px solid var(--line);
+border-radius: 16px;
+background: var(--surface);
+font-size: 0.86rem;
+}
+.blog-toc strong {
+display: block;
+margin-bottom: 0.65rem;
+font-weight: 700;
+}
+.blog-toc ol {
+margin: 0;
+padding-left: 1.1rem;
+color: var(--muted);
+display: grid;
+gap: 0.4rem;
+}
+.blog-toc a {
+color: var(--muted);
+transition: color 0.2s ease;
+}
+.blog-toc a:hover,
+.blog-toc a.is-active {
+color: var(--primary-text);
+font-weight: 700;
+}
+.blog-layout .prose.blog-article {
+max-width: none;
+margin: 0;
+padding: 0;
+}
+img.blog-cover {
+width: 100%;
+aspect-ratio: 16 / 9;
+object-fit: cover;
+border-radius: 18px;
+border: 1px solid var(--line);
+margin: 0 0 1.5rem;
+box-shadow: 0 10px 28px rgba(15, 42, 67, 0.1);
+}
+.blog-article h2 {
+scroll-margin-top: 5.5rem;
+}
+.blog-article h3 {
+font-size: 1.05rem;
+margin: 1.25rem 0 0.45rem;
+letter-spacing: -0.02em;
+}
+.blog-cta {
+margin-top: 2.5rem;
+padding: 1.5rem;
+border-radius: 18px;
+border: 1px solid var(--line);
+background:
+radial-gradient(500px 180px at 10% 0%, rgba(0, 196, 154, 0.14), transparent 60%),
+var(--bg-end);
+}
+.blog-cta h2 {
+margin-top: 0;
+}
+.blog-cta .hero__actions,
+.blog-cta .blog-cta__actions {
+display: flex;
+flex-wrap: wrap;
+gap: 0.75rem;
+margin-top: 1rem;
+}
+.blog-related {
+width: min(var(--max), calc(100% - 40px));
+margin: 0 auto 48px;
+padding-top: 8px;
+}
+.blog-related__title {
+margin: 0 0 1rem;
+font-size: 1.35rem;
+letter-spacing: -0.02em;
+}
+.page-hero:has(+ .blog-article-section) h1,
+.page-hero:has(+ .blog-article-section) > p,
+.page-hero:has(+ .blog-article-section) .blog-meta {
+animation: blog-hero-in 0.55s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+.page-hero:has(+ .blog-article-section) > p {
+animation-delay: 0.08s;
+}
+.page-hero:has(+ .blog-article-section) .blog-meta {
+animation-delay: 0.16s;
+}
+@keyframes blog-hero-in {
+from {
+opacity: 0;
+transform: translateY(14px);
+}
+to {
+opacity: 1;
+transform: none;
+}
+}
+@media (max-width: 900px) {
+.blog-layout {
+grid-template-columns: 1fr;
+}
+.blog-toc {
+position: static;
+}
+}
+@media (prefers-reduced-motion: reduce) {
+.page-hero:has(+ .blog-article-section) h1,
+.page-hero:has(+ .blog-article-section) > p,
+.page-hero:has(+ .blog-article-section) .blog-meta {
+animation: none;
+}
+.blog-card:hover {
+transform: none;
+}
+.blog-card:hover .blog-card__media img {
+transform: none;
+}
 }
 .prose {
 max-width: 720px;
@@ -2732,17 +2879,33 @@ min-height: 42px;
       </nav>
     </div>
   </header>
-  <main id="main">
+    <main id="main">
     <div class="page-hero section" style="width:min(var(--max), calc(100% - 40px));margin:0 auto;">
       <p class="crumbs"><a href="/">Home</a> / <a href="/blog/">Blog</a> / Annual insurance premium month: health and vehicle</p>
       <h1>Annual insurance premium month: health and vehicle</h1>
-      <p class="blog-card__date">2026-10-05</p>
       <p>A yearly health or vehicle premium is one large debit, not a weekly leak. Log it on the day it leaves, and use a monthly set-aside so your Google Sheet is not surprised.</p>
+      <div class="blog-meta">
+        <span>Last updated: <time datetime="2026-10-05">5 October 2026</time></span>
+        <span>Written by Kharch Log</span>
+        <span>Expert written and reviewed</span>
+      </div>
     </div>
-    <article class="section prose" style="max-width:720px;margin:0 auto 48px;padding:0 20px;">
-<figure class="prose-figure"><img src="/images/blog/annual-insurance-premium-month-960.webp" srcset="/images/blog/annual-insurance-premium-month-480.webp 480w, /images/blog/annual-insurance-premium-month-960.webp 960w, /images/blog/annual-insurance-premium-month-1400.webp 1400w" sizes="(max-width: 760px) 92vw, 760px" decoding="async" alt="Annual insurance premium month: health and vehicle" width="1400" height="900" /></figure>
+    <section class="section blog-article-section">
+      <div class="blog-layout">
+          <aside class="blog-toc" aria-label="Table of contents">
+            <strong>Table of contents</strong>
+            <ol>
+              <li><a href="#log-the-full-premium-on-the-day-it-leaves">Log the full premium on the day it leaves</a></li>
+              <li><a href="#do-not-hunt-groceries-for-a-renewal">Do not hunt groceries for a renewal</a></li>
+              <li><a href="#a-set-aside-that-does-not-double-the-policy">A set-aside that does not double the policy</a></li>
+              <li><a href="#leave-a-renewal-note-not-a-partnership-story">Leave a renewal note, not a partnership story</a></li>
+              <li><a href="#questions-people-actually-ask">Questions people actually ask</a></li>
+            </ol>
+          </aside>
+        <article class="prose blog-article">
+          <img class="blog-cover" src="/images/blog/annual-insurance-premium-month-960.webp" srcset="/images/blog/annual-insurance-premium-month-480.webp 480w, /images/blog/annual-insurance-premium-month-960.webp 960w, /images/blog/annual-insurance-premium-month-1400.webp 1400w" sizes="(max-width: 760px) 92vw, 760px" decoding="async" alt="Annual insurance premium month: health and vehicle" width="1400" height="900" />
 <p>A yearly premium does not behave like a weekly expense. Health cover or a vehicle policy can leave in one large debit, then stay quiet for a year. Filed beside food, it makes you slash groceries or resent the policy. Neither response is useful. The bank or card SMS can sit in your Google Sheet. Kharch Log places it there without a bank login. Label it insurance, note the period covered, and keep a monthly set-aside so the day is not a shock.</p>
-<h2>Log the full premium on the day it leaves</h2>
+<h2 id="log-the-full-premium-on-the-day-it-leaves">Log the full premium on the day it leaves</h2>
 <p>Log the premium on the day the money leaves, for the full SMS amount. Do not create twelve fake monthly debits. The bank did not. A monthly set-aside can be a transfer to yourself. Those transfers are not twelve insurance expenses. The expense is the day the premium actually left. Recording both the set-aside and the premium as insurance doubles the policy. The note should use the plain policy name you will recognise at renewal.</p>
 <p>Health, vehicle, and life cover are different notes even in one category. Write who is covered and the period. You do not need a long policy number if it already lives in your email. Amount, period, and type are what the Sheet is for. Add-on covers paid separately should be their own rows. A discount is already inside the SMS amount. Do not type the price from the brochure on top.</p>
 <ul>
@@ -2751,10 +2914,10 @@ min-height: 42px;
 <li>Health, vehicle, and life stay distinct in the note</li>
 <li>Do not retype a brochure price the bank did not charge</li>
 </ul>
-<h2>Do not hunt groceries for a renewal</h2>
+<h2 id="do-not-hunt-groceries-for-a-renewal">Do not hunt groceries for a renewal</h2>
 <p>In a premium month, read everyday spending with that one row excluded, then read the row alone. The leak question is the first view. Whether the cover still fits is the second. One blended total makes the month look like failure. You will hunt groceries for a renewal. Name the premium in the month header so Sunday reviews can ignore it. The debit stays in the Sheet. The filter is what keeps it from running every weekly conversation.</p>
 <p>If you pay the premium by card, the swipe is the expense and the later bill is a transfer. Do not wait for the bill or you will mis-date the cover. A UPI from savings is one debit, and that debit is the expense. If you convert it to EMI, do not log the full premium and every instalment. Pick one method. The cover period belongs on the first row, because renewal cares about dates, not the EMI calendar.</p>
-<h2>A set-aside that does not double the policy</h2>
+<h2 id="a-set-aside-that-does-not-double-the-policy">A set-aside that does not double the policy</h2>
 <p>Divide the last premium by twelve and move that amount aside each month if you can. Label those moves as transfers, not as insurance. The pot is still your money. On renewal, the payment is the expense. Moving money back from the pot is a transfer, not income. If you skip the pot, exclude the premium when you judge the month, and expect the balance to hurt. The plan and the actual debit can both be visible. You do not need a new bank account for the pot. A note is enough.</p>
 <p>If the premium rose, write last year's amount next to this year's. Study the difference, not only the whole debit. A rise because you added a person is different from a rise on the same cover. Say which in the note. If you cancelled a cover, write that in the header so a missing SMS is not a scare. An intentional gap should look like a choice. Silence looks like a missed debit.</p>
 <ul>
@@ -2763,17 +2926,25 @@ min-height: 42px;
 <li>Compare this year with last year's amount in the note</li>
 <li>A cancelled cover needs a header note so the gap is intentional</li>
 </ul>
-<h2>Leave a renewal note, not a partnership story</h2>
+<h2 id="leave-a-renewal-note-not-a-partnership-story">Leave a renewal note, not a partnership story</h2>
 <p>For renewal, keep the type, who or what is covered, the period, and the amount. That is enough to ask for a new quote without hunting a PDF. Leave the SMS payee as the bank sent it. Put the plain insurer name in the note. If someone else paid the insurer, do not also log the full premium. Your transfer to them is your share, not a second policy. The phone that paid the insurer holds the real SMS.</p>
 <p>Use the premium month to note other yearly hits, such as school annual charges or a year-long tool. Write the month they fall so this is not the only spike that feels unfair. You are dating spikes, not starting a new system. When that month comes, the header already names the reason. This is your own bookkeeping. The app is not a partner of any insurer. It files the SMS from the payment you chose to make.</p>
-<h2>Questions people actually ask</h2>
+<h2 id="questions-people-actually-ask">Questions people actually ask</h2>
 <p><strong>Should the spending total spread a yearly premium over twelve months?</strong> Keep the full debit on the real date, because that is when the balance fell. A planning note can show one-twelfth so ordinary months stay comparable. If your only total spreads the premium, the real day will shock you. You will trust the Sheet less. Do not replace the SMS with twelve invented rows.</p>
 <p><strong>The insurer sent part of the premium back. What should I change?</strong> Match the credit to the premium, the same way you match any refund. The net is the cost for that period. Use the net, not the gross, when you set next year's monthly aside. Write both amounts in the note. If the credit arrives months later, link the dates. It is not salary, and it is not spare food money.</p>
 <p><strong>I pay health cover every month. Is the rule different?</strong> Yes. Log each monthly debit when the SMS arrives, because that is the cash pattern. Do not spread it further. Note who is covered so a hike is easy to see. Keep it out of groceries and out of SIP. Monthly cover is spending. A SIP is still your money. Mixing them misnames both the protection and the investment.</p>
 <p>Record the yearly premium on the day it leaves, and judge other habits without that row. How a salary month absorbs big debits is related to <a href="/blog/salary-cycle-emi-expense-tracker-india/">salary, EMIs, and the Sheet</a>. See <a href="/features/">Kharch Log features</a> for SMS capture. A monthly set-aside is a transfer. The premium SMS is the expense.</p>
-      <p><a class="btn" href="/pay/">Get Kharch Log lifetime - ₹149</a>
-      <a class="btn btn--ghost" href="/features/">See features</a></p>
-    </article>
+          <div class="blog-cta">
+            <h2>Ready to track every rupee?</h2>
+            <p>Kharch Log syncs to your Google Sheet. One-time unlock, no subscription.</p>
+            <div class="blog-cta__actions">
+              <a class="btn" href="/pay/" rel="noopener">Get lifetime - ₹149</a>
+              <a class="btn btn--ghost" href="/features/">See features</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
   </main>
   <footer class="site-footer">
     <div class="site-footer__inner">

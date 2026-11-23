@@ -2050,11 +2050,12 @@ border: 1px solid var(--line);
 border-radius: 16px;
 text-decoration: none !important;
 color: inherit;
-transition: transform 0.15s ease, box-shadow 0.15s ease;
+transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1), border-color 0.35s ease, box-shadow 0.4s ease;
 }
 .blog-card:hover {
-transform: translateY(-2px);
-box-shadow: 0 10px 24px rgba(15, 42, 67, 0.1);
+transform: translateY(-8px);
+border-color: rgba(0, 133, 255, 0.35);
+box-shadow: 0 24px 60px rgba(15, 42, 67, 0.12);
 }
 .blog-card__media {
 aspect-ratio: 16 / 9;
@@ -2065,6 +2066,10 @@ overflow: hidden;
 width: 100%;
 height: 100%;
 object-fit: cover;
+transition: transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.blog-card:hover .blog-card__media img {
+transform: scale(1.05);
 }
 .blog-card__body {
 display: grid;
@@ -2100,6 +2105,148 @@ box-shadow: 0 10px 28px rgba(15, 42, 67, 0.1);
 width: 100%;
 aspect-ratio: 16 / 9;
 object-fit: cover;
+}
+.blog-meta {
+display: flex;
+flex-wrap: wrap;
+gap: 0.65rem 1.25rem;
+margin-top: 1rem;
+color: var(--muted);
+font-size: 0.9rem;
+}
+.blog-article-section {
+width: min(var(--max), calc(100% - 40px));
+margin: 0 auto;
+padding-bottom: 48px;
+}
+.blog-layout {
+display: grid;
+grid-template-columns: 220px minmax(0, 1fr);
+gap: 2rem;
+align-items: start;
+}
+.blog-toc {
+position: sticky;
+top: 5.5rem;
+padding: 1rem;
+border: 1px solid var(--line);
+border-radius: 16px;
+background: var(--surface);
+font-size: 0.86rem;
+}
+.blog-toc strong {
+display: block;
+margin-bottom: 0.65rem;
+font-weight: 700;
+}
+.blog-toc ol {
+margin: 0;
+padding-left: 1.1rem;
+color: var(--muted);
+display: grid;
+gap: 0.4rem;
+}
+.blog-toc a {
+color: var(--muted);
+transition: color 0.2s ease;
+}
+.blog-toc a:hover,
+.blog-toc a.is-active {
+color: var(--primary-text);
+font-weight: 700;
+}
+.blog-layout .prose.blog-article {
+max-width: none;
+margin: 0;
+padding: 0;
+}
+img.blog-cover {
+width: 100%;
+aspect-ratio: 16 / 9;
+object-fit: cover;
+border-radius: 18px;
+border: 1px solid var(--line);
+margin: 0 0 1.5rem;
+box-shadow: 0 10px 28px rgba(15, 42, 67, 0.1);
+}
+.blog-article h2 {
+scroll-margin-top: 5.5rem;
+}
+.blog-article h3 {
+font-size: 1.05rem;
+margin: 1.25rem 0 0.45rem;
+letter-spacing: -0.02em;
+}
+.blog-cta {
+margin-top: 2.5rem;
+padding: 1.5rem;
+border-radius: 18px;
+border: 1px solid var(--line);
+background:
+radial-gradient(500px 180px at 10% 0%, rgba(0, 196, 154, 0.14), transparent 60%),
+var(--bg-end);
+}
+.blog-cta h2 {
+margin-top: 0;
+}
+.blog-cta .hero__actions,
+.blog-cta .blog-cta__actions {
+display: flex;
+flex-wrap: wrap;
+gap: 0.75rem;
+margin-top: 1rem;
+}
+.blog-related {
+width: min(var(--max), calc(100% - 40px));
+margin: 0 auto 48px;
+padding-top: 8px;
+}
+.blog-related__title {
+margin: 0 0 1rem;
+font-size: 1.35rem;
+letter-spacing: -0.02em;
+}
+.page-hero:has(+ .blog-article-section) h1,
+.page-hero:has(+ .blog-article-section) > p,
+.page-hero:has(+ .blog-article-section) .blog-meta {
+animation: blog-hero-in 0.55s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+.page-hero:has(+ .blog-article-section) > p {
+animation-delay: 0.08s;
+}
+.page-hero:has(+ .blog-article-section) .blog-meta {
+animation-delay: 0.16s;
+}
+@keyframes blog-hero-in {
+from {
+opacity: 0;
+transform: translateY(14px);
+}
+to {
+opacity: 1;
+transform: none;
+}
+}
+@media (max-width: 900px) {
+.blog-layout {
+grid-template-columns: 1fr;
+}
+.blog-toc {
+position: static;
+}
+}
+@media (prefers-reduced-motion: reduce) {
+.page-hero:has(+ .blog-article-section) h1,
+.page-hero:has(+ .blog-article-section) > p,
+.page-hero:has(+ .blog-article-section) .blog-meta {
+animation: none;
+}
+.blog-card:hover {
+transform: none;
+}
+.blog-card:hover .blog-card__media img {
+transform: none;
+}
 }
 .prose {
 max-width: 720px;
@@ -2732,17 +2879,33 @@ min-height: 42px;
       </nav>
     </div>
   </header>
-  <main id="main">
+    <main id="main">
     <div class="page-hero section" style="width:min(var(--max), calc(100% - 40px));margin:0 auto;">
       <p class="crumbs"><a href="/">Home</a> / <a href="/blog/">Blog</a> / Train, flight, and hotel: what one trip actually cost</p>
       <h1>Train, flight, and hotel: what one trip actually cost</h1>
-      <p class="blog-card__date">2026-10-06</p>
       <p>The ticket is not the trip. Tag the train or flight, hotel, cabs, and meals with one trip name in your Google Sheet and sum that filter when you get home.</p>
+      <div class="blog-meta">
+        <span>Last updated: <time datetime="2026-10-06">6 October 2026</time></span>
+        <span>Written by Kharch Log</span>
+        <span>Expert written and reviewed</span>
+      </div>
     </div>
-    <article class="section prose" style="max-width:720px;margin:0 auto 48px;padding:0 20px;">
-<figure class="prose-figure"><img src="/images/blog/train-flight-and-hotel-upi-trip-cost-960.webp" srcset="/images/blog/train-flight-and-hotel-upi-trip-cost-480.webp 480w, /images/blog/train-flight-and-hotel-upi-trip-cost-960.webp 960w, /images/blog/train-flight-and-hotel-upi-trip-cost-1400.webp 1400w" sizes="(max-width: 760px) 92vw, 760px" decoding="async" alt="Train, flight, and hotel: what one trip actually cost" width="1400" height="900" /></figure>
+    <section class="section blog-article-section">
+      <div class="blog-layout">
+          <aside class="blog-toc" aria-label="Table of contents">
+            <strong>Table of contents</strong>
+            <ol>
+              <li><a href="#keep-every-sms-glue-them-with-one-name">Keep every SMS, glue them with one name</a></li>
+              <li><a href="#the-ticket-price-is-the-part-you-brag-about">The ticket price is the part you brag about</a></li>
+              <li><a href="#mark-rows-in-the-evening-not-at-the-airport-home">Mark rows in the evening, not at the airport home</a></li>
+              <li><a href="#write-the-all-in-number-when-you-return">Write the all-in number when you return</a></li>
+              <li><a href="#questions-people-actually-ask">Questions people actually ask</a></li>
+            </ol>
+          </aside>
+        <article class="prose blog-article">
+          <img class="blog-cover" src="/images/blog/train-flight-and-hotel-upi-trip-cost-960.webp" srcset="/images/blog/train-flight-and-hotel-upi-trip-cost-480.webp 480w, /images/blog/train-flight-and-hotel-upi-trip-cost-960.webp 960w, /images/blog/train-flight-and-hotel-upi-trip-cost-1400.webp 1400w" sizes="(max-width: 760px) 92vw, 760px" decoding="async" alt="Train, flight, and hotel: what one trip actually cost" width="1400" height="900" />
 <p>People remember the ticket and forget the rest of the trip. A train or flight payment is only the start. A hotel, a cab, a toll, and meals away from home follow it. Each SMS is real and none of them is the whole cost. Without a shared note, you cannot say what the weekend cost. Those alerts can sit in your Google Sheet. Kharch Log files them without a bank login. Put one trip name on every related row, then sum that name. That total is the trip.</p>
-<h2>Keep every SMS, glue them with one name</h2>
+<h2 id="keep-every-sms-glue-them-with-one-name">Keep every SMS, glue them with one name</h2>
 <p>Do not collapse the trip into one giant row. Keep each SMS as its own row and add the same trip name and dates in the note. A filter on that name is the sum. Separate rows show whether the stay or the cabs blew the plan. Write the sum in the header when you are back. Meals can stay in food if the trip name is on them too. Leave them out of the filter and the trip looks cheap while the food month looks worse.</p>
 <p>If a friend paid the hotel and you UPI your share, that UPI is travel, not a vague friend transfer. Put the trip name on it. If you paid for everyone, log the full SMS as travel. Their repayments are transfers matched to the trip, not income. Your cost is the net. A repayment labelled income makes the trip feel cheaper than it was. Say in the note whether you paid the group or only your share.</p>
 <ul>
@@ -2751,10 +2914,10 @@ min-height: 42px;
 <li>Your share sent to a friend is travel, not a generic transfer</li>
 <li>Group repayments are transfers, and your cost is the net</li>
 </ul>
-<h2>The ticket price is the part you brag about</h2>
+<h2 id="the-ticket-price-is-the-part-you-brag-about">The ticket price is the part you brag about</h2>
 <p>Add station food, cab, and extra fees to the trip even when each looks small. They are why the ticket price you quote is incomplete. A leisure toll is travel, not your office commute. Change the category or the commute month absorbs the holiday. Do not invent discounts that never hit the bank as negative spend. A cash auto you type by hand still belongs on the trip name. That is often the cost people drop first.</p>
 <p>On a cancellation, the fee you did not get back is the travel cost. Match the refunded fare so it is not also a loss. A rebooked ticket is a new row with the same trip name. Do not overwrite the old price. You want the charge to stay visible. A separate insurance debit can carry the trip name and still be insurance. One trip may use several categories. The shared name is what lets you sum them.</p>
-<h2>Mark rows in the evening, not at the airport home</h2>
+<h2 id="mark-rows-in-the-evening-not-at-the-airport-home">Mark rows in the evening, not at the airport home</h2>
 <p>Each evening, add the trip name to that day's rows. Waiting until you are home means the small rows get misfiled. A hotel payee is often a person, and it will look like a friend transfer without a note. Food can keep both the food category and the trip name. A meal at home the night before is not the trip. Four words in the note are the whole method. The SMS is already captured.</p>
 <p>You can log trip cash as one bundle if you will not note every snack. Say so in the note, and do not also itemise those snacks. If you withdraw again, add a new bundle row rather than editing the first. Leftover notes deposited back are not income. If the withdrawal was already a transfer to cash, unspent notes are simply spends you do not type. If you counted the withdrawal as the spend, the deposit reduces the trip. Know which cash method you are using before you leave.</p>
 <ul>
@@ -2763,17 +2926,25 @@ min-height: 42px;
 <li>Home meals before departure stay off the trip</li>
 <li>Trip cash is either itemised or one bundle, not both</li>
 </ul>
-<h2>Write the all-in number when you return</h2>
+<h2 id="write-the-all-in-number-when-you-return">Write the all-in number when you return</h2>
 <p>When you return, filter the trip name and split the sum into ticket, stay, local travel, food, and other. Write that sum in the header. Compare it with what you expected. Do not delete meals to force the old expectation. Next time, plan from this sum, not from the ticket screenshot. Use the net after friend repayments. If someone still owes you, say outstanding in the header and update the net when they pay.</p>
 <p>Keep the rows in the main Sheet. A second file will miss later SMS. The trip name is enough to reopen the weekend. If the trip crosses two months, filter the name across dates instead of forcing one month. The monthly view can mention that a travel chunk was this trip. The SMS date may be the booking day, not the day you travelled. Put both dates in the note when they differ. A September booking for an October trip moves the cost unless the note says so.</p>
-<h2>Questions people actually ask</h2>
+<h2 id="questions-people-actually-ask">Questions people actually ask</h2>
 <p><strong>Do trip meals also use my normal food cap?</strong> Put trip meals in the trip sum first. Say whether they also use the monthly food cap. Many people keep them out of the weekly food cap so home habits are judged fairly. Write that choice before you leave. Do not decide afterward just to make the food month look calm. The rows stay. Only the cap rule changes.</p>
 <p><strong>I paid partly with reward points. What number do I keep?</strong> The cost is the SMS amount that left your account. If points lowered the debit, the lower figure is already the truth. Do not add the price from before the points. A fee you paid to buy points is its own row if there was an SMS. A trip that looks small because of points is showing real cash. That smaller number is what you gave up.</p>
 <p><strong>Work will repay part of the train fare. When do I log it?</strong> Log the full ticket when you pay, and mark the part you expect back. When the credit arrives, match it and clear only that part. Your cost is the remainder plus anything the office will not pay. Do not leave the ticket unlabelled while you wait. A pending claim is not the same as zero cost.</p>
 <p>Give every ticket, hotel, cab, and meal the same trip name, then sum that filter when you are back. Weekly reviews still matter for the rest of the month, as in <a href="/blog/weekly-spending-review-20-minutes/">a twenty minute weekly review</a>. The <a href="/features/">Kharch Log features</a> page covers how the underlying SMS reaches your Sheet. Keep the all-in total, not the ticket screenshot.</p>
-      <p><a class="btn" href="/pay/">Get Kharch Log lifetime - ₹149</a>
-      <a class="btn btn--ghost" href="/features/">See features</a></p>
-    </article>
+          <div class="blog-cta">
+            <h2>Ready to track every rupee?</h2>
+            <p>Kharch Log syncs to your Google Sheet. One-time unlock, no subscription.</p>
+            <div class="blog-cta__actions">
+              <a class="btn" href="/pay/" rel="noopener">Get lifetime - ₹149</a>
+              <a class="btn btn--ghost" href="/features/">See features</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
   </main>
   <footer class="site-footer">
     <div class="site-footer__inner">

@@ -2050,11 +2050,12 @@ border: 1px solid var(--line);
 border-radius: 16px;
 text-decoration: none !important;
 color: inherit;
-transition: transform 0.15s ease, box-shadow 0.15s ease;
+transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1), border-color 0.35s ease, box-shadow 0.4s ease;
 }
 .blog-card:hover {
-transform: translateY(-2px);
-box-shadow: 0 10px 24px rgba(15, 42, 67, 0.1);
+transform: translateY(-8px);
+border-color: rgba(0, 133, 255, 0.35);
+box-shadow: 0 24px 60px rgba(15, 42, 67, 0.12);
 }
 .blog-card__media {
 aspect-ratio: 16 / 9;
@@ -2065,6 +2066,10 @@ overflow: hidden;
 width: 100%;
 height: 100%;
 object-fit: cover;
+transition: transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.blog-card:hover .blog-card__media img {
+transform: scale(1.05);
 }
 .blog-card__body {
 display: grid;
@@ -2100,6 +2105,148 @@ box-shadow: 0 10px 28px rgba(15, 42, 67, 0.1);
 width: 100%;
 aspect-ratio: 16 / 9;
 object-fit: cover;
+}
+.blog-meta {
+display: flex;
+flex-wrap: wrap;
+gap: 0.65rem 1.25rem;
+margin-top: 1rem;
+color: var(--muted);
+font-size: 0.9rem;
+}
+.blog-article-section {
+width: min(var(--max), calc(100% - 40px));
+margin: 0 auto;
+padding-bottom: 48px;
+}
+.blog-layout {
+display: grid;
+grid-template-columns: 220px minmax(0, 1fr);
+gap: 2rem;
+align-items: start;
+}
+.blog-toc {
+position: sticky;
+top: 5.5rem;
+padding: 1rem;
+border: 1px solid var(--line);
+border-radius: 16px;
+background: var(--surface);
+font-size: 0.86rem;
+}
+.blog-toc strong {
+display: block;
+margin-bottom: 0.65rem;
+font-weight: 700;
+}
+.blog-toc ol {
+margin: 0;
+padding-left: 1.1rem;
+color: var(--muted);
+display: grid;
+gap: 0.4rem;
+}
+.blog-toc a {
+color: var(--muted);
+transition: color 0.2s ease;
+}
+.blog-toc a:hover,
+.blog-toc a.is-active {
+color: var(--primary-text);
+font-weight: 700;
+}
+.blog-layout .prose.blog-article {
+max-width: none;
+margin: 0;
+padding: 0;
+}
+img.blog-cover {
+width: 100%;
+aspect-ratio: 16 / 9;
+object-fit: cover;
+border-radius: 18px;
+border: 1px solid var(--line);
+margin: 0 0 1.5rem;
+box-shadow: 0 10px 28px rgba(15, 42, 67, 0.1);
+}
+.blog-article h2 {
+scroll-margin-top: 5.5rem;
+}
+.blog-article h3 {
+font-size: 1.05rem;
+margin: 1.25rem 0 0.45rem;
+letter-spacing: -0.02em;
+}
+.blog-cta {
+margin-top: 2.5rem;
+padding: 1.5rem;
+border-radius: 18px;
+border: 1px solid var(--line);
+background:
+radial-gradient(500px 180px at 10% 0%, rgba(0, 196, 154, 0.14), transparent 60%),
+var(--bg-end);
+}
+.blog-cta h2 {
+margin-top: 0;
+}
+.blog-cta .hero__actions,
+.blog-cta .blog-cta__actions {
+display: flex;
+flex-wrap: wrap;
+gap: 0.75rem;
+margin-top: 1rem;
+}
+.blog-related {
+width: min(var(--max), calc(100% - 40px));
+margin: 0 auto 48px;
+padding-top: 8px;
+}
+.blog-related__title {
+margin: 0 0 1rem;
+font-size: 1.35rem;
+letter-spacing: -0.02em;
+}
+.page-hero:has(+ .blog-article-section) h1,
+.page-hero:has(+ .blog-article-section) > p,
+.page-hero:has(+ .blog-article-section) .blog-meta {
+animation: blog-hero-in 0.55s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+.page-hero:has(+ .blog-article-section) > p {
+animation-delay: 0.08s;
+}
+.page-hero:has(+ .blog-article-section) .blog-meta {
+animation-delay: 0.16s;
+}
+@keyframes blog-hero-in {
+from {
+opacity: 0;
+transform: translateY(14px);
+}
+to {
+opacity: 1;
+transform: none;
+}
+}
+@media (max-width: 900px) {
+.blog-layout {
+grid-template-columns: 1fr;
+}
+.blog-toc {
+position: static;
+}
+}
+@media (prefers-reduced-motion: reduce) {
+.page-hero:has(+ .blog-article-section) h1,
+.page-hero:has(+ .blog-article-section) > p,
+.page-hero:has(+ .blog-article-section) .blog-meta {
+animation: none;
+}
+.blog-card:hover {
+transform: none;
+}
+.blog-card:hover .blog-card__media img {
+transform: none;
+}
 }
 .prose {
 max-width: 720px;
@@ -2732,17 +2879,33 @@ min-height: 42px;
       </nav>
     </div>
   </header>
-  <main id="main">
+    <main id="main">
     <div class="page-hero section" style="width:min(var(--max), calc(100% - 40px));margin:0 auto;">
       <p class="crumbs"><a href="/">Home</a> / <a href="/blog/">Blog</a> / Refunds and reversals: do not leave a returned spend as a loss</p>
       <h1>Refunds and reversals: do not leave a returned spend as a loss</h1>
-      <p class="blog-card__date">2026-10-04</p>
       <p>A refund or a failed UPI is not new income. Match the credit to the original debit in your Google Sheet so a cancelled spend does not stay on the books as a loss.</p>
+      <div class="blog-meta">
+        <span>Last updated: <time datetime="2026-10-04">4 October 2026</time></span>
+        <span>Written by Kharch Log</span>
+        <span>Expert written and reviewed</span>
+      </div>
     </div>
-    <article class="section prose" style="max-width:720px;margin:0 auto 48px;padding:0 20px;">
-<figure class="prose-figure"><img src="/images/blog/refunds-and-reversals-in-the-expense-sheet-960.webp" srcset="/images/blog/refunds-and-reversals-in-the-expense-sheet-480.webp 480w, /images/blog/refunds-and-reversals-in-the-expense-sheet-960.webp 960w, /images/blog/refunds-and-reversals-in-the-expense-sheet-1400.webp 1400w" sizes="(max-width: 760px) 92vw, 760px" decoding="async" alt="Refunds and reversals: do not leave a returned spend as a loss" width="1400" height="900" /></figure>
+    <section class="section blog-article-section">
+      <div class="blog-layout">
+          <aside class="blog-toc" aria-label="Table of contents">
+            <strong>Table of contents</strong>
+            <ol>
+              <li><a href="#a-credit-is-not-a-bonus">A credit is not a bonus</a></li>
+              <li><a href="#partial-refunds-and-the-net">Partial refunds and the net</a></li>
+              <li><a href="#card-credits-wallets-and-cash-handed-back">Card credits, wallets, and cash handed back</a></li>
+              <li><a href="#clear-credits-before-you-judge-a-category">Clear credits before you judge a category</a></li>
+              <li><a href="#questions-people-actually-ask">Questions people actually ask</a></li>
+            </ol>
+          </aside>
+        <article class="prose blog-article">
+          <img class="blog-cover" src="/images/blog/refunds-and-reversals-in-the-expense-sheet-960.webp" srcset="/images/blog/refunds-and-reversals-in-the-expense-sheet-480.webp 480w, /images/blog/refunds-and-reversals-in-the-expense-sheet-960.webp 960w, /images/blog/refunds-and-reversals-in-the-expense-sheet-1400.webp 1400w" sizes="(max-width: 760px) 92vw, 760px" decoding="async" alt="Refunds and reversals: do not leave a returned spend as a loss" width="1400" height="900" />
 <p>Money that comes back is where a ledger quietly lies. A refund, a failed UPI, or a cancelled order can show up later as a credit SMS. If the debit stays as a loss and the credit feels like free money, you punish real spending and then spend the refund again. Both alerts can land in your Google Sheet. Kharch Log reads them from the bank SMS on your Android phone. There is no bank login. Link the credit to the original row so the net is what you actually lost.</p>
-<h2>A credit is not a bonus</h2>
+<h2 id="a-credit-is-not-a-bonus">A credit is not a bonus</h2>
 <p>When a credit SMS arrives, look for a recent debit with a similar amount and payee. Write refund and the original date on the credit. Write refunded on the debit. Do not delete the debit. The history is the point. A full match should drop out of the spending total. A partial refund should leave only the net. Deleting the row makes the Sheet disagree with the SMS trail. An unmatched credit gets spent the same evening if you call it income.</p>
 <p>A failed UPI often shows a debit and a credit within a day. If you already filed the debit as food, clear that label when the credit lands. If you only notice the credit, do not call it income. It is your money coming back. Match on amount and time when the wording differs. The row should not remain a meal you never got. Put reversal in both notes so you can find the pair later.</p>
 <ul>
@@ -2751,10 +2914,10 @@ min-height: 42px;
 <li>A full match leaves the spending total</li>
 <li>A reversal is not income</li>
 </ul>
-<h2>Partial refunds and the net</h2>
+<h2 id="partial-refunds-and-the-net">Partial refunds and the net</h2>
 <p>A partial refund leaves a real cost. If an order returns only part of the debit, the spend is the net. Either note the net on the original row, or keep both SMS amounts and subtract in the total. Write the choice in the header. Do not keep the full debit as spend and also treat the credit as spare money. Charges that were not returned stay in the net. Say that in the note.</p>
 <p>A refund next month can still refer to last month's purchase. Decide if your total is cash that moved this month, or the net cost of the purchase. Cash movement shows the credit when it arrived. Net cost needs a note tying it back. Do not mix the two readings in one total. The SMS date stays the bank date. The note is what connects a big return to the original buy.</p>
-<h2>Card credits, wallets, and cash handed back</h2>
+<h2 id="card-credits-wallets-and-cash-handed-back">Card credits, wallets, and cash handed back</h2>
 <p>Card refunds follow the same match as UPI refunds. If you log swipes, mark the swipe so spending falls. The bill you pay later should be smaller, and that is correct. Do not also call the card credit income. If you only track the bill, the smaller payment is the whole story. Do not add a separate income row on top. Two alerts for one return should be marked so only one remains in the total.</p>
 <p>A refund into an app wallet may not hit the bank at all. Do not invent a bank credit the SMS never sent. Track the wallet as its own pocket, like cash, or do not track the internal credit. Mixing a wallet credit with bank rows breaks the reconcile. Cash handed back at a counter needs a manual credit row. Link it to the purchase. The app cannot see notes a shop returns to you. Skip that row and the purchase stays a loss while the cash gets spent again.</p>
 <ul>
@@ -2763,17 +2926,25 @@ min-height: 42px;
 <li>Wallet credits that never hit the bank are not bank rows</li>
 <li>Cash returned at a counter is a manual credit you type</li>
 </ul>
-<h2>Clear credits before you judge a category</h2>
+<h2 id="clear-credits-before-you-judge-a-category">Clear credits before you judge a category</h2>
 <p>Once a week, filter credits that are not salary, client pay, or your own transfers. Each one needs a match or a clear income label. This takes a few minutes before you judge a category. A food total that still includes a cancelled order is a bad reason to cut groceries. Show the debit and the credit. The spending number is what remains after the match. Put this check on the same day as your other weekly review.</p>
 <p>At month end, look for refund notes and for credit rows with no category. A blank credit will be misread as income or as a silent reduction. Force a label before you trust the total. Read the category after matches, not before. If a later refund changes last month, add a sentence to that month's header. Do not rebuild the whole month for one credit. Next month's cap should use the net pattern, not a total still carrying a returned spend.</p>
-<h2>Questions people actually ask</h2>
+<h2 id="questions-people-actually-ask">Questions people actually ask</h2>
 <p><strong>Should a refund be categorised as income?</strong> No, unless it is truly income, such as salary or a client payment. A refund is a purchase running backwards. Calling it income makes you look richer while the old debit still overstates spending. Match it to the debit. If you cannot find the debit, label it unmatched and look again next week. Do not park it in salary to force a balance.</p>
 <p><strong>The refund is a rupee or two short. Is it still a match?</strong> Yes if the payee and the timing line up. Note a tiny gap as a fee that was kept. Do not refuse the match over one rupee. A pile of near-matches will still distort the category. If the gap is large, it is a partial refund and the net is still spend. Write both figures in the note.</p>
 <p><strong>Can I edit the original amount and delete the credit?</strong> You may show the net on the original row. Do not drop the credit from history if you want a trail. Mark the credit matched so it does not reduce the total again. Editing the debit and still counting the credit doubles the refund. Use one method only. Say which method in the header.</p>
 <p>Match every refund and reversal to the debit it undoes, and keep that pair out of the loss column. Small credits are easy to miss, which is why <a href="/blog/upi-expense-tracker-stop-losing-small-payments/">small UPI payments</a> are worth a weekly look. The <a href="/features/">Kharch Log features</a> page shows both debits and credits landing in your Sheet. Read unmatched credits before you cut a category.</p>
-      <p><a class="btn" href="/pay/">Get Kharch Log lifetime - ₹149</a>
-      <a class="btn btn--ghost" href="/features/">See features</a></p>
-    </article>
+          <div class="blog-cta">
+            <h2>Ready to track every rupee?</h2>
+            <p>Kharch Log syncs to your Google Sheet. One-time unlock, no subscription.</p>
+            <div class="blog-cta__actions">
+              <a class="btn" href="/pay/" rel="noopener">Get lifetime - ₹149</a>
+              <a class="btn btn--ghost" href="/features/">See features</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
   </main>
   <footer class="site-footer">
     <div class="site-footer__inner">

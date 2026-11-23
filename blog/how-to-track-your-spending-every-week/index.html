@@ -2051,11 +2051,12 @@ border: 1px solid var(--line);
 border-radius: 16px;
 text-decoration: none !important;
 color: inherit;
-transition: transform 0.15s ease, box-shadow 0.15s ease;
+transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1), border-color 0.35s ease, box-shadow 0.4s ease;
 }
 .blog-card:hover {
-transform: translateY(-2px);
-box-shadow: 0 10px 24px rgba(15, 42, 67, 0.1);
+transform: translateY(-8px);
+border-color: rgba(0, 133, 255, 0.35);
+box-shadow: 0 24px 60px rgba(15, 42, 67, 0.12);
 }
 .blog-card__media {
 aspect-ratio: 16 / 9;
@@ -2066,6 +2067,10 @@ overflow: hidden;
 width: 100%;
 height: 100%;
 object-fit: cover;
+transition: transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.blog-card:hover .blog-card__media img {
+transform: scale(1.05);
 }
 .blog-card__body {
 display: grid;
@@ -2101,6 +2106,148 @@ box-shadow: 0 10px 28px rgba(15, 42, 67, 0.1);
 width: 100%;
 aspect-ratio: 16 / 9;
 object-fit: cover;
+}
+.blog-meta {
+display: flex;
+flex-wrap: wrap;
+gap: 0.65rem 1.25rem;
+margin-top: 1rem;
+color: var(--muted);
+font-size: 0.9rem;
+}
+.blog-article-section {
+width: min(var(--max), calc(100% - 40px));
+margin: 0 auto;
+padding-bottom: 48px;
+}
+.blog-layout {
+display: grid;
+grid-template-columns: 220px minmax(0, 1fr);
+gap: 2rem;
+align-items: start;
+}
+.blog-toc {
+position: sticky;
+top: 5.5rem;
+padding: 1rem;
+border: 1px solid var(--line);
+border-radius: 16px;
+background: var(--surface);
+font-size: 0.86rem;
+}
+.blog-toc strong {
+display: block;
+margin-bottom: 0.65rem;
+font-weight: 700;
+}
+.blog-toc ol {
+margin: 0;
+padding-left: 1.1rem;
+color: var(--muted);
+display: grid;
+gap: 0.4rem;
+}
+.blog-toc a {
+color: var(--muted);
+transition: color 0.2s ease;
+}
+.blog-toc a:hover,
+.blog-toc a.is-active {
+color: var(--primary-text);
+font-weight: 700;
+}
+.blog-layout .prose.blog-article {
+max-width: none;
+margin: 0;
+padding: 0;
+}
+img.blog-cover {
+width: 100%;
+aspect-ratio: 16 / 9;
+object-fit: cover;
+border-radius: 18px;
+border: 1px solid var(--line);
+margin: 0 0 1.5rem;
+box-shadow: 0 10px 28px rgba(15, 42, 67, 0.1);
+}
+.blog-article h2 {
+scroll-margin-top: 5.5rem;
+}
+.blog-article h3 {
+font-size: 1.05rem;
+margin: 1.25rem 0 0.45rem;
+letter-spacing: -0.02em;
+}
+.blog-cta {
+margin-top: 2.5rem;
+padding: 1.5rem;
+border-radius: 18px;
+border: 1px solid var(--line);
+background:
+radial-gradient(500px 180px at 10% 0%, rgba(0, 196, 154, 0.14), transparent 60%),
+var(--bg-end);
+}
+.blog-cta h2 {
+margin-top: 0;
+}
+.blog-cta .hero__actions,
+.blog-cta .blog-cta__actions {
+display: flex;
+flex-wrap: wrap;
+gap: 0.75rem;
+margin-top: 1rem;
+}
+.blog-related {
+width: min(var(--max), calc(100% - 40px));
+margin: 0 auto 48px;
+padding-top: 8px;
+}
+.blog-related__title {
+margin: 0 0 1rem;
+font-size: 1.35rem;
+letter-spacing: -0.02em;
+}
+.page-hero:has(+ .blog-article-section) h1,
+.page-hero:has(+ .blog-article-section) > p,
+.page-hero:has(+ .blog-article-section) .blog-meta {
+animation: blog-hero-in 0.55s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+.page-hero:has(+ .blog-article-section) > p {
+animation-delay: 0.08s;
+}
+.page-hero:has(+ .blog-article-section) .blog-meta {
+animation-delay: 0.16s;
+}
+@keyframes blog-hero-in {
+from {
+opacity: 0;
+transform: translateY(14px);
+}
+to {
+opacity: 1;
+transform: none;
+}
+}
+@media (max-width: 900px) {
+.blog-layout {
+grid-template-columns: 1fr;
+}
+.blog-toc {
+position: static;
+}
+}
+@media (prefers-reduced-motion: reduce) {
+.page-hero:has(+ .blog-article-section) h1,
+.page-hero:has(+ .blog-article-section) > p,
+.page-hero:has(+ .blog-article-section) .blog-meta {
+animation: none;
+}
+.blog-card:hover {
+transform: none;
+}
+.blog-card:hover .blog-card__media img {
+transform: none;
+}
 }
 .prose {
 max-width: 720px;
@@ -2744,29 +2891,41 @@ min-height: 42px;
       </nav>
     </div>
   </header>
-  <main id="main">
+    <main id="main">
     <div class="page-hero section" style="width:min(var(--max), calc(100% - 40px));margin:0 auto;">
       <p class="crumbs"><a href="/">Home</a> / <a href="/blog/">Blog</a> / How to track your spending every week (simple system)</p>
       <h1>How to track your spending every week (simple system)</h1>
-      <p class="blog-card__date">2026-08-29</p>
       <p>A simple weekly system to track your spending: capture daily, categorize, review once a week, and adjust. Built for busy people who abandon complex budgets.</p>
-    </div>
-        <div class="section blog-cover-wrap">
-      <div class="blog-cover">
-        <img src="/images/blog/how-to-track-your-spending-every-week-960.webp" srcset="/images/blog/how-to-track-your-spending-every-week-480.webp 480w, /images/blog/how-to-track-your-spending-every-week-960.webp 960w, /images/blog/how-to-track-your-spending-every-week-1350.webp 1350w" sizes="(max-width: 760px) 92vw, 760px" decoding="async" alt="" width="1200" height="675" />
+      <div class="blog-meta">
+        <span>Last updated: <time datetime="2026-08-29">29 August 2026</time></span>
+        <span>Written by Kharch Log</span>
+        <span>Expert written and reviewed</span>
       </div>
     </div>
-    <article class="prose">
-
+    <section class="section blog-article-section">
+      <div class="blog-layout">
+          <aside class="blog-toc" aria-label="Table of contents">
+            <strong>Table of contents</strong>
+            <ol>
+              <li><a href="#step-1-capture-the-same-day">Step 1 - Capture the same day</a></li>
+              <li><a href="#step-2-use-fewer-categories">Step 2 - Use fewer categories</a></li>
+              <li><a href="#step-3-one-15-minute-weekly-review">Step 3 - One 15-minute weekly review</a></li>
+              <li><a href="#step-4-adjust-one-lever-only">Step 4 - Adjust one lever only</a></li>
+              <li><a href="#where-automation-helps">Where automation helps</a></li>
+              <li><a href="#tools-that-match-this-workflow">Tools that match this workflow</a></li>
+            </ol>
+          </aside>
+        <article class="prose blog-article">
+          <img class="blog-cover" src="/images/blog/how-to-track-your-spending-every-week-960.webp" srcset="/images/blog/how-to-track-your-spending-every-week-480.webp 480w, /images/blog/how-to-track-your-spending-every-week-960.webp 960w, /images/blog/how-to-track-your-spending-every-week-1350.webp 1350w" sizes="(max-width: 760px) 92vw, 760px" decoding="async" alt="" width="1200" height="675" />
 <p>Most budgeting advice fails for one reason: the system is heavier than the habit. Money guides (the "track your spending first" approach) are right - you cannot cut what you never measure. Here's a lightweight weekly loop that works with any <strong>spending tracker</strong> or spreadsheet.</p>
 
-<h2>Step 1 - Capture the same day</h2>
+<h2 id="step-1-capture-the-same-day">Step 1 - Capture the same day</h2>
 <p>Use a <strong>daily expense tracker</strong> habit: log while the purchase is fresh. Manual entry, voice note, or SMS auto-capture all count. Waiting until Sunday turns tracking into archaeology.</p>
 
-<h2>Step 2 - Use fewer categories</h2>
+<h2 id="step-2-use-fewer-categories">Step 2 - Use fewer categories</h2>
 <p>Start with 6-8 buckets: food, travel, bills, shopping, health, entertainment, other, income. You can refine later. Over-tagging kills consistency.</p>
 
-<h2>Step 3 - One 15-minute weekly review</h2>
+<h2 id="step-3-one-15-minute-weekly-review">Step 3 - One 15-minute weekly review</h2>
 <p>Pick a fixed slot (Sunday evening or Monday morning). Ask:</p>
 <ul>
   <li>What were the top 3 spends?</li>
@@ -2775,13 +2934,13 @@ min-height: 42px;
   <li>What one change next week?</li>
 </ul>
 
-<h2>Step 4 - Adjust one lever only</h2>
+<h2 id="step-4-adjust-one-lever-only">Step 4 - Adjust one lever only</h2>
 <p>Don't rebuild your whole budget every week. Change one thing: food delivery limit, fuel cap, or a "no spend" weekday. Small levers compound.</p>
 
-<h2>Where automation helps</h2>
+<h2 id="where-automation-helps">Where automation helps</h2>
 <p>If your bank already texts you, SMS parsing can fill the log while you stay in control with a review inbox. Prefer privacy? Manual + voice still complete the weekly system. Amounts work in any currency.</p>
 
-<h2>Tools that match this workflow</h2>
+<h2 id="tools-that-match-this-workflow">Tools that match this workflow</h2>
 <ul>
   <li>Phone app for capture (Kharch Log's model: fast log  ->  SMS auto-capture  ->  Sheet)</li>
   <li>Google Sheet for history, pivots, and sharing with a partner</li>
@@ -2789,8 +2948,17 @@ min-height: 42px;
 </ul>
 
 <p>Explore <a href="/features/reports-insights/">today &amp; reports</a> and <a href="/blog/daily-expense-tracker-habits/">daily habits that stick</a>.</p>
-
-    </article>
+          <div class="blog-cta">
+            <h2>Ready to track every rupee?</h2>
+            <p>Kharch Log syncs to your Google Sheet. One-time unlock, no subscription.</p>
+            <div class="blog-cta__actions">
+              <a class="btn" href="/pay/" rel="noopener">Get lifetime - ₹149</a>
+              <a class="btn btn--ghost" href="/features/">See features</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
   </main>
   <footer class="site-footer">
     <div class="site-footer__inner">

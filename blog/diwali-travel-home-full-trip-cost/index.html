@@ -2050,11 +2050,12 @@ border: 1px solid var(--line);
 border-radius: 16px;
 text-decoration: none !important;
 color: inherit;
-transition: transform 0.15s ease, box-shadow 0.15s ease;
+transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1), border-color 0.35s ease, box-shadow 0.4s ease;
 }
 .blog-card:hover {
-transform: translateY(-2px);
-box-shadow: 0 10px 24px rgba(15, 42, 67, 0.1);
+transform: translateY(-8px);
+border-color: rgba(0, 133, 255, 0.35);
+box-shadow: 0 24px 60px rgba(15, 42, 67, 0.12);
 }
 .blog-card__media {
 aspect-ratio: 16 / 9;
@@ -2065,6 +2066,10 @@ overflow: hidden;
 width: 100%;
 height: 100%;
 object-fit: cover;
+transition: transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.blog-card:hover .blog-card__media img {
+transform: scale(1.05);
 }
 .blog-card__body {
 display: grid;
@@ -2100,6 +2105,148 @@ box-shadow: 0 10px 28px rgba(15, 42, 67, 0.1);
 width: 100%;
 aspect-ratio: 16 / 9;
 object-fit: cover;
+}
+.blog-meta {
+display: flex;
+flex-wrap: wrap;
+gap: 0.65rem 1.25rem;
+margin-top: 1rem;
+color: var(--muted);
+font-size: 0.9rem;
+}
+.blog-article-section {
+width: min(var(--max), calc(100% - 40px));
+margin: 0 auto;
+padding-bottom: 48px;
+}
+.blog-layout {
+display: grid;
+grid-template-columns: 220px minmax(0, 1fr);
+gap: 2rem;
+align-items: start;
+}
+.blog-toc {
+position: sticky;
+top: 5.5rem;
+padding: 1rem;
+border: 1px solid var(--line);
+border-radius: 16px;
+background: var(--surface);
+font-size: 0.86rem;
+}
+.blog-toc strong {
+display: block;
+margin-bottom: 0.65rem;
+font-weight: 700;
+}
+.blog-toc ol {
+margin: 0;
+padding-left: 1.1rem;
+color: var(--muted);
+display: grid;
+gap: 0.4rem;
+}
+.blog-toc a {
+color: var(--muted);
+transition: color 0.2s ease;
+}
+.blog-toc a:hover,
+.blog-toc a.is-active {
+color: var(--primary-text);
+font-weight: 700;
+}
+.blog-layout .prose.blog-article {
+max-width: none;
+margin: 0;
+padding: 0;
+}
+img.blog-cover {
+width: 100%;
+aspect-ratio: 16 / 9;
+object-fit: cover;
+border-radius: 18px;
+border: 1px solid var(--line);
+margin: 0 0 1.5rem;
+box-shadow: 0 10px 28px rgba(15, 42, 67, 0.1);
+}
+.blog-article h2 {
+scroll-margin-top: 5.5rem;
+}
+.blog-article h3 {
+font-size: 1.05rem;
+margin: 1.25rem 0 0.45rem;
+letter-spacing: -0.02em;
+}
+.blog-cta {
+margin-top: 2.5rem;
+padding: 1.5rem;
+border-radius: 18px;
+border: 1px solid var(--line);
+background:
+radial-gradient(500px 180px at 10% 0%, rgba(0, 196, 154, 0.14), transparent 60%),
+var(--bg-end);
+}
+.blog-cta h2 {
+margin-top: 0;
+}
+.blog-cta .hero__actions,
+.blog-cta .blog-cta__actions {
+display: flex;
+flex-wrap: wrap;
+gap: 0.75rem;
+margin-top: 1rem;
+}
+.blog-related {
+width: min(var(--max), calc(100% - 40px));
+margin: 0 auto 48px;
+padding-top: 8px;
+}
+.blog-related__title {
+margin: 0 0 1rem;
+font-size: 1.35rem;
+letter-spacing: -0.02em;
+}
+.page-hero:has(+ .blog-article-section) h1,
+.page-hero:has(+ .blog-article-section) > p,
+.page-hero:has(+ .blog-article-section) .blog-meta {
+animation: blog-hero-in 0.55s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+.page-hero:has(+ .blog-article-section) > p {
+animation-delay: 0.08s;
+}
+.page-hero:has(+ .blog-article-section) .blog-meta {
+animation-delay: 0.16s;
+}
+@keyframes blog-hero-in {
+from {
+opacity: 0;
+transform: translateY(14px);
+}
+to {
+opacity: 1;
+transform: none;
+}
+}
+@media (max-width: 900px) {
+.blog-layout {
+grid-template-columns: 1fr;
+}
+.blog-toc {
+position: static;
+}
+}
+@media (prefers-reduced-motion: reduce) {
+.page-hero:has(+ .blog-article-section) h1,
+.page-hero:has(+ .blog-article-section) > p,
+.page-hero:has(+ .blog-article-section) .blog-meta {
+animation: none;
+}
+.blog-card:hover {
+transform: none;
+}
+.blog-card:hover .blog-card__media img {
+transform: none;
+}
 }
 .prose {
 max-width: 720px;
@@ -2732,17 +2879,34 @@ min-height: 42px;
       </nav>
     </div>
   </header>
-  <main id="main">
+    <main id="main">
     <div class="page-hero section" style="width:min(var(--max), calc(100% - 40px));margin:0 auto;">
       <p class="crumbs"><a href="/">Home</a> / <a href="/blog/">Blog</a> / Diwali travel home: ticket, cab, food, and the quiet extras</p>
       <h1>Diwali travel home: ticket, cab, food, and the quiet extras</h1>
-      <p class="blog-card__date">2026-11-06</p>
       <p>The IRCTC SMS is not the trip cost. Tag every Diwali travel debit with one trip name in Kharch Log and sum it when you return.</p>
+      <div class="blog-meta">
+        <span>Last updated: <time datetime="2026-11-06">6 November 2026</time></span>
+        <span>Written by Kharch Log</span>
+        <span>Expert written and reviewed</span>
+      </div>
     </div>
-    <article class="section prose" style="max-width:720px;margin:0 auto 48px;padding:0 20px;">
-<figure class="prose-figure"><img src="/images/blog/diwali-travel-home-full-trip-cost-960.webp" srcset="/images/blog/diwali-travel-home-full-trip-cost-480.webp 480w, /images/blog/diwali-travel-home-full-trip-cost-960.webp 960w, /images/blog/diwali-travel-home-full-trip-cost-1400.webp 1400w" sizes="(max-width: 760px) 92vw, 760px" decoding="async" alt="Diwali travel home: ticket, cab, food, and the quiet extras" width="1400" height="900" /></figure>
+    <section class="section blog-article-section">
+      <div class="blog-layout">
+          <aside class="blog-toc" aria-label="Table of contents">
+            <strong>Table of contents</strong>
+            <ol>
+              <li><a href="#one-trip-tag">One trip tag</a></li>
+              <li><a href="#gifts-travelling-with-you">Gifts travelling with you</a></li>
+              <li><a href="#return-journey">Return journey</a></li>
+              <li><a href="#after-you-return">After you return</a></li>
+              <li><a href="#a-practical-checklist-you-can-reuse">A practical checklist you can reuse</a></li>
+              <li><a href="#questions-people-actually-ask">Questions people actually ask</a></li>
+            </ol>
+          </aside>
+        <article class="prose blog-article">
+          <img class="blog-cover" src="/images/blog/diwali-travel-home-full-trip-cost-960.webp" srcset="/images/blog/diwali-travel-home-full-trip-cost-480.webp 480w, /images/blog/diwali-travel-home-full-trip-cost-960.webp 960w, /images/blog/diwali-travel-home-full-trip-cost-1400.webp 1400w" sizes="(max-width: 760px) 92vw, 760px" decoding="async" alt="Diwali travel home: ticket, cab, food, and the quiet extras" width="1400" height="900" />
 <p>Going home for Diwali usually starts with a train or flight SMS people remember, then continues with autos, platform food, a last-minute bedsheet for the sleeper, and gifts stuffed into the luggage. If only the ticket sits in your mental budget, the trip always surprises you. In the Google Sheet, tag every related debit with the same trip name and read the filter when you are back.</p>
-<h2>One trip tag</h2>
+<h2 id="one-trip-tag">One trip tag</h2>
 <p>Pick a short tag like Diwali-Home-2026 and put it in the note or a dedicated column for ticket, cab, meals on the way, and return. Do not invent five synonyms. Consistency makes the sum possible.</p>
 <p>Bookings for parents paid by you belong in the same tag if they are your spend. If they refund you, mark repayable.</p>
 <ul>
@@ -2751,16 +2915,16 @@ min-height: 42px;
 <li>Food on the way</li>
 <li>Emergency purchases tied to the journey</li>
 </ul>
-<h2>Gifts travelling with you</h2>
+<h2 id="gifts-travelling-with-you">Gifts travelling with you</h2>
 <p>Sweets bought for home can be Gifts with the trip tag, or Travel with a gift note. Choose one. Splitting without a tag hides the trip total.</p>
 <p>Kharch Log SMS rows plus manual cash for coolies or platform vendors fill the gaps.</p>
-<h2>Return journey</h2>
+<h2 id="return-journey">Return journey</h2>
 <p>Return tickets often post on a different day. Same tag. When both legs exist, the filter is the real travel cost.</p>
 <p>If cancellation refunds arrive later, match them to the tag so the trip does not stay artificially expensive.</p>
-<h2>After you return</h2>
+<h2 id="after-you-return">After you return</h2>
 <p>Sum the tag once. Write it next to what you guessed before booking. That gap teaches next year more than any tip article.</p>
 <p>See <a href="/blog/train-flight-and-hotel-upi-trip-cost/">trip cost tracking</a>.</p>
-<h2>A practical checklist you can reuse</h2>
+<h2 id="a-practical-checklist-you-can-reuse">A practical checklist you can reuse</h2>
 <p>Re-open this page the next time the same situation appears. The checklist under Diwali travel home: ticket, cab, food, and the quiet extras is meant to be boring on purpose: same order, same names, same place on the disk or in the Sheet. Boring is how you avoid a second scramble. Write the date you last followed the steps in a note at the top of the folder or the month tab, so you know whether the pack is fresh.</p>
 <p>If two people share the work, put one name as owner for diwali travel home full trip cost. Two owners without a rule create two half-finished packs. Keep originals when you merge or categorise, and only send the cleaned pack outward. That habit survives busy weeks better than a perfect system you abandon.</p>
 <p>When a portal, a CA, or a family member asks for one item, send that item. Do not forward the whole archive. Smaller sends are easier to verify and safer when the file carries personal numbers. After they confirm, you still keep your own copy where you can find it without searching chat history.</p>
@@ -2770,15 +2934,23 @@ min-height: 42px;
 <li>Originals kept, cleaned pack sent outward</li>
 <li>Date stamp on the folder or month tab</li>
 </ul>
-<h2>Questions people actually ask</h2>
+<h2 id="questions-people-actually-ask">Questions people actually ask</h2>
 <p><strong>Flight was paid by office.</strong> If it never hit your account, do not invent a debit. If it hit and will be reimbursed, mark repayable.</p>
 <p><strong>I drove and paid only tolls and fuel.</strong> Tag those rows. Fuel without a trip tag disappears into monthly petrol noise.</p>
 <p><strong>Multiple cities in one Diwali break.</strong> One tag still works if it is one budget. Or use Home and Friends as two tags if you need split totals.</p>
 <p><strong>How often should I repeat this cleanup?</strong> Repeat when the season or the deadline returns, not every idle evening. A dated pack or a dated Sheet total is enough to know you are current.</p>
 <p>Ticket plus everything else is the trip. Tag it in <a href="/features/">Kharch Log</a>.</p>
-      <p><a class="btn" href="/pay/">Get Kharch Log lifetime - ₹149</a>
-      <a class="btn btn--ghost" href="/features/">See features</a></p>
-    </article>
+          <div class="blog-cta">
+            <h2>Ready to track every rupee?</h2>
+            <p>Kharch Log syncs to your Google Sheet. One-time unlock, no subscription.</p>
+            <div class="blog-cta__actions">
+              <a class="btn" href="/pay/" rel="noopener">Get lifetime - ₹149</a>
+              <a class="btn btn--ghost" href="/features/">See features</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
   </main>
   <footer class="site-footer">
     <div class="site-footer__inner">

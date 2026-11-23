@@ -2050,11 +2050,12 @@ border: 1px solid var(--line);
 border-radius: 16px;
 text-decoration: none !important;
 color: inherit;
-transition: transform 0.15s ease, box-shadow 0.15s ease;
+transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1), border-color 0.35s ease, box-shadow 0.4s ease;
 }
 .blog-card:hover {
-transform: translateY(-2px);
-box-shadow: 0 10px 24px rgba(15, 42, 67, 0.1);
+transform: translateY(-8px);
+border-color: rgba(0, 133, 255, 0.35);
+box-shadow: 0 24px 60px rgba(15, 42, 67, 0.12);
 }
 .blog-card__media {
 aspect-ratio: 16 / 9;
@@ -2065,6 +2066,10 @@ overflow: hidden;
 width: 100%;
 height: 100%;
 object-fit: cover;
+transition: transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.blog-card:hover .blog-card__media img {
+transform: scale(1.05);
 }
 .blog-card__body {
 display: grid;
@@ -2100,6 +2105,148 @@ box-shadow: 0 10px 28px rgba(15, 42, 67, 0.1);
 width: 100%;
 aspect-ratio: 16 / 9;
 object-fit: cover;
+}
+.blog-meta {
+display: flex;
+flex-wrap: wrap;
+gap: 0.65rem 1.25rem;
+margin-top: 1rem;
+color: var(--muted);
+font-size: 0.9rem;
+}
+.blog-article-section {
+width: min(var(--max), calc(100% - 40px));
+margin: 0 auto;
+padding-bottom: 48px;
+}
+.blog-layout {
+display: grid;
+grid-template-columns: 220px minmax(0, 1fr);
+gap: 2rem;
+align-items: start;
+}
+.blog-toc {
+position: sticky;
+top: 5.5rem;
+padding: 1rem;
+border: 1px solid var(--line);
+border-radius: 16px;
+background: var(--surface);
+font-size: 0.86rem;
+}
+.blog-toc strong {
+display: block;
+margin-bottom: 0.65rem;
+font-weight: 700;
+}
+.blog-toc ol {
+margin: 0;
+padding-left: 1.1rem;
+color: var(--muted);
+display: grid;
+gap: 0.4rem;
+}
+.blog-toc a {
+color: var(--muted);
+transition: color 0.2s ease;
+}
+.blog-toc a:hover,
+.blog-toc a.is-active {
+color: var(--primary-text);
+font-weight: 700;
+}
+.blog-layout .prose.blog-article {
+max-width: none;
+margin: 0;
+padding: 0;
+}
+img.blog-cover {
+width: 100%;
+aspect-ratio: 16 / 9;
+object-fit: cover;
+border-radius: 18px;
+border: 1px solid var(--line);
+margin: 0 0 1.5rem;
+box-shadow: 0 10px 28px rgba(15, 42, 67, 0.1);
+}
+.blog-article h2 {
+scroll-margin-top: 5.5rem;
+}
+.blog-article h3 {
+font-size: 1.05rem;
+margin: 1.25rem 0 0.45rem;
+letter-spacing: -0.02em;
+}
+.blog-cta {
+margin-top: 2.5rem;
+padding: 1.5rem;
+border-radius: 18px;
+border: 1px solid var(--line);
+background:
+radial-gradient(500px 180px at 10% 0%, rgba(0, 196, 154, 0.14), transparent 60%),
+var(--bg-end);
+}
+.blog-cta h2 {
+margin-top: 0;
+}
+.blog-cta .hero__actions,
+.blog-cta .blog-cta__actions {
+display: flex;
+flex-wrap: wrap;
+gap: 0.75rem;
+margin-top: 1rem;
+}
+.blog-related {
+width: min(var(--max), calc(100% - 40px));
+margin: 0 auto 48px;
+padding-top: 8px;
+}
+.blog-related__title {
+margin: 0 0 1rem;
+font-size: 1.35rem;
+letter-spacing: -0.02em;
+}
+.page-hero:has(+ .blog-article-section) h1,
+.page-hero:has(+ .blog-article-section) > p,
+.page-hero:has(+ .blog-article-section) .blog-meta {
+animation: blog-hero-in 0.55s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+.page-hero:has(+ .blog-article-section) > p {
+animation-delay: 0.08s;
+}
+.page-hero:has(+ .blog-article-section) .blog-meta {
+animation-delay: 0.16s;
+}
+@keyframes blog-hero-in {
+from {
+opacity: 0;
+transform: translateY(14px);
+}
+to {
+opacity: 1;
+transform: none;
+}
+}
+@media (max-width: 900px) {
+.blog-layout {
+grid-template-columns: 1fr;
+}
+.blog-toc {
+position: static;
+}
+}
+@media (prefers-reduced-motion: reduce) {
+.page-hero:has(+ .blog-article-section) h1,
+.page-hero:has(+ .blog-article-section) > p,
+.page-hero:has(+ .blog-article-section) .blog-meta {
+animation: none;
+}
+.blog-card:hover {
+transform: none;
+}
+.blog-card:hover .blog-card__media img {
+transform: none;
+}
 }
 .prose {
 max-width: 720px;
@@ -2732,17 +2879,33 @@ min-height: 42px;
       </nav>
     </div>
   </header>
-  <main id="main">
+    <main id="main">
     <div class="page-hero section" style="width:min(var(--max), calc(100% - 40px));margin:0 auto;">
       <p class="crumbs"><a href="/">Home</a> / <a href="/blog/">Blog</a> / Kirana cash plus UPI: keep one grocery ledger</p>
       <h1>Kirana cash plus UPI: keep one grocery ledger</h1>
-      <p class="blog-card__date">2026-09-21</p>
       <p>The neighbourhood shop often takes notes for loose items and UPI for the rest. Log both in the same Google Sheet so the monthly grocery number is real.</p>
+      <div class="blog-meta">
+        <span>Last updated: <time datetime="2026-09-21">21 September 2026</time></span>
+        <span>Written by Kharch Log</span>
+        <span>Expert written and reviewed</span>
+      </div>
     </div>
-    <article class="section prose" style="max-width:720px;margin:0 auto 48px;padding:0 20px;">
-<figure class="prose-figure"><img src="/images/blog/kirana-cash-plus-upi-same-ledger-960.webp" srcset="/images/blog/kirana-cash-plus-upi-same-ledger-480.webp 480w, /images/blog/kirana-cash-plus-upi-same-ledger-960.webp 960w, /images/blog/kirana-cash-plus-upi-same-ledger-1400.webp 1400w" sizes="(max-width: 760px) 92vw, 760px" decoding="async" alt="Kirana cash plus UPI: keep one grocery ledger" width="1400" height="900" /></figure>
+    <section class="section blog-article-section">
+      <div class="blog-layout">
+          <aside class="blog-toc" aria-label="Table of contents">
+            <strong>Table of contents</strong>
+            <ol>
+              <li><a href="#treat-one-shop-visit-as-one-visit">Treat one shop visit as one visit</a></li>
+              <li><a href="#do-not-let-the-shop-vanish-into-misc">Do not let the shop vanish into misc</a></li>
+              <li><a href="#build-a-weekly-grocery-number">Build a weekly grocery number</a></li>
+              <li><a href="#close-the-month-with-one-food-number">Close the month with one food number</a></li>
+              <li><a href="#questions-people-actually-ask">Questions people actually ask</a></li>
+            </ol>
+          </aside>
+        <article class="prose blog-article">
+          <img class="blog-cover" src="/images/blog/kirana-cash-plus-upi-same-ledger-960.webp" srcset="/images/blog/kirana-cash-plus-upi-same-ledger-480.webp 480w, /images/blog/kirana-cash-plus-upi-same-ledger-960.webp 960w, /images/blog/kirana-cash-plus-upi-same-ledger-1400.webp 1400w" sizes="(max-width: 760px) 92vw, 760px" decoding="async" alt="Kirana cash plus UPI: keep one grocery ledger" width="1400" height="900" />
 <p>A kirana bill is often two payments pretending to be one. You tap UPI for the branded packet and hand over notes for eggs, loose dal, or the balance the QR would not take. The bank SMS records only the tap. By month end the Sheet looks like you spent less on food than you did, and the missing cash is a mystery. Kharch Log can file the UPI half from the SMS on your Android phone, with no bank login. The cash half is a row you add the same evening. One ledger, one grocery total, in a Google Sheet you own.</p>
-<h2>Treat one shop visit as one visit</h2>
+<h2 id="treat-one-shop-visit-as-one-visit">Treat one shop visit as one visit</h2>
 <p>When you get home, write the cash amount next to the UPI row, or as its own row with the same date and the shop name. Use the category Groceries for both. If the cash paid for a broom or a bulb, put that part in household, not food. The UPI SMS may show a person's name, because many shops use a personal QR. That name is your payee. Add the shop name in the note or you will not recognise it in a filter. Do this for the main kirana, not for every ₹20 biscuit, unless those biscuits are the leak you are chasing.</p>
 <p>Keep a tiny note on the phone for the cash figure if you cannot open the Sheet in the shop. A scribble that says 340 cash, Lakshmi stores, milk and eggs is enough. Enter it before you sleep. Next morning is when people round ₹340 down to nothing. If you round, you will understate groceries by a few thousand rupees a month and then blame the salary. Kharch Log does not see cash. You type it. The UPI half should already be in the Sheet from the SMS, so you are only adding the gap, not the whole bill.</p>
 <ul>
@@ -2751,10 +2914,10 @@ min-height: 42px;
 <li>Write the real shop name when the QR shows a person</li>
 <li>Type the cash before you sleep, not next week</li>
 </ul>
-<h2>Do not let the shop vanish into misc</h2>
+<h2 id="do-not-let-the-shop-vanish-into-misc">Do not let the shop vanish into misc</h2>
 <p>Personal QR names look like transfers to friends. If you leave them uncategorised, the grocery total is a fiction and misc becomes your largest category. The first time you see a new name, label it Groceries and put the shop in the note. The next SMS with the same payee is easier to spot. Some shops change the QR name when a family member's account is used. When the amount and the day match your visit, trust the visit, not the string. A wrong label once is fine. A wrong label all month hides the real food bill.</p>
 <p>Split the visit if it mixed food with something else. A gas lighter, a soap stack, or school pencils should not inflate groceries, or you will cut vegetables when the real rise was household. You do not need paisa-level splits. Two rows, food and non-food, matching the cash plus UPI total, are enough. If you only remember one number, put it all in groceries and fix the obvious non-food items on Sunday. Perfect books that you abandon are worse than a slightly mixed row you actually keep. The Expense tracker is the Sheet you still open.</p>
-<h2>Build a weekly grocery number</h2>
+<h2 id="build-a-weekly-grocery-number">Build a weekly grocery number</h2>
 <p>Once a week, filter Groceries and add UPI plus the cash rows you typed. Compare that with last week before you decide the shop has become expensive. A festival week or a month of guests will jump. A quiet week should fall. If it never falls, the cash rows are missing or the personal QR is still in misc. This check takes five minutes if the categories are already set. People who only watch the bank balance never see this split, because the balance hides cash that already left the house. The Sheet is where both halves sit together.</p>
 <p>Set a grocery cap that includes cash, or the cap is a joke. If you plan ₹8,000 and only ₹5,000 shows in SMS, you may think you have ₹3,000 left and then spend it, while the cash already took it. Write the cap in the header cell. When the running total crosses it, the next shop visit is a shorter list, not a new app. Prices move, so revise the cap when your household size changes, not every time onions spike for a week. A cap you never edit becomes superstition. A cap you edit daily is not a cap.</p>
 <ul>
@@ -2763,17 +2926,25 @@ min-height: 42px;
 <li>Revise the cap when the household changes, not on one pricey week</li>
 <li>If the weekly total never falls, a cash row is missing</li>
 </ul>
-<h2>Close the month with one food number</h2>
+<h2 id="close-the-month-with-one-food-number">Close the month with one food number</h2>
 <p>At month end, sum Groceries. That number is atta, milk, vegetables, and the cash you remembered to type. It is not Swiggy. Keep delivery in its own category or the kirana will be blamed for weekends. If you want one food number for the household, add the two categories in a cell, but do not merge the rows. Merged rows make it impossible to see which habit to change. The kirana total is the one you can lower with a list. Delivery is a different decision, made on your sofa.</p>
 <p>If a week of cash was never typed, do not invent a precise figure. Add one row called cash estimate, with the range you believe, and a note that it is approximate. Then start the same-evening habit tomorrow. An estimate labelled as an estimate is honest. A blank month is a lie that flatters you. Over a few months the typed cash share becomes obvious, often a quarter or more of the shop. That is the amount your bank app will never show. The Google Sheet will, because you put it there. Kharch Log keeps the UPI side automatic so the manual side stays small.</p>
-<h2>Questions people actually ask</h2>
+<h2 id="questions-people-actually-ask">Questions people actually ask</h2>
 <p><strong>Should I photograph every kirana bill?</strong> No. The row needs amount, date, shop, and category. A photo does not add itself up. Type from the bill the same evening if the shop wrote one, then you can recycle the paper. The UPI part is already in the Sheet from the bank SMS. Cash has no SMS, so the amount you type is the record that matters.</p>
 <p><strong>What if the shop keeps a monthly khata?</strong> Some neighbourhood shops let you run a tab and clear it by UPI at month end. Log the clearing UPI as groceries, and note the period it covers. Do not also invent daily rows for the same goods or you will double the month. If you want daily control, write rough daily notes and then reduce them when the clearing payment hits. The Sheet should show the goods once.</p>
 <p><strong>Is small cash at the shop worth typing?</strong> Yes when the small notes are daily. ₹80 of eggs and vegetables feels tiny and becomes ₹2,400 in a month, which is enough to miss a bill. Track the main shop every visit. Ignore a rare ₹10 mint. The test is whether you would be surprised by the monthly sum. If you would, type it. The Expense tracker cannot guess notes in your pocket.</p>
 <p>Add cash to the same grocery category as the shop UPI, or the month will flatter you. Categories that match an Indian household are covered in the <a href="/blog/expense-categories-indian-household/">household categories guide</a>. The <a href="/features/">Kharch Log features</a> page explains SMS capture into your Sheet. Review the grocery filter once a week, then shorten the next list if the cap is gone.</p>
-      <p><a class="btn" href="/pay/">Get Kharch Log lifetime - ₹149</a>
-      <a class="btn btn--ghost" href="/features/">See features</a></p>
-    </article>
+          <div class="blog-cta">
+            <h2>Ready to track every rupee?</h2>
+            <p>Kharch Log syncs to your Google Sheet. One-time unlock, no subscription.</p>
+            <div class="blog-cta__actions">
+              <a class="btn" href="/pay/" rel="noopener">Get lifetime - ₹149</a>
+              <a class="btn btn--ghost" href="/features/">See features</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
   </main>
   <footer class="site-footer">
     <div class="site-footer__inner">

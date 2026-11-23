@@ -2050,11 +2050,12 @@ border: 1px solid var(--line);
 border-radius: 16px;
 text-decoration: none !important;
 color: inherit;
-transition: transform 0.15s ease, box-shadow 0.15s ease;
+transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1), border-color 0.35s ease, box-shadow 0.4s ease;
 }
 .blog-card:hover {
-transform: translateY(-2px);
-box-shadow: 0 10px 24px rgba(15, 42, 67, 0.1);
+transform: translateY(-8px);
+border-color: rgba(0, 133, 255, 0.35);
+box-shadow: 0 24px 60px rgba(15, 42, 67, 0.12);
 }
 .blog-card__media {
 aspect-ratio: 16 / 9;
@@ -2065,6 +2066,10 @@ overflow: hidden;
 width: 100%;
 height: 100%;
 object-fit: cover;
+transition: transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.blog-card:hover .blog-card__media img {
+transform: scale(1.05);
 }
 .blog-card__body {
 display: grid;
@@ -2100,6 +2105,148 @@ box-shadow: 0 10px 28px rgba(15, 42, 67, 0.1);
 width: 100%;
 aspect-ratio: 16 / 9;
 object-fit: cover;
+}
+.blog-meta {
+display: flex;
+flex-wrap: wrap;
+gap: 0.65rem 1.25rem;
+margin-top: 1rem;
+color: var(--muted);
+font-size: 0.9rem;
+}
+.blog-article-section {
+width: min(var(--max), calc(100% - 40px));
+margin: 0 auto;
+padding-bottom: 48px;
+}
+.blog-layout {
+display: grid;
+grid-template-columns: 220px minmax(0, 1fr);
+gap: 2rem;
+align-items: start;
+}
+.blog-toc {
+position: sticky;
+top: 5.5rem;
+padding: 1rem;
+border: 1px solid var(--line);
+border-radius: 16px;
+background: var(--surface);
+font-size: 0.86rem;
+}
+.blog-toc strong {
+display: block;
+margin-bottom: 0.65rem;
+font-weight: 700;
+}
+.blog-toc ol {
+margin: 0;
+padding-left: 1.1rem;
+color: var(--muted);
+display: grid;
+gap: 0.4rem;
+}
+.blog-toc a {
+color: var(--muted);
+transition: color 0.2s ease;
+}
+.blog-toc a:hover,
+.blog-toc a.is-active {
+color: var(--primary-text);
+font-weight: 700;
+}
+.blog-layout .prose.blog-article {
+max-width: none;
+margin: 0;
+padding: 0;
+}
+img.blog-cover {
+width: 100%;
+aspect-ratio: 16 / 9;
+object-fit: cover;
+border-radius: 18px;
+border: 1px solid var(--line);
+margin: 0 0 1.5rem;
+box-shadow: 0 10px 28px rgba(15, 42, 67, 0.1);
+}
+.blog-article h2 {
+scroll-margin-top: 5.5rem;
+}
+.blog-article h3 {
+font-size: 1.05rem;
+margin: 1.25rem 0 0.45rem;
+letter-spacing: -0.02em;
+}
+.blog-cta {
+margin-top: 2.5rem;
+padding: 1.5rem;
+border-radius: 18px;
+border: 1px solid var(--line);
+background:
+radial-gradient(500px 180px at 10% 0%, rgba(0, 196, 154, 0.14), transparent 60%),
+var(--bg-end);
+}
+.blog-cta h2 {
+margin-top: 0;
+}
+.blog-cta .hero__actions,
+.blog-cta .blog-cta__actions {
+display: flex;
+flex-wrap: wrap;
+gap: 0.75rem;
+margin-top: 1rem;
+}
+.blog-related {
+width: min(var(--max), calc(100% - 40px));
+margin: 0 auto 48px;
+padding-top: 8px;
+}
+.blog-related__title {
+margin: 0 0 1rem;
+font-size: 1.35rem;
+letter-spacing: -0.02em;
+}
+.page-hero:has(+ .blog-article-section) h1,
+.page-hero:has(+ .blog-article-section) > p,
+.page-hero:has(+ .blog-article-section) .blog-meta {
+animation: blog-hero-in 0.55s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+.page-hero:has(+ .blog-article-section) > p {
+animation-delay: 0.08s;
+}
+.page-hero:has(+ .blog-article-section) .blog-meta {
+animation-delay: 0.16s;
+}
+@keyframes blog-hero-in {
+from {
+opacity: 0;
+transform: translateY(14px);
+}
+to {
+opacity: 1;
+transform: none;
+}
+}
+@media (max-width: 900px) {
+.blog-layout {
+grid-template-columns: 1fr;
+}
+.blog-toc {
+position: static;
+}
+}
+@media (prefers-reduced-motion: reduce) {
+.page-hero:has(+ .blog-article-section) h1,
+.page-hero:has(+ .blog-article-section) > p,
+.page-hero:has(+ .blog-article-section) .blog-meta {
+animation: none;
+}
+.blog-card:hover {
+transform: none;
+}
+.blog-card:hover .blog-card__media img {
+transform: none;
+}
 }
 .prose {
 max-width: 720px;
@@ -2732,17 +2879,33 @@ min-height: 42px;
       </nav>
     </div>
   </header>
-  <main id="main">
+    <main id="main">
     <div class="page-hero section" style="width:min(var(--max), calc(100% - 40px));margin:0 auto;">
       <p class="crumbs"><a href="/">Home</a> / <a href="/blog/">Blog</a> / Money sent to parents each month: how to record it</p>
       <h1>Money sent to parents each month: how to record it</h1>
-      <p class="blog-card__date">2026-09-29</p>
       <p>A monthly transfer home is a real outflow. Give it a family category in your Google Sheet so extras do not hide inside misc or become the new regular amount.</p>
+      <div class="blog-meta">
+        <span>Last updated: <time datetime="2026-09-29">29 September 2026</time></span>
+        <span>Written by Kharch Log</span>
+        <span>Expert written and reviewed</span>
+      </div>
     </div>
-    <article class="section prose" style="max-width:720px;margin:0 auto 48px;padding:0 20px;">
-<figure class="prose-figure"><img src="/images/blog/money-sent-to-parents-each-month-960.webp" srcset="/images/blog/money-sent-to-parents-each-month-480.webp 480w, /images/blog/money-sent-to-parents-each-month-960.webp 960w, /images/blog/money-sent-to-parents-each-month-1400.webp 1400w" sizes="(max-width: 760px) 92vw, 760px" decoding="async" alt="Money sent to parents each month: how to record it" width="1400" height="900" /></figure>
+    <section class="section blog-article-section">
+      <div class="blog-layout">
+          <aside class="blog-toc" aria-label="Table of contents">
+            <strong>Table of contents</strong>
+            <ol>
+              <li><a href="#give-the-regular-transfer-a-stable-category">Give the regular transfer a stable category</a></li>
+              <li><a href="#mark-extras-so-they-do-not-reset-the-promise">Mark extras so they do not reset the promise</a></li>
+              <li><a href="#do-not-leave-it-in-a-transfer-pile">Do not leave it in a transfer pile</a></li>
+              <li><a href="#use-the-year-total-when-you-look-at-a-raise">Use the year total when you look at a raise</a></li>
+              <li><a href="#questions-people-actually-ask">Questions people actually ask</a></li>
+            </ol>
+          </aside>
+        <article class="prose blog-article">
+          <img class="blog-cover" src="/images/blog/money-sent-to-parents-each-month-960.webp" srcset="/images/blog/money-sent-to-parents-each-month-480.webp 480w, /images/blog/money-sent-to-parents-each-month-960.webp 960w, /images/blog/money-sent-to-parents-each-month-1400.webp 1400w" sizes="(max-width: 760px) 92vw, 760px" decoding="async" alt="Money sent to parents each month: how to record it" width="1400" height="900" />
 <p>Money sent to parents is one of the largest quiet lines in a salary. It may be a fixed UPI, plus an extra amount when a bill appears. If both sit in misc beside friend transfers, you cannot see the promise or the extra. The SMS has the amount and a name that may be a parent or a sibling who receives it for them. Kharch Log copies that alert into your Google Sheet. No bank login is required. The note should say parents, the month, and whether it was the regular amount.</p>
-<h2>Give the regular transfer a stable category</h2>
+<h2 id="give-the-regular-transfer-a-stable-category">Give the regular transfer a stable category</h2>
 <p>Create a family category and use it every month for the agreed amount. Put the month in the note. Do not use a generic transfer label, or it vanishes beside refunds and your own account moves. Do not call it rent unless you are paying a landlord for them. The regular amount left your account and it is not an investment in your name. Give it a stable category so a food cut is not your first response. Twelve months should filter cleanly.</p>
 <p>If the amount changes, write the new figure and the month you agreed. Do not edit old rows. Old rows are what you sent. If a parent returns part of it, that credit is not salary. Match it to the month so the family total stays factual. If a sibling shares the support, your row is only what you sent. Their payment is not in your SMS. Do not type their transfer into your Sheet. Your ledger is your alerts plus the rows you add for your own cash.</p>
 <ul>
@@ -2751,10 +2914,10 @@ min-height: 42px;
 <li>A partial return is matched, not treated as salary</li>
 <li>Log only the UPI that left your account</li>
 </ul>
-<h2>Mark extras so they do not reset the promise</h2>
+<h2 id="mark-extras-so-they-do-not-reset-the-promise">Mark extras so they do not reset the promise</h2>
 <p>A hospital bill on top of the monthly transfer is not the new monthly amount. Note it as extra, with a plain word such as medical or repair. Next month, return to the regular figure unless you chose to change it. Write a real change in the header with the month it starts. One labelled extra should not become the new promise by accident. Filter regular notes and extra notes separately. The app does not know the family agreement. The words in the note are the agreement you can see.</p>
 <p>If you pay a hospital directly, you can use health and the word parents in the note. If you send money for them to pay, the category is family, because you did not see the bill. Do not make two rows for one debit. Pick one house rule for this case and keep it all year. Inconsistent labels make the yearly help look smaller than it was. The SMS amount is the part that does not depend on memory.</p>
-<h2>Do not leave it in a transfer pile</h2>
+<h2 id="do-not-leave-it-in-a-transfer-pile">Do not leave it in a transfer pile</h2>
 <p>Friend splits and money sent home cannot share one vague transfer category. You will never review it. Family is for support you intend, not every birthday UPI to a relative. Birthday gifts can stay in gifts. The monthly support stays in family. A family filter should be a short list you can read. Leaving the category blank pushes this into misc, where Sunday reviews go to die. Name it once and it leaves the food conversation.</p>
 <p>If a sibling receives the UPI and passes it on, the payee will stay the sibling. The note should say it is for your parents, plus the month. Otherwise the year looks like support for the sibling alone. If part of the amount is for the sibling, write two amounts in the note. Those amounts must add to the SMS. Do not create two rows unless the bank sent two debits. One SMS, one row, a note that says who the money was for.</p>
 <ul>
@@ -2763,17 +2926,25 @@ min-height: 42px;
 <li>Split amounts in the note must add to the SMS</li>
 <li>One debit stays one row</li>
 </ul>
-<h2>Use the year total when you look at a raise</h2>
+<h2 id="use-the-year-total-when-you-look-at-a-raise">Use the year total when you look at a raise</h2>
 <p>At year end, sum the family category. You can divide by twelve for a planning figure, but do not replace the rows with an average. The average hides the month that had a medical extra. Put the planning figure in next year's header. When you look at a raise, this total sits with rent and SIP as committed money. Forgetting it is how a raise disappears. The record is not a verdict on the transfer. It stops you being surprised by a promise you already make.</p>
 <p>If you skip a month, leave the gap. Do not invent a row because you meant to send it. If you send double later, the note should say which two months. A double amount with a one-month note looks like a raised promise. If the UPI fails, wait for the real debit. A pending screenshot is not a row. When the SMS arrives, file it on the bank date. The note carries the months the money was meant to cover.</p>
-<h2>Questions people actually ask</h2>
+<h2 id="questions-people-actually-ask">Questions people actually ask</h2>
 <p><strong>Is a transfer to parents an expense?</strong> Treat it as family support in the picture you compare with salary, because it is not coming back. It is not a leak to erase. It is committed money you should see before you plan the rest. If one amount is a loan they will return, mark that row and match the credit later. Do not mark the regular support as a loan.</p>
 <p><strong>What about cash I hand over during a visit?</strong> Yes if you want it in the yearly total. There is no SMS. Type the amount, the date, and a parents note the same day. If it was a gift outside the monthly promise, use gifts so the support line stays stable. Do not guess a week later. Cash handed over on a visit is the row people forget.</p>
 <p><strong>Several siblings send money. How do I avoid doubling?</strong> Log only what left your account as your support. If you collect from siblings and send one combined UPI, your expense is your share only. The rest is money passing through. Log their incoming UPI as a transfer, not as income, and do not call the full outgoing amount yours. If you label the full UPI as your support, the year is overstated.</p>
 <p>Give the monthly transfer home a family category and mark extras so they do not become the new regular amount. How UPI app history differs from bank SMS is in <a href="/blog/gpay-phonepe-vs-bank-sms-expense-ledger/">UPI apps versus the bank SMS</a>. The <a href="/features/">Kharch Log features</a> page covers capture into your own Sheet. Sum the year without deleting the unusual months.</p>
-      <p><a class="btn" href="/pay/">Get Kharch Log lifetime - ₹149</a>
-      <a class="btn btn--ghost" href="/features/">See features</a></p>
-    </article>
+          <div class="blog-cta">
+            <h2>Ready to track every rupee?</h2>
+            <p>Kharch Log syncs to your Google Sheet. One-time unlock, no subscription.</p>
+            <div class="blog-cta__actions">
+              <a class="btn" href="/pay/" rel="noopener">Get lifetime - ₹149</a>
+              <a class="btn btn--ghost" href="/features/">See features</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
   </main>
   <footer class="site-footer">
     <div class="site-footer__inner">

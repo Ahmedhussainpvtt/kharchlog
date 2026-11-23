@@ -2050,11 +2050,12 @@ border: 1px solid var(--line);
 border-radius: 16px;
 text-decoration: none !important;
 color: inherit;
-transition: transform 0.15s ease, box-shadow 0.15s ease;
+transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1), border-color 0.35s ease, box-shadow 0.4s ease;
 }
 .blog-card:hover {
-transform: translateY(-2px);
-box-shadow: 0 10px 24px rgba(15, 42, 67, 0.1);
+transform: translateY(-8px);
+border-color: rgba(0, 133, 255, 0.35);
+box-shadow: 0 24px 60px rgba(15, 42, 67, 0.12);
 }
 .blog-card__media {
 aspect-ratio: 16 / 9;
@@ -2065,6 +2066,10 @@ overflow: hidden;
 width: 100%;
 height: 100%;
 object-fit: cover;
+transition: transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.blog-card:hover .blog-card__media img {
+transform: scale(1.05);
 }
 .blog-card__body {
 display: grid;
@@ -2100,6 +2105,148 @@ box-shadow: 0 10px 28px rgba(15, 42, 67, 0.1);
 width: 100%;
 aspect-ratio: 16 / 9;
 object-fit: cover;
+}
+.blog-meta {
+display: flex;
+flex-wrap: wrap;
+gap: 0.65rem 1.25rem;
+margin-top: 1rem;
+color: var(--muted);
+font-size: 0.9rem;
+}
+.blog-article-section {
+width: min(var(--max), calc(100% - 40px));
+margin: 0 auto;
+padding-bottom: 48px;
+}
+.blog-layout {
+display: grid;
+grid-template-columns: 220px minmax(0, 1fr);
+gap: 2rem;
+align-items: start;
+}
+.blog-toc {
+position: sticky;
+top: 5.5rem;
+padding: 1rem;
+border: 1px solid var(--line);
+border-radius: 16px;
+background: var(--surface);
+font-size: 0.86rem;
+}
+.blog-toc strong {
+display: block;
+margin-bottom: 0.65rem;
+font-weight: 700;
+}
+.blog-toc ol {
+margin: 0;
+padding-left: 1.1rem;
+color: var(--muted);
+display: grid;
+gap: 0.4rem;
+}
+.blog-toc a {
+color: var(--muted);
+transition: color 0.2s ease;
+}
+.blog-toc a:hover,
+.blog-toc a.is-active {
+color: var(--primary-text);
+font-weight: 700;
+}
+.blog-layout .prose.blog-article {
+max-width: none;
+margin: 0;
+padding: 0;
+}
+img.blog-cover {
+width: 100%;
+aspect-ratio: 16 / 9;
+object-fit: cover;
+border-radius: 18px;
+border: 1px solid var(--line);
+margin: 0 0 1.5rem;
+box-shadow: 0 10px 28px rgba(15, 42, 67, 0.1);
+}
+.blog-article h2 {
+scroll-margin-top: 5.5rem;
+}
+.blog-article h3 {
+font-size: 1.05rem;
+margin: 1.25rem 0 0.45rem;
+letter-spacing: -0.02em;
+}
+.blog-cta {
+margin-top: 2.5rem;
+padding: 1.5rem;
+border-radius: 18px;
+border: 1px solid var(--line);
+background:
+radial-gradient(500px 180px at 10% 0%, rgba(0, 196, 154, 0.14), transparent 60%),
+var(--bg-end);
+}
+.blog-cta h2 {
+margin-top: 0;
+}
+.blog-cta .hero__actions,
+.blog-cta .blog-cta__actions {
+display: flex;
+flex-wrap: wrap;
+gap: 0.75rem;
+margin-top: 1rem;
+}
+.blog-related {
+width: min(var(--max), calc(100% - 40px));
+margin: 0 auto 48px;
+padding-top: 8px;
+}
+.blog-related__title {
+margin: 0 0 1rem;
+font-size: 1.35rem;
+letter-spacing: -0.02em;
+}
+.page-hero:has(+ .blog-article-section) h1,
+.page-hero:has(+ .blog-article-section) > p,
+.page-hero:has(+ .blog-article-section) .blog-meta {
+animation: blog-hero-in 0.55s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+.page-hero:has(+ .blog-article-section) > p {
+animation-delay: 0.08s;
+}
+.page-hero:has(+ .blog-article-section) .blog-meta {
+animation-delay: 0.16s;
+}
+@keyframes blog-hero-in {
+from {
+opacity: 0;
+transform: translateY(14px);
+}
+to {
+opacity: 1;
+transform: none;
+}
+}
+@media (max-width: 900px) {
+.blog-layout {
+grid-template-columns: 1fr;
+}
+.blog-toc {
+position: static;
+}
+}
+@media (prefers-reduced-motion: reduce) {
+.page-hero:has(+ .blog-article-section) h1,
+.page-hero:has(+ .blog-article-section) > p,
+.page-hero:has(+ .blog-article-section) .blog-meta {
+animation: none;
+}
+.blog-card:hover {
+transform: none;
+}
+.blog-card:hover .blog-card__media img {
+transform: none;
+}
 }
 .prose {
 max-width: 720px;
@@ -2732,17 +2879,34 @@ min-height: 42px;
       </nav>
     </div>
   </header>
-  <main id="main">
+    <main id="main">
     <div class="page-hero section" style="width:min(var(--max), calc(100% - 40px));margin:0 auto;">
       <p class="crumbs"><a href="/">Home</a> / <a href="/blog/">Blog</a> / Festival advance from the office: log the credit and the spend separately</p>
       <h1>Festival advance from the office: log the credit and the spend separately</h1>
-      <p class="blog-card__date">2026-11-01</p>
       <p>A Diwali advance is not free money. Record the credit in your Google Sheet, then track the UPI that spends it so November does not look richer than it is.</p>
+      <div class="blog-meta">
+        <span>Last updated: <time datetime="2026-11-01">1 November 2026</time></span>
+        <span>Written by Kharch Log</span>
+        <span>Expert written and reviewed</span>
+      </div>
     </div>
-    <article class="section prose" style="max-width:720px;margin:0 auto 48px;padding:0 20px;">
-<figure class="prose-figure"><img src="/images/blog/festival-advance-from-office-in-the-sheet-960.webp" srcset="/images/blog/festival-advance-from-office-in-the-sheet-480.webp 480w, /images/blog/festival-advance-from-office-in-the-sheet-960.webp 960w, /images/blog/festival-advance-from-office-in-the-sheet-1400.webp 1400w" sizes="(max-width: 760px) 92vw, 760px" decoding="async" alt="Festival advance from the office: log the credit and the spend separately" width="1400" height="900" /></figure>
+    <section class="section blog-article-section">
+      <div class="blog-layout">
+          <aside class="blog-toc" aria-label="Table of contents">
+            <strong>Table of contents</strong>
+            <ol>
+              <li><a href="#label-the-credit-on-day-one">Label the credit on day one</a></li>
+              <li><a href="#spend-against-a-cap-not-against-the-credit-haze">Spend against a cap, not against the credit haze</a></li>
+              <li><a href="#when-recovery-happens">When recovery happens</a></li>
+              <li><a href="#shared-households">Shared households</a></li>
+              <li><a href="#a-practical-checklist-you-can-reuse">A practical checklist you can reuse</a></li>
+              <li><a href="#questions-people-actually-ask">Questions people actually ask</a></li>
+            </ol>
+          </aside>
+        <article class="prose blog-article">
+          <img class="blog-cover" src="/images/blog/festival-advance-from-office-in-the-sheet-960.webp" srcset="/images/blog/festival-advance-from-office-in-the-sheet-480.webp 480w, /images/blog/festival-advance-from-office-in-the-sheet-960.webp 960w, /images/blog/festival-advance-from-office-in-the-sheet-1400.webp 1400w" sizes="(max-width: 760px) 92vw, 760px" decoding="async" alt="Festival advance from the office: log the credit and the spend separately" width="1400" height="900" />
 <p>Many employers pay a festival advance or a Diwali ex-gratia in the first days of November. It arrives as a credit SMS and feels like a bonus. Part of it may be recovered later from salary, and all of it can vanish into gifts before you notice. In the Google Sheet Kharch Log fills, record the credit clearly, then let the gift and travel debits stand on their own so your month view stays honest.</p>
-<h2>Label the credit on day one</h2>
+<h2 id="label-the-credit-on-day-one">Label the credit on day one</h2>
 <p>When the advance SMS lands, set the category to something like Festival advance or Salary advance, and note in the payee or note field whether HR said it is recoverable. If recovery will hit a later salary, write the expected month in the note. Do not file the credit as random income you can spend twice.</p>
 <p>If the advance and the regular salary arrive close together, keep them as two rows. Merging them in your head is how people believe they have more surplus than the Sheet shows.</p>
 <ul>
@@ -2751,16 +2915,16 @@ min-height: 42px;
 <li>Separate row for regular salary</li>
 <li>No double counting when reimbursement also arrives</li>
 </ul>
-<h2>Spend against a cap, not against the credit haze</h2>
+<h2 id="spend-against-a-cap-not-against-the-credit-haze">Spend against a cap, not against the credit haze</h2>
 <p>Put a gift and travel cap under the advance amount if that was the point of the advance. When UPI gifts start, watch the running gift total, not the remaining bank balance. Balance still has rent and EMI claims on it.</p>
 <p>Kharch Log will file the debit SMS automatically. Correct the category once for a mithai shop or a clothing payee so later rows are easier to scan.</p>
-<h2>When recovery happens</h2>
+<h2 id="when-recovery-happens">When recovery happens</h2>
 <p>If a later salary is lower by the advance amount, you should already expect it from your note. Do not treat the recovery as a mystery expense. It is the advance reversing. A short note on the salary row keeps the story tied together.</p>
 <p>If your office calls it a bonus with no recovery, still track the spend. A bonus can be real and still be gone by Bhai Dooj.</p>
-<h2>Shared households</h2>
+<h2 id="shared-households">Shared households</h2>
 <p>If both partners get advances, decide which Sheet tab holds the festival plan. Two advances in two heads without one Sheet becomes two shopping lists.</p>
 <p>Lifetime unlock for Kharch Log is ₹149. The Sheet remains yours on Google.</p>
-<h2>A practical checklist you can reuse</h2>
+<h2 id="a-practical-checklist-you-can-reuse">A practical checklist you can reuse</h2>
 <p>Re-open this page the next time the same situation appears. The checklist under Festival advance from the office: log the credit and the spend separately is meant to be boring on purpose: same order, same names, same place on the disk or in the Sheet. Boring is how you avoid a second scramble. Write the date you last followed the steps in a note at the top of the folder or the month tab, so you know whether the pack is fresh.</p>
 <p>If two people share the work, put one name as owner for festival advance from office in the sheet. Two owners without a rule create two half-finished packs. Keep originals when you merge or categorise, and only send the cleaned pack outward. That habit survives busy weeks better than a perfect system you abandon.</p>
 <p>When a portal, a CA, or a family member asks for one item, send that item. Do not forward the whole archive. Smaller sends are easier to verify and safer when the file carries personal numbers. After they confirm, you still keep your own copy where you can find it without searching chat history.</p>
@@ -2770,15 +2934,23 @@ min-height: 42px;
 <li>Originals kept, cleaned pack sent outward</li>
 <li>Date stamp on the folder or month tab</li>
 </ul>
-<h2>Questions people actually ask</h2>
+<h2 id="questions-people-actually-ask">Questions people actually ask</h2>
 <p><strong>Is festival advance income for budgeting?</strong> For cash flow yes, carefully. For tax treatment follow your employer and CA. In the Sheet, label it so you do not spend it like a recurring raise.</p>
 <p><strong>The advance came as cash.</strong> Add a manual credit row, then add cash spends as you use it. SMS will not see the notes in your wallet.</p>
 <p><strong>Should I refuse to spend the advance on gifts?</strong> That is a household choice. The Sheet only makes the choice visible.</p>
 <p><strong>How often should I repeat this cleanup?</strong> Repeat when the season or the deadline returns, not every idle evening. A dated pack or a dated Sheet total is enough to know you are current.</p>
 <p>An advance is a story with two chapters: credit and spend. Keep both in the Sheet. More on <a href="/features/">Kharch Log features</a>.</p>
-      <p><a class="btn" href="/pay/">Get Kharch Log lifetime - ₹149</a>
-      <a class="btn btn--ghost" href="/features/">See features</a></p>
-    </article>
+          <div class="blog-cta">
+            <h2>Ready to track every rupee?</h2>
+            <p>Kharch Log syncs to your Google Sheet. One-time unlock, no subscription.</p>
+            <div class="blog-cta__actions">
+              <a class="btn" href="/pay/" rel="noopener">Get lifetime - ₹149</a>
+              <a class="btn btn--ghost" href="/features/">See features</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
   </main>
   <footer class="site-footer">
     <div class="site-footer__inner">

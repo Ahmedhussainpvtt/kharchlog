@@ -2050,11 +2050,12 @@ border: 1px solid var(--line);
 border-radius: 16px;
 text-decoration: none !important;
 color: inherit;
-transition: transform 0.15s ease, box-shadow 0.15s ease;
+transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1), border-color 0.35s ease, box-shadow 0.4s ease;
 }
 .blog-card:hover {
-transform: translateY(-2px);
-box-shadow: 0 10px 24px rgba(15, 42, 67, 0.1);
+transform: translateY(-8px);
+border-color: rgba(0, 133, 255, 0.35);
+box-shadow: 0 24px 60px rgba(15, 42, 67, 0.12);
 }
 .blog-card__media {
 aspect-ratio: 16 / 9;
@@ -2065,6 +2066,10 @@ overflow: hidden;
 width: 100%;
 height: 100%;
 object-fit: cover;
+transition: transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.blog-card:hover .blog-card__media img {
+transform: scale(1.05);
 }
 .blog-card__body {
 display: grid;
@@ -2100,6 +2105,148 @@ box-shadow: 0 10px 28px rgba(15, 42, 67, 0.1);
 width: 100%;
 aspect-ratio: 16 / 9;
 object-fit: cover;
+}
+.blog-meta {
+display: flex;
+flex-wrap: wrap;
+gap: 0.65rem 1.25rem;
+margin-top: 1rem;
+color: var(--muted);
+font-size: 0.9rem;
+}
+.blog-article-section {
+width: min(var(--max), calc(100% - 40px));
+margin: 0 auto;
+padding-bottom: 48px;
+}
+.blog-layout {
+display: grid;
+grid-template-columns: 220px minmax(0, 1fr);
+gap: 2rem;
+align-items: start;
+}
+.blog-toc {
+position: sticky;
+top: 5.5rem;
+padding: 1rem;
+border: 1px solid var(--line);
+border-radius: 16px;
+background: var(--surface);
+font-size: 0.86rem;
+}
+.blog-toc strong {
+display: block;
+margin-bottom: 0.65rem;
+font-weight: 700;
+}
+.blog-toc ol {
+margin: 0;
+padding-left: 1.1rem;
+color: var(--muted);
+display: grid;
+gap: 0.4rem;
+}
+.blog-toc a {
+color: var(--muted);
+transition: color 0.2s ease;
+}
+.blog-toc a:hover,
+.blog-toc a.is-active {
+color: var(--primary-text);
+font-weight: 700;
+}
+.blog-layout .prose.blog-article {
+max-width: none;
+margin: 0;
+padding: 0;
+}
+img.blog-cover {
+width: 100%;
+aspect-ratio: 16 / 9;
+object-fit: cover;
+border-radius: 18px;
+border: 1px solid var(--line);
+margin: 0 0 1.5rem;
+box-shadow: 0 10px 28px rgba(15, 42, 67, 0.1);
+}
+.blog-article h2 {
+scroll-margin-top: 5.5rem;
+}
+.blog-article h3 {
+font-size: 1.05rem;
+margin: 1.25rem 0 0.45rem;
+letter-spacing: -0.02em;
+}
+.blog-cta {
+margin-top: 2.5rem;
+padding: 1.5rem;
+border-radius: 18px;
+border: 1px solid var(--line);
+background:
+radial-gradient(500px 180px at 10% 0%, rgba(0, 196, 154, 0.14), transparent 60%),
+var(--bg-end);
+}
+.blog-cta h2 {
+margin-top: 0;
+}
+.blog-cta .hero__actions,
+.blog-cta .blog-cta__actions {
+display: flex;
+flex-wrap: wrap;
+gap: 0.75rem;
+margin-top: 1rem;
+}
+.blog-related {
+width: min(var(--max), calc(100% - 40px));
+margin: 0 auto 48px;
+padding-top: 8px;
+}
+.blog-related__title {
+margin: 0 0 1rem;
+font-size: 1.35rem;
+letter-spacing: -0.02em;
+}
+.page-hero:has(+ .blog-article-section) h1,
+.page-hero:has(+ .blog-article-section) > p,
+.page-hero:has(+ .blog-article-section) .blog-meta {
+animation: blog-hero-in 0.55s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+.page-hero:has(+ .blog-article-section) > p {
+animation-delay: 0.08s;
+}
+.page-hero:has(+ .blog-article-section) .blog-meta {
+animation-delay: 0.16s;
+}
+@keyframes blog-hero-in {
+from {
+opacity: 0;
+transform: translateY(14px);
+}
+to {
+opacity: 1;
+transform: none;
+}
+}
+@media (max-width: 900px) {
+.blog-layout {
+grid-template-columns: 1fr;
+}
+.blog-toc {
+position: static;
+}
+}
+@media (prefers-reduced-motion: reduce) {
+.page-hero:has(+ .blog-article-section) h1,
+.page-hero:has(+ .blog-article-section) > p,
+.page-hero:has(+ .blog-article-section) .blog-meta {
+animation: none;
+}
+.blog-card:hover {
+transform: none;
+}
+.blog-card:hover .blog-card__media img {
+transform: none;
+}
 }
 .prose {
 max-width: 720px;
@@ -2732,17 +2879,33 @@ min-height: 42px;
       </nav>
     </div>
   </header>
-  <main id="main">
+    <main id="main">
     <div class="page-hero section" style="width:min(var(--max), calc(100% - 40px));margin:0 auto;">
       <p class="crumbs"><a href="/">Home</a> / <a href="/blog/">Blog</a> / Two UPI apps, one Google Sheet: a shared ledger for couples</p>
       <h1>Two UPI apps, one Google Sheet: a shared ledger for couples</h1>
-      <p class="blog-card__date">2026-09-20</p>
       <p>Two people and two UPI apps still need one household total. Point both phones at the same Google Sheet, mark who paid, and settle the gap without counting it twice.</p>
+      <div class="blog-meta">
+        <span>Last updated: <time datetime="2026-09-20">20 September 2026</time></span>
+        <span>Written by Kharch Log</span>
+        <span>Expert written and reviewed</span>
+      </div>
     </div>
-    <article class="section prose" style="max-width:720px;margin:0 auto 48px;padding:0 20px;">
-<figure class="prose-figure"><img src="/images/blog/couple-shared-upi-one-google-sheet-960.webp" srcset="/images/blog/couple-shared-upi-one-google-sheet-480.webp 480w, /images/blog/couple-shared-upi-one-google-sheet-960.webp 960w, /images/blog/couple-shared-upi-one-google-sheet-1400.webp 1400w" sizes="(max-width: 760px) 92vw, 760px" decoding="async" alt="Two UPI apps, one Google Sheet: a shared ledger for couples" width="1400" height="900" /></figure>
+    <section class="section blog-article-section">
+      <div class="blog-layout">
+          <aside class="blog-toc" aria-label="Table of contents">
+            <strong>Table of contents</strong>
+            <ol>
+              <li><a href="#point-both-phones-at-one-month-tab">Point both phones at one month tab</a></li>
+              <li><a href="#mark-who-paid-before-the-row-goes-cold">Mark who paid before the row goes cold</a></li>
+              <li><a href="#keep-personal-spends-out-of-the-split">Keep personal spends out of the split</a></li>
+              <li><a href="#settle-the-gap-in-fifteen-minutes">Settle the gap in fifteen minutes</a></li>
+              <li><a href="#questions-people-actually-ask">Questions people actually ask</a></li>
+            </ol>
+          </aside>
+        <article class="prose blog-article">
+          <img class="blog-cover" src="/images/blog/couple-shared-upi-one-google-sheet-960.webp" srcset="/images/blog/couple-shared-upi-one-google-sheet-480.webp 480w, /images/blog/couple-shared-upi-one-google-sheet-960.webp 960w, /images/blog/couple-shared-upi-one-google-sheet-1400.webp 1400w" sizes="(max-width: 760px) 92vw, 760px" decoding="async" alt="Two UPI apps, one Google Sheet: a shared ledger for couples" width="1400" height="900" />
 <p>Two salaries and two UPI apps do not make one household total. One person pays rent from Google Pay, the other pays groceries and the power bill from PhonePe, and each assumes the other is watching. A shared WhatsApp note is usually stale by the 10th. Put both phones on Kharch Log so each bank SMS lands in one Google Sheet you can both open. Neither phone needs a netbanking password. The rows stay in your own Drive. You still choose which lines count as household and which stay personal.</p>
-<h2>Point both phones at one month tab</h2>
+<h2 id="point-both-phones-at-one-month-tab">Point both phones at one month tab</h2>
 <p>Decide which Google account owns the Sheet before the second phone connects. Use one month tab, not a tab per person, or rent will sit in one place and groceries in another. Both of you install Kharch Log and point it at that same Sheet. The bank SMS still arrives on the phone that holds the SIM, so each person captures their own alerts. A forwarded screenshot is not a row. Put a name at the start of the note the same day, every time.</p>
 <p>Send a ₹10 UPI to each other after setup and confirm that each test appears once in the Sheet. If you see two rows, one phone is reading both the bank SMS and a second alert from the UPI app. Keep the bank debit and mark the copy, or every shared total will be high. Do not create a fresh Sheet for the couple. The SMS feed is easier to trust when it has been writing all month. After the test, label those ₹10 rows as a transfer so they do not look like spending.</p>
 <ul>
@@ -2751,10 +2914,10 @@ min-height: 42px;
 <li>Each phone captures only the SMS it receives</li>
 <li>Name the payer in the note the same day</li>
 </ul>
-<h2>Mark who paid before the row goes cold</h2>
+<h2 id="mark-who-paid-before-the-row-goes-cold">Mark who paid before the row goes cold</h2>
 <p>The Sunday split fails when the note is blank. A payee that says a brand or a person's first name does not tell you whether it was household dinner or a personal order. Agree a short prefix: H for household, P for personal, plus the payer's name. Type it when you clear the review list, not three weeks later from memory. Kharch Log leaves unclear merchants for you to fix before the row is trusted. If you both clear reviews into the same Sheet, decide who edits a row so you do not overwrite each other.</p>
 <p>Rent, society maintenance, wifi, and the big grocery run are household even if only one UPI app sent the money. A new phone or a dress is personal unless you agreed to share it. Write that rule in the top row so you can follow it on a tired Sunday. When one person pays the full electricity bill, the row is household, and the other person's share is a settlement later, not a second electricity expense. Say the amount in the note, for example full power bill, split next Sunday. Cryptic notes are how couples count the same bill twice.</p>
-<h2>Keep personal spends out of the split</h2>
+<h2 id="keep-personal-spends-out-of-the-split">Keep personal spends out of the split</h2>
 <p>A shared Sheet does not mean every rupee is joint. If both of you can open the file, you will see personal rows, so agree that the Sunday meeting only adds lines marked household. Personal medical bills, gifts to your own parents, and hobbies stay out of that addition. You can still track them, because each person's own spending is how a salary disappears. The point is a number you can settle, not a trial. Filter the note column to household before you add. Leave the personal total visible once a month so it is not a secret, just not part of the transfer.</p>
 <p>If a payment must stay private, do not rely on hiding a row in a Sheet the other person can open. Use a category you both understand, or keep that one spend on the phone that does not write into the shared tab. Surprise gifts are the usual case: log them as personal and do not put the shop name in the shared note if the surprise is still ahead. After the occasion, you can rename the note. Kharch Log will not invent a private vault for you. Your Sheet permissions are the privacy control, so share the file only with the person who should see it.</p>
 <ul>
@@ -2763,17 +2926,25 @@ min-height: 42px;
 <li>A surprise gift does not need the shop name in the shared note</li>
 <li>Share the Google file only with the person who should see it</li>
 </ul>
-<h2>Settle the gap in fifteen minutes</h2>
+<h2 id="settle-the-gap-in-fifteen-minutes">Settle the gap in fifteen minutes</h2>
 <p>Filter household rows for the week. Add the two household totals. The difference is the UPI one of you sends the other. That settlement is a transfer, not food, rent, or groceries. If you label it as an expense, the household looks more expensive than it was and you will argue about a ghost. Put the week dates in the note, such as settle 14-20 Sep. A fifteen minute timer is enough when the notes were filled during the week. If the notes are empty, you are doing two weeks of work, which is how people quit the habit.</p>
 <p>Do the split from the Sheet, not from memory of who bought milk. Memory rewards the person who felt busier. If a large row is wrong, fix the category before you pay the difference. Paying first and editing later is how a settlement gets counted as spend. Once a month, look at personal totals beside household totals so each person can see their own pattern without mixing it into the rent. Kharch Log is the capture tool. The rule that household is shared and personal is not is yours. Write it where the Sheet opens, or you will renegotiate it every Sunday.</p>
-<h2>Questions people actually ask</h2>
+<h2 id="questions-people-actually-ask">Questions people actually ask</h2>
 <p><strong>Do both people have to install Kharch Log?</strong> Yes if both of you spend from your own bank accounts. The app reads SMS on the phone that received them. It cannot see the other person's alerts. One shared Google Sheet is the join. If only one person spends, one phone is enough. Unlock is ₹149 once on a phone you choose to pay for, and you can keep using the Sheet either way.</p>
 <p><strong>What if my partner will not track?</strong> Then track the household payments you make, and ask them to UPI you their share from a single weekly total you show them. You will miss their personal spending, which is fine if you never agreed to manage it. Do not rebuild their UPI history from screenshots. A partial household ledger is still better than a chat thread.</p>
 <p><strong>Should the settlement UPI count as an expense?</strong> No. It moves money between you to balance household costs you already logged. Label it as a transfer, and put the week dates in the note. If you also leave it as food or bills, you double the real spend and the next month looks worse than it was. Match it to the week you are settling, even if the UPI happens on Monday.</p>
 <p>Add the two household totals on Sunday and settle only the gap. That UPI is a transfer, or the same groceries get counted again. The <a href="/blog/weekly-spending-review-20-minutes/">twenty minute weekly review</a> is a good timer for this pass. SMS capture details are on the <a href="/features/">Kharch Log features</a> page. Write the amount in the note before you send it, then stop when the two totals match.</p>
-      <p><a class="btn" href="/pay/">Get Kharch Log lifetime - ₹149</a>
-      <a class="btn btn--ghost" href="/features/">See features</a></p>
-    </article>
+          <div class="blog-cta">
+            <h2>Ready to track every rupee?</h2>
+            <p>Kharch Log syncs to your Google Sheet. One-time unlock, no subscription.</p>
+            <div class="blog-cta__actions">
+              <a class="btn" href="/pay/" rel="noopener">Get lifetime - ₹149</a>
+              <a class="btn btn--ghost" href="/features/">See features</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
   </main>
   <footer class="site-footer">
     <div class="site-footer__inner">

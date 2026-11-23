@@ -2050,11 +2050,12 @@ border: 1px solid var(--line);
 border-radius: 16px;
 text-decoration: none !important;
 color: inherit;
-transition: transform 0.15s ease, box-shadow 0.15s ease;
+transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1), border-color 0.35s ease, box-shadow 0.4s ease;
 }
 .blog-card:hover {
-transform: translateY(-2px);
-box-shadow: 0 10px 24px rgba(15, 42, 67, 0.1);
+transform: translateY(-8px);
+border-color: rgba(0, 133, 255, 0.35);
+box-shadow: 0 24px 60px rgba(15, 42, 67, 0.12);
 }
 .blog-card__media {
 aspect-ratio: 16 / 9;
@@ -2065,6 +2066,10 @@ overflow: hidden;
 width: 100%;
 height: 100%;
 object-fit: cover;
+transition: transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.blog-card:hover .blog-card__media img {
+transform: scale(1.05);
 }
 .blog-card__body {
 display: grid;
@@ -2100,6 +2105,148 @@ box-shadow: 0 10px 28px rgba(15, 42, 67, 0.1);
 width: 100%;
 aspect-ratio: 16 / 9;
 object-fit: cover;
+}
+.blog-meta {
+display: flex;
+flex-wrap: wrap;
+gap: 0.65rem 1.25rem;
+margin-top: 1rem;
+color: var(--muted);
+font-size: 0.9rem;
+}
+.blog-article-section {
+width: min(var(--max), calc(100% - 40px));
+margin: 0 auto;
+padding-bottom: 48px;
+}
+.blog-layout {
+display: grid;
+grid-template-columns: 220px minmax(0, 1fr);
+gap: 2rem;
+align-items: start;
+}
+.blog-toc {
+position: sticky;
+top: 5.5rem;
+padding: 1rem;
+border: 1px solid var(--line);
+border-radius: 16px;
+background: var(--surface);
+font-size: 0.86rem;
+}
+.blog-toc strong {
+display: block;
+margin-bottom: 0.65rem;
+font-weight: 700;
+}
+.blog-toc ol {
+margin: 0;
+padding-left: 1.1rem;
+color: var(--muted);
+display: grid;
+gap: 0.4rem;
+}
+.blog-toc a {
+color: var(--muted);
+transition: color 0.2s ease;
+}
+.blog-toc a:hover,
+.blog-toc a.is-active {
+color: var(--primary-text);
+font-weight: 700;
+}
+.blog-layout .prose.blog-article {
+max-width: none;
+margin: 0;
+padding: 0;
+}
+img.blog-cover {
+width: 100%;
+aspect-ratio: 16 / 9;
+object-fit: cover;
+border-radius: 18px;
+border: 1px solid var(--line);
+margin: 0 0 1.5rem;
+box-shadow: 0 10px 28px rgba(15, 42, 67, 0.1);
+}
+.blog-article h2 {
+scroll-margin-top: 5.5rem;
+}
+.blog-article h3 {
+font-size: 1.05rem;
+margin: 1.25rem 0 0.45rem;
+letter-spacing: -0.02em;
+}
+.blog-cta {
+margin-top: 2.5rem;
+padding: 1.5rem;
+border-radius: 18px;
+border: 1px solid var(--line);
+background:
+radial-gradient(500px 180px at 10% 0%, rgba(0, 196, 154, 0.14), transparent 60%),
+var(--bg-end);
+}
+.blog-cta h2 {
+margin-top: 0;
+}
+.blog-cta .hero__actions,
+.blog-cta .blog-cta__actions {
+display: flex;
+flex-wrap: wrap;
+gap: 0.75rem;
+margin-top: 1rem;
+}
+.blog-related {
+width: min(var(--max), calc(100% - 40px));
+margin: 0 auto 48px;
+padding-top: 8px;
+}
+.blog-related__title {
+margin: 0 0 1rem;
+font-size: 1.35rem;
+letter-spacing: -0.02em;
+}
+.page-hero:has(+ .blog-article-section) h1,
+.page-hero:has(+ .blog-article-section) > p,
+.page-hero:has(+ .blog-article-section) .blog-meta {
+animation: blog-hero-in 0.55s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+.page-hero:has(+ .blog-article-section) > p {
+animation-delay: 0.08s;
+}
+.page-hero:has(+ .blog-article-section) .blog-meta {
+animation-delay: 0.16s;
+}
+@keyframes blog-hero-in {
+from {
+opacity: 0;
+transform: translateY(14px);
+}
+to {
+opacity: 1;
+transform: none;
+}
+}
+@media (max-width: 900px) {
+.blog-layout {
+grid-template-columns: 1fr;
+}
+.blog-toc {
+position: static;
+}
+}
+@media (prefers-reduced-motion: reduce) {
+.page-hero:has(+ .blog-article-section) h1,
+.page-hero:has(+ .blog-article-section) > p,
+.page-hero:has(+ .blog-article-section) .blog-meta {
+animation: none;
+}
+.blog-card:hover {
+transform: none;
+}
+.blog-card:hover .blog-card__media img {
+transform: none;
+}
 }
 .prose {
 max-width: 720px;
@@ -2732,18 +2879,35 @@ min-height: 42px;
       </nav>
     </div>
   </header>
-  <main id="main">
+    <main id="main">
     <div class="page-hero section" style="width:min(var(--max), calc(100% - 40px));margin:0 auto;">
       <p class="crumbs"><a href="/">Home</a> / <a href="/blog/">Blog</a> / Kharch Log is now on Google Play: what changes for you</p>
       <h1>Kharch Log is now on Google Play: what changes for you</h1>
-      <p class="blog-card__date">2026-10-30</p>
       <p>Kharch Log is live on Google Play. Your Google Sheet and lifetime access stay the same, updates arrive automatically, and SMS keep logging with the app closed.</p>
+      <div class="blog-meta">
+        <span>Last updated: <time datetime="2026-10-30">30 October 2026</time></span>
+        <span>Written by Kharch Log</span>
+        <span>Expert written and reviewed</span>
+      </div>
     </div>
-    <article class="section prose" style="max-width:720px;margin:0 auto 48px;padding:0 20px;">
-<figure class="prose-figure"><img src="/images/blog/kharch-log-now-on-google-play-960.webp" srcset="/images/blog/kharch-log-now-on-google-play-480.webp 480w, /images/blog/kharch-log-now-on-google-play-960.webp 960w, /images/blog/kharch-log-now-on-google-play-1400.webp 1400w" sizes="(max-width: 760px) 92vw, 760px" decoding="async" alt="Kharch Log is now on Google Play: what changes for you" width="1400" height="900" /></figure>
+    <section class="section blog-article-section">
+      <div class="blog-layout">
+          <aside class="blog-toc" aria-label="Table of contents">
+            <strong>Table of contents</strong>
+            <ol>
+              <li><a href="#what-stays-the-same">What stays the same</a></li>
+              <li><a href="#how-to-switch-in-three-steps">How to switch in three steps</a></li>
+              <li><a href="#why-the-play-version-is-worth-it">Why the Play version is worth it</a></li>
+              <li><a href="#what-is-new-in-this-release">What is new in this release</a></li>
+              <li><a href="#keep-tracking-reliable-on-your-phone">Keep tracking reliable on your phone</a></li>
+              <li><a href="#questions-people-actually-ask">Questions people actually ask</a></li>
+            </ol>
+          </aside>
+        <article class="prose blog-article">
+          <img class="blog-cover" src="/images/blog/kharch-log-now-on-google-play-960.webp" srcset="/images/blog/kharch-log-now-on-google-play-480.webp 480w, /images/blog/kharch-log-now-on-google-play-960.webp 960w, /images/blog/kharch-log-now-on-google-play-1400.webp 1400w" sizes="(max-width: 760px) 92vw, 760px" decoding="async" alt="Kharch Log is now on Google Play: what changes for you" width="1400" height="900" />
 <p>Kharch Log is now on the Google Play Store. If you have been using the app from our website, or you were one of the people who tested it before launch, this post explains what changes for you and what stays exactly the same. The short version: your expenses stay in your own Google Sheet, your lifetime access stays tied to your Google email, and updates now arrive on their own through Google Play. You do not need to rebuild anything.</p>
 <p>Install it from <a href="https://play.google.com/store/apps/details?id=com.kharchlog.app">Kharch Log on Google Play</a>, sign in with the same Google account you already use, and the app finds your Sheet again. That is the whole switch. The rest of this post covers the details people ask about: what happens to the old app, why the Play version is worth moving to, and what the latest release fixes.</p>
-<h2>What stays the same</h2>
+<h2 id="what-stays-the-same">What stays the same</h2>
 <p>Your data was never inside the app. Every row Kharch Log writes goes to a Google Sheet in your own Google Drive. That is the reason the move is simple. A new install does not need a backup file, a transfer code, or an export and import step. When you sign in, the app reconnects to the same Sheet and shows the same months, categories, credits, and notes. If you open the Sheet on a laptop today and again after the switch, you will see the same rows in the same place.</p>
 <p>Your plan also stays the same. Lifetime access belongs to your Google email, not to a phone or to a copy of the app. Sign in with that email on the Play version and the unlock follows you. If you paid ₹149 once, you do not pay again. If you are still trying the app free, you can unlock lifetime whenever you are ready, with no monthly fee.</p>
 <ul>
@@ -2752,13 +2916,13 @@ min-height: 42px;
 <li>Same SMS rules: bank and UPI messages read on the phone, no bank login</li>
 <li>Same review inbox for messages the app could not read with confidence</li>
 </ul>
-<h2>How to switch in three steps</h2>
+<h2 id="how-to-switch-in-three-steps">How to switch in three steps</h2>
 <p>First, open Google Play on your Android phone and install Kharch Log. Second, open it and sign in with the same Google account you used before. Third, give the SMS permission again when the app asks, because Android treats a fresh install as a new app. After that, new bank and UPI messages flow into your Sheet as before.</p>
 <p>On some phones Google Play cannot install over the version you downloaded from our website, because the two copies were installed from different places. If Play shows an error, uninstall the old Kharch Log first, then install from Play. This is safe. Uninstalling removes the app, not your Sheet. Everything you logged is still in Google Drive and appears again after you sign in. If you want peace of mind, open the Sheet in a browser before you uninstall and look at your latest rows. They will be there after the switch too.</p>
-<h2>Why the Play version is worth it</h2>
+<h2 id="why-the-play-version-is-worth-it">Why the Play version is worth it</h2>
 <p>The biggest change is updates. On the Play version, fixes and new features arrive automatically, the same way your other apps update. You no longer need to download a new file or tap an in-app update prompt. When we fix a bank SMS format that was being skipped, or improve a screen, you get it without doing anything.</p>
 <p>Play also handles installs the way Android expects. You do not need to allow installs from your browser, and the app is checked by Google Play before it reaches you. For family members who are careful about installing files from websites, a Play listing is simply easier to trust. If you were waiting to recommend Kharch Log to a parent or a friend until it was on the Play Store, now is that moment.</p>
-<h2>What is new in this release</h2>
+<h2 id="what-is-new-in-this-release">What is new in this release</h2>
 <p>This version focuses on one thing people told us mattered most: tracking should never stop on its own. Earlier, if you did not open the app for a few days, some phones stopped saving bank SMS until you opened it again. That is fixed. Kharch Log now checks its own access in the background and keeps saving SMS even when the app stays closed for days. It also survives a phone restart, so a reboot does not pause tracking.</p>
 <p>The app also looks back at recent bank SMS on its own. If a message was missed, for example because the phone was busy or offline when it arrived, the app fills it in later, within the last week. Duplicate checks stop the same payment from landing twice. If you have not opened the app for a while, you may get one gentle reminder to open it, because some phones pause apps they think are unused.</p>
 <ul>
@@ -2767,18 +2931,26 @@ min-height: 42px;
 <li>Missed bank SMS from the last week are filled in automatically</li>
 <li>Duplicate checks keep each payment to one row</li>
 </ul>
-<h2>Keep tracking reliable on your phone</h2>
+<h2 id="keep-tracking-reliable-on-your-phone">Keep tracking reliable on your phone</h2>
 <p>Android phones from Xiaomi, Redmi, Samsung, Oppo, Vivo, and Realme have their own battery savers. They are helpful for games and heavy apps, but they can slow down an expense tracker that only needs a moment when an SMS arrives. Kharch Log asks for battery permission during setup. If your phone has an extra list such as sleeping apps or autostart, keep Kharch Log allowed there. It uses very little battery because it only wakes up for a bank message and for a short check a few times a day.</p>
 <p>Open the app once in a while too. It takes a few seconds, it shows you the month at a glance, and it tells Android the app is still in use. A weekly look at your spending is also the habit that turns tracking into decisions. Our guide on <a href="/blog/daily-expense-tracker-habits/">daily expense tracker habits</a> keeps that habit short.</p>
-<h2>Questions people actually ask</h2>
+<h2 id="questions-people-actually-ask">Questions people actually ask</h2>
 <p><strong>Will I lose my expenses when I uninstall the website version?</strong> No. Your expenses live in your Google Sheet in Google Drive, not inside the app. Uninstalling removes the app only. Install from Play, sign in with the same Google account, and your rows show up again.</p>
 <p><strong>Do I need to pay again on Google Play?</strong> No. Lifetime access is linked to your Google email. Sign in with the same email and the unlock is there. Only people who never unlocked will see the option to get lifetime for ₹149.</p>
 <p><strong>Can I keep using the website version?</strong> Yes, it keeps working. We recommend the Play version because updates arrive automatically and you do not need to install files from a browser.</p>
 <p><strong>I changed phones. Is it the same process?</strong> Yes. Install from Play on the new phone, sign in with the same Google account, allow SMS, and keep the battery setting allowed. The Sheet is the same on every phone you sign in with.</p>
 <p>Kharch Log is built so your money record belongs to you. Moving to Google Play keeps that promise and makes updates effortless. See everything the app does on the <a href="/features/">features page</a>, and if you have a question we did not answer here, write to us from the <a href="/contact/">contact page</a>.</p>
-      <p><a class="btn" href="/pay/">Get Kharch Log lifetime - ₹149</a>
-      <a class="btn btn--ghost" href="/features/">See features</a></p>
-    </article>
+          <div class="blog-cta">
+            <h2>Ready to track every rupee?</h2>
+            <p>Kharch Log syncs to your Google Sheet. One-time unlock, no subscription.</p>
+            <div class="blog-cta__actions">
+              <a class="btn" href="/pay/" rel="noopener">Get lifetime - ₹149</a>
+              <a class="btn btn--ghost" href="/features/">See features</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
   </main>
   <footer class="site-footer">
     <div class="site-footer__inner">

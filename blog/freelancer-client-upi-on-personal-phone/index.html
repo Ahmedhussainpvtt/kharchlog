@@ -2050,11 +2050,12 @@ border: 1px solid var(--line);
 border-radius: 16px;
 text-decoration: none !important;
 color: inherit;
-transition: transform 0.15s ease, box-shadow 0.15s ease;
+transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1), border-color 0.35s ease, box-shadow 0.4s ease;
 }
 .blog-card:hover {
-transform: translateY(-2px);
-box-shadow: 0 10px 24px rgba(15, 42, 67, 0.1);
+transform: translateY(-8px);
+border-color: rgba(0, 133, 255, 0.35);
+box-shadow: 0 24px 60px rgba(15, 42, 67, 0.12);
 }
 .blog-card__media {
 aspect-ratio: 16 / 9;
@@ -2065,6 +2066,10 @@ overflow: hidden;
 width: 100%;
 height: 100%;
 object-fit: cover;
+transition: transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.blog-card:hover .blog-card__media img {
+transform: scale(1.05);
 }
 .blog-card__body {
 display: grid;
@@ -2100,6 +2105,148 @@ box-shadow: 0 10px 28px rgba(15, 42, 67, 0.1);
 width: 100%;
 aspect-ratio: 16 / 9;
 object-fit: cover;
+}
+.blog-meta {
+display: flex;
+flex-wrap: wrap;
+gap: 0.65rem 1.25rem;
+margin-top: 1rem;
+color: var(--muted);
+font-size: 0.9rem;
+}
+.blog-article-section {
+width: min(var(--max), calc(100% - 40px));
+margin: 0 auto;
+padding-bottom: 48px;
+}
+.blog-layout {
+display: grid;
+grid-template-columns: 220px minmax(0, 1fr);
+gap: 2rem;
+align-items: start;
+}
+.blog-toc {
+position: sticky;
+top: 5.5rem;
+padding: 1rem;
+border: 1px solid var(--line);
+border-radius: 16px;
+background: var(--surface);
+font-size: 0.86rem;
+}
+.blog-toc strong {
+display: block;
+margin-bottom: 0.65rem;
+font-weight: 700;
+}
+.blog-toc ol {
+margin: 0;
+padding-left: 1.1rem;
+color: var(--muted);
+display: grid;
+gap: 0.4rem;
+}
+.blog-toc a {
+color: var(--muted);
+transition: color 0.2s ease;
+}
+.blog-toc a:hover,
+.blog-toc a.is-active {
+color: var(--primary-text);
+font-weight: 700;
+}
+.blog-layout .prose.blog-article {
+max-width: none;
+margin: 0;
+padding: 0;
+}
+img.blog-cover {
+width: 100%;
+aspect-ratio: 16 / 9;
+object-fit: cover;
+border-radius: 18px;
+border: 1px solid var(--line);
+margin: 0 0 1.5rem;
+box-shadow: 0 10px 28px rgba(15, 42, 67, 0.1);
+}
+.blog-article h2 {
+scroll-margin-top: 5.5rem;
+}
+.blog-article h3 {
+font-size: 1.05rem;
+margin: 1.25rem 0 0.45rem;
+letter-spacing: -0.02em;
+}
+.blog-cta {
+margin-top: 2.5rem;
+padding: 1.5rem;
+border-radius: 18px;
+border: 1px solid var(--line);
+background:
+radial-gradient(500px 180px at 10% 0%, rgba(0, 196, 154, 0.14), transparent 60%),
+var(--bg-end);
+}
+.blog-cta h2 {
+margin-top: 0;
+}
+.blog-cta .hero__actions,
+.blog-cta .blog-cta__actions {
+display: flex;
+flex-wrap: wrap;
+gap: 0.75rem;
+margin-top: 1rem;
+}
+.blog-related {
+width: min(var(--max), calc(100% - 40px));
+margin: 0 auto 48px;
+padding-top: 8px;
+}
+.blog-related__title {
+margin: 0 0 1rem;
+font-size: 1.35rem;
+letter-spacing: -0.02em;
+}
+.page-hero:has(+ .blog-article-section) h1,
+.page-hero:has(+ .blog-article-section) > p,
+.page-hero:has(+ .blog-article-section) .blog-meta {
+animation: blog-hero-in 0.55s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+.page-hero:has(+ .blog-article-section) > p {
+animation-delay: 0.08s;
+}
+.page-hero:has(+ .blog-article-section) .blog-meta {
+animation-delay: 0.16s;
+}
+@keyframes blog-hero-in {
+from {
+opacity: 0;
+transform: translateY(14px);
+}
+to {
+opacity: 1;
+transform: none;
+}
+}
+@media (max-width: 900px) {
+.blog-layout {
+grid-template-columns: 1fr;
+}
+.blog-toc {
+position: static;
+}
+}
+@media (prefers-reduced-motion: reduce) {
+.page-hero:has(+ .blog-article-section) h1,
+.page-hero:has(+ .blog-article-section) > p,
+.page-hero:has(+ .blog-article-section) .blog-meta {
+animation: none;
+}
+.blog-card:hover {
+transform: none;
+}
+.blog-card:hover .blog-card__media img {
+transform: none;
+}
 }
 .prose {
 max-width: 720px;
@@ -2732,17 +2879,33 @@ min-height: 42px;
       </nav>
     </div>
   </header>
-  <main id="main">
+    <main id="main">
     <div class="page-hero section" style="width:min(var(--max), calc(100% - 40px));margin:0 auto;">
       <p class="crumbs"><a href="/">Home</a> / <a href="/blog/">Blog</a> / Client UPI on the same phone as household spend</p>
       <h1>Client UPI on the same phone as household spend</h1>
-      <p class="blog-card__date">2026-09-30</p>
       <p>Freelance payments, software bills, and the kirana share one phone. Label business in and business out in your Google Sheet so a client credit is not treated as spendable pay.</p>
+      <div class="blog-meta">
+        <span>Last updated: <time datetime="2026-09-30">30 September 2026</time></span>
+        <span>Written by Kharch Log</span>
+        <span>Expert written and reviewed</span>
+      </div>
     </div>
-    <article class="section prose" style="max-width:720px;margin:0 auto 48px;padding:0 20px;">
-<figure class="prose-figure"><img src="/images/blog/freelancer-client-upi-on-personal-phone-960.webp" srcset="/images/blog/freelancer-client-upi-on-personal-phone-480.webp 480w, /images/blog/freelancer-client-upi-on-personal-phone-960.webp 960w, /images/blog/freelancer-client-upi-on-personal-phone-1400.webp 1400w" sizes="(max-width: 760px) 92vw, 760px" decoding="async" alt="Client UPI on the same phone as household spend" width="1400" height="900" /></figure>
+    <section class="section blog-article-section">
+      <div class="blog-layout">
+          <aside class="blog-toc" aria-label="Table of contents">
+            <strong>Table of contents</strong>
+            <ol>
+              <li><a href="#label-client-credits-before-they-feel-like-salary">Label client credits before they feel like salary</a></li>
+              <li><a href="#tools-and-gear-on-a-personal-upi">Tools and gear on a personal UPI</a></li>
+              <li><a href="#take-home-is-the-net-not-the-credit">Take-home is the net, not the credit</a></li>
+              <li><a href="#stay-on-one-sheet-until-a-real-split-exists">Stay on one Sheet until a real split exists</a></li>
+              <li><a href="#questions-people-actually-ask">Questions people actually ask</a></li>
+            </ol>
+          </aside>
+        <article class="prose blog-article">
+          <img class="blog-cover" src="/images/blog/freelancer-client-upi-on-personal-phone-960.webp" srcset="/images/blog/freelancer-client-upi-on-personal-phone-480.webp 480w, /images/blog/freelancer-client-upi-on-personal-phone-960.webp 960w, /images/blog/freelancer-client-upi-on-personal-phone-1400.webp 1400w" sizes="(max-width: 760px) 92vw, 760px" decoding="async" alt="Client UPI on the same phone as household spend" width="1400" height="900" />
 <p>A freelancer often has one phone, one UPI, and no separate account yet. A client payment, a software renewal, and the kirana all hit the same SMS inbox. If you treat the client credit as spendable pay, you will use money meant for a tool or a tax set-aside. Kharch Log reads those alerts into a Google Sheet you own. It does not log into your bank. Use two labels, money in from clients and money out for work, kept off household categories. What remains is closer to what you can spend at home.</p>
-<h2>Label client credits before they feel like salary</h2>
+<h2 id="label-client-credits-before-they-feel-like-salary">Label client credits before they feel like salary</h2>
 <p>When a client UPI arrives, label it business in, with a short client name and the month. Do not label it salary unless an employer actually paid salary. Mixing them makes a quiet month look like a pay cut you did not have. If the credit repays a cost you already logged, match it. It is not a new fee. The SMS is stored. The short name is so a cut-off payee still means something later.</p>
 <p>Advances and final payments are separate rows because they are separate SMS. The note says advance or final, and which job. If you refund a cancelled job, match that debit to the credit. It is not a household expense. The net of the two is the job. Do not spend an advance as if the work were fully paid and finished. A header list of open advances stops the household budget from treating float as pay.</p>
 <ul>
@@ -2751,10 +2914,10 @@ min-height: 42px;
 <li>Advance and final payment stay separate rows</li>
 <li>A refund of a client credit is not household spend</li>
 </ul>
-<h2>Tools and gear on a personal UPI</h2>
+<h2 id="tools-and-gear-on-a-personal-upi">Tools and gear on a personal UPI</h2>
 <p>A domain, hosting, or a work tool is business out. It is not groceries and it is not a personal subscription, even on a personal UPI. Log it the day the SMS arrives, with the tool name. If a tool is half personal, either split the note into amounts that add up, or pick one label and keep it. Write that choice down. A blunt rule you repeat beats a fresh debate every month. Next month the same payee should get the same label.</p>
 <p>A phone or laptop is not a monthly tool fee. If you log the full purchase as business out, do not invent monthly rows as well. A monthly planning note is allowed. Extra fake debits are not. The bank did one debit. Do not add tax on top of an SMS that already took the full charge. This Sheet is your own record, not a filing. If a gadget is personal, label it personal even if you wish it were work.</p>
-<h2>Take-home is the net, not the credit</h2>
+<h2 id="take-home-is-the-net-not-the-credit">Take-home is the net, not the credit</h2>
 <p>Once a week, sum business in and subtract business out before you treat anything as household money. A transfer to another account of yours is not spending. Groceries should live in one place, not on both sides of that transfer. On one phone, one Sheet with work labels and home labels is enough. The weekly net is a filter, not a new app. Do the filter before you raise your home spending to match a fat credit.</p>
 <p>A slow month is a different problem if work costs paused than if rent still left. You only see which one it is when the labels exist. Compare the net with a recent month, not with your best project. The best month is how people promise rent they cannot keep. Watch whether this month added to a buffer or ate it. The food category cannot answer that. Write the weekly net in the header so the answer is one line.</p>
 <ul>
@@ -2763,17 +2926,25 @@ min-height: 42px;
 <li>Compare with a recent month, not your best month</li>
 <li>Keep groceries in one place only</li>
 </ul>
-<h2>Stay on one Sheet until a real split exists</h2>
+<h2 id="stay-on-one-sheet-until-a-real-split-exists">Stay on one Sheet until a real split exists</h2>
 <p>You do not need a second Sheet on day one. A second Sheet splits the SMS and rows get missed. Use categories until a truly separate account exists. Personal meals stay personal. A client meal can be business out if it was for work, with the name in the note. Decide that the day you pay. A personal dinner will try to become a work dinner at review time. April is too late to remember. Kharch Log keeps writing into the Sheet you already chose.</p>
 <p>If a platform pays a net amount, the SMS is the net. Log that. Do not also type a gross and a fee unless both are real movements you can see. A fee that never left as its own debit should not become a fake row. Note the platform name. Several small credits are several rows. Bundling them hides a missing payout. Match the phone, one alert at a time. The Sheet holds what hit the account, not the invoice fantasy.</p>
-<h2>Questions people actually ask</h2>
+<h2 id="questions-people-actually-ask">Questions people actually ask</h2>
 <p><strong>Do I need a separate bank account first?</strong> No. A separate account can wait. Categories can separate work and home today. The app does not need a business account or a bank login. If you open another account later, send that SMS stream to the same Sheet. Keep the same labels. Two accounts without labels will mix again. The label is what makes take-home visible.</p>
 <p><strong>A client paid me in cash. How do I record it?</strong> Type a business in row the day you receive the cash. There is no SMS. Write the client and the job. A later deposit into the bank is a transfer, not a second payment. If you spend the cash, those spends still need categories. The cash income row is what shows where they were funded. Skip that row and every spend looks like it came from salary.</p>
 <p><strong>Can I call part of my house rent a work cost?</strong> Keep house rent in rent unless you have a written rule for a work portion. A portion you change every month hides both home and work. A coworking desk for work is business out. Your house rent stays rent. The Sheet can stay simpler than a tax form. Use it to see cash. Take formal questions to a professional if you file.</p>
 <p>Separate client credits and work costs from household categories, then read the weekly net. A second phone is a different setup, covered in <a href="/blog/two-phone-personal-office-expense-tracker/">personal and office phones</a>. The <a href="/features/">Kharch Log features</a> page shows SMS capture into the Sheet you choose. Do not raise home spending just because a client credit landed.</p>
-      <p><a class="btn" href="/pay/">Get Kharch Log lifetime - ₹149</a>
-      <a class="btn btn--ghost" href="/features/">See features</a></p>
-    </article>
+          <div class="blog-cta">
+            <h2>Ready to track every rupee?</h2>
+            <p>Kharch Log syncs to your Google Sheet. One-time unlock, no subscription.</p>
+            <div class="blog-cta__actions">
+              <a class="btn" href="/pay/" rel="noopener">Get lifetime - ₹149</a>
+              <a class="btn btn--ghost" href="/features/">See features</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
   </main>
   <footer class="site-footer">
     <div class="site-footer__inner">
