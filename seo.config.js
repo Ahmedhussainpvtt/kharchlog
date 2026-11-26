@@ -31,7 +31,7 @@ module.exports = {
     email: 'support@easypeeze.com',
     parentOrganization: {
       '@type': 'Organization',
-      name: 'Easy Peeze Tools',
+      name: 'Eazy Peeze Apps',
       url: 'https://easypeeze.com/',
     },
     sameAs: ['https://easypeeze.com/'],
@@ -147,7 +147,7 @@ module.exports = {
     },
     '/about/': {
       title: 'About Kharch Log',
-      description: 'Kharch Log is an Android expense tracker by Easy Peeze Tools - SMS + Sheets, built for India.',
+      description: 'Kharch Log is an Android expense tracker by Eazy Peeze Apps - SMS + Sheets, built for India.',
       priority: 0.7,
     },
     '/contact/': {
