@@ -1,6 +1,6 @@
 # Kharch Log - llms-full.txt
 
-Generated: 2026-11-23
+Generated: 2026-11-27
 Source: https://kharchlog.com/
 Index: https://kharchlog.com/llms.txt
 
@@ -490,3 +490,309 @@ Glossary: what “Voice Expense Entry” means and how it relates to the product
 ### Weekly Expense Tracker
 URL: https://kharchlog.com/glossary/weekly-expense-tracker/
 Glossary: what “Weekly Expense Tracker” means and how it relates to the product.
+
+## FAQ Knowledge Base
+
+### Private expense tracker with no cloud sync
+URL: https://kharchlog.com/faq/private-expense-tracker-no-cloud-sync/
+Q: Is Kharch Log a private expense tracker with no cloud sync?
+A: Yes. Kharch Log does not sync your expense ledger to a company cloud database. Every confirmed expense and income row is written directly from your Android phone to a Google Sheet inside your own Google Drive.
+Q: Does Kharch Log store my transaction history on its own servers?
+A: No. Our server only handles sign-in verification and license status (free or INR 149 lifetime). Your actual spending rows, merchant names, notes, and balances live in your personal Google Sheet, not on Kharch Log servers.
+Q: Why is saving to my own Google Sheet safer than typical budget apps?
+A: Most free budget apps store your full financial life on their servers to sell loan offers, credit cards, or analytics. With Kharch Log, your ledger stays inside your own Google account under Google Drive file-level permission, so you can export, edit, or delete it whenever you want.
+Q: Does Kharch Log read my other files in Google Drive?
+A: No. Kharch Log requests the narrow Google Drive file scope, meaning it can only access the specific Kharch Log spreadsheet it creates for you and cannot view, list, or touch any of your other Drive files or photos.
+Q: Does Kharch Log show ads or sell my spending data to loan apps?
+A: Never. Kharch Log is funded directly by the INR 149 one-time lifetime unlock. There are no ads, no credit card spam, and no third-party data brokers.
+Q: Can I log expenses when my phone is offline?
+A: Yes. You can log expenses offline on Android and they sync straight to your Google Sheet as soon as your phone reconnects to the internet.
+Q: What happens to my data if I stop using Kharch Log?
+A: Your entire financial history stays safely in your Google Drive as a normal Google Sheet. You can keep using it in Google Sheets or download it as Excel (.xlsx) or CSV forever.
+Q: Where can I read the full Kharch Log privacy policy?
+A: The dedicated Kharch Log privacy policy is at easypeeze.com/privacy/kharch-log/. It explains every permission in plain language.
+
+### UPI and bank SMS auto-capture for GPay, PhonePe and Paytm
+URL: https://kharchlog.com/faq/upi-sms-auto-capture-gpay-phonepe-paytm/
+Q: Which expense tracker reads GPay SMS and keeps data on the phone?
+A: Kharch Log reads bank and UPI debit SMS directly on your Android device for Google Pay (GPay), PhonePe, Paytm, BHIM, CRED, Amazon Pay, and any UPI app whose bank sends a transaction alert, then saves confirmed entries straight into your own Google Sheet.
+Q: Does Kharch Log work with PhonePe, Paytm, and GPay together in one ledger?
+A: Yes. Because Indian banks send SMS alerts regardless of which UPI app initiated the payment, Kharch Log captures GPay, PhonePe, Paytm, and bank card debits into one unified daily ledger.
+Q: Can it log UPI spending automatically without manual entry?
+A: Yes. When a bank or UPI debit SMS arrives, Kharch Log parses the amount, date, payment mode, and merchant on your phone and queues a draft so you do not have to type every Rs 40 chai or Rs 250 auto ride from scratch.
+Q: Does Kharch Log upload my SMS inbox to any server?
+A: No. SMS parsing happens locally on your Android phone. Kharch Log ignores personal chats and OTPs and only extracts transaction details from bank and UPI alerts.
+Q: Which Indian banks are supported by SMS auto-capture?
+A: Kharch Log supports standard debit and credit SMS formats from major Indian banks including HDFC, SBI, ICICI, Axis, Kotak, IDFC First, Yes Bank, IndusInd, Federal Bank, PNB, Bank of Baroda, and RuPay/UPI alerts.
+Q: What if my bank sends an unusual SMS format that Kharch Log is not 100% sure about?
+A: Uncertain messages are never silently dropped or miscategorized. They land in the Needs Review inbox where you can confirm, edit the category, or dismiss them in one tap.
+Q: Does SMS capture also catch UPI Lite or small transactions?
+A: Any transaction that triggers a bank SMS alert is captured automatically. For UPI Lite payments where your bank does not send an individual SMS, you can log them in 3 seconds using voice entry or manual entry.
+Q: Why do I need to grant SMS permission in Android?
+A: Android blocks apps from reading incoming bank payment alerts unless you explicitly grant SMS permission. That permission is strictly used on-device to detect payment SMS and draft your expenses.
+
+### Google Sheets sync, Drive ownership and Excel export
+URL: https://kharchlog.com/faq/google-sheets-sync-drive-ownership/
+Q: How does Kharch Log save expenses directly into Google Sheets?
+A: When you sign in with Google, Kharch Log creates a Kharch Log folder and spreadsheet inside your own Google Drive. Every expense, income entry, and credit update syncs directly to that sheet.
+Q: Can I open my Kharch Log data in Microsoft Excel or CSV?
+A: Yes. Open your Kharch Log spreadsheet in Google Sheets on desktop or mobile and click File > Download > Microsoft Excel (.xlsx) or CSV at any time. You own 100% of your spreadsheet.
+Q: Can I build my own charts or pivot tables on top of the Kharch Log Google Sheet?
+A: Yes. You can create a separate tab inside your Google Sheet for custom formulas, tax summaries, or family budget dashboards without disturbing the synced transaction tabs.
+Q: Can my spouse or family member view our shared Kharch Log spreadsheet?
+A: Yes. Because it is a normal Google Sheet in your Drive, you can share view access with your spouse, partner, or CA directly using Google Drive sharing settings.
+Q: Will editing the sheet break the app?
+A: Avoid renaming or deleting the core column headers that Kharch Log creates. For custom calculations or notes, add a new tab in the same workbook so syncing stays smooth.
+Q: Does Kharch Log work like a free Excel income and expense tracker?
+A: Yes, with a major upgrade: instead of manually typing rows into an Excel file every Sunday night, Kharch Log captures your UPI SMS all week on Android and writes clean structured rows into your Google Sheet automatically.
+Q: How much Google Drive storage does the Kharch Log sheet use?
+A: Almost zero. A full year of thousands of expense rows in Google Sheets uses less than a couple of megabytes of your free 15 GB Google Drive quota.
+Q: What columns does Kharch Log write to my Google Sheet?
+A: Each row includes clean fields like date, type (expense or income), amount, category, payment mode (UPI, cash, card, bank), note/merchant, and monthly organization so you can filter or sum anything instantly.
+
+### No bank login required vs Account Aggregator apps
+URL: https://kharchlog.com/faq/no-bank-login-vs-account-aggregator/
+Q: Can I track UPI spending without linking my bank account?
+A: Yes. Kharch Log requires zero bank account linking, zero net banking credentials, zero debit card numbers, and zero Account Aggregator sign-ups. It reads payment SMS locally on your phone.
+Q: How is Kharch Log different from Account Aggregator (AA) apps like Fold or Finvu?
+A: Account Aggregator apps connect to your live bank feeds via regulated third-party FIP/FIU servers and store synced bank data in the cloud. Kharch Log stays completely lightweight and private: no bank linking, no cloud sync, just on-device SMS capture straight to your Google Sheet.
+Q: Is Kharch Log safer if I do not want any app linked to my bank account?
+A: Yes. If you prefer keeping your bank login completely separate from your daily budget tracker, on-device SMS parsing gives you automatic UPI tracking with zero bank-account integration.
+Q: Does Kharch Log ever ask for my UPI PIN or bank OTP?
+A: Never. Kharch Log is strictly a read-only expense logger. It cannot move money, initiate UPI payments, or access your banking apps.
+Q: Do I need to upload bank statement PDFs or Form 16 to use Kharch Log?
+A: No. Kharch Log is a daily personal and household expense tracker, not an ITR or tax filing app. You never upload Form 16 or bank statements.
+Q: What if I have multiple Indian bank accounts on the same phone?
+A: Kharch Log automatically captures debit and credit SMS from all of them into one single ledger, without making you link 3 or 4 separate bank accounts.
+Q: Can I still use Kharch Log if I do not want SMS capture for one bank?
+A: Yes. You can review and dismiss drafts in the Needs Review inbox, or log manually and by voice whenever you prefer.
+Q: Does Kharch Log work with joint family bank accounts?
+A: Yes. Any debit SMS that arrives on your phone can be logged, and you can tag or categorize household spends cleanly.
+
+### Kharch Log vs Axio, Walnut, Money Manager and Fold
+URL: https://kharchlog.com/faq/kharch-log-vs-walnut-axio-money-manager/
+Q: How does Kharch Log compare to Axio (formerly Walnut)?
+A: Axio (Walnut) parses SMS but keeps your data inside its own ecosystem and promotes BNPL and personal loan products. Kharch Log has zero ads, zero loan pitches, no cloud lock-in, saves straight to your own Google Sheet, and costs a one-time INR 149 for lifetime access.
+Q: How is Kharch Log different from Money Manager or Day to Day Expenses?
+A: Traditional manual apps like Money Manager require you to type every single UPI payment by hand, so most people quit after two weeks. Kharch Log combines Indian UPI/bank SMS auto-capture with voice entry and live Google Sheets sync.
+Q: How does Kharch Log compare to Fold Money?
+A: Fold relies on Account Aggregator bank linking and cloud servers. Kharch Log requires no bank linking, keeps zero cloud copy of your ledger, supports cash and Hindi voice entry, and writes directly to your Google Sheet.
+Q: Why does Kharch Log cost INR 149 one-time while other apps charge monthly subscriptions?
+A: Because your expense data lives in your own Google Drive instead of our cloud servers, our server costs stay minimal. That lets us offer a permanent INR 149 lifetime unlock instead of INR 199/month subscriptions.
+Q: Does Kharch Log have a Credits tracker for money lent to friends?
+A: Yes. Unlike basic budget apps, Kharch Log includes a dedicated Credits tracker showing who owes you money, partial returns, remaining due balance, and due-date reminders.
+Q: Which app is better if I want my data in Google Sheets or Excel?
+A: Kharch Log is built Google-Sheets-first from day one. Most competing apps lock CSV/Excel export behind expensive annual subscriptions or only offer one-time manual exports.
+Q: Does Kharch Log work better for Indian daily kharch than US budget apps like YNAB?
+A: Yes. US apps like YNAB cost over INR 8,000 per year and do not understand Indian UPI SMS (GPay, PhonePe, Paytm), INR formatting, or cash kirana spending. Kharch Log is built specifically for India.
+Q: Can I switch from an Excel sheet to Kharch Log without losing my habit?
+A: Yes. Because Kharch Log writes to a live Google Sheet, you get the exact spreadsheet ownership you love without having to type every UPI transaction manually.
+
+### Pricing, free tier and INR 149 one-time lifetime unlock
+URL: https://kharchlog.com/faq/pricing-lifetime-149-free-tier/
+Q: How much does Kharch Log cost?
+A: Kharch Log is free to install and try on Google Play. Full lifetime access is a one-time payment of INR 149 with no monthly or yearly renewal fees.
+Q: Is the INR 149 lifetime plan really one-time forever?
+A: Yes. You pay INR 149 once and keep lifetime access on your Google account. There is no auto-debit, no annual renewal, and no subscription.
+Q: How do I unlock lifetime access for Kharch Log?
+A: You can unlock lifetime access via Google Play in-app purchase or through our official pricing page at easypeeze.com/pricing/#kharch-log using the same Google email you use in the app.
+Q: Which payment methods work on easypeeze.com/pricing/#kharch-log?
+A: UPI (GPay, PhonePe, Paytm, BHIM), debit cards, credit cards, and net banking are all supported.
+Q: Do free accounts expire if I do not open the app for 3 months?
+A: Unused free accounts can be deleted after 90 days of complete inactivity after email reminders. Paid INR 149 lifetime accounts are never deleted for inactivity.
+Q: If I change my Android phone, do I have to pay INR 149 again?
+A: No. Your lifetime unlock is tied to your Google account. Install Kharch Log on your new phone, sign in with the same Google email, and your lifetime status and Google Sheet reconnect automatically.
+Q: What is the refund policy for Kharch Log?
+A: See kharchlog.com/refund/. If you were accidentally charged twice or hit a bug we cannot fix, email support@easypeeze.com with your receipt and we will take care of it.
+Q: Are future updates to Kharch Log included in the INR 149 lifetime unlock?
+A: Yes. Ongoing Android updates, new SMS parser improvements, and fixes are included at no extra cost.
+
+### Daily kharch, cash expenses, voice entry and Hindi use
+URL: https://kharchlog.com/faq/daily-kharch-cash-voice-entry/
+Q: What does kharch mean and can I track daily kharcha in Kharch Log?
+A: Kharch (or kharcha) means daily spending or expenses in Hindi and Urdu. Kharch Log is built for Indian daily kharch: milk, vegetables, auto fares, chai, UPI bills, rent, and festival shopping all in one clean tracker.
+Q: How do I track cash expenses where there is no bank SMS?
+A: Use Voice Entry or quick Manual Entry. Tap the mic, say the amount and item (for example "150 vegetables cash"), confirm, and it logs straight to your Google Sheet alongside your UPI spends.
+Q: Can I log both kirana cash spends and UPI payments in the same monthly report?
+A: Yes. Every entry records its payment mode (UPI, Cash, Card, Bank), so your monthly total shows your real complete spending instead of missing the Rs 5,000 you withdrew from the ATM.
+Q: How does voice expense entry work in Kharch Log?
+A: Tap voice entry, speak naturally with the amount and purpose, and Kharch Log fills the fields for you to confirm in one tap. It is built for busy evenings when typing feels like a chore.
+Q: Can I log daily income or freelance payments as well as expenses?
+A: Yes. Kharch Log tracks both income (salary, freelance UPI, rent received, pocket money) and expenses, calculating your net balance and monthly savings rate automatically.
+Q: How do I handle ATM cash withdrawals without double-counting?
+A: Log cash spending as you spend it, or treat an ATM withdrawal cleanly instead of logging both the ATM withdrawal AND every cash purchase from that same cash.
+Q: Can students track hostel, mess, and pocket money kharch in Kharch Log?
+A: Yes. Students use Kharch Log to track monthly allowance as income, auto-capture GPay/PhonePe canteen and Swiggy spends, and see exactly how much is left before month-end.
+Q: How fast is adding a manual expense?
+A: About 3 to 5 seconds: enter amount, tap a category icon, choose Cash or UPI, and save.
+
+### Needs Review inbox, refunds, reversals and double-counting
+URL: https://kharchlog.com/faq/review-inbox-duplicates-refunds/
+Q: What is the Needs Review inbox in Kharch Log?
+A: Needs Review is a staging tray for newly detected bank and UPI SMS drafts. You can quickly verify the merchant, pick the right category, or dismiss non-expense messages before they land in your clean Google Sheet.
+Q: How does Kharch Log stop duplicate entries when both UPI and bank send alerts?
+A: Kharch Log checks transaction details and routes unclear or duplicate alerts through your review flow so the same Rs 500 payment is not accidentally counted twice.
+Q: How should I record a Swiggy, Amazon, or Flipkart refund in Kharch Log?
+A: When a refund or UPI reversal arrives, log it as a refund/credit or adjust the original expense so your monthly shopping total reflects your true net spending.
+Q: How do I avoid double-counting when paying my credit card bill via UPI?
+A: If you already logged individual credit card swipes during the month, dismiss the lump-sum credit card bill payment SMS in Needs Review (or vice versa) so you never count the same spend twice.
+Q: Are self-transfers between my own two bank accounts counted as expenses?
+A: No, you can dismiss self-transfers right inside the Needs Review inbox in one swipe so moving money from your salary account to your savings account does not inflate your monthly spend.
+Q: What about SIPs, RDs, and mutual fund auto-debits?
+A: You decide how to classify them: dismiss investment transfers from spending or place them in a dedicated Savings/Investments category so they never distort your groceries and lifestyle budget.
+Q: What happens if I ignore the Needs Review inbox for a few days?
+A: Your drafts wait safely in the inbox until you have 2 minutes on Sunday to review and confirm them all in one batch.
+Q: Can I edit an expense after it has already been confirmed and synced?
+A: Yes. You can edit the amount, category, date, or note in Kharch Log and the updated row syncs to your Google Sheet.
+
+### Credits tracker, money lent, flatmates and family splits
+URL: https://kharchlog.com/faq/credits-money-lent-splits-family/
+Q: Can Kharch Log track money I lent to a friend or colleague?
+A: Yes. The built-in Credits feature tracks who you gave money to, how much they returned, and the exact balance still due, separate from your personal consumption expenses.
+Q: What if someone pays me back in two or three partial UPI installments?
+A: You can record each partial return against that person inside Credits. Kharch Log automatically updates the remaining due amount and keeps a clean date-wise history.
+Q: Can Kharch Log remind me when someone promised to return money?
+A: Yes. Set a due date on any credit entry and Kharch Log sends you a reminder so awkward IOUs never slip through the cracks.
+Q: Can I share a clean summary of what someone owes me on WhatsApp?
+A: Yes. From Credits, you can generate and share a clear bill/summary showing given amounts, returns received, and the balance due.
+Q: How do flatmates use Kharch Log for Wi-Fi, electricity, and maid splits?
+A: When you pay the full Rs 3,000 electricity bill, log your own share as an expense and record your flatmates shares under Credits until they UPI you back.
+Q: Does money lent to someone inflate my monthly expense report?
+A: No. Keeping recoverable loans and splits in Credits stops your monthly spending chart from spiking just because you paid for a group dinner.
+Q: Can couples track shared household UPI spending together?
+A: Yes. Each person can track cleanly and share the Google Sheet in Drive, making monthly rent, groceries, and utility reconciliation effortless.
+Q: Can I track money sent to parents every month?
+A: Yes. Create or use a Family category so monthly support sent to parents is tracked separately from your personal discretionary kharch.
+
+### Credit card bills, no-cost EMI, cashback and budgets
+URL: https://kharchlog.com/faq/credit-card-emi-subscriptions-budgets/
+Q: Can Kharch Log capture credit card transaction SMS?
+A: Yes. Credit card swipe and online debit SMS from major Indian card issuers are detected on-device just like UPI alerts.
+Q: How should I track a 6-month no-cost EMI from a Diwali or Amazon sale?
+A: Log each monthly EMI installment as it hits your card statement (including processing fee and GST on interest) so your monthly cash flow stays realistic instead of distorting one single month.
+Q: How do I track recurring OTT and app subscriptions so I catch leaks?
+A: Tag Netflix, Spotify, YouTube, cloud storage, and gym auto-debits under Subscriptions. Reviewing that one category at month-end immediately exposes forgotten renewals.
+Q: Can I set monthly budgets or alerts in Kharch Log?
+A: Yes. Watching your category totals against your monthly target in Reports helps you spot mid-month leaks in food delivery or shopping before salary week runs dry.
+Q: How should I handle credit card cashback or instant discounts?
+A: Log the actual net amount debited on your SMS. If statement cashback arrives next month, record it as cashback/income or offset that month card category.
+Q: Can I track fuel, FASTag, and daily commute costs separately?
+A: Yes. Put petrol, metro recharges, cab rides, and FASTag tolls under Transport/Commute to see your true monthly travel cost.
+Q: Does Kharch Log track home loan or bike EMIs?
+A: Yes. Categorize monthly loan EMIs under EMI/Loans so fixed obligations are clearly separated from flexible daily spending.
+Q: Can I compare this month spending against last month?
+A: Yes. Open Reports & Insights to switch between weekly, monthly, and yearly views and spot where your spending rose or dropped.
+
+### Monthly reports, categories, insights and carry-forward
+URL: https://kharchlog.com/faq/reports-categories-carry-forward/
+Q: What reports are built into Kharch Log?
+A: Kharch Log shows daily, weekly, monthly, and yearly spending totals, category breakdowns, income vs expense comparisons, savings overview, and carry-forward balance.
+Q: What is carry-forward balance in Kharch Log?
+A: Carry-forward brings your leftover unspent balance from the previous month into the current month so your running cash position matches reality.
+Q: Can I customize expense categories for an Indian household?
+A: Yes. You can organize spending into practical Indian categories like Groceries/Kirana, Food Delivery, Rent, Electricity/Wi-Fi, Transport/Fuel, Medical, Family, Shopping, EMI, and Festivals.
+Q: Can I filter reports by payment mode like UPI vs Cash?
+A: Yes. Because every row stores payment mode, you can review your UPI outflow separately from cash spending both in the app and in your Google Sheet.
+Q: How do I do a quick 10-minute weekly spending review?
+A: Every Sunday, clear your Needs Review inbox, open the Weekly report, check your top 3 categories (usually food delivery, shopping, and transport), and adjust for the coming week.
+Q: Does Kharch Log calculate my monthly savings rate?
+A: Yes. When you log both income and expenses, you can immediately see how much you saved out of your salary cycle.
+Q: Can I view last year or multi-month totals?
+A: Yes. Use the yearly report inside the app or open your Google Sheet for multi-year comparisons and custom pivot charts.
+Q: Do reports work offline?
+A: Yes. Your local app view lets you browse your recent entries and reports even without an active internet connection.
+
+### Sharing Pay-To invoices, PDF and image summaries
+URL: https://kharchlog.com/faq/share-invoice-pdf-summary/
+Q: What is the Share Invoice feature in Kharch Log?
+A: Share Invoice lets you export a neat, readable summary of expenses or Credits as an image, PDF, or plain text message ready to send on WhatsApp or email.
+Q: When is Share Invoice most useful?
+A: It is great for group trip splits, flatmate monthly bills, family expense updates, freelance client reimbursements, and polite Credits payment reminders.
+Q: Can I export a PDF summary of a trip or event budget?
+A: Yes. Filter or pick the relevant entries and generate a clean PDF or image summary without manually formatting screenshots in Excel.
+Q: Does sharing an invoice expose my entire Google Sheet to the recipient?
+A: No. Sharing a generated PDF, image, or text summary only sends that specific snapshot. Your private Google Sheet remains completely private in your Drive.
+Q: Can I share a Pay-To summary with my UPI details?
+A: Yes. You can include clear totals and payment notes so friends or teammates can settle their share right away.
+Q: Does Share Invoice work on WhatsApp and Gmail?
+A: Yes. It uses the standard Android share sheet, so you can send directly to WhatsApp, Telegram, Gmail, or save locally to your phone.
+Q: Is Share Invoice included in the INR 149 lifetime unlock?
+A: Yes. There are no extra per-export charges or separate add-on fees.
+Q: Can I also print my monthly summary from Google Sheets?
+A: Yes. Open your Kharch Log Google Sheet on any computer and print or export to PDF with full custom formatting.
+
+### 10 app languages including Hindi, Telugu, Urdu and English
+URL: https://kharchlog.com/faq/languages-hindi-telugu-urdu-global/
+Q: Which languages does Kharch Log support?
+A: Kharch Log supports 10 languages: English, Hindi, Telugu, Urdu, Chinese, Japanese, Korean, French, Spanish, and German.
+Q: How do I switch Kharch Log to Hindi, Telugu, or Urdu?
+A: Open Settings inside the Kharch Log Android app, tap Language, and select Hindi, Telugu, Urdu, or any of the 10 supported languages. The entire interface updates immediately.
+Q: Does switching the app to Hindi or Telugu change my Google Sheet data?
+A: No. Your existing numbers, dates, and Google Sheet stay completely safe and intact when you switch display languages.
+Q: Does Urdu mode support right-to-left (RTL) reading cleanly?
+A: Yes. Urdu is supported cleanly in the app interface so parents and family members comfortable in Urdu can track daily kharch effortlessly.
+Q: Can SMS auto-capture still read English bank SMS when the app is set to Hindi or Telugu?
+A: Yes. Indian banks send transaction SMS in English even if your app interface is set to Hindi, Telugu, or Urdu, and Kharch Log parses them seamlessly.
+Q: Can I use voice entry in Hindi or Indian English?
+A: Yes. Voice entry works naturally with Indian English and everyday Hindi expense terms.
+Q: Can I switch languages back to English anytime?
+A: Yes. You can toggle between any of the 10 languages inside Settings as often as you like.
+Q: Is Kharch Log usable outside India too?
+A: Yes. While SMS patterns are tuned for Indian banks and UPI, manual entry, voice entry, Google Sheets sync, Credits, and all 10 languages work anywhere in the world.
+
+### Google Play install, SMS permission and data safety
+URL: https://kharchlog.com/faq/google-play-install-permissions-safety/
+Q: Where should I download Kharch Log on Android?
+A: Install Kharch Log from Google Play (com.kharchlog.app) or follow the official download link on kharchlog.com. Never install modified APKs from third-party Telegram channels or unofficial APK mirror sites.
+Q: What Android permissions does Kharch Log request and why?
+A: Kharch Log only asks for what it needs: SMS permission (to detect Indian bank and UPI alerts on-device), Google Sign-In with Drive file scope (to write strictly to your own Kharch Log spreadsheet), and optional Microphone permission if you use voice entry.
+Q: Can I use Kharch Log if I deny microphone permission?
+A: Yes. Microphone permission is completely optional and only requested when you tap Voice Entry.
+Q: Does Kharch Log work on Android 12, 13, 14, and 15?
+A: Yes. Kharch Log is built for modern Android versions and follows current Google Play security and privacy guidelines.
+Q: Why did older direct APK installs show a Play Protect warning?
+A: Earlier beta builds distributed outside Google Play triggered Android default sideload warnings. Installing from Google Play removes sideload prompts and delivers automatic updates.
+Q: Does Kharch Log drain my phone battery in the background?
+A: No. SMS detection uses lightweight event triggers instead of heavy background polling, so battery impact is negligible.
+Q: How do I verify my Kharch Log install is authentic?
+A: Verify the publisher is Eazy Peeze Apps / EasyPeeze Technologies and the package ID on Google Play is com.kharchlog.app.
+Q: Who do I contact if Google Play billing or sign-in gets stuck?
+A: Email support@easypeeze.com with your Google email and a quick note on what happened, and we will help you resolve it fast.
+
+### iPhone access, switching phones, backup and deleting data
+URL: https://kharchlog.com/faq/iphone-two-phones-backup-restore/
+Q: Is Kharch Log available on iPhone (iOS)?
+A: Not yet. Android is first because iOS does not allow apps to read bank/UPI SMS automatically. However, you can view and edit your live Kharch Log Google Sheet on any iPhone or iPad using the official Google Sheets app.
+Q: How do I move Kharch Log to a new Android phone?
+A: Install Kharch Log on your new phone and sign in with the exact same Google account. Your INR 149 lifetime license and your Google Sheet in Drive reconnect automatically with zero manual backup files needed.
+Q: Can I use Kharch Log across a personal phone and an office phone?
+A: Yes. Sign in with the same Google account if you want both devices syncing to the same ledger, or keep a separate Google account if you want office reimbursements completely isolated.
+Q: Do I need to manually back up my Kharch Log data?
+A: No. Every confirmed row is synced straight to your Google Drive spreadsheet, so even if your phone is lost or reset, your full expense history is safe in your Google account.
+Q: What if I accidentally delete the Kharch Log spreadsheet in Google Drive?
+A: Check Google Drive Trash within 30 days and click Restore. Your full history comes right back.
+Q: How do I delete my Kharch Log account and server metadata?
+A: Submit a request at easypeeze.com/delete-data/ or email support@easypeeze.com from your registered email. We delete your account record promptly; your personal Google Sheet stays under your own control in Drive until you choose to delete it.
+Q: Will uninstalling Kharch Log delete my Google Sheet?
+A: No. Uninstalling the app removes it from your phone while leaving your Google Sheet untouched in Google Drive.
+Q: Can I revoke Kharch Log access to my Google account anytime?
+A: Yes. You can revoke app access at any time from your Google Account Security > Third-party apps & services page.
+
+### Diwali kharch, wedding shagun, travel and household budgets
+URL: https://kharchlog.com/faq/festive-diwali-wedding-travel-kharch/
+Q: How do I track Diwali kharch without mixing it into my normal monthly budget?
+A: Tag sweets, lights, gifts, Dhanteras gold/silver, and travel under a Festival or Diwali category. At month-end you can see both your normal baseline cost of living and your total festival spend separately.
+Q: How do I track cash shagun envelopes at weddings where there is no UPI SMS?
+A: Log cash shagun immediately via voice entry or manual entry with the person or family name in the note field so you have a clean record in your Google Sheet for future weddings.
+Q: Can I track a full train, flight, and hotel family trip cost in one place?
+A: Yes. Tag all tickets, cabs, hotel UPI payments, and roadside cash meals under Travel so you know the exact total cost of the trip to the last rupee.
+Q: How do I stop post-Diwali returns and refunds from messing up November totals?
+A: Record refunds in the same Shopping or Festival category so your net figure reflects what you actually kept, not the gross amount before returns.
+Q: How should I budget for irregular annual bills like car insurance or school term fees?
+A: Log annual insurance premiums and term fees in dedicated categories so you can review your yearly report and set aside 1/12th each month next year.
+Q: How do freelancers track client expenses separately on a personal phone?
+A: Add a Work/Client category or note prefix so you can filter reimbursable client spends in Google Sheets in two clicks at invoice time.
+Q: How do I catch weekend food delivery leaks on Swiggy and Zomato?
+A: Put Swiggy, Zomato, and eating-out UPI alerts into one Food Delivery category. Seeing the real monthly sum in Reports is usually the fastest way to cut Rs 3,000 to Rs 6,000 a month.
+Q: How do I reset cleanly on the 1st of every month?
+A: Clear your Needs Review inbox on the last evening of the month, glance at your monthly category chart, and start the 1st with a clean slate while your historical months stay archived in Google Sheets.

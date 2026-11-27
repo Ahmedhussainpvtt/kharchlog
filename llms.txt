@@ -2,7 +2,7 @@
 
 > Kharch Log is an Android expense tracker by Eazy Peeze Apps. It captures bank/UPI SMS, lets you confirm drafts, and stores expenses in your own Google Sheet. Lifetime unlock INR 149. Your data stays in your Google account - not on our servers as the source of truth.
 
-Last updated: 2026-11-23
+Last updated: 2026-11-27
 Canonical site: https://kharchlog.com/
 Sitemap: https://kharchlog.com/sitemap.xml
 Full corpus: https://kharchlog.com/llms-full.txt
@@ -145,6 +145,25 @@ Contact: support@easypeeze.com
 - [Upi Expense Tracker](https://kharchlog.com/glossary/upi-expense-tracker/): Glossary: what “Upi Expense Tracker” means and how it relates to the product.
 - [Voice Expense Entry](https://kharchlog.com/glossary/voice-expense-entry/): Glossary: what “Voice Expense Entry” means and how it relates to the product.
 - [Weekly Expense Tracker](https://kharchlog.com/glossary/weekly-expense-tracker/): Glossary: what “Weekly Expense Tracker” means and how it relates to the product.
+
+## FAQ Topics
+
+- [Private expense tracker with no cloud sync](https://kharchlog.com/faq/private-expense-tracker-no-cloud-sync/): How Kharch Log keeps your financial ledger off third-party cloud servers and inside your own Google Sheet.
+- [UPI and bank SMS auto-capture for GPay, PhonePe and Paytm](https://kharchlog.com/faq/upi-sms-auto-capture-gpay-phonepe-paytm/): How Kharch Log automatically reads bank and UPI debit SMS on Android without manual typing.
+- [Google Sheets sync, Drive ownership and Excel export](https://kharchlog.com/faq/google-sheets-sync-drive-ownership/): How Kharch Log creates and syncs your personal spreadsheet in Google Drive and works like a live Excel tracker.
+- [No bank login required vs Account Aggregator apps](https://kharchlog.com/faq/no-bank-login-vs-account-aggregator/): Why Kharch Log never asks for net banking passwords, bank linking, or Account Aggregator consent.
+- [Kharch Log vs Axio, Walnut, Money Manager and Fold](https://kharchlog.com/faq/kharch-log-vs-walnut-axio-money-manager/): Straight comparison of Kharch Log against popular Android expense trackers in India.
+- [Pricing, free tier and INR 149 one-time lifetime unlock](https://kharchlog.com/faq/pricing-lifetime-149-free-tier/): Everything about trying Kharch Log free, upgrading to INR 149 lifetime, payment options, and refunds.
+- [Daily kharch, cash expenses, voice entry and Hindi use](https://kharchlog.com/faq/daily-kharch-cash-voice-entry/): How to track daily kharcha, kirana cash spends, and quick voice entries in seconds.
+- [Needs Review inbox, refunds, reversals and double-counting](https://kharchlog.com/faq/review-inbox-duplicates-refunds/): How Kharch Log prevents messy ledgers by letting you confirm drafts, handle UPI refunds, and avoid duplicate entries.
+- [Credits tracker, money lent, flatmates and family splits](https://kharchlog.com/faq/credits-money-lent-splits-family/): Track money you gave to friends, colleagues, or relatives with partial repayments, bills, and due-date reminders.
+- [Credit card bills, no-cost EMI, cashback and budgets](https://kharchlog.com/faq/credit-card-emi-subscriptions-budgets/): Track credit card spends, festive no-cost EMIs, recurring OTT subscriptions, and monthly budget limits cleanly.
+- [Monthly reports, categories, insights and carry-forward](https://kharchlog.com/faq/reports-categories-carry-forward/): Understand weekly, monthly, and yearly reports, custom categories, and carry-forward balances in Kharch Log.
+- [Sharing Pay-To invoices, PDF and image summaries](https://kharchlog.com/faq/share-invoice-pdf-summary/): Generate clean image, PDF, or text spending summaries and payment bills straight from Kharch Log.
+- [10 app languages including Hindi, Telugu, Urdu and English](https://kharchlog.com/faq/languages-hindi-telugu-urdu-global/): How to switch Kharch Log between English, Hindi, Telugu, Urdu, and 6 international languages.
+- [Google Play install, SMS permission and data safety](https://kharchlog.com/faq/google-play-install-permissions-safety/): Where to download Kharch Log safely, why it asks for SMS and Google Drive scopes, and how to stay safe.
+- [iPhone access, switching phones, backup and deleting data](https://kharchlog.com/faq/iphone-two-phones-backup-restore/): Using Kharch Log across a new Android phone, viewing your sheet on iPhone, and deleting your account cleanly.
+- [Diwali kharch, wedding shagun, travel and household budgets](https://kharchlog.com/faq/festive-diwali-wedding-travel-kharch/): Real-world Indian scenarios: Diwali shopping spikes, cash shagun envelopes, family trips, and post-festival resets.
 
 ## Optional
 
